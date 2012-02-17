@@ -17,8 +17,8 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
     extend: 'Ext.form.Panel',
 
     config: {
-        html: 'config',
         id: 'ConfigPanel',
+        scrollable: false,
         items: [
             {
                 xtype: 'titlebar',
@@ -30,6 +30,29 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         id: 'okConfig',
                         ui: 'confirm',
                         text: 'OK'
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                defaults: {
+                    required: true,
+                    labelAlign: 'left',
+                    labelWidth: '40%'
+                },
+                layout: {
+                    type: 'hbox'
+                },
+                instructions: 'Opcions generals de l\'eina.',
+                title: 'Opcions Generals',
+                items: [
+                    {
+                        xtype: 'selectfield',
+                        label: 'Escala',
+                        name: 'escalaType',
+                        displayField: 'label',
+                        store: 'scaleTypesStoreId',
+                        valueField: 'idScale'
                     }
                 ]
             }

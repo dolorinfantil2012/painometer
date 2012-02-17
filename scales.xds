@@ -53,6 +53,34 @@
                 "app/controller/FPSRPanel.js"
             ],
             "className": "FPSRPanel"
+        },
+        "6713f8cf-7ca5-4334-94e4-24f0c7567826": {
+            "paths": [
+                "app/store/scaleTypesStore.js",
+                "app/store/base/scaleTypesStore.js"
+            ],
+            "className": "scaleTypesStore"
+        },
+        "bb13e684-a2b2-4f1d-ac4b-ed6ff0932d05": {
+            "paths": [
+                "app/view/NRS11Panel.js",
+                "app/view/ui/NRS11Panel.js"
+            ],
+            "className": "NRS11Panel"
+        },
+        "bc3742f5-81f1-4e56-97dc-73c4d4d1f3a2": {
+            "paths": [
+                "app/view/CASPanel.js",
+                "app/view/ui/CASPanel.js"
+            ],
+            "className": "CASPanel"
+        },
+        "5b31aa95-ddd5-4190-94ac-373de28aad8c": {
+            "paths": [
+                "app/view/VASPanel.js",
+                "app/view/ui/VASPanel.js"
+            ],
+            "className": "VASPanel"
         }
     },
     "expandedState": {

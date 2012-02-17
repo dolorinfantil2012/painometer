@@ -17,6 +17,9 @@ Ext.define('Painometer.view.ui.MainContainer', {
     extend: 'Ext.Container',
     requires: [
         'Painometer.view.FPSRPanel',
+        'Painometer.view.NRS11Panel',
+        'Painometer.view.CASPanel',
+        'Painometer.view.VASPanel',
         'Painometer.view.ConfigPanel'
     ],
 
@@ -32,6 +35,18 @@ Ext.define('Painometer.view.ui.MainContainer', {
             {
                 xtype: 'fpsrpanel',
                 id: 'FPSRPanelIt'
+            },
+            {
+                xtype: 'nrs11panel',
+                id: 'nrs11PanelIt'
+            },
+            {
+                xtype: 'caspanel',
+                id: 'casPanelIt'
+            },
+            {
+                xtype: 'vaspanel',
+                id: 'vasPanelIt'
             },
             {
                 xtype: 'configpanel',

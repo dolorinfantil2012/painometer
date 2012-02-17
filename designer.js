@@ -18,9 +18,21 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    models: [
+        'Config',
+        'ScaleTypes'
+    ],
+
+    stores: [
+        'scaleTypesStore'
+    ],
+
     views: [
         'MainContainer',
-        'ConfigPanel'
+        'ConfigPanel',
+        'NRS11Panel',
+        'CASPanel',
+        'VASPanel'
     ],
 
     glossOnIcon: true,

@@ -7,9 +7,19 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "Config",
+            "ScaleTypes"
+        ],
+        "stores": [
+            "scaleTypesStoreId"
+        ],
         "views": [
             "MainContainer",
-            "ConfigPanel"
+            "ConfigPanel",
+            "NRS11Panel",
+            "CASPanel",
+            "VASPanel"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

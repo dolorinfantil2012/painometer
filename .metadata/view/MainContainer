@@ -13,13 +13,12 @@
         "ui": "",
         "layout": "card",
         "designer|userClassName": "MainContainer",
-        "container|animation": "cube",
-        "activeItem": null
+        "container|animation": "cube"
     },
     "customConfigs": [],
     "designerId": "7e707a99-90db-4d80-9225-13d04587e7d7",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen5499",
@@ -36,6 +35,54 @@
             "iconCls": "icon-linkedinstance",
             "expanded": true,
             "masterInstanceId": "ExtBox1-ext-gen3974"
+        },
+        {
+            "id": "ExtBox1-ext-gen37357",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "nrs11PanelIt"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen36222"
+        },
+        {
+            "id": "ExtBox1-ext-gen38379",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "casPanelIt"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen36442"
+        },
+        {
+            "id": "ExtBox1-ext-gen39408",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "vasPanelIt"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen36661"
         },
         {
             "id": "ExtBox1-ext-gen4693",

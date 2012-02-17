@@ -7,12 +7,20 @@
     },
     "codeClass": null,
     "userConfig": {
-        "html": "config",
+        "html": null,
         "id": "ConfigPanel",
+        "scrollable": "false",
         "designer|userClassName": "ConfigPanel",
-        "designer|userAlias": "configpanel"
+        "designer|userAlias": "configpanel",
+        "fullscreen": null
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "fullscreen",
+            "type": "boolean"
+        }
+    ],
     "designerId": "5d1b5cba-1b1c-459d-b90b-4a6a7b52a15f",
     "$viewOrder": 1,
     "expanded": false,
@@ -46,6 +54,47 @@
                         "ui": "confirm",
                         "text": "OK",
                         "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen26050",
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaults": "{\nrequired: true,\nlabelAlign: 'left',\nlabelWidth: '40%'\n}",
+                "layout": "hbox",
+                "instructions": "Opcions generals de l'eina.",
+                "title": "Opcions Generals",
+                "designer|userClassName": "MyFieldSet"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen26059",
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Escala",
+                        "labelWidth": null,
+                        "name": "escalaType",
+                        "required": null,
+                        "displayField": "label",
+                        "store": "scaleTypesStoreId",
+                        "valueField": "idScale",
+                        "designer|userClassName": "MySelectField"
                     },
                     "customConfigs": [],
                     "expanded": true

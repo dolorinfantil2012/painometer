@@ -1,0 +1,18 @@
+{
+    "id": "ExtBox1-ext-gen36661",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": "VASPanel under construction",
+        "designer|userClassName": "VASPanel",
+        "designer|userAlias": "vaspanel"
+    },
+    "customConfigs": [],
+    "designerId": "5b31aa95-ddd5-4190-94ac-373de28aad8c",
+    "$viewOrder": 5,
+    "expanded": true
+}

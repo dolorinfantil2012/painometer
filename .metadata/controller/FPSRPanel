@@ -16,7 +16,7 @@
     "customConfigs": [],
     "designerId": "40c4d108-b253-4287-b931-d49f315c15e2",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen29952",
@@ -112,7 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onInfoButtonTap",
-                "implHandler": "var me = this;\nme.getMainContainer().setActiveItem(1);",
+                "implHandler": "var me = this;\nme.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",

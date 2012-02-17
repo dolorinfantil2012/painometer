@@ -1,0 +1,18 @@
+{
+    "id": "ExtBox1-ext-gen36442",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": "CASPanel under construction",
+        "designer|userClassName": "CASPanel",
+        "designer|userAlias": "caspanel"
+    },
+    "customConfigs": [],
+    "designerId": "bc3742f5-81f1-4e56-97dc-73c4d4d1f3a2",
+    "$viewOrder": 4,
+    "expanded": true
+}

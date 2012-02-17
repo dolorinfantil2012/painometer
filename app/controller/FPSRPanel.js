@@ -54,7 +54,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
     onInfoButtonTap: function(button, e, options) {
         var me = this;
-        me.getMainContainer().setActiveItem(1);
+        me.getMainContainer().setActiveItem(4);
     }
 
 });

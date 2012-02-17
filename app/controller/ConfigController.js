@@ -17,24 +17,15 @@ Ext.define('PainScales.controller.ConfigController', {
 
     config: {
         refs: {
-            infoBtn: '#infoBtn',
-            mainContainer: '#MainContainer',
-            okConfig: '#okConfig'
+            okConfig: '#okConfig',
+            mainContainer: '#MainContainer'
         },
 
         control: {
-            "infoBtn": {
-                tap: 'onInfoButtonTap'
-            },
             "okConfig": {
                 tap: 'onConfigTap'
             }
         }
-    },
-
-    onInfoButtonTap: function(button, e, options) {
-        var me = this;
-        me.getMainContainer().setActiveItem(1);
     },
 
     onConfigTap: function(button, e, options) {

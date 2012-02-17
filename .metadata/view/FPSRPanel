@@ -31,14 +31,14 @@
                 "docked": "top",
                 "id": "FPSNavContainer",
                 "padding": 10,
-                "defaults": "{ \n   width: 50,\n   height: 60,\n   padding: 10\n}",
+                "defaults": "{\n   width: 50,\n   height: 68,\n   style:\n        'background-position: center center; background-size: 52px;'\n}",
                 "layout": "hbox",
                 "designer|userClassName": "MyContainer1",
                 "container|align": "center",
                 "container|pack": "center"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen6951",
@@ -51,8 +51,9 @@
                     "userConfig": {
                         "height": null,
                         "id": "smallFace1",
+                        "style": null,
                         "width": null,
-                        "src": "resources/images/fpsr/small_face1.png",
+                        "src": "resources/images/fpsr/cara1.png",
                         "designer|userClassName": "MyImage"
                     },
                     "customConfigs": [],
@@ -70,7 +71,7 @@
                         "height": null,
                         "id": "smallFace2",
                         "width": null,
-                        "src": "resources/images/fpsr/small_face2.png",
+                        "src": "resources/images/fpsr/cara2.png",
                         "designer|userClassName": "MyImage1"
                     },
                     "customConfigs": [],
@@ -88,7 +89,7 @@
                         "height": null,
                         "id": "smallFace3",
                         "width": null,
-                        "src": "resources/images/fpsr/small_face3.png",
+                        "src": "resources/images/fpsr/cara3.png",
                         "designer|userClassName": "MyImage2"
                     },
                     "customConfigs": [],
@@ -106,7 +107,7 @@
                         "height": null,
                         "id": "smallFace4",
                         "width": null,
-                        "src": "resources/images/fpsr/small_face4.png",
+                        "src": "resources/images/fpsr/cara4.png",
                         "designer|userClassName": "MyImage3"
                     },
                     "customConfigs": [],
@@ -124,7 +125,7 @@
                         "height": null,
                         "id": "smallFace5",
                         "width": null,
-                        "src": "resources/images/fpsr/small_face5.png",
+                        "src": "resources/images/fpsr/cara5.png",
                         "designer|userClassName": "MyImage4"
                     },
                     "customConfigs": [],
@@ -142,7 +143,7 @@
                         "height": null,
                         "id": "smallFace6",
                         "width": null,
-                        "src": "resources/images/fpsr/small_face6.png",
+                        "src": "resources/images/fpsr/cara6.png",
                         "designer|userClassName": "MyImage5"
                     },
                     "customConfigs": [],
@@ -221,25 +222,25 @@
                     "userConfig": {
                         "id": "FPSCarousel",
                         "itemId": null,
-                        "defaults": "{\n   layout: {\n      align: 'start',\n      pack: 'center',\n      type: 'hbox'\n   },\n   defaults: {\n      height: 360,\n      width: 290                                \n   }\n}",
                         "designer|userClassName": "MyCarousel"
                     },
                     "customConfigs": [],
-                    "expanded": false,
+                    "expanded": true,
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen11935",
-                            "type": "container",
+                            "id": "ExtBox1-ext-gen12082",
+                            "type": "image",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": null,
-                                "id": "facesContainer1",
-                                "itemId": "",
-                                "designer|userClassName": "MyContainer2",
+                                "height": null,
+                                "id": "face_1",
+                                "style": "background-position: 75% 0%; background-size: 285px;",
+                                "src": "resources/images/fpsr/cara1.png",
+                                "designer|userClassName": "MyImage6",
                                 "value": 0
                             },
                             "customConfigs": [
@@ -249,39 +250,22 @@
                                     "type": "number"
                                 }
                             ],
-                            "expanded": true,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen12134",
-                                    "type": "image",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": null,
-                                        "id": "face1",
-                                        "src": "resources/images/fpsr/cara1.png",
-                                        "designer|userClassName": "MyImage6"
-                                    },
-                                    "customConfigs": [],
-                                    "expanded": true
-                                }
-                            ]
+                            "expanded": true
                         },
                         {
-                            "id": "ExtBox1-ext-gen4548",
-                            "type": "container",
+                            "id": "ExtBox1-ext-gen13344",
+                            "type": "image",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": null,
-                                "id": "facesContainer2",
-                                "designer|userClassName": "MyContainer2",
+                                "height": null,
+                                "id": "face_2",
+                                "style": "background-position: 75% 0%; background-size: 285px;",
+                                "src": "resources/images/fpsr/cara2.png",
+                                "designer|userClassName": "MyImage6",
                                 "value": 2
                             },
                             "customConfigs": [
@@ -291,39 +275,22 @@
                                     "type": "number"
                                 }
                             ],
-                            "expanded": false,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen4551",
-                                    "type": "image",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": null,
-                                        "id": "face2",
-                                        "src": "resources/images/fpsr/cara2.png",
-                                        "designer|userClassName": "MyImage6"
-                                    },
-                                    "customConfigs": [],
-                                    "expanded": true
-                                }
-                            ]
+                            "expanded": true
                         },
                         {
-                            "id": "ExtBox1-ext-gen4661",
-                            "type": "container",
+                            "id": "ExtBox1-ext-gen13612",
+                            "type": "image",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": null,
-                                "id": "facesContainer3",
-                                "designer|userClassName": "MyContainer2",
+                                "height": null,
+                                "id": "face_3",
+                                "style": "background-position: 75% 0%; background-size: 285px;",
+                                "src": "resources/images/fpsr/cara3.png",
+                                "designer|userClassName": "MyImage6",
                                 "value": 4
                             },
                             "customConfigs": [
@@ -333,39 +300,22 @@
                                     "type": "number"
                                 }
                             ],
-                            "expanded": false,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen4664",
-                                    "type": "image",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": null,
-                                        "id": "face3",
-                                        "src": "resources/images/fpsr/cara3.png",
-                                        "designer|userClassName": "MyImage6"
-                                    },
-                                    "customConfigs": [],
-                                    "expanded": true
-                                }
-                            ]
+                            "expanded": true
                         },
                         {
-                            "id": "ExtBox1-ext-gen4776",
-                            "type": "container",
+                            "id": "ExtBox1-ext-gen14998",
+                            "type": "image",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": null,
-                                "id": "facesContainer4",
-                                "designer|userClassName": "MyContainer2",
+                                "height": null,
+                                "id": "face_4",
+                                "style": "background-position: 75% 0%; background-size: 285px;",
+                                "src": "resources/images/fpsr/cara4.png",
+                                "designer|userClassName": "MyImage6",
                                 "value": 6
                             },
                             "customConfigs": [
@@ -375,39 +325,22 @@
                                     "type": "number"
                                 }
                             ],
-                            "expanded": false,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen4779",
-                                    "type": "image",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": null,
-                                        "id": "face4",
-                                        "src": "resources/images/fpsr/cara4.png",
-                                        "designer|userClassName": "MyImage6"
-                                    },
-                                    "customConfigs": [],
-                                    "expanded": true
-                                }
-                            ]
+                            "expanded": true
                         },
                         {
-                            "id": "ExtBox1-ext-gen4893",
-                            "type": "container",
+                            "id": "ExtBox1-ext-gen15641",
+                            "type": "image",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": null,
-                                "id": "facesContainer5",
-                                "designer|userClassName": "MyContainer2",
+                                "height": null,
+                                "id": "face_5",
+                                "style": "background-position: 75% 0%; background-size: 285px;",
+                                "src": "resources/images/fpsr/cara5.png",
+                                "designer|userClassName": "MyImage6",
                                 "value": 8
                             },
                             "customConfigs": [
@@ -417,39 +350,22 @@
                                     "type": "number"
                                 }
                             ],
-                            "expanded": false,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen4896",
-                                    "type": "image",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": null,
-                                        "id": "face5",
-                                        "src": "resources/images/fpsr/cara5.png",
-                                        "designer|userClassName": "MyImage6"
-                                    },
-                                    "customConfigs": [],
-                                    "expanded": true
-                                }
-                            ]
+                            "expanded": true
                         },
                         {
-                            "id": "ExtBox1-ext-gen5012",
-                            "type": "container",
+                            "id": "ExtBox1-ext-gen16122",
+                            "type": "image",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": null,
-                                "id": "facesContainer6",
-                                "designer|userClassName": "MyContainer2",
+                                "height": null,
+                                "id": "face_6",
+                                "style": "background-position: 75% 0%; background-size: 285px;",
+                                "src": "resources/images/fpsr/cara6.png",
+                                "designer|userClassName": "MyImage6",
                                 "value": 10
                             },
                             "customConfigs": [
@@ -459,26 +375,7 @@
                                     "type": "number"
                                 }
                             ],
-                            "expanded": false,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen5015",
-                                    "type": "image",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": null,
-                                        "id": "face6",
-                                        "src": "resources/images/fpsr/cara6.png",
-                                        "designer|userClassName": "MyImage6"
-                                    },
-                                    "customConfigs": [],
-                                    "expanded": true
-                                }
-                            ]
+                            "expanded": true
                         }
                     ]
                 }

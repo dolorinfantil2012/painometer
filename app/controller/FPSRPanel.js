@@ -17,30 +17,41 @@ Ext.define('PainScales.controller.FPSRPanel', {
 
     config: {
         refs: {
-            faceContainer: '#FPSCarousel container',
-            fpsNav: '#FPSNavContainer'
+            faceContainer: '#FPSCarousel image',
+            fpsNav: '#FPSNavContainer',
+            infoBtn: '#infoBtn',
+            mainContainer: '#MainContainer'
         },
 
         control: {
             "faceContainer": {
                 activate: 'faceActivate'
+            },
+            "infoBtn": {
+                tap: 'onInfoButtonTap'
             }
         }
     },
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
-
-        if (!Ext.isEmpty(container) && !Ext.isEmpty(oldActiveItem)) {
-            var newIndex = container.config.value / 2;
+        if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 2;
-
-            var newFace    = this.getFpsNav().items.getAt(newIndex);
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
 
             oldFace.removeCls("face-selected");
-            newFace.addCls("face-selected");
         }
 
+        if (!Ext.isEmpty(container)) {
+            var newIndex = container.config.value / 2;
+            var newFace    = this.getFpsNav().items.getAt(newIndex);
+
+            newFace.addCls("face-selected");
+        }
+    },
+
+    onInfoButtonTap: function(button, e, options) {
+        var me = this;
+        me.getMainContainer().setActiveItem(1);
     }
 
 });

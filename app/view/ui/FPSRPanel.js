@@ -30,8 +30,8 @@ Ext.define('PainScales.view.ui.FPSRPanel', {
                 padding: 10,
                 defaults: {
                     width: 50,
-                    height: 60,
-                    padding: 10
+                    height: 68,
+                    style: 'background-position: center center; background-size: 52px;'
                 },
                 layout: {
                     align: 'center',
@@ -42,32 +42,32 @@ Ext.define('PainScales.view.ui.FPSRPanel', {
                     {
                         xtype: 'image',
                         id: 'smallFace1',
-                        src: 'resources/images/fpsr/small_face1.png'
+                        src: 'resources/images/fpsr/cara1.png'
                     },
                     {
                         xtype: 'image',
                         id: 'smallFace2',
-                        src: 'resources/images/fpsr/small_face2.png'
+                        src: 'resources/images/fpsr/cara2.png'
                     },
                     {
                         xtype: 'image',
                         id: 'smallFace3',
-                        src: 'resources/images/fpsr/small_face3.png'
+                        src: 'resources/images/fpsr/cara3.png'
                     },
                     {
                         xtype: 'image',
                         id: 'smallFace4',
-                        src: 'resources/images/fpsr/small_face4.png'
+                        src: 'resources/images/fpsr/cara4.png'
                     },
                     {
                         xtype: 'image',
                         id: 'smallFace5',
-                        src: 'resources/images/fpsr/small_face5.png'
+                        src: 'resources/images/fpsr/cara5.png'
                     },
                     {
                         xtype: 'image',
                         id: 'smallFace6',
-                        src: 'resources/images/fpsr/small_face6.png'
+                        src: 'resources/images/fpsr/cara6.png'
                     }
                 ]
             },
@@ -102,90 +102,48 @@ Ext.define('PainScales.view.ui.FPSRPanel', {
                     {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
-                        defaults: {
-                            layout: {
-                                align: 'start',
-                                pack: 'center',
-                                type: 'hbox'
-                            },
-                            defaults: {
-                                height: 360,
-                                width: 290
-                            }
-                        },
                         items: [
                             {
-                                xtype: 'container',
-                                id: 'facesContainer1',
-                                itemId: '',
-                                value: 0,
-                                items: [
-                                    {
-                                        xtype: 'image',
-                                        id: 'face1',
-                                        src: 'resources/images/fpsr/cara1.png'
-                                    }
-                                ]
+                                xtype: 'image',
+                                id: 'face_1',
+                                style: 'background-position: 75% 0%; background-size: 285px;',
+                                src: 'resources/images/fpsr/cara1.png',
+                                value: 0
                             },
                             {
-                                xtype: 'container',
-                                id: 'facesContainer2',
-                                value: 2,
-                                items: [
-                                    {
-                                        xtype: 'image',
-                                        id: 'face2',
-                                        src: 'resources/images/fpsr/cara2.png'
-                                    }
-                                ]
+                                xtype: 'image',
+                                id: 'face_2',
+                                style: 'background-position: 75% 0%; background-size: 285px;',
+                                src: 'resources/images/fpsr/cara2.png',
+                                value: 2
                             },
                             {
-                                xtype: 'container',
-                                id: 'facesContainer3',
-                                value: 4,
-                                items: [
-                                    {
-                                        xtype: 'image',
-                                        id: 'face3',
-                                        src: 'resources/images/fpsr/cara3.png'
-                                    }
-                                ]
+                                xtype: 'image',
+                                id: 'face_3',
+                                style: 'background-position: 75% 0%; background-size: 285px;',
+                                src: 'resources/images/fpsr/cara3.png',
+                                value: 4
                             },
                             {
-                                xtype: 'container',
-                                id: 'facesContainer4',
-                                value: 6,
-                                items: [
-                                    {
-                                        xtype: 'image',
-                                        id: 'face4',
-                                        src: 'resources/images/fpsr/cara4.png'
-                                    }
-                                ]
+                                xtype: 'image',
+                                id: 'face_4',
+                                style: 'background-position: 75% 0%; background-size: 285px;',
+                                src: 'resources/images/fpsr/cara4.png',
+                                value: 6
                             },
                             {
-                                xtype: 'container',
-                                id: 'facesContainer5',
-                                value: 8,
-                                items: [
-                                    {
-                                        xtype: 'image',
-                                        id: 'face5',
-                                        src: 'resources/images/fpsr/cara5.png'
-                                    }
-                                ]
+                                xtype: 'image',
+                                id: 'face_5',
+                                style: 'background-position: 75% 0%; background-size: 285px;',
+                                src: 'resources/images/fpsr/cara5.png',
+                                value: 8
                             },
                             {
-                                xtype: 'container',
-                                id: 'facesContainer6',
-                                value: 10,
-                                items: [
-                                    {
-                                        xtype: 'image',
-                                        id: 'face6',
-                                        src: 'resources/images/fpsr/cara6.png'
-                                    }
-                                ]
+                                xtype: 'image',
+                                id: 'face_6',
+                                style: 'background-position: 75% 0%; background-size: 285px;',
+                                src: 'resources/images/fpsr/cara6.png',
+                                value: 10
                             }
                         ]
                     }

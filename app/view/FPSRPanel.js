@@ -12,8 +12,8 @@
  * class.
  */
 
-Ext.define('PainScales.view.FPSRPanel', {
-    extend: 'PainScales.view.ui.FPSRPanel',
+Ext.define('Painometer.view.FPSRPanel', {
+    extend: 'Painometer.view.ui.FPSRPanel',
     alias: 'widget.fpsrpanel',
 
     initialize: function() {

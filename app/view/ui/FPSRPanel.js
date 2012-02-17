@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('PainScales.view.ui.FPSRPanel', {
+Ext.define('Painometer.view.ui.FPSRPanel', {
     extend: 'Ext.form.Panel',
 
     config: {
@@ -102,46 +102,43 @@ Ext.define('PainScales.view.ui.FPSRPanel', {
                     {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
+                        defaults: {
+                            style: 'background-position: 75% 0%; background-size: 285px;'
+                        },
                         items: [
                             {
                                 xtype: 'image',
                                 id: 'face_1',
-                                style: 'background-position: 75% 0%; background-size: 285px;',
                                 src: 'resources/images/fpsr/cara1.png',
                                 value: 0
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_2',
-                                style: 'background-position: 75% 0%; background-size: 285px;',
                                 src: 'resources/images/fpsr/cara2.png',
                                 value: 2
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_3',
-                                style: 'background-position: 75% 0%; background-size: 285px;',
                                 src: 'resources/images/fpsr/cara3.png',
                                 value: 4
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_4',
-                                style: 'background-position: 75% 0%; background-size: 285px;',
                                 src: 'resources/images/fpsr/cara4.png',
                                 value: 6
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_5',
-                                style: 'background-position: 75% 0%; background-size: 285px;',
                                 src: 'resources/images/fpsr/cara5.png',
                                 value: 8
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_6',
-                                style: 'background-position: 75% 0%; background-size: 285px;',
                                 src: 'resources/images/fpsr/cara6.png',
                                 value: 10
                             }

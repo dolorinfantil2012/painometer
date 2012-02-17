@@ -13,11 +13,11 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('PainScales.view.ui.MainContainer', {
+Ext.define('Painometer.view.ui.MainContainer', {
     extend: 'Ext.Container',
     requires: [
-        'PainScales.view.FPSRPanel',
-        'PainScales.view.ConfigPanel'
+        'Painometer.view.FPSRPanel',
+        'Painometer.view.ConfigPanel'
     ],
 
     config: {

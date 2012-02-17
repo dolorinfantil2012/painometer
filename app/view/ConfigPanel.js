@@ -12,8 +12,8 @@
  * class.
  */
 
-Ext.define('PainScales.view.ConfigPanel', {
-    extend: 'PainScales.view.ui.ConfigPanel',
+Ext.define('Painometer.view.ConfigPanel', {
+    extend: 'Painometer.view.ui.ConfigPanel',
     alias: 'widget.configpanel',
 
     initialize: function() {

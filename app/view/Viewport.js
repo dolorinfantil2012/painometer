@@ -13,12 +13,12 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('PainScales.view.Viewport', {
-    extend: 'PainScales.view.MainContainer',
+Ext.define('Painometer.view.Viewport', {
+    extend: 'Painometer.view.MainContainer',
     config: {
         fullscreen: true
     },
     requires: [
-        'PainScales.view.MainContainer'
+        'Painometer.view.MainContainer'
     ]
 });

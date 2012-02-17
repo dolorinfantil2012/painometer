@@ -12,7 +12,7 @@
  * class.
  */
 
-Ext.define('PainScales.controller.ConfigController', {
+Ext.define('Painometer.controller.ConfigController', {
     extend: 'Ext.app.Controller',
 
     config: {

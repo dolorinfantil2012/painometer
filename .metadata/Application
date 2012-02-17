@@ -9,11 +9,11 @@
     "userConfig": {
         "views": [
             "MainContainer",
-            "ConfigPanel",
-            "FPSRPanel"
+            "ConfigPanel"
         ],
         "designer|launch": "",
-        "name": "PainScales"
+        "glossOnIcon": true,
+        "name": "Painometer"
     },
     "customConfigs": [],
     "designerId": "application",

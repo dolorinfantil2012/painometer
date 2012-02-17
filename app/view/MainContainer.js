@@ -12,8 +12,8 @@
  * class.
  */
 
-Ext.define('PainScales.view.MainContainer', {
-    extend: 'PainScales.view.ui.MainContainer',
+Ext.define('Painometer.view.MainContainer', {
+    extend: 'Painometer.view.ui.MainContainer',
 
     initialize: function() {
         var me = this;

@@ -12,10 +12,13 @@
  * class.
  */
 
-Ext.define('PainScales.controller.FPSRPanel', {
+Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
+        views: [
+            'FPSRPanel'
+        ],
         refs: {
             faceContainer: '#FPSCarousel image',
             fpsNav: '#FPSNavContainer',

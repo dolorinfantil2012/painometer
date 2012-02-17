@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('PainScales.view.ui.ConfigPanel', {
+Ext.define('Painometer.view.ui.ConfigPanel', {
     extend: 'Ext.form.Panel',
 
     config: {

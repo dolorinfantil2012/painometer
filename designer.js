@@ -20,11 +20,12 @@ Ext.Loader.setConfig({
 Ext.application({
     views: [
         'MainContainer',
-        'ConfigPanel',
-        'FPSRPanel'
+        'ConfigPanel'
     ],
 
-    name: 'PainScales',
+    glossOnIcon: true,
+
+    name: 'Painometer',
 
     controllers: [
         'ConfigController',
@@ -32,6 +33,6 @@ Ext.application({
     ],
 
     launch: function() {
-        Ext.create('PainScales.view.Viewport');
+        Ext.create('Painometer.view.Viewport');
     }
 });

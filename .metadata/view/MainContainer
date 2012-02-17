@@ -1,0 +1,57 @@
+{
+    "id": "ExtBox1-ext-gen3064",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "id": "MainContainer",
+        "style": "background-color:white",
+        "ui": "",
+        "layout": "card",
+        "designer|userClassName": "MainContainer",
+        "container|animation": "cube",
+        "activeItem": null
+    },
+    "customConfigs": [],
+    "designerId": "7e707a99-90db-4d80-9225-13d04587e7d7",
+    "$viewOrder": 0,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5499",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "FPSRPanelIt"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen3974"
+        },
+        {
+            "id": "ExtBox1-ext-gen4693",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "configPanelIt"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen3433"
+        }
+    ]
+}

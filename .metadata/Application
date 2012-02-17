@@ -1,0 +1,22 @@
+{
+    "id": "ExtBox1-ext-gen3019",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "MainContainer",
+            "ConfigPanel",
+            "FPSRPanel"
+        ],
+        "designer|launch": "",
+        "name": "PainScales"
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "expanded": true
+}

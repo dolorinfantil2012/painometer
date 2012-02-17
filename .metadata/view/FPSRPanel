@@ -1,0 +1,488 @@
+{
+    "id": "ExtBox1-ext-gen3974",
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "id": "FPSRPanel",
+        "layout": "fit",
+        "scrollable": "false",
+        "designer|userClassName": "FPSRPanel",
+        "designer|userAlias": "fpsrpanel"
+    },
+    "customConfigs": [],
+    "designerId": "5e0c77f3-813b-4b62-b539-aadb9241db86",
+    "$viewOrder": 2,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5820",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "id": "FPSNavContainer",
+                "padding": 10,
+                "defaults": "{ \n   width: 50,\n   height: 60,\n   padding: 10\n}",
+                "layout": "hbox",
+                "designer|userClassName": "MyContainer1",
+                "container|align": "center",
+                "container|pack": "center"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen6951",
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "smallFace1",
+                        "width": null,
+                        "src": "resources/images/fpsr/small_face1.png",
+                        "designer|userClassName": "MyImage"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7133",
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "smallFace2",
+                        "width": null,
+                        "src": "resources/images/fpsr/small_face2.png",
+                        "designer|userClassName": "MyImage1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7316",
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "smallFace3",
+                        "width": null,
+                        "src": "resources/images/fpsr/small_face3.png",
+                        "designer|userClassName": "MyImage2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7500",
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "smallFace4",
+                        "width": null,
+                        "src": "resources/images/fpsr/small_face4.png",
+                        "designer|userClassName": "MyImage3"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7685",
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "smallFace5",
+                        "width": null,
+                        "src": "resources/images/fpsr/small_face5.png",
+                        "designer|userClassName": "MyImage4"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7871",
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "smallFace6",
+                        "width": null,
+                        "src": "resources/images/fpsr/small_face6.png",
+                        "designer|userClassName": "MyImage5"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen4449",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "InfoCaroCont",
+                "layout": "fit",
+                "designer|userClassName": "MyContainer9"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen7992",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "infoContainer",
+                        "layout": "hbox",
+                        "designer|userClassName": "MyContainer8",
+                        "container|align": "end",
+                        "container|pack": "end"
+                    },
+                    "customConfigs": [],
+                    "expanded": false,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen8369",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": null,
+                                "id": "infoBtn",
+                                "style": "border:0",
+                                "ui": "info_btn-small",
+                                "width": 22,
+                                "icon": null,
+                                "iconCls": "info",
+                                "iconMask": true,
+                                "text": null,
+                                "designer|userClassName": "MyButton"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen10653",
+                    "type": "carousel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "FPSCarousel",
+                        "itemId": null,
+                        "defaults": "{\n   layout: {\n      align: 'start',\n      pack: 'center',\n      type: 'hbox'\n   },\n   defaults: {\n      height: 360,\n      width: 290                                \n   }\n}",
+                        "designer|userClassName": "MyCarousel"
+                    },
+                    "customConfigs": [],
+                    "expanded": false,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen11935",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "id": "facesContainer1",
+                                "itemId": "",
+                                "designer|userClassName": "MyContainer2",
+                                "value": 0
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen12134",
+                                    "type": "image",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "id": "face1",
+                                        "src": "resources/images/fpsr/cara1.png",
+                                        "designer|userClassName": "MyImage6"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen4548",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "id": "facesContainer2",
+                                "designer|userClassName": "MyContainer2",
+                                "value": 2
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": false,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen4551",
+                                    "type": "image",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "id": "face2",
+                                        "src": "resources/images/fpsr/cara2.png",
+                                        "designer|userClassName": "MyImage6"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen4661",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "id": "facesContainer3",
+                                "designer|userClassName": "MyContainer2",
+                                "value": 4
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": false,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen4664",
+                                    "type": "image",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "id": "face3",
+                                        "src": "resources/images/fpsr/cara3.png",
+                                        "designer|userClassName": "MyImage6"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen4776",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "id": "facesContainer4",
+                                "designer|userClassName": "MyContainer2",
+                                "value": 6
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": false,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen4779",
+                                    "type": "image",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "id": "face4",
+                                        "src": "resources/images/fpsr/cara4.png",
+                                        "designer|userClassName": "MyImage6"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen4893",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "id": "facesContainer5",
+                                "designer|userClassName": "MyContainer2",
+                                "value": 8
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": false,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen4896",
+                                    "type": "image",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "id": "face5",
+                                        "src": "resources/images/fpsr/cara5.png",
+                                        "designer|userClassName": "MyImage6"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen5012",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "id": "facesContainer6",
+                                "designer|userClassName": "MyContainer2",
+                                "value": 10
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": false,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen5015",
+                                    "type": "image",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "id": "face6",
+                                        "src": "resources/images/fpsr/cara6.png",
+                                        "designer|userClassName": "MyImage6"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "id": "ExtBox1-ext-gen30376",
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": "[\n{ idScale: 1, label: \"FPS-R\"},\n{ idScale: 2, label: \"NRS-11\"},\n{ idScale: 3, label: \"CAS\"},\n{ idScale: 4, label: \"VAS\"}\n]",
+        "model": "ScaleTypes",
+        "storeId": "scaleTypesStoreId",
+        "designer|userClassName": "scaleTypesStore",
+        "autoDestroy": null
+    },
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "autoDestroy",
+            "type": "boolean"
+        }
+    ],
+    "designerId": "6713f8cf-7ca5-4334-94e4-24f0c7567826",
+    "$viewOrder": 0,
+    "expanded": true
+}

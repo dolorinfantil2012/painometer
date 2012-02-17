@@ -1,0 +1,32 @@
+{
+    "id": "ExtBox1-ext-gen3019",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Config",
+            "ScaleTypes"
+        ],
+        "stores": [
+            "scaleTypesStoreId"
+        ],
+        "views": [
+            "MainContainer",
+            "ConfigPanel",
+            "NRS11Panel",
+            "CASPanel",
+            "VASPanel"
+        ],
+        "designer|launch": "",
+        "glossOnIcon": true,
+        "name": "Painometer"
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "expanded": true
+}

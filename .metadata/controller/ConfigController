@@ -1,0 +1,70 @@
+{
+    "id": "ExtBox1-ext-gen7057",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|init": "",
+        "designer|userClassName": "ConfigController"
+    },
+    "customConfigs": [],
+    "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
+    "$viewOrder": 0,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen15177",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "okConfig",
+                "selector": "#okConfig",
+                "designer|userClassName": "okConfig"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen15501",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onConfigTap",
+                "implHandler": "        var me = this;\n        me.getMainContainer().setActiveItem(0);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "okConfig",
+                "designer|userClassName": "onConfigTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10118",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainContainer",
+                "selector": "#MainContainer",
+                "designer|userClassName": "mainContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

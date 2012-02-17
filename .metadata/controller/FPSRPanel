@@ -1,0 +1,125 @@
+{
+    "id": "ExtBox1-ext-gen28445",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "FPSRPanel"
+        ],
+        "designer|init": "",
+        "designer|userClassName": "FPSRPanel"
+    },
+    "customConfigs": [],
+    "designerId": "40c4d108-b253-4287-b931-d49f315c15e2",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen29952",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "faceContainer",
+                "selector": "#FPSCarousel image",
+                "xtype": null,
+                "designer|userClassName": "faceContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen30247",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "faceActivate",
+                "implHandler": "if (!Ext.isEmpty(oldActiveItem)) {\n    var oldIndex = oldActiveItem.config.value / 2;\n    var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n    oldFace.removeCls(\"face-selected\");\n}\n\nif (!Ext.isEmpty(container)) {\n    var newIndex = container.config.value / 2;\n    var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n    newFace.addCls(\"face-selected\");\n}",
+                "name": "activate",
+                "designer|targetType": "Ext.Container",
+                "designer|controlQuery": "faceContainer",
+                "designer|userClassName": "faceActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen43491",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fpsNav",
+                "selector": "#FPSNavContainer",
+                "designer|userClassName": "fpsNav"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7984",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "infoBtn",
+                "selector": "#infoBtn",
+                "designer|userClassName": "infoBtn"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11701",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainContainer",
+                "selector": "#MainContainer",
+                "designer|userClassName": "mainContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5686",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onInfoButtonTap",
+                "implHandler": "var me = this;\nme.getMainContainer().setActiveItem(4);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "infoBtn",
+                "designer|userClassName": "onInfoButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

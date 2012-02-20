@@ -17,6 +17,7 @@ Ext.define('Painometer.view.CASPanel', {
     alias: 'widget.caspanel',
 
     initialize: function() {
+
         var me = this;
         me.callParent(arguments);
     }

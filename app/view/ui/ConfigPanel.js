@@ -48,11 +48,20 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                 items: [
                     {
                         xtype: 'selectfield',
+                        width: 163,
                         label: 'Escala',
                         name: 'escalaType',
                         displayField: 'label',
                         store: 'scaleTypesStoreId',
                         valueField: 'idScale'
+                    },
+                    {
+                        xtype: 'selectfield',
+                        label: 'Idioma',
+                        name: 'language',
+                        displayField: 'label',
+                        store: 'languageStoreId',
+                        valueField: 'idLang'
                     }
                 ]
             }

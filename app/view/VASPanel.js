@@ -17,6 +17,7 @@ Ext.define('Painometer.view.VASPanel', {
     alias: 'widget.vaspanel',
 
     initialize: function() {
+
         var me = this;
         me.callParent(arguments);
     }

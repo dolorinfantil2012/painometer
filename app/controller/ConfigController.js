@@ -29,6 +29,7 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onConfigTap: function(button, e, options) {
+
         var me = this;
         me.getMainContainer().setActiveItem(0);
     }

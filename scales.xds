@@ -81,6 +81,13 @@
                 "app/view/ui/VASPanel.js"
             ],
             "className": "VASPanel"
+        },
+        "064e2aa3-bbdf-4ae7-9ed6-6688fb632ef3": {
+            "paths": [
+                "app/store/languageStore.js",
+                "app/store/base/languageStore.js"
+            ],
+            "className": "languageStore"
         }
     },
     "expandedState": {

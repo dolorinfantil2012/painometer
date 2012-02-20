@@ -17,6 +17,7 @@ Ext.define('Painometer.view.ConfigPanel', {
     alias: 'widget.configpanel',
 
     initialize: function() {
+
         var me = this;
         me.callParent(arguments);
     }

@@ -9,10 +9,12 @@
     "userConfig": {
         "models": [
             "Config",
-            "ScaleTypes"
+            "ScaleTypes",
+            "Language"
         ],
         "stores": [
-            "scaleTypesStoreId"
+            "scaleTypesStoreId",
+            "languageStoreId"
         ],
         "views": [
             "MainContainer",

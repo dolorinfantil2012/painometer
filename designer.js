@@ -20,11 +20,13 @@ Ext.Loader.setConfig({
 Ext.application({
     models: [
         'Config',
-        'ScaleTypes'
+        'ScaleTypes',
+        'Language'
     ],
 
     stores: [
-        'scaleTypesStore'
+        'scaleTypesStore',
+        'languageStore'
     ],
 
     views: [

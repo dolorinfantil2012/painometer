@@ -23,7 +23,7 @@
     ],
     "designerId": "5d1b5cba-1b1c-459d-b90b-4a6a7b52a15f",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen13702",
@@ -87,6 +87,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "width": 163,
                         "label": "Escala",
                         "labelWidth": null,
                         "name": "escalaType",
@@ -95,6 +96,25 @@
                         "store": "scaleTypesStoreId",
                         "valueField": "idScale",
                         "designer|userClassName": "MySelectField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen6563",
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Idioma",
+                        "name": "language",
+                        "displayField": "label",
+                        "store": "languageStoreId",
+                        "valueField": "idLang",
+                        "designer|userClassName": "MySelectField1"
                     },
                     "customConfigs": [],
                     "expanded": true

@@ -41,7 +41,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "        var me = this;\n        me.getMainContainer().setActiveItem(0);",
+                "implHandler": "        var me = this;\r\n        me.getMainContainer().setActiveItem(0);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",

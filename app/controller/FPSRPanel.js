@@ -50,6 +50,9 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
             newFace.addCls("face-selected");
         }
+
+        /* guardar valor al model */
+        /* guardar model al disc */
     },
 
     onInfoButtonTap: function(button, e, options) {

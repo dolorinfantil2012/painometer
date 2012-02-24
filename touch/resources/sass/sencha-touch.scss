@@ -17,6 +17,8 @@
 @include sencha-msgbox;
 @include sencha-loading-spinner;
 
+/*****************************/
+
 
 @include pictos-iconmask('info');
 @include pictos-iconmask('lock_open');
@@ -42,4 +44,3 @@
     //-webkit-transform: scale(1.2);
 }
 
-  

@@ -5,7 +5,7 @@
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "/Users/roman/Sites/scales",
+        "exportPath": "C:/xampp/htdocs/painometer",
         "extPath": "touch/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -81,6 +81,12 @@
                 "app/view/ui/VASPanel.js"
             ],
             "className": "VASPanel"
+        },
+        "9554e44c-a0c7-4564-b92c-02314adf5544": {
+            "paths": [
+                "app/controller/NRS11Panel.js"
+            ],
+            "className": "NRS11Panel"
         }
     },
     "expandedState": {

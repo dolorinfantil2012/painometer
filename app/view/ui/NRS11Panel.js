@@ -14,10 +14,192 @@
  */
 
 Ext.define('Painometer.view.ui.NRS11Panel', {
-    extend: 'Ext.Container',
+    extend: 'Ext.form.Panel',
 
     config: {
-        html: 'NRS11Panel under construction'
+        html: '',
+        id: 'NRS11Panel',
+        style: 'background-color:white;',
+        scrollable: false,
+        items: [
+            {
+                xtype: 'container',
+                id: 'NRSNavContainer',
+                defaults: {
+                    width: 29,
+                    height: 25,
+                    style: 'margin-top: 15px; text-align: center; background-position: center center; background-size: 52px;'
+                },
+                layout: {
+                    type: 'hbox'
+                },
+                items: [
+                    {
+                        xtype: 'container',
+                        html: 0,
+                        id: 'smallNRS0'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 1,
+                        id: 'smallNRS1'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 2,
+                        id: 'smallNRS2'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 3,
+                        id: 'smallNRS3'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 4,
+                        id: 'smallNRS4'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 5,
+                        id: 'smallNRS5'
+                    },
+                    {
+                        xtype: 'container',
+                        height: '',
+                        html: 6,
+                        id: 'smallNRS6'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 7,
+                        id: 'smallNRS7'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 8,
+                        id: 'smallNRS8'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 9,
+                        id: 'smallNRS9'
+                    },
+                    {
+                        xtype: 'container',
+                        html: 10,
+                        id: 'smallNRS10'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                height: 436,
+                id: 'InfoCaroCont2',
+                items: [
+                    {
+                        xtype: 'container',
+                        docked: 'right',
+                        id: 'infoContainer2',
+                        layout: {
+                            align: 'end',
+                            pack: 'end',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                id: 'infoBtn2',
+                                style: 'border:0',
+                                ui: 'info_btn-small',
+                                width: 22,
+                                iconCls: 'info',
+                                iconMask: true
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'carousel',
+                        height: 433,
+                        id: 'NRSCarousel',
+                        defaults: {
+                            style: 'padding-top: 80px; padding-left: 110px; font-size: 180px;',
+                            
+                        },
+                        items: [
+                            {
+                                xtype: 'container',
+                                height: 445,
+                                html: 0,
+                                id: 'NRS0',
+                                value: 0
+                            },
+                            {
+                                xtype: 'container',
+                                html: 1,
+                                id: 'NRS1',
+                                value: 1
+                            },
+                            {
+                                xtype: 'container',
+                                html: 2,
+                                id: 'NRS2',
+                                value: 2
+                            },
+                            {
+                                xtype: 'container',
+                                html: 3,
+                                id: 'NRS3',
+                                value: 3
+                            },
+                            {
+                                xtype: 'container',
+                                html: 4,
+                                id: 'NRS4',
+                                value: 4
+                            },
+                            {
+                                xtype: 'container',
+                                html: 5,
+                                id: 'NRS5',
+                                value: 5
+                            },
+                            {
+                                xtype: 'container',
+                                html: 6,
+                                id: 'NRS6',
+                                value: 6
+                            },
+                            {
+                                xtype: 'container',
+                                html: 7,
+                                id: 'NRS7',
+                                value: 7
+                            },
+                            {
+                                xtype: 'container',
+                                html: 8,
+                                id: 'NRS8',
+                                value: 8
+                            },
+                            {
+                                xtype: 'container',
+                                html: 9,
+                                id: 'NRS9',
+                                value: 9
+                            },
+                            {
+                                xtype: 'container',
+                                html: 10,
+                                id: 'NRS10',
+                                style: 'padding-top: 80px; padding-left: 60px; font-size: 180px',
+                                value: 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 
 });

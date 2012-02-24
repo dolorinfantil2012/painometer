@@ -18,8 +18,24 @@
     "customConfigs": [],
     "designerId": "7e707a99-90db-4d80-9225-13d04587e7d7",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
+        {
+            "id": "ExtBox1-ext-gen37357",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "NRS11PanelIt"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen36222"
+        },
         {
             "id": "ExtBox1-ext-gen5499",
             "type": "linkedinstance",
@@ -35,22 +51,6 @@
             "iconCls": "icon-linkedinstance",
             "expanded": true,
             "masterInstanceId": "ExtBox1-ext-gen3974"
-        },
-        {
-            "id": "ExtBox1-ext-gen37357",
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "id": "nrs11PanelIt"
-            },
-            "customConfigs": [],
-            "iconCls": "icon-linkedinstance",
-            "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen36222"
         },
         {
             "id": "ExtBox1-ext-gen38379",

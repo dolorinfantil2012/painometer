@@ -1,18 +1,556 @@
 {
     "id": "ExtBox1-ext-gen36222",
-    "type": "container",
+    "type": "formpanel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "html": "NRS11Panel under construction",
+        "html": "",
+        "id": "NRS11Panel",
+        "style": "background-color:white;",
+        "scrollable": "false",
         "designer|userClassName": "NRS11Panel",
         "designer|userAlias": "nrs11panel"
     },
     "customConfigs": [],
     "designerId": "bb13e684-a2b2-4f1d-ac4b-ed6ff0932d05",
     "$viewOrder": 3,
-    "expanded": true
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6248",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": "NRSNavContainer",
+                "defaults": "{\n   width: 29,\n   height: 25,\n   style: \n        'margin-top: 15px; text-align: center; background-position: center center; background-size: 52px;'\n}",
+                "layout": "hbox",
+                "designer|userClassName": "MyContainer10"
+            },
+            "customConfigs": [],
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen11676",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 0,
+                        "id": "smallNRS0",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen18222",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 1,
+                        "id": "smallNRS1",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen11821",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 2,
+                        "id": "smallNRS2",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen11932",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 3,
+                        "id": "smallNRS3",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12044",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 4,
+                        "id": "smallNRS4",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12157",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 5,
+                        "id": "smallNRS5",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12271",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "",
+                        "html": 6,
+                        "id": "smallNRS6",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12386",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 7,
+                        "id": "smallNRS7",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12502",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 8,
+                        "id": "smallNRS8",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12619",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 9,
+                        "id": "smallNRS9",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen12857",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": 10,
+                        "id": "smallNRS10",
+                        "designer|userClassName": "MyContainer11"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen23772",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 436,
+                "id": "InfoCaroCont2",
+                "designer|userClassName": "MyContainer23"
+            },
+            "customConfigs": [],
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen27355",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "id": "infoContainer2",
+                        "layout": "hbox",
+                        "designer|userClassName": "MyContainer8",
+                        "container|align": "end",
+                        "container|pack": "end"
+                    },
+                    "customConfigs": [],
+                    "expanded": false,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen27358",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": null,
+                                "id": "infoBtn2",
+                                "style": "border:0",
+                                "ui": "info_btn-small",
+                                "width": 22,
+                                "icon": null,
+                                "iconCls": "info",
+                                "iconMask": true,
+                                "text": null,
+                                "designer|userClassName": "MyButton"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen24407",
+                    "type": "carousel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 433,
+                        "id": "NRSCarousel",
+                        "defaults": "{\nstyle: 'padding-top: 80px; padding-left: 110px; font-size: 180px;',\n  \n}",
+                        "designer|userClassName": "MyCarousel1"
+                    },
+                    "customConfigs": [],
+                    "expanded": false,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen24908",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 445,
+                                "html": 0,
+                                "id": "NRS0",
+                                "designer|userClassName": "MyContainer24",
+                                "value": 0
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25062",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 1,
+                                "id": "NRS1",
+                                "designer|userClassName": "MyContainer25",
+                                "value": 1
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25217",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 2,
+                                "id": "NRS2",
+                                "designer|userClassName": "MyContainer26",
+                                "value": 2
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25401",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 3,
+                                "id": "NRS3",
+                                "designer|userClassName": "MyContainer27",
+                                "value": 3
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25555",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 4,
+                                "id": "NRS4",
+                                "designer|userClassName": "MyContainer28",
+                                "value": 4
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25707",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 5,
+                                "id": "NRS5",
+                                "designer|userClassName": "MyContainer29",
+                                "value": 5
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25892",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 6,
+                                "id": "NRS6",
+                                "designer|userClassName": "MyContainer30",
+                                "value": 6
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen26046",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 7,
+                                "id": "NRS7",
+                                "designer|userClassName": "MyContainer31",
+                                "value": 7
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen26202",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 8,
+                                "id": "NRS8",
+                                "designer|userClassName": "MyContainer32",
+                                "value": 8
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen26594",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 9,
+                                "id": "NRS9",
+                                "designer|userClassName": "MyContainer34",
+                                "value": 9
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen27049",
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": 10,
+                                "id": "NRS10",
+                                "style": "padding-top: 80px; padding-left: 60px; font-size: 180px",
+                                "designer|userClassName": "MyContainer33",
+                                "value": 10
+                            },
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "value",
+                                    "type": "number"
+                                }
+                            ],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

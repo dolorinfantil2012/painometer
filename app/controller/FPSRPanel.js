@@ -41,6 +41,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
 
 
+
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 2;
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
@@ -60,6 +61,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
     },
 
     onInfoButtonTap: function(button, e, options) {
+
 
 
 

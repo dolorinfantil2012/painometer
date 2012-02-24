@@ -34,6 +34,7 @@ Ext.define('Painometer.controller.ConfigController', {
 
 
 
+
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);

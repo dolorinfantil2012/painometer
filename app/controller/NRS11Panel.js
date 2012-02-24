@@ -40,6 +40,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
 
 
 
+
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value;
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
@@ -59,6 +60,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
     },
 
     onInfoButtonTap: function(button, e, options) {
+
 
 
 

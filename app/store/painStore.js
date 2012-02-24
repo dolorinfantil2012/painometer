@@ -16,6 +16,7 @@ Ext.define('Painometer.store.painStore', {
     extend: 'Painometer.store.base.painStore',
 
     constructor: function(cfg) {
+
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);

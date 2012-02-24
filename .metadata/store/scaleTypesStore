@@ -8,7 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "data": "[\n{ idScale: 1, label: \"FPS-R\"},\n{ idScale: 2, label: \"NRS-11\"},\n{ idScale: 3, label: \"CAS\"},\n{ idScale: 4, label: \"VAS\"}\n]",
+        "data": "[\n{ idScale: 0, label: \"FPS-R\"},\n{ idScale: 1, label: \"NRS-11\"},\n{ idScale: 2, label: \"CAS\"},\n{ idScale: 3, label: \"VAS\"}\n]",
         "model": "ScaleTypes",
         "storeId": "scaleTypesStoreId",
         "designer|userClassName": "scaleTypesStore",

@@ -38,13 +38,11 @@ Ext.define('Painometer.view.ui.MainContainer', {
         items: [
             {
                 xtype: 'fpsrpanel',
-                id: 'FPSRPanelIt',
-                style: 'background-color:white;'
+                id: 'FpsrPanel'
             },
             {
                 xtype: 'nrs11panel',
-                id: 'nrs11PanelIt',
-                style: 'background-color:white;'
+                id: 'Nrs11Panel'
             },
             {
                 xtype: 'caspanel',

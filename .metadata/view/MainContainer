@@ -19,10 +19,10 @@
     "customConfigs": [],
     "designerId": "7e707a99-90db-4d80-9225-13d04587e7d7",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen5499",
+            "id": "ExtBox1-ext-gen11612",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -30,8 +30,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "FPSRPanelIt",
-                "style": "background-color:white;"
+                "id": "FpsrPanel"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -39,7 +38,7 @@
             "masterInstanceId": "ExtBox1-ext-gen3974"
         },
         {
-            "id": "ExtBox1-ext-gen37357",
+            "id": "ExtBox1-ext-gen12461",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -47,8 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "nrs11PanelIt",
-                "style": "background-color:white;"
+                "id": "Nrs11Panel"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

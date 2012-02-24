@@ -23,19 +23,19 @@ Ext.define('Painometer.store.base.scaleTypesStore', {
         autoLoad: true,
         data: [
             {
-                idScale: 1,
+                idScale: 0,
                 label: 'FPS-R'
             },
             {
-                idScale: 2,
+                idScale: 1,
                 label: 'NRS-11'
             },
             {
-                idScale: 3,
+                idScale: 2,
                 label: 'CAS'
             },
             {
-                idScale: 4,
+                idScale: 3,
                 label: 'VAS'
             }
         ],

@@ -45,7 +45,8 @@ Ext.application({
 
     controllers: [
         'ConfigController',
-        'FPSRPanel'
+        'FPSRPanel',
+        'NRS11Panel'
     ],
 
     launch: function() {

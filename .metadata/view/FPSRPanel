@@ -9,6 +9,7 @@
     "userConfig": {
         "html": null,
         "id": "FPSRPanel",
+        "style": "background-color:white;",
         "layout": "fit",
         "scrollable": "false",
         "designer|userClassName": "FPSRPanel",
@@ -17,7 +18,7 @@
     "customConfigs": [],
     "designerId": "5e0c77f3-813b-4b62-b539-aadb9241db86",
     "$viewOrder": 2,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen5820",
@@ -185,7 +186,7 @@
                         "container|pack": "end"
                     },
                     "customConfigs": [],
-                    "expanded": false,
+                    "expanded": true,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen8369",
@@ -240,7 +241,7 @@
                             "userConfig": {
                                 "height": null,
                                 "id": "face_1",
-                                "style": null,
+                                "style": "background-color:white;",
                                 "src": "resources/images/fpsr/cara1.png",
                                 "designer|userClassName": "MyImage6",
                                 "value": 0

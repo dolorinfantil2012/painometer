@@ -95,6 +95,12 @@
                 "app/store/base/painStore.js"
             ],
             "className": "painStore"
+        },
+        "9554e44c-a0c7-4564-b92c-02314adf5544": {
+            "paths": [
+                "app/controller/NRS11Panel.js"
+            ],
+            "className": "NRS11Panel"
         }
     },
     "expandedState": {

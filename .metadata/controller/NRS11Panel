@@ -28,7 +28,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "numActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value;\r\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\r\n\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value;\r\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\r\n\n            newFace.addCls(\"face-selected\");\r\n        }\r\n\n        /* guardar valor al model */\r\n        /* guardar model al disc */;",
+                "implHandler": "\r\n        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value;\r\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\r\n\r\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\r\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value;\r\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\r\n\r\n            newFace.addCls(\"face-selected\");\r\n        }\r\n\r\n        /* guardar valor al model */\r\n        /* guardar model al disc */;",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "numContainer",
@@ -47,7 +47,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onInfoButtonTap",
-                "implHandler": "        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
+                "implHandler": "\r\n        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",

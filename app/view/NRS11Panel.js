@@ -17,7 +17,6 @@ Ext.define('Painometer.view.NRS11Panel', {
     alias: 'widget.nrs11panel',
 
     initialize: function() {
-
         var me = this;
         me.callParent(arguments);
     }

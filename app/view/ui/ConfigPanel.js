@@ -44,12 +44,17 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                     type: 'hbox'
                 },
                 instructions: 'Opcions generals de l\'eina.',
-                title: 'Opcions Generals',
                 items: [
                     {
                         xtype: 'selectfield',
-                        width: 163,
+                        docked: 'top',
+                        height: '',
+                        id: 'ScaleSel',
+                        itemId: 'ScaleSel',
+                        width: '',
                         label: 'Escala',
+                        labelAlign: 'bottom',
+                        labelWidth: '40%',
                         name: 'escalaType',
                         displayField: 'label',
                         store: 'scaleTypesStoreId',
@@ -57,11 +62,16 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                     },
                     {
                         xtype: 'selectfield',
+                        docked: 'top',
+                        height: '',
+                        width: '',
                         label: 'Idioma',
-                        name: 'language',
+                        labelAlign: 'bottom',
+                        labelWidth: '40%',
+                        name: 'Language',
                         displayField: 'label',
                         store: 'languageStoreId',
-                        valueField: 'idLang'
+                        valueField: 'idLang\n'
                     }
                 ]
             }

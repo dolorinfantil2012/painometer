@@ -17,7 +17,6 @@ Ext.define('Painometer.view.FPSRPanel', {
     alias: 'widget.fpsrpanel',
 
     initialize: function() {
-
         var me = this;
         me.callParent(arguments);
     }

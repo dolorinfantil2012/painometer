@@ -16,7 +16,6 @@ Ext.define('Painometer.view.MainContainer', {
     extend: 'Painometer.view.ui.MainContainer',
 
     initialize: function() {
-
         var me = this;
         me.callParent(arguments);
     }

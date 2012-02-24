@@ -9,8 +9,9 @@
     "userConfig": {
         "designer|initialView": true,
         "id": "MainContainer",
-        "style": "background-color:white",
+        "style": "background-color:white;",
         "ui": "",
+        "defaults": "{\nstyle:'background-color:white;',\n}",
         "layout": "card",
         "designer|userClassName": "MainContainer",
         "container|animation": "cube"
@@ -18,7 +19,7 @@
     "customConfigs": [],
     "designerId": "7e707a99-90db-4d80-9225-13d04587e7d7",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen5499",
@@ -29,7 +30,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "FPSRPanelIt"
+                "id": "FPSRPanelIt",
+                "style": "background-color:white;"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -45,7 +47,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "nrs11PanelIt"
+                "id": "nrs11PanelIt",
+                "style": "background-color:white;"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -61,7 +64,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "casPanelIt"
+                "id": "casPanelIt",
+                "style": "background-color:white;"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -77,7 +81,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "vasPanelIt"
+                "id": "vasPanelIt",
+                "style": "background-color:white;"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

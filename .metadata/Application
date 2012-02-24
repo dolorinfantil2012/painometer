@@ -10,11 +10,13 @@
         "models": [
             "Config",
             "ScaleTypes",
-            "Language"
+            "Language",
+            "Pain"
         ],
         "stores": [
             "scaleTypesStoreId",
-            "languageStoreId"
+            "languageStoreId",
+            "painStoreId"
         ],
         "views": [
             "MainContainer",

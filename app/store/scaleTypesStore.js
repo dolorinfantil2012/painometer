@@ -16,7 +16,6 @@ Ext.define('Painometer.store.scaleTypesStore', {
     extend: 'Painometer.store.base.scaleTypesStore',
 
     constructor: function(cfg) {
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);

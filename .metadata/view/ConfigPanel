@@ -23,7 +23,7 @@
     ],
     "designerId": "5d1b5cba-1b1c-459d-b90b-4a6a7b52a15f",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen13702",
@@ -72,7 +72,7 @@
                 "defaults": "{\nrequired: true,\nlabelAlign: 'left',\nlabelWidth: '40%'\n}",
                 "layout": "hbox",
                 "instructions": "Opcions generals de l'eina.",
-                "title": "Opcions Generals",
+                "title": null,
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
@@ -87,9 +87,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 163,
+                        "docked": "top",
+                        "height": "",
+                        "id": "ScaleSel",
+                        "itemId": "ScaleSel",
+                        "width": "",
                         "label": "Escala",
-                        "labelWidth": null,
+                        "labelAlign": "bottom",
+                        "labelWidth": "40%",
                         "name": "escalaType",
                         "required": null,
                         "displayField": "label",
@@ -101,7 +106,7 @@
                     "expanded": true
                 },
                 {
-                    "id": "ExtBox1-ext-gen6563",
+                    "id": "ExtBox1-ext-gen43421",
                     "type": "selectfield",
                     "reference": {
                         "name": "items",
@@ -109,12 +114,18 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "docked": "top",
+                        "height": "",
+                        "width": "",
                         "label": "Idioma",
-                        "name": "language",
+                        "labelAlign": "bottom",
+                        "labelWidth": "40%",
+                        "name": "Language",
+                        "required": null,
                         "displayField": "label",
                         "store": "languageStoreId",
-                        "valueField": "idLang",
-                        "designer|userClassName": "MySelectField1"
+                        "valueField": "idLang\n",
+                        "designer|userClassName": "MySelectField"
                     },
                     "customConfigs": [],
                     "expanded": true

@@ -74,6 +74,10 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
             {
                 xtype: 'container',
                 id: 'InfoCaroCont',
+                defaults: {
+                    style: 'background-color:white',
+                    
+                },
                 layout: {
                     type: 'fit'
                 },

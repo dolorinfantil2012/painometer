@@ -13,7 +13,7 @@
     "customConfigs": [],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15177",
@@ -41,7 +41,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "\r\n        var me = this;\r\n        me.getMainContainer().setActiveItem(0);",
+                "implHandler": "var me = this;\r\nvar scale = me.getScaleSel().getValue() - 1;\r\nme.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -62,6 +62,38 @@
                 "ref": "mainContainer",
                 "selector": "#MainContainer",
                 "designer|userClassName": "mainContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16407",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "painData",
+                "selector": "#painStoreId",
+                "designer|userClassName": "painData"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen17185",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "scaleSel",
+                "selector": "#ScaleSel",
+                "designer|userClassName": "scaleSel"
             },
             "customConfigs": [],
             "expanded": true

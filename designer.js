@@ -21,12 +21,14 @@ Ext.application({
     models: [
         'Config',
         'ScaleTypes',
-        'Language'
+        'Language',
+        'Pain'
     ],
 
     stores: [
         'scaleTypesStore',
-        'languageStore'
+        'languageStore',
+        'painStore'
     ],
 
     views: [

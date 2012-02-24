@@ -25,28 +25,36 @@ Ext.define('Painometer.view.ui.MainContainer', {
 
     config: {
         id: 'MainContainer',
-        style: 'background-color:white',
+        style: 'background-color:white;',
         ui: '',
         layout: {
             animation: 'cube',
             type: 'card'
         },
+        defaults: {
+            style: 'background-color:white;',
+            
+        },
         items: [
             {
                 xtype: 'fpsrpanel',
-                id: 'FPSRPanelIt'
+                id: 'FPSRPanelIt',
+                style: 'background-color:white;'
             },
             {
                 xtype: 'nrs11panel',
-                id: 'nrs11PanelIt'
+                id: 'nrs11PanelIt',
+                style: 'background-color:white;'
             },
             {
                 xtype: 'caspanel',
-                id: 'casPanelIt'
+                id: 'casPanelIt',
+                style: 'background-color:white;'
             },
             {
                 xtype: 'vaspanel',
-                id: 'vasPanelIt'
+                id: 'vasPanelIt',
+                style: 'background-color:white;'
             },
             {
                 xtype: 'configpanel',

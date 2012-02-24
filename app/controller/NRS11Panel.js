@@ -52,7 +52,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
         }
 
         /* guardar valor al model */
-        /* guardar model al disc */
+        /* guardar model al disc */;
     },
 
     onInfoButtonTap: function(button, e, options) {

@@ -90,9 +90,9 @@
         }
     },
     "expandedState": {
-        "data": true,
+        "data": false,
         "model": true,
         "component": true,
-        "controller": true
+        "controller": false
     }
 }

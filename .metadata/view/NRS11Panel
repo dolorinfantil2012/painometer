@@ -230,7 +230,7 @@
                 "designer|userClassName": "MyContainer23"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen27355",
@@ -249,7 +249,7 @@
                         "container|pack": "end"
                     },
                     "customConfigs": [],
-                    "expanded": false,
+                    "expanded": true,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen27358",

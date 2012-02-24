@@ -23,20 +23,21 @@ Ext.define('Painometer.controller.NRS11Panel', {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
             infoBtn2: '#infoBtn2',
-            mainContainer: '#mainContainer'
+            mainContainer: '#MainContainer'
         },
 
         control: {
             "numContainer": {
                 activate: 'numActivate'
             },
-            "infoBtn": {
+            "infoBtn2": {
                 tap: 'onInfoButtonTap'
             }
         }
     },
 
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
+
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value;
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
@@ -52,10 +53,11 @@ Ext.define('Painometer.controller.NRS11Panel', {
         }
 
         /* guardar valor al model */
-        /* guardar model al disc */
+        /* guardar model al disc */;
     },
 
     onInfoButtonTap: function(button, e, options) {
+
         var me = this;
         me.getMainContainer().setActiveItem(4);
     }

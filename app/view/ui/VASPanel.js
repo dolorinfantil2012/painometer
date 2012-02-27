@@ -17,7 +17,49 @@ Ext.define('Painometer.view.ui.VASPanel', {
     extend: 'Ext.Container',
 
     config: {
-        html: 'VASPanel under construction'
+        html: 'VASPanel under construction',
+        style: 'background-color:white;',
+        ui: '',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'container',
+                cls: [
+                    'sencha-vas-slider'
+                ],
+                id: 'VASSliderContainer',
+                style: 'background-color:white;',
+                items: [
+                    {
+                        xtype: 'sliderfield',
+                        centered: true
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                docked: 'right',
+                id: 'infoContainer',
+                layout: {
+                    align: 'end',
+                    pack: 'end',
+                    type: 'hbox'
+                },
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'infoBtn',
+                        style: 'border:0',
+                        ui: 'info_btn-small',
+                        width: 22,
+                        iconCls: 'info',
+                        iconMask: true
+                    }
+                ]
+            }
+        ]
     }
 
 });

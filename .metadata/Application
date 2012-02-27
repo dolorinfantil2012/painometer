@@ -14,9 +14,9 @@
             "Pain"
         ],
         "stores": [
-            "scaleTypesStoreId",
-            "languageStoreId",
-            "painStoreId"
+            "scaleTypesStore",
+            "languageStore",
+            "painStore"
         ],
         "views": [
             "MainContainer",

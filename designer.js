@@ -50,6 +50,6 @@ Ext.application({
     ],
 
     launch: function() {
-        Ext.create('Painometer.view.Viewport');
+        Ext.create('Painometer.view.MainContainer', {fullscreen: true});
     }
 });

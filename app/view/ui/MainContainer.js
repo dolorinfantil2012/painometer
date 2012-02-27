@@ -51,8 +51,7 @@ Ext.define('Painometer.view.ui.MainContainer', {
             },
             {
                 xtype: 'vaspanel',
-                id: 'vasPanelIt',
-                style: 'background-color:white;'
+                id: 'vasPanelIt'
             },
             {
                 xtype: 'configpanel',

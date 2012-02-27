@@ -42,3 +42,85 @@
     border: 1px solid lightgray;
     //-webkit-transform: scale(1.2);
 }
+
+/**************************************************************/
+/* VAS SLIDER                                                 */
+/**************************************************************/
+/*@import '../global';*/
+
+/**
+ * Includes default form slider styles.
+ *
+ * @member Ext.field.Slider
+ */
+@mixin sencha-vas-sliders {
+
+  .x-slider-field {
+    .x-component-outer {
+      padding: $form-spacing;
+    }
+  }
+
+  .x-slider {
+      position: relative;
+      height: 3cm;
+      min-height: 0;
+      min-width: 0;
+      background-image: url(../images/cas_bg.png);
+      width: 10cm;
+      background-size: 10cm 3cm;
+      background-repeat: no-repeat;
+
+    > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+  .x-slider.x-item-disabled {
+    opacity: .6;
+  }
+
+    .x-thumb {
+      position: absolute;
+      height: 3cm;
+      width: 3cm;
+
+      // The actual thumb
+      &:before {
+        @include insertion($form-toggle-size, $form-toggle-size, $form-thumb-space, $form-thumb-space);
+        border: 1px solid darken($form-light, 30%);
+        //@if $include-border-radius { @include border-radius($form-toggle-size/2); }
+        @include border-radius(0);
+        // overflow: visible;
+        @include background-gradient($form-light);
+        @include background-clip(padding-box);
+      }
+
+      &.x-dragging {
+        &:before {
+          @include background-gradient(darken($form-light, 5%));
+        }
+        opacity: 1;
+      }
+    }
+
+    // Create the slider track
+    .x-slider:after {
+      @include insertion(auto, $form-slider-size, $form-toggle-size / 2 - $form-slider-size/2 + $form-spacing/2 - $form-thumb-space / 2, 0);
+      right: 0;
+      margin: 0 $form-toggle-size/2;
+      
+      //@include background-gradient($form-light, 'recessed');*/
+      border: .1em solid rgba(#000, .1);
+      border-bottom: 0;
+      -webkit-box-shadow: rgba(#fff,.7) 0 .1em 0;
+      @include border-radius($form-slider-size/2);
+    }
+  
+}
+
+.sencha-vas-slider {
+  @include sencha-vas-sliders;
+}

@@ -59,13 +59,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
 
     onInfoButtonTap: function(button, e, options) {
 
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> pere
         var me = this;
         me.getMainContainer().setActiveItem(4);
     }

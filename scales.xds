@@ -90,10 +90,10 @@
         },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
-                "app/store/painStore.js",
-                "app/store/base/painStore.js"
+                "app/store/ConfigStore.js",
+                "app/store/base/ConfigStore.js"
             ],
-            "className": "painStore"
+            "className": "ConfigStore"
         },
         "9554e44c-a0c7-4564-b92c-02314adf5544": {
             "paths": [
@@ -118,16 +118,10 @@
                 "app/model/Language.js"
             ],
             "className": "Language"
-        },
-        "300b0dc5-5aa3-4f98-ad0b-e28835185014": {
-            "paths": [
-                "app/model/Pain.js"
-            ],
-            "className": "Pain"
         }
     },
     "expandedState": {
-        "data": false,
+        "data": true,
         "model": false,
         "component": true,
         "controller": true

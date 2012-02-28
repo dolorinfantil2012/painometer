@@ -30,7 +30,7 @@
             "userConfig": {
                 "height": null,
                 "id": "NRSNavContainer",
-                "defaults": "{\n   width: 29,\n   height: 25,\n   style: \n        'margin-top: 15px; text-align: center; background-position: center center; background-size: 52px;'\n}",
+                "defaults": "{\n   width: 29,\n   height: 20,\n   style: \n        'margin-top: 15px; text-align: center; background-position: center center; '\n}",
                 "layout": "hbox",
                 "designer|userClassName": "MyContainer10"
             },
@@ -142,7 +142,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": "",
+                        "height": null,
                         "html": 6,
                         "id": "smallNRS6",
                         "designer|userClassName": "MyContainer11"
@@ -225,8 +225,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 436,
+                "height": null,
                 "id": "InfoCaroCont2",
+                "width": null,
+                "defaults": "{\nstyle:'background-color:white',\n}",
                 "designer|userClassName": "MyContainer23"
             },
             "customConfigs": [],
@@ -249,7 +251,7 @@
                         "container|pack": "end"
                     },
                     "customConfigs": [],
-                    "expanded": true,
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen27358",
@@ -285,9 +287,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 433,
+                        "height": null,
                         "id": "NRSCarousel",
-                        "defaults": "{\nstyle: 'padding-top: 80px; padding-left: 110px; font-size: 180px;',\n  \n}",
+                        "style": " height: 445px; width: 300px;",
+                        "defaults": "{\nstyle: 'padding-top: 100px; padding-left: 100px; font-size: 180px;'\n  \n}",
                         "designer|userClassName": "MyCarousel1"
                     },
                     "customConfigs": [],
@@ -302,9 +305,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "height": 445,
+                                "height": null,
                                 "html": 0,
                                 "id": "NRS0",
+                                "tpl": null,
                                 "designer|userClassName": "MyContainer24",
                                 "value": 0
                             },
@@ -535,7 +539,7 @@
                             "userConfig": {
                                 "html": 10,
                                 "id": "NRS10",
-                                "style": "padding-top: 80px; padding-left: 60px; font-size: 180px",
+                                "style": "padding-top: 100px; padding-left: 50px; font-size: 180px",
                                 "designer|userClassName": "MyContainer33",
                                 "value": 10
                             },

@@ -28,6 +28,11 @@ Ext.define('Painometer.model.Config', {
                 defaultValue: 0,
                 name: 'language',
                 type: 'int'
+            },
+            {
+                defaultValue: 0,
+                name: 'value',
+                type: 'int'
             }
         ]
     }

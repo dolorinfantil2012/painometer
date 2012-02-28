@@ -23,11 +23,11 @@ Ext.define('Painometer.store.base.languageStore', {
         autoLoad: true,
         data: [
             {
-                idLang: 1,
+                idLang: 0,
                 label: 'Català'
             },
             {
-                idLang: 2,
+                idLang: 1,
                 label: 'Español'
             }
         ],

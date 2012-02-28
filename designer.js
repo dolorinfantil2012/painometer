@@ -19,21 +19,18 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Config',
         'ScaleTypes',
-        'Language',
-        'Pain'
+        'Language'
     ],
 
     stores: [
         'scaleTypesStore',
         'languageStore',
-        'painStore'
+        'ConfigStore'
     ],
 
     views: [
         'MainContainer',
-        'ConfigPanel',
         'NRS11Panel',
         'CASPanel',
         'VASPanel'

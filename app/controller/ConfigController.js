@@ -16,6 +16,12 @@ Ext.define('Painometer.controller.ConfigController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        models: [
+            'Config'
+        ],
+        views: [
+            'ConfigPanel'
+        ],
         refs: {
             okConfig: '#okConfig',
             mainContainer: '#MainContainer',

@@ -27,8 +27,8 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                 id: 'NRSNavContainer',
                 defaults: {
                     width: 29,
-                    height: 25,
-                    style: 'margin-top: 15px; text-align: center; background-position: center center; background-size: 52px;'
+                    height: 20,
+                    style: 'margin-top: 15px; text-align: center; background-position: center center; '
                 },
                 layout: {
                     type: 'hbox'
@@ -66,7 +66,6 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     },
                     {
                         xtype: 'container',
-                        height: '',
                         html: 6,
                         id: 'smallNRS6'
                     },
@@ -94,8 +93,11 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
             },
             {
                 xtype: 'container',
-                height: 436,
                 id: 'InfoCaroCont2',
+                defaults: {
+                    style: 'background-color:white',
+                    
+                },
                 items: [
                     {
                         xtype: 'container',
@@ -120,16 +122,14 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     },
                     {
                         xtype: 'carousel',
-                        height: 433,
                         id: 'NRSCarousel',
+                        style: ' height: 445px; width: 300px;',
                         defaults: {
-                            style: 'padding-top: 80px; padding-left: 110px; font-size: 180px;',
-                            
+                            style: 'padding-top: 100px; padding-left: 100px; font-size: 180px;'
                         },
                         items: [
                             {
                                 xtype: 'container',
-                                height: 445,
                                 html: 0,
                                 id: 'NRS0',
                                 value: 0
@@ -192,7 +192,7 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                                 xtype: 'container',
                                 html: 10,
                                 id: 'NRS10',
-                                style: 'padding-top: 80px; padding-left: 60px; font-size: 180px',
+                                style: 'padding-top: 100px; padding-left: 50px; font-size: 180px',
                                 value: 10
                             }
                         ]

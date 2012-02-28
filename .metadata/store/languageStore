@@ -8,7 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "data": "[\n{ idLang: 1, label: \"Català\"},\n{ idLang: 2, label: \"Español\"}\n]",
+        "data": "[\n{ idLang: 0, label: \"Català\"},\n{ idLang: 1, label: \"Español\"}\n]",
         "model": "Language",
         "storeId": "languageStoreId",
         "designer|userClassName": "languageStore"

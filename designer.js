@@ -19,21 +19,18 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Config',
         'ScaleTypes',
-        'Language',
-        'Pain'
+        'Language'
     ],
 
     stores: [
         'scaleTypesStore',
         'languageStore',
-        'painStore'
+        'ConfigStore'
     ],
 
     views: [
         'MainContainer',
-        'ConfigPanel',
         'NRS11Panel',
         'CASPanel',
         'VASPanel'
@@ -50,6 +47,6 @@ Ext.application({
     ],
 
     launch: function() {
-        Ext.create('Painometer.view.Viewport');
+        Ext.create('Painometer.view.MainContainer', {fullscreen: true});
     }
 });

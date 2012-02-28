@@ -8,19 +8,16 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "Config",
             "ScaleTypes",
-            "Language",
-            "Pain"
+            "Language"
         ],
         "stores": [
-            "scaleTypesStoreId",
-            "languageStoreId",
-            "painStoreId"
+            "scaleTypesStore",
+            "languageStore",
+            "ConfigStore"
         ],
         "views": [
             "MainContainer",
-            "ConfigPanel",
             "NRS11Panel",
             "CASPanel",
             "VASPanel"

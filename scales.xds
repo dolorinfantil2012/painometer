@@ -23,8 +23,7 @@
         "7e707a99-90db-4d80-9225-13d04587e7d7": {
             "paths": [
                 "app/view/MainContainer.js",
-                "app/view/ui/MainContainer.js",
-                "app/view/Viewport.js"
+                "app/view/ui/MainContainer.js"
             ],
             "className": "MainContainer"
         },
@@ -91,21 +90,39 @@
         },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
-                "app/store/painStore.js",
-                "app/store/base/painStore.js"
+                "app/store/ConfigStore.js",
+                "app/store/base/ConfigStore.js"
             ],
-            "className": "painStore"
+            "className": "ConfigStore"
         },
         "9554e44c-a0c7-4564-b92c-02314adf5544": {
             "paths": [
                 "app/controller/NRS11Panel.js"
             ],
             "className": "NRS11Panel"
+        },
+        "42444c09-c10c-4a37-a5c2-46353cd16764": {
+            "paths": [
+                "app/model/Config.js"
+            ],
+            "className": "Config"
+        },
+        "0dda6c73-6cff-4c12-96df-16214d950e50": {
+            "paths": [
+                "app/model/ScaleTypes.js"
+            ],
+            "className": "ScaleTypes"
+        },
+        "7f37ac91-b1b4-47a6-9101-25deabc7d2c9": {
+            "paths": [
+                "app/model/Language.js"
+            ],
+            "className": "Language"
         }
     },
     "expandedState": {
         "data": true,
-        "model": true,
+        "model": false,
         "component": true,
         "controller": true
     }

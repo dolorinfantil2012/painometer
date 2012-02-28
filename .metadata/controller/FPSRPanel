@@ -16,7 +16,7 @@
     "customConfigs": [],
     "designerId": "40c4d108-b253-4287-b931-d49f315c15e2",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen29952",
@@ -45,9 +45,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "faceActivate",
-
-                "implHandler": "\r\n\r\n\r\n\r\n\r\n        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value / 2;\r\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\r\n\r\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\r\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value / 2;\r\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\r\n\r\n            newFace.addCls(\"face-selected\");\r\n        }\r\n\r\n        /* guardar valor al model */\r\n        /* guardar model al disc */;",
-
+                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value / 2;\r\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\r\n\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value / 2;\r\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\r\n\n            newFace.addCls(\"face-selected\");\r\n        }\r\n\n        /* guardar valor al model */\r\n        /* guardar model al disc */;",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "faceContainer",
@@ -114,11 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onInfoButtonTap",
-<<<<<<< HEAD
-                "implHandler": "\r\n\r\n\r\n\r\n\r\n        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
-=======
-                "implHandler": "\r\n        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
->>>>>>> pere
+                "implHandler": "        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",

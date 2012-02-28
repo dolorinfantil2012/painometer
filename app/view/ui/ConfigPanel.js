@@ -18,6 +18,9 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
 
     config: {
         id: 'ConfigPanel',
+        layout: {
+            type: 'vbox'
+        },
         scrollable: false,
         items: [
             {
@@ -34,20 +37,39 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                 ]
             },
             {
-                xtype: 'fieldset',
-                defaults: {
-                    required: true,
-                    labelAlign: 'left',
-                    labelWidth: '40%'
-                },
+                xtype: 'panel',
+                height: 183,
+                id: 'ValueCont',
                 layout: {
-                    type: 'hbox'
+                    type: 'fit'
                 },
-                instructions: 'Opcions generals de l\'eina.',
+                items: [
+                    {
+                        xtype: 'dataview',
+                        centered: true,
+                        height: 130,
+                        id: 'Value',
+                        style: 'border-width:0.1 px; border-style:solid;',
+                        width: 130,
+                        scrollable: false,
+                        itemTpl: [
+                            '<div style=" padding-top:-15px;',
+                            'font-size:100px;"><center>{valor}</center></div>'
+                        ],
+                        store: 'painStoreId'
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                layout: {
+                    type: 'default'
+                },
+                instructions: 'Opcions generals de l\'eina',
+                title: 'Opcions',
                 items: [
                     {
                         xtype: 'selectfield',
-                        docked: 'top',
                         height: '',
                         id: 'ScaleSel',
                         itemId: 'ScaleSel',
@@ -62,7 +84,6 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                     },
                     {
                         xtype: 'selectfield',
-                        docked: 'top',
                         height: '',
                         width: '',
                         label: 'Idioma',
@@ -70,7 +91,7 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         labelWidth: '40%',
                         name: 'Language',
                         displayField: 'label',
-                        store: 'languageStoreId',
+                        store: 'languageTypesStoreId',
                         valueField: 'idLang\n'
                     }
                 ]

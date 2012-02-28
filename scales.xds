@@ -23,8 +23,7 @@
         "7e707a99-90db-4d80-9225-13d04587e7d7": {
             "paths": [
                 "app/view/MainContainer.js",
-                "app/view/ui/MainContainer.js",
-                "app/view/Viewport.js"
+                "app/view/ui/MainContainer.js"
             ],
             "className": "MainContainer"
         },
@@ -84,10 +83,10 @@
         },
         "064e2aa3-bbdf-4ae7-9ed6-6688fb632ef3": {
             "paths": [
-                "app/store/languageStore.js",
-                "app/store/base/languageStore.js"
+                "app/store/languageTypesStore.js",
+                "app/store/base/languageTypesStore.js"
             ],
-            "className": "languageStore"
+            "className": "languageTypesStore"
         },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
@@ -101,6 +100,30 @@
                 "app/controller/NRS11Panel.js"
             ],
             "className": "NRS11Panel"
+        },
+        "42444c09-c10c-4a37-a5c2-46353cd16764": {
+            "paths": [
+                "app/model/Config.js"
+            ],
+            "className": "Config"
+        },
+        "0dda6c73-6cff-4c12-96df-16214d950e50": {
+            "paths": [
+                "app/model/ScaleTypes.js"
+            ],
+            "className": "ScaleTypes"
+        },
+        "7f37ac91-b1b4-47a6-9101-25deabc7d2c9": {
+            "paths": [
+                "app/model/Language.js"
+            ],
+            "className": "Language"
+        },
+        "300b0dc5-5aa3-4f98-ad0b-e28835185014": {
+            "paths": [
+                "app/model/Pain.js"
+            ],
+            "className": "Pain"
         }
     },
     "expandedState": {

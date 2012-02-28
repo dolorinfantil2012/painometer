@@ -23,5 +23,21 @@
     ],
     "designerId": "6713f8cf-7ca5-4334-94e4-24f0c7567826",
     "$viewOrder": 0,
-    "expanded": true
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen17581",
+            "type": "memoryproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMemoryProxy"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
 }

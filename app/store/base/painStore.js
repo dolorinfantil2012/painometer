@@ -29,6 +29,15 @@ Ext.define('Painometer.store.base.painStore', {
             }
         ],
         model: 'Painometer.model.Pain',
-        storeId: 'painStoreId'
+        storeId: 'painStoreId',
+        proxy: {
+            type: 'localstorage'
+        },
+        listeners: [
+            {
+                fn: 'onStoreLoad',
+                event: 'load'
+            }
+        ]
     }
 });

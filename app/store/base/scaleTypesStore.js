@@ -40,6 +40,9 @@ Ext.define('Painometer.store.base.scaleTypesStore', {
             }
         ],
         model: 'Painometer.model.ScaleTypes',
-        storeId: 'scaleTypesStoreId'
+        storeId: 'scaleTypesStoreId',
+        proxy: {
+            type: 'memory'
+        }
     }
 });

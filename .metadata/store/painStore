@@ -16,5 +16,37 @@
     "customConfigs": [],
     "designerId": "fd2548c4-ff23-4550-8829-75f7c0e67fb4",
     "$viewOrder": 2,
-    "expanded": true
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen7738",
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7292",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "name": "load",
+                "designer|userClassName": "onStoreLoad"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
 }

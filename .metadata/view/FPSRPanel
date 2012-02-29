@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "5e0c77f3-813b-4b62-b539-aadb9241db86",
     "$viewOrder": 2,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen5820",
@@ -170,48 +170,20 @@
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen7992",
-                    "type": "container",
+                    "id": "ExtBox1-ext-gen20650",
+                    "type": "linkedinstance",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "right",
-                        "id": "infoContainer",
-                        "layout": "hbox",
-                        "designer|userClassName": "MyContainer8",
-                        "container|align": "end",
-                        "container|pack": "end"
+                        "id": "infoContainerFPSR"
                     },
                     "customConfigs": [],
-                    "expanded": false,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen8369",
-                            "type": "button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "height": null,
-                                "id": "infoBtn",
-                                "style": "border:0",
-                                "ui": "info_btn-small",
-                                "width": 22,
-                                "icon": null,
-                                "iconCls": "info",
-                                "iconMask": true,
-                                "text": null,
-                                "designer|userClassName": "MyButton"
-                            },
-                            "customConfigs": [],
-                            "expanded": true
-                        }
-                    ]
+                    "iconCls": "icon-linkedinstance",
+                    "expanded": true,
+                    "masterInstanceId": "ExtBox1-ext-gen27355"
                 },
                 {
                     "id": "ExtBox1-ext-gen10653",
@@ -228,7 +200,7 @@
                         "designer|userClassName": "MyCarousel"
                     },
                     "customConfigs": [],
-                    "expanded": true,
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen12082",

@@ -16,13 +16,19 @@
         "views": [
             "ConfigPanel"
         ],
-        "designer|init": "",
+        "designer|init": "this.configStore = Ext.getStore(\"configStoreId\");\nthis.configInstance = this.configStore.first();\n",
         "designer|userClassName": "ConfigController"
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "configStore",
+            "type": "string"
+        }
+    ],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen8873",
@@ -34,7 +40,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "        var me = this;\n\n        var view = me.getValueView();\n        view.refresh();",
+                "implHandler": "\r\n        var me = this;\r\n\r\n        var view = me.getValueView();\r\n        view.refresh();",
                 "name": "activate",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "ConfigPanel",
@@ -69,9 +75,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-
-                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
-
+                "implHandler": "\r\n\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -124,6 +128,79 @@
                 "ref": "scaleSel",
                 "selector": "#ScaleSel",
                 "designer|userClassName": "scaleSel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23068",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonTap",
+                "implHandler": "var me = this;\n\nme.configStore.sync();\nme.getMainContainer().setActiveItem(4);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "infoBtn",
+                "designer|userClassName": "onButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen12585",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": "var configDefault = Ext.create('Painometer.model.Config', {\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\n\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    store.add(configDefault);\n    store.sync();\n};",
+                "name": "load",
+                "designer|targetType": "Ext.data.Store",
+                "designer|controlQuery": "configStore",
+                "designer|userClassName": "onStoreLoad"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen17082",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setValue",
+                "designer|params": [
+                    "newValue"
+                ],
+                "implHandler": "this.configInstance.set('value', newValue);",
+                "designer|userClassName": "setValue"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22696",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "infoBtn",
+                "selector": "#infoBtn",
+                "designer|userClassName": "infoBtn"
             },
             "customConfigs": [],
             "expanded": true

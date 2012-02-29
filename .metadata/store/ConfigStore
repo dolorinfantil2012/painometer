@@ -31,25 +31,6 @@
             },
             "customConfigs": [],
             "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen20287",
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onStoreLoad",
-
-                "implHandler": "        //alert(\"Store: records \" + Ext.isEmpty(records) + \" suc:\" + successful);\n\n        var configDefault = Ext.create('Painometer.model.Config', {\n            scale    : 0,\n            language : 0,\n            value    : 0\n        });\n\n        if (Ext.isEmpty(records)) {\n            // no hi ha cap registre\n            store.add(configDefault);\n            store.sync();\n        };",
-
-                "name": "load",
-                "designer|userClassName": "onStoreLoad"
-            },
-            "customConfigs": [],
-            "expanded": true
         }
     ]
 }

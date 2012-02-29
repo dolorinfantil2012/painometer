@@ -25,7 +25,6 @@ Ext.define('Painometer.controller.NRS11Panel', {
         refs: {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
-            infoBtn2: '#infoBtn2',
             mainContainer: '#MainContainer',
             NRS11Panel: '#Nrs11Panel',
             NRSCarousel: '#NRSCarousel'
@@ -35,16 +34,18 @@ Ext.define('Painometer.controller.NRS11Panel', {
             "numContainer": {
                 activate: 'numActivate'
             },
-            "infoBtn2": {
-                tap: 'onInfoButtonTap'
-            },
             "NRS11Panel": {
                 activate: 'onNRS11PanelActivate'
             }
         }
     },
 
+    init: function() {
+        this.storeConfig = Ext.getStore("configStoreId");
+    },
+
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
+
 
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value;
@@ -58,29 +59,13 @@ Ext.define('Painometer.controller.NRS11Panel', {
             var newFace    = this.getNrsNav().items.getAt(newIndex);
 
             newFace.addCls("face-selected");
+            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+            configController.setValue(newIndex);
         }
-
-        /* guardar valor al model */
-        /* guardar model al disc */;
-    },
-
-    onInfoButtonTap: function(button, e, options) {
-        var valueContainer = this.getNRSCarousel().getActiveItem();
-        var val = valueContainer.config.value;
-        var store = Ext.getStore("configStoreId");
-        var configValue = Ext.create('Painometer.model.Config', {
-            value : val
-        });
-        store.add(configValue);
-        store.sync();
-
-
-
-        var me = this;
-        me.getMainContainer().setActiveItem(4);
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+
         var storeConfig = Ext.getStore("configStoreId");
         var dataStore   = storeConfig.getData();
         var configModel = dataStore.getAt(0);

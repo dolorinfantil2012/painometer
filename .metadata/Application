@@ -23,7 +23,8 @@
             "CASPanel",
             "VASPanel",
             "ConfigPanel",
-            "FPSRPanel"
+            "FPSRPanel",
+            "infoContainer"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

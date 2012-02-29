@@ -26,12 +26,6 @@ Ext.define('Painometer.store.base.ConfigStore', {
         proxy: {
             type: 'localstorage',
             id: 'configStoreProxy'
-        },
-        listeners: [
-            {
-                fn: 'onStoreLoad',
-                event: 'load'
-            }
-        ]
+        }
     }
 });

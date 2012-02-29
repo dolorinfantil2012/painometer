@@ -16,7 +16,7 @@
     "customConfigs": [],
     "designerId": "40c4d108-b253-4287-b931-d49f315c15e2",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen29952",
@@ -45,9 +45,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "faceActivate",
-
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value / 2;\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value / 2;\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n        }\n\n        /* guardar valor al model */\n        /* guardar model al disc */;",
-
+                "implHandler": "\r\n\r\n        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value / 2;\r\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\r\n\r\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\r\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value / 2;\r\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\r\n\r\n            newFace.addCls(\"face-selected\");\r\n        }\r\n\r\n        /* guardar valor al model */\r\n        /* guardar model al disc */;",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "faceContainer",
@@ -73,22 +71,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen7984",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "infoBtn",
-                "selector": "#infoBtn",
-                "designer|userClassName": "infoBtn"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen11701",
             "type": "controllerref",
             "reference": {
@@ -100,27 +82,6 @@
                 "ref": "mainContainer",
                 "selector": "#MainContainer",
                 "designer|userClassName": "mainContainer"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen5686",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onInfoButtonTap",
-
-                "implHandler": "        var me = this;\n        me.getMainContainer().setActiveItem(4);",
-
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "infoBtn",
-                "designer|userClassName": "onInfoButtonTap"
             },
             "customConfigs": [],
             "expanded": true

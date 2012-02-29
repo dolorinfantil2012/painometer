@@ -5,7 +5,7 @@
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "/Users/roman/Sites/scales",
+        "exportPath": "C:/xampp/htdocs/painometer",
         "extPath": "touch/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -111,12 +111,19 @@
                 "app/model/Language.js"
             ],
             "className": "Language"
+        },
+        "76a4b273-e5b0-42ad-b402-232eb3fc8e82": {
+            "paths": [
+                "app/view/infoContainer.js",
+                "app/view/ui/infoContainer.js"
+            ],
+            "className": "infoContainer"
         }
     },
     "expandedState": {
-        "data": true,
-        "model": true,
-        "component": true,
-        "controller": false
+        "data": false,
+        "model": false,
+        "component": false,
+        "controller": true
     }
 }

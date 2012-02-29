@@ -20,10 +20,14 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
         html: '',
         id: 'NRS11Panel',
         style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
         scrollable: false,
         items: [
             {
                 xtype: 'container',
+                docked: 'top',
                 id: 'NRSNavContainer',
                 defaults: {
                     width: 29,
@@ -94,9 +98,14 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
             {
                 xtype: 'container',
                 id: 'InfoCaroCont2',
+                style: 'background-color:white;',
+                ui: '',
                 defaults: {
                     style: 'background-color:white',
                     
+                },
+                layout: {
+                    type: 'fit'
                 },
                 items: [
                     {
@@ -123,7 +132,7 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     {
                         xtype: 'carousel',
                         id: 'NRSCarousel',
-                        style: ' height: 445px; width: 300px;',
+                        style: 'background-color:white;',
                         defaults: {
                             style: 'padding-top: 100px; padding-left: 100px; font-size: 180px;'
                         },

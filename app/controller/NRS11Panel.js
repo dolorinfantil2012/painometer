@@ -66,7 +66,6 @@ Ext.define('Painometer.controller.NRS11Panel', {
     onInfoButtonTap: function(button, e, options) {
         var me = this;
         me.getMainContainer().setActiveItem(4);
-
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {

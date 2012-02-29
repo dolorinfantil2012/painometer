@@ -10,6 +10,7 @@
         "html": "",
         "id": "NRS11Panel",
         "style": "background-color:white;",
+        "layout": "fit",
         "scrollable": "false",
         "designer|userClassName": "NRS11Panel",
         "designer|userAlias": "nrs11panel"
@@ -17,7 +18,7 @@
     "customConfigs": [],
     "designerId": "bb13e684-a2b2-4f1d-ac4b-ed6ff0932d05",
     "$viewOrder": 3,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen6248",
@@ -28,6 +29,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "docked": "top",
                 "height": null,
                 "id": "NRSNavContainer",
                 "defaults": "{\n   width: 29,\n   height: 20,\n   style: \n        'margin-top: 15px; text-align: center; background-position: center center; '\n}",
@@ -227,8 +229,11 @@
             "userConfig": {
                 "height": null,
                 "id": "InfoCaroCont2",
+                "style": "background-color:white;",
+                "ui": "",
                 "width": null,
                 "defaults": "{\nstyle:'background-color:white',\n}",
+                "layout": "fit",
                 "designer|userClassName": "MyContainer23"
             },
             "customConfigs": [],
@@ -289,7 +294,7 @@
                     "userConfig": {
                         "height": null,
                         "id": "NRSCarousel",
-                        "style": " height: 445px; width: 300px;",
+                        "style": "background-color:white;",
                         "defaults": "{\nstyle: 'padding-top: 100px; padding-left: 100px; font-size: 180px;'\n  \n}",
                         "designer|userClassName": "MyCarousel1"
                     },

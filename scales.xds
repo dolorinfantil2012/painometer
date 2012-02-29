@@ -81,19 +81,12 @@
             ],
             "className": "VASPanel"
         },
-        "064e2aa3-bbdf-4ae7-9ed6-6688fb632ef3": {
+        "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
                 "app/store/languageStore.js",
                 "app/store/base/languageStore.js"
             ],
             "className": "languageStore"
-        },
-        "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
-            "paths": [
-                "app/store/ConfigStore.js",
-                "app/store/base/ConfigStore.js"
-            ],
-            "className": "ConfigStore"
         },
         "9554e44c-a0c7-4564-b92c-02314adf5544": {
             "paths": [

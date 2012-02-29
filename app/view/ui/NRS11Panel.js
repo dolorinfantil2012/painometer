@@ -35,6 +35,7 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     style: 'margin-top: 15px; text-align: center; background-position: center center; '
                 },
                 layout: {
+                    pack: 'center',
                     type: 'hbox'
                 },
                 items: [
@@ -134,7 +135,7 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                         id: 'NRSCarousel',
                         style: 'background-color:white;',
                         defaults: {
-                            style: 'padding-top: 100px; padding-left: 100px; font-size: 180px;'
+                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -100px; font-size: 200px; text-align: center;'
                         },
                         items: [
                             {

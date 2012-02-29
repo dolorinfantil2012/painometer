@@ -8,6 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "models": [
+            "Config",
             "ScaleTypes",
             "Language"
         ],
@@ -20,7 +21,9 @@
             "MainContainer",
             "NRS11Panel",
             "CASPanel",
-            "VASPanel"
+            "VASPanel",
+            "ConfigPanel",
+            "FPSRPanel"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

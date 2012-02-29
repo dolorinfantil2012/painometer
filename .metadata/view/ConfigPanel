@@ -9,6 +9,7 @@
     "userConfig": {
         "html": null,
         "id": "ConfigPanel",
+        "layout": "vbox",
         "scrollable": "false",
         "designer|userClassName": "ConfigPanel",
         "designer|userAlias": "configpanel",
@@ -39,7 +40,7 @@
                 "designer|userClassName": "MyTitleBar"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen14210",
@@ -61,7 +62,49 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen26050",
+            "id": "ExtBox1-ext-gen8349",
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 183,
+                "id": "ValueCont",
+                "layout": "fit",
+                "designer|userClassName": "MyPanel"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen19025",
+                    "type": "dataview",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "docked": null,
+                        "height": 130,
+                        "id": "Value",
+                        "style": "border-width:0.1 px; border-style:solid;",
+                        "width": 130,
+                        "scrollable": "false",
+                        "itemTpl": "<div style=\" padding-top:-15px;\nfont-size:100px;\"><center>{value}</center></div>",
+                        "store": "configStoreId",
+                        "designer|userClassName": "MyDataView"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen22132",
             "type": "fieldset",
             "reference": {
                 "name": "items",
@@ -69,10 +112,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "defaults": "{\nrequired: true,\nlabelAlign: 'left',\nlabelWidth: '40%'\n}",
-                "layout": "hbox",
-                "instructions": "Opcions generals de l'eina.",
-                "title": null,
+                "layout": "default",
+                "instructions": "Opcions generals de l'eina",
+                "title": "Opcions",
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
@@ -87,7 +129,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "top",
+                        "docked": null,
                         "height": "",
                         "id": "ScaleSel",
                         "itemId": "ScaleSel",
@@ -114,7 +156,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "top",
+                        "docked": null,
                         "height": "",
                         "width": "",
                         "label": "Idioma",

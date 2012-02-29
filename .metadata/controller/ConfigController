@@ -10,7 +10,9 @@
         "models": [
             "Config"
         ],
-        "stores": null,
+        "stores": [
+            "ConfigStore"
+        ],
         "views": [
             "ConfigPanel"
         ],
@@ -20,8 +22,27 @@
     "customConfigs": [],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
+        {
+            "id": "ExtBox1-ext-gen8873",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onConfigPanelActivate",
+                "implHandler": "        var me = this;\n\n        var view = me.getValueView();\n        view.refresh();",
+                "name": "activate",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "ConfigPanel",
+                "designer|userClassName": "onConfigPanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
         {
             "id": "ExtBox1-ext-gen15177",
             "type": "controllerref",
@@ -58,6 +79,22 @@
             "expanded": true
         },
         {
+            "id": "ExtBox1-ext-gen11522",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ValueView",
+                "selector": "Value",
+                "designer|userClassName": "ValueView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
             "id": "ExtBox1-ext-gen10118",
             "type": "controllerref",
             "reference": {
@@ -69,22 +106,6 @@
                 "ref": "mainContainer",
                 "selector": "#MainContainer",
                 "designer|userClassName": "mainContainer"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen16407",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "painData",
-                "selector": "#painStoreId",
-                "designer|userClassName": "painData"
             },
             "customConfigs": [],
             "expanded": true

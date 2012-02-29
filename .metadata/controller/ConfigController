@@ -7,11 +7,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "models": [
-            "Pain"
-        ],
+        "models": [],
         "stores": [
-            "painStore"
+            "languageStore"
         ],
         "views": [
             "ConfigPanel"
@@ -50,7 +48,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "var me = this;\r\n\nvar scale = me.getScaleSel().getValue();\r\nvar value = me.getPainStore().getData();\r\n\nme.getMainContainer().getItem(scale).setActiveItem(value[0]);\r\nme.getMainContainer().setActiveItem(scale);",
+                "implHandler": "\r\n        var me = this;\r\n\r\n        var scale = me.getScaleSel().getValue();\r\n        var value = me.getPainStore().getData();\r\n\r\n        me.getMainContainer().getItem(scale).setActiveItem(value[0]);\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",

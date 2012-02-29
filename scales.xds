@@ -81,19 +81,12 @@
             ],
             "className": "VASPanel"
         },
-        "064e2aa3-bbdf-4ae7-9ed6-6688fb632ef3": {
-            "paths": [
-                "app/store/languageTypesStore.js",
-                "app/store/base/languageTypesStore.js"
-            ],
-            "className": "languageTypesStore"
-        },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
-                "app/store/painStore.js",
-                "app/store/base/painStore.js"
+                "app/store/languageStore.js",
+                "app/store/base/languageStore.js"
             ],
-            "className": "painStore"
+            "className": "languageStore"
         },
         "9554e44c-a0c7-4564-b92c-02314adf5544": {
             "paths": [
@@ -118,12 +111,6 @@
                 "app/model/Language.js"
             ],
             "className": "Language"
-        },
-        "300b0dc5-5aa3-4f98-ad0b-e28835185014": {
-            "paths": [
-                "app/model/Pain.js"
-            ],
-            "className": "Pain"
         }
     },
     "expandedState": {

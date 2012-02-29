@@ -17,10 +17,10 @@ Ext.define('Painometer.controller.ConfigController', {
 
     config: {
         models: [
-            'Pain'
+            
         ],
         stores: [
-            'painStore'
+            'languageStore'
         ],
         views: [
             'ConfigPanel'
@@ -40,6 +40,7 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onConfigTap: function(button, e, options) {
+
         var me = this;
 
         var scale = me.getScaleSel().getValue();

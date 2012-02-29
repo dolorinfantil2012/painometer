@@ -19,14 +19,16 @@ Ext.define('Painometer.model.Config', {
         fields: [
             {
                 allowNull: false,
-                defaultValue: 0,
                 name: 'scale',
                 type: 'int'
             },
             {
                 allowNull: false,
-                defaultValue: 0,
                 name: 'language',
+                type: 'int'
+            },
+            {
+                name: 'value',
                 type: 'int'
             }
         ]

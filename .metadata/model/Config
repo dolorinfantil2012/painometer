@@ -24,7 +24,6 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "defaultValue": "0",
                 "name": "scale",
                 "type": "int",
                 "designer|userClassName": "MyField"
@@ -42,10 +41,25 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "defaultValue": "0",
                 "name": "language",
                 "type": "int",
                 "designer|userClassName": "MyField5"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7457",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value",
+                "type": "int",
+                "designer|userClassName": "MyField6"
             },
             "customConfigs": [],
             "expanded": true

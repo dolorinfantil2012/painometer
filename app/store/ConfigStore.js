@@ -18,12 +18,14 @@ Ext.define('Painometer.store.ConfigStore', {
     constructor: function(cfg) {
 
 
+
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
+
 
 
         //alert("Store: records " + Ext.isEmpty(records) + " suc:" + successful);

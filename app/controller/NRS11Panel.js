@@ -16,6 +16,9 @@ Ext.define('Painometer.controller.NRS11Panel', {
     extend: 'Ext.app.Controller',
 
     config: {
+        stores: [
+            'ConfigStore'
+        ],
         views: [
             'NRS11Panel'
         ],
@@ -23,7 +26,9 @@ Ext.define('Painometer.controller.NRS11Panel', {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
             infoBtn2: '#infoBtn2',
-            mainContainer: '#MainContainer'
+            mainContainer: '#MainContainer',
+            NRS11Panel: '#Nrs11Panel',
+            NRSCarousel: '#NRSCarousel'
         },
 
         control: {
@@ -32,6 +37,9 @@ Ext.define('Painometer.controller.NRS11Panel', {
             },
             "infoBtn2": {
                 tap: 'onInfoButtonTap'
+            },
+            "NRS11Panel": {
+                activate: 'onNRS11PanelActivate'
             }
         }
     },
@@ -57,9 +65,32 @@ Ext.define('Painometer.controller.NRS11Panel', {
     },
 
     onInfoButtonTap: function(button, e, options) {
-
         var me = this;
+
+
+        var activeValue = me.getNRSCarousel().getActiveItem();
+        var val = activeValue.getComponent("value");
+        var store = Ext.getStore("configStoreId");
+        var configValue = Ext.create('Painometer.model.Config', {
+            value : val
+        });
+        store.add(configValue);
+        store.sync();
+
         me.getMainContainer().setActiveItem(4);
+    },
+
+    onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+
+        var storeConfig = Ext.getStore("configStoreId");
+        var dataStore   = storeConfig.getData();
+        var configModel = dataStore.getAt(0);
+
+        var value = configModel.get("value");
+
+        var pan = this.getNRSCarousel();
+
+        pan.setActiveItem(value);
     }
 
 });

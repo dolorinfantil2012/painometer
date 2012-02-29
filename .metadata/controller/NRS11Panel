@@ -7,6 +7,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "stores": [
+            "ConfigStore"
+        ],
         "views": [
             "NRS11Panel"
         ],
@@ -47,7 +50,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onInfoButtonTap",
-                "implHandler": "\r\n        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
+                "implHandler": "var me = this;\n\n\nvar activeValue = me.getNRSCarousel().getActiveItem();\nvar val = activeValue.getComponent(\"value\");\nvar store = Ext.getStore(\"configStoreId\");\nvar configValue = Ext.create('Painometer.model.Config', {\n    value : val\n});\nstore.add(configValue);\nstore.sync();\n\nme.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn2",
@@ -116,6 +119,57 @@
                 "ref": "mainContainer",
                 "selector": "#MainContainer",
                 "designer|userClassName": "mainContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23363",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNRS11PanelActivate",
+                "implHandler": "\nvar storeConfig = Ext.getStore(\"configStoreId\");\nvar dataStore   = storeConfig.getData();\nvar configModel = dataStore.getAt(0);\n\nvar value = configModel.get(\"value\");\n\nvar pan = this.getNRSCarousel();\n\npan.setActiveItem(value);",
+                "name": "activate",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "NRS11Panel",
+                "designer|userClassName": "onNRS11PanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24036",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "NRS11Panel",
+                "selector": "#Nrs11Panel",
+                "designer|userClassName": "NRS11Panel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen28058",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "NRSCarousel",
+                "selector": "#NRSCarousel",
+                "designer|userClassName": "NRSCarousel"
             },
             "customConfigs": [],
             "expanded": true

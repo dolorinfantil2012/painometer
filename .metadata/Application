@@ -15,14 +15,15 @@
         "stores": [
             "scaleTypesStore",
             "languageStore",
-            "configStore"
+            "ConfigStore"
         ],
         "views": [
             "MainContainer",
-            "ConfigPanel",
             "NRS11Panel",
             "CASPanel",
-            "VASPanel"
+            "VASPanel",
+            "ConfigPanel",
+            "FPSRPanel"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

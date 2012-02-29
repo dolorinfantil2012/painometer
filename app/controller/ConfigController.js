@@ -17,22 +17,25 @@ Ext.define('Painometer.controller.ConfigController', {
 
     config: {
         models: [
-            
+            'Config'
         ],
         stores: [
-            'languageStore'
+            'ConfigStore'
         ],
         views: [
             'ConfigPanel'
         ],
         refs: {
             okConfig: '#okConfig',
+            ValueView: 'Value',
             mainContainer: '#MainContainer',
-            scaleSel: '#ScaleSel',
-            painStore: '#painStoreId'
+            scaleSel: '#ScaleSel'
         },
 
         control: {
+            "ConfigPanel": {
+                activate: 'onConfigPanelActivate'
+            },
             "okConfig": {
                 tap: 'onConfigTap'
             }
@@ -42,12 +45,15 @@ Ext.define('Painometer.controller.ConfigController', {
     onConfigTap: function(button, e, options) {
 
         var me = this;
-
         var scale = me.getScaleSel().getValue();
-        var value = me.getPainStore().getData();
-
-        me.getMainContainer().getItem(scale).setActiveItem(value[0]);
         me.getMainContainer().setActiveItem(scale);
+    },
+
+    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var me = this;
+
+        var view = me.getValueView();
+        view.refresh();
     }
 
 });

@@ -54,9 +54,9 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         scrollable: false,
                         itemTpl: [
                             '<div style=" padding-top:-15px;',
-                            'font-size:100px;"><center>{valor}</center></div>'
+                            'font-size:100px;"><center>{value}</center></div>'
                         ],
-                        store: 'painStoreId'
+                        store: 'configStoreId'
                     }
                 ]
             },
@@ -91,7 +91,7 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         labelWidth: '40%',
                         name: 'Language',
                         displayField: 'label',
-                        store: 'languageTypesStoreId',
+                        store: 'languageStoreId',
                         valueField: 'idLang\n'
                     }
                 ]

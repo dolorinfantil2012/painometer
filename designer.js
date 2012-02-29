@@ -27,15 +27,16 @@ Ext.application({
     stores: [
         'scaleTypesStore',
         'languageStore',
-        'configStore'
+        'ConfigStore'
     ],
 
     views: [
         'MainContainer',
-        'ConfigPanel',
         'NRS11Panel',
         'CASPanel',
-        'VASPanel'
+        'VASPanel',
+        'ConfigPanel',
+        'FPSRPanel'
     ],
 
     glossOnIcon: true,

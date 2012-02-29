@@ -94,8 +94,8 @@
                         "style": "border-width:0.1 px; border-style:solid;",
                         "width": 130,
                         "scrollable": "false",
-                        "itemTpl": "<div style=\" padding-top:-15px;\nfont-size:100px;\"><center>{valor}</center></div>",
-                        "store": "painStoreId",
+                        "itemTpl": "<div style=\" padding-top:-15px;\nfont-size:100px;\"><center>{value}</center></div>",
+                        "store": "configStoreId",
                         "designer|userClassName": "MyDataView"
                     },
                     "customConfigs": [],
@@ -165,7 +165,7 @@
                         "name": "Language",
                         "required": null,
                         "displayField": "label",
-                        "store": "languageTypesStoreId",
+                        "store": "languageStoreId",
                         "valueField": "idLang\n",
                         "designer|userClassName": "MySelectField"
                     },

@@ -7,9 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "models": [],
+        "models": [
+            "Config"
+        ],
         "stores": [
-            "languageStore"
+            "ConfigStore"
         ],
         "views": [
             "ConfigPanel"
@@ -20,8 +22,27 @@
     "customConfigs": [],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
+        {
+            "id": "ExtBox1-ext-gen8873",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onConfigPanelActivate",
+                "implHandler": "var me = this;\n\nvar view = me.getValueView();\nview.refresh();",
+                "name": "activate",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "ConfigPanel",
+                "designer|userClassName": "onConfigPanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
         {
             "id": "ExtBox1-ext-gen15177",
             "type": "controllerref",
@@ -48,11 +69,27 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "\r\n        var me = this;\r\n\r\n        var scale = me.getScaleSel().getValue();\r\n        var value = me.getPainStore().getData();\r\n\r\n        me.getMainContainer().getItem(scale).setActiveItem(value[0]);\r\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "\nvar me = this;\nvar scale = me.getScaleSel().getValue();\nme.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
                 "designer|userClassName": "onConfigTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11522",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ValueView",
+                "selector": "Value",
+                "designer|userClassName": "ValueView"
             },
             "customConfigs": [],
             "expanded": true
@@ -85,22 +122,6 @@
                 "ref": "scaleSel",
                 "selector": "#ScaleSel",
                 "designer|userClassName": "scaleSel"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen17645",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "painStore",
-                "selector": "#painStoreId",
-                "designer|userClassName": "painStore"
             },
             "customConfigs": [],
             "expanded": true

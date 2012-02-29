@@ -16,17 +16,12 @@ Ext.define('Painometer.store.ConfigStore', {
     extend: 'Painometer.store.base.ConfigStore',
 
     constructor: function(cfg) {
-
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-
-
-
         //alert("Store: records " + Ext.isEmpty(records) + " suc:" + successful);
 
         var configDefault = Ext.create('Painometer.model.Config', {

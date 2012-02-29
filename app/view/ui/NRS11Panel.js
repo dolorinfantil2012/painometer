@@ -99,6 +99,8 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
             {
                 xtype: 'container',
                 id: 'InfoCaroCont2',
+                style: 'background-color:white;',
+                ui: '',
                 defaults: {
                     style: 'background-color:white',
                     

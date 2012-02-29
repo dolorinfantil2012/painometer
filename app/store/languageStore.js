@@ -16,10 +16,6 @@ Ext.define('Painometer.store.languageStore', {
     extend: 'Painometer.store.base.languageStore',
 
     constructor: function(cfg) {
-
-
-
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);

@@ -42,7 +42,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "alert(\"Store: records \" + Ext.isEmpty(records) + \" suc:\" + successful);\n\nvar configDefault = Ext.create('Painometer.model.Config', {\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\n\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    store.add(configDefault);\n    store.sync();\n};",
+                "implHandler": "\r\n        //alert(\"Store: records \" + Ext.isEmpty(records) + \" suc:\" + successful);\r\n\r\n        var configDefault = Ext.create('Painometer.model.Config', {\r\n            scale    : 0,\r\n            language : 0,\r\n            value    : 0\r\n        });\r\n\r\n        if (Ext.isEmpty(records)) {\r\n            // no hi ha cap registre\r\n            store.add(configDefault);\r\n            store.sync();\r\n        };",
                 "name": "load",
                 "designer|userClassName": "onStoreLoad"
             },

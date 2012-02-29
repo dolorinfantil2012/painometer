@@ -44,18 +44,12 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onConfigTap: function(button, e, options) {
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 8f0c09a482ec5d68c3ed921ae183da9cb06da502
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);
     },
 
     onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-
         var me = this;
 
         var view = me.getValueView();

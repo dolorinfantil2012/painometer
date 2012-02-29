@@ -34,7 +34,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "\r\n        var me = this;\r\n\r\n        var view = me.getValueView();\r\n        view.refresh();",
+                "implHandler": "        var me = this;\n\n        var view = me.getValueView();\n        view.refresh();",
                 "name": "activate",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "ConfigPanel",
@@ -69,11 +69,9 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-<<<<<<< HEAD
-                "implHandler": "\r\n\r\n\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
-=======
-                "implHandler": "\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
->>>>>>> 8f0c09a482ec5d68c3ed921ae183da9cb06da502
+
+                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
+
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",

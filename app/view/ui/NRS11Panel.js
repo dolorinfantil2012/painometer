@@ -20,10 +20,14 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
         html: '',
         id: 'NRS11Panel',
         style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
         scrollable: false,
         items: [
             {
                 xtype: 'container',
+                docked: 'top',
                 id: 'NRSNavContainer',
                 defaults: {
                     width: 29,
@@ -31,6 +35,7 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     style: 'margin-top: 15px; text-align: center; background-position: center center; '
                 },
                 layout: {
+                    pack: 'center',
                     type: 'hbox'
                 },
                 items: [
@@ -98,6 +103,9 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     style: 'background-color:white',
                     
                 },
+                layout: {
+                    type: 'fit'
+                },
                 items: [
                     {
                         xtype: 'container',
@@ -123,9 +131,9 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                     {
                         xtype: 'carousel',
                         id: 'NRSCarousel',
-                        style: ' height: 445px; width: 300px;',
+                        style: 'background-color:white;',
                         defaults: {
-                            style: 'padding-top: 100px; padding-left: 100px; font-size: 180px;'
+                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -100px; font-size: 200px; text-align: center;'
                         },
                         items: [
                             {

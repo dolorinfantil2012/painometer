@@ -65,23 +65,12 @@ Ext.define('Painometer.controller.NRS11Panel', {
     },
 
     onInfoButtonTap: function(button, e, options) {
+
         var me = this;
-
-
-        var activeValue = me.getNRSCarousel().getActiveItem();
-        var val = activeValue.getComponent("value");
-        var store = Ext.getStore("configStoreId");
-        var configValue = Ext.create('Painometer.model.Config', {
-            value : val
-        });
-        store.add(configValue);
-        store.sync();
-
         me.getMainContainer().setActiveItem(4);
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-
         var storeConfig = Ext.getStore("configStoreId");
         var dataStore   = storeConfig.getData();
         var configModel = dataStore.getAt(0);

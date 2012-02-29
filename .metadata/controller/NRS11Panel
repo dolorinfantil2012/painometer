@@ -50,7 +50,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onInfoButtonTap",
-                "implHandler": "\nvar me = this;\nme.getMainContainer().setActiveItem(4);",
+                "implHandler": "\r\n\r\n        var me = this;\r\n        me.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn2",
@@ -133,7 +133,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNRS11PanelActivate",
-                "implHandler": "\r\n\r\n        var storeConfig = Ext.getStore(\"configStoreId\");\r\n        var dataStore   = storeConfig.getData();\r\n        var configModel = dataStore.getAt(0);\r\n\r\n        var value = configModel.get(\"value\");\r\n\r\n        var pan = this.getNRSCarousel();\r\n\r\n        pan.setActiveItem(value);",
+                "implHandler": "\r\n        var storeConfig = Ext.getStore(\"configStoreId\");\r\n        var dataStore   = storeConfig.getData();\r\n        var configModel = dataStore.getAt(0);\r\n\r\n        var value = configModel.get(\"value\");\r\n\r\n        var pan = this.getNRSCarousel();\r\n\r\n        pan.setActiveItem(value);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "NRS11Panel",

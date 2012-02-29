@@ -46,6 +46,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
 
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
 
+
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value;
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
@@ -71,6 +72,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+
 
         var storeConfig = Ext.getStore("configStoreId");
         var dataStore   = storeConfig.getData();

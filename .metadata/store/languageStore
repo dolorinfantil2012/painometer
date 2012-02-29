@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen7687",
+    "id": "ExtBox1-ext-gen12966",
     "type": "store",
     "reference": {
         "name": "items",
@@ -14,7 +14,7 @@
         "designer|userClassName": "languageStore"
     },
     "customConfigs": [],
-    "designerId": "064e2aa3-bbdf-4ae7-9ed6-6688fb632ef3",
-    "$viewOrder": 1,
+    "designerId": "fd2548c4-ff23-4550-8829-75f7c0e67fb4",
+    "$viewOrder": 2,
     "expanded": true
 }

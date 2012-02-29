@@ -19,6 +19,7 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
+        'Config',
         'ScaleTypes',
         'Language'
     ],
@@ -33,7 +34,9 @@ Ext.application({
         'MainContainer',
         'NRS11Panel',
         'CASPanel',
-        'VASPanel'
+        'VASPanel',
+        'ConfigPanel',
+        'FPSRPanel'
     ],
 
     glossOnIcon: true,

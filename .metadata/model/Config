@@ -12,7 +12,7 @@
     "customConfigs": [],
     "designerId": "42444c09-c10c-4a37-a5c2-46353cd16764",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen20058",
@@ -24,7 +24,6 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "defaultValue": "0",
                 "name": "scale",
                 "type": "int",
                 "designer|userClassName": "MyField"
@@ -42,7 +41,6 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "defaultValue": "0",
                 "name": "language",
                 "type": "int",
                 "designer|userClassName": "MyField5"

@@ -114,7 +114,6 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
                             {
                                 xtype: 'image',
                                 id: 'face_1',
-                                style: 'background-color:white;',
                                 src: 'resources/images/fpsr/cara1.png',
                                 value: 0
                             },

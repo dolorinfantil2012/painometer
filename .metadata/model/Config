@@ -24,7 +24,6 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "defaultValue": "0",
                 "name": "scale",
                 "type": "int",
                 "designer|userClassName": "MyField"
@@ -42,7 +41,6 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "defaultValue": "0",
                 "name": "language",
                 "type": "int",
                 "designer|userClassName": "MyField5"

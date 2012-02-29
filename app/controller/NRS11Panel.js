@@ -76,14 +76,18 @@ Ext.define('Painometer.controller.NRS11Panel', {
         store.add(configValue);
         store.sync();
 
+
         var me = this;
         me.getMainContainer().setActiveItem(4);
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8f0c09a482ec5d68c3ed921ae183da9cb06da502
         var storeConfig = Ext.getStore("configStoreId");
         var dataStore   = storeConfig.getData();
         var configModel = dataStore.getAt(0);

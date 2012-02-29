@@ -38,8 +38,11 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8f0c09a482ec5d68c3ed921ae183da9cb06da502
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 2;
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
@@ -60,8 +63,11 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
     onInfoButtonTap: function(button, e, options) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8f0c09a482ec5d68c3ed921ae183da9cb06da502
         var me = this;
         me.getMainContainer().setActiveItem(4);
     }

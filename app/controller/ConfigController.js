@@ -42,6 +42,19 @@ Ext.define('Painometer.controller.ConfigController', {
         }
     },
 
+    init: function() {
+        alert("initConfigController");
+
+        //var modelType = Ext.ModelManager.getModel(this.getModels()[0]);
+        //modelType.load(1, {success: this.loadModel, failure: this.initModel} );
+    },
+
+    /*loadModel: function(model) {
+        alert("load!");
+        this.model = model;
+        cc=this;
+    },*/
+
     onConfigTap: function(button, e, options) {
         var me = this;
         var scale = me.getScaleSel().getValue();
@@ -53,6 +66,17 @@ Ext.define('Painometer.controller.ConfigController', {
 
         var view = me.getValueView();
         view.refresh();
-    }
+    },
+
+    /*initModel: function(model, options, scope) {
+        
+        mm = model;
+        op = options;
+        sc = scope;
+
+        var modelType = Ext.ModelManager.getModel(this.getModels()[0]);
+        this.model = Ext.create(modelType);
+        this.model.save();
+    }*/
 
 });

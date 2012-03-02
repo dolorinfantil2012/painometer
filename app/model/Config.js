@@ -32,6 +32,10 @@ Ext.define('Painometer.model.Config', {
                 name: 'value',
                 type: 'int'
             }
-        ]
+        ],
+        proxy: {
+            type: 'localstorage',
+            id: 'AppData'
+        }
     }
 });

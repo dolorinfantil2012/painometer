@@ -12,7 +12,7 @@
     "customConfigs": [],
     "designerId": "42444c09-c10c-4a37-a5c2-46353cd16764",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen20058",
@@ -61,6 +61,21 @@
                 "name": "value",
                 "type": "int",
                 "designer|userClassName": "MyField6"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8045",
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "AppData",
+                "designer|userClassName": "MyLocalStorageProxy1"
             },
             "customConfigs": [],
             "expanded": true

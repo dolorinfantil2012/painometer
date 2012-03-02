@@ -16,10 +16,17 @@
         "views": [
             "ConfigPanel"
         ],
-        "designer|init": "",
-        "designer|userClassName": "ConfigController"
+        "designer|init": "alert(\"initConfigController\");\n\nvar modelType = Ext.ModelManager.getModel(this.getModels()[0]);\nmodelType.load(1, {success: this.loadModel, failure: this.initModel} );",
+        "designer|userClassName": "ConfigController",
+        "model": null
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "model",
+            "type": "number"
+        }
+    ],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
     "expanded": true,
@@ -122,6 +129,44 @@
                 "ref": "scaleSel",
                 "selector": "#ScaleSel",
                 "designer|userClassName": "scaleSel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9974",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadModel",
+                "designer|params": [
+                    "model"
+                ],
+                "implHandler": "/* the model exists, so we load and save in the this.model */\nalert(\"load!\");\nthis.model = model;\ncc=this;",
+                "designer|userClassName": "loadModel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen6694",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initModel",
+                "designer|params": [
+                    "model, options, scope"
+                ],
+                "implHandler": "/* init the application */\n/* we save the default model in \"this.model\"*/\n\nmm = model;\nop = options;\nsc = scope;\n\nvar modelType = Ext.ModelManager.getModel(this.getModels()[0]);\nthis.model = Ext.create(modelType);\nthis.model.save();",
+                "designer|userClassName": "initModel"
             },
             "customConfigs": [],
             "expanded": true

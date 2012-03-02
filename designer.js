@@ -50,6 +50,7 @@ Ext.application({
     ],
 
     launch: function() {
+        painometerApp = this;
         Ext.create('Painometer.view.MainContainer', {fullscreen: true});
     }
 });

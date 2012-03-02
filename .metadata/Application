@@ -25,7 +25,7 @@
             "ConfigPanel",
             "FPSRPanel"
         ],
-        "designer|launch": "",
+        "designer|launch": "painometerApp = this;",
         "glossOnIcon": true,
         "name": "Painometer"
     },

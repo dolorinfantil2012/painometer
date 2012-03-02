@@ -300,7 +300,7 @@
                         "designer|userClassName": "MyCarousel1"
                     },
                     "customConfigs": [],
-                    "expanded": true,
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen24908",

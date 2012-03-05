@@ -1,0 +1,47 @@
+{
+    "id": "ExtBox1-ext-gen27355",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "docked": "right",
+        "id": "infoContainerID",
+        "layout": "hbox",
+        "designer|userClassName": "InfoContainer",
+        "designer|userAlias": "infoContainer",
+        "container|align": "end",
+        "container|pack": "end"
+    },
+    "customConfigs": [],
+    "designerId": "76a4b273-e5b0-42ad-b402-232eb3fc8e82",
+    "$viewOrder": 6,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen27358",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": "infoBtn",
+                "style": "border:0",
+                "ui": "info_btn-small",
+                "width": 22,
+                "icon": null,
+                "iconCls": "info",
+                "iconMask": true,
+                "text": null,
+                "designer|userClassName": "MyButton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

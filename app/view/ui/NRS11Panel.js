@@ -15,6 +15,9 @@
 
 Ext.define('Painometer.view.ui.NRS11Panel', {
     extend: 'Ext.form.Panel',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
         html: '',
@@ -185,6 +188,10 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                                 value: 10
                             }
                         ]
+                    },
+                    {
+                        xtype: 'infoContainer',
+                        id: 'infoContainer'
                     }
                 ]
             }

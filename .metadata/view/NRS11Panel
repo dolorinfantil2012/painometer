@@ -515,22 +515,6 @@
                             "expanded": true
                         }
                     ]
-                },
-                {
-                    "id": "ExtBox1-ext-gen9686",
-                    "type": "linkedinstance",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "infoContainer"
-                    },
-                    "customConfigs": [],
-                    "iconCls": "icon-linkedinstance",
-                    "expanded": true,
-                    "masterInstanceId": "ExtBox1-ext-gen27355"
                 }
             ]
         }

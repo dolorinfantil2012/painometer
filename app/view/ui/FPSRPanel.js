@@ -15,6 +15,9 @@
 
 Ext.define('Painometer.view.ui.FPSRPanel', {
     extend: 'Ext.form.Panel',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
         id: 'FPSRPanel',
@@ -127,6 +130,10 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
                                 value: 10
                             }
                         ]
+                    },
+                    {
+                        xtype: 'infoContainer',
+                        id: 'infoContainerFP'
                     }
                 ]
             }

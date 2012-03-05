@@ -31,7 +31,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "numActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value;\r\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\r\n\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value;\r\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\r\n\n            newFace.addCls(\"face-selected\");\r\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\r\n            configController.setValue(newIndex);\r\n        }",
+                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value;\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value;\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n            configController.setValue(newIndex);\n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "numContainer",

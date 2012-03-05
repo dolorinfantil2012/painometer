@@ -16,7 +16,7 @@
         "views": [
             "ConfigPanel"
         ],
-        "designer|init": "this.configStore = Ext.getStore(\"configStoreId\");\nthis.configInstance = this.configStore.first();\n",
+        "designer|init": "var configDefault = Ext.create('Painometer.model.Config', {\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\n\nthis.configInstance = configDefault;\n\nthis.configStore = Ext.getStore(\"configStoreId\");\nthis.configStore.on('load', this.onStoreLoad, this);\nthis.configStore.load();\n",
         "designer|userClassName": "ConfigController"
     },
     "customConfigs": [
@@ -40,7 +40,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "        var me = this;\r\n\n        var view = me.getValueView();\r\n        view.refresh();",
+                "implHandler": "var me = this;\r\n\nalert(\"activat config panel\");\r\n\n//var view = me.getValueView();\r\n//view.refresh();",
                 "name": "activate",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "ConfigPanel",
@@ -161,10 +161,10 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "        var configDefault = Ext.create('Painometer.model.Config', {\n            scale    : 0,\n            language : 0,\n            value    : 0\n        });\n        alert(\"onstoreload hello\");\n        if (Ext.isEmpty(records)) {\n            // no hi ha cap registre\n            alert(\"onstoreload is empty\");\n            store.add(configDefault);\n            store.sync();\n        };",
+                "implHandler": "\nalert(\"onstoreload hello\");\n\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    alert(\"onstoreload is empty\");\n    store.add(this.configInstance);\n    store.sync();\n}\n\nthis.configInstance = this.configStore.first();",
                 "name": "load",
                 "designer|targetType": "Ext.data.Store",
-                "designer|controlQuery": "configStore",
+                "designer|controlQuery": "ConfigStore",
                 "designer|userClassName": "onStoreLoad"
             },
             "customConfigs": [],
@@ -183,7 +183,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "        this.configInstance.set('value', newValue);",
+                "implHandler": "\ncc = this;\naa = this.configInstance;\n\nthis.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],
@@ -201,6 +201,22 @@
                 "ref": "infoBtn",
                 "selector": "#infoBtn",
                 "designer|userClassName": "infoBtn"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16550",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ConfigPanel",
+                "selector": "#ConfigPanel",
+                "designer|userClassName": "ConfigPanel"
             },
             "customConfigs": [],
             "expanded": true

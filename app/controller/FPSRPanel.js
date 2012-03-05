@@ -21,13 +21,18 @@ Ext.define('Painometer.controller.FPSRPanel', {
         ],
         refs: {
             faceContainer: '#FPSCarousel image',
+            FPSRPanel: '#fpsrpanel',
             fpsNav: '#FPSNavContainer',
-            mainContainer: '#MainContainer'
+            mainContainer: '#MainContainer',
+            FPSCarousel: '#FPSCarousel'
         },
 
         control: {
             "faceContainer": {
                 activate: 'faceActivate'
+            },
+            "FPSRPanel": {
+                activate: 'onContainerActivate'
             }
         }
     },
@@ -45,10 +50,24 @@ Ext.define('Painometer.controller.FPSRPanel', {
             var newFace    = this.getFpsNav().items.getAt(newIndex);
 
             newFace.addCls("face-selected");
+
+            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+            configController.setValue(container.config.value);
         }
 
-        /* guardar valor al model */
-        /* guardar model al disc */;
+    },
+
+    onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var storeConfig = Ext.getStore("configStoreId");
+        var dataStore   = storeConfig.getData();
+        var configModel = dataStore.getAt(0);
+
+        var value = configModel.get("value");
+
+        var pan = this.getFPSCarousel();
+
+        value = Math.floor(value / 2);
+        pan.setActiveItem(value);
     }
 
 });

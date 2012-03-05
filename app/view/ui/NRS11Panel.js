@@ -16,7 +16,7 @@
 Ext.define('Painometer.view.ui.NRS11Panel', {
     extend: 'Ext.form.Panel',
     requires: [
-        'Painometer.view.infoContainer'
+        'Painometer.view.InfoContainer'
     ],
 
     config: {
@@ -113,10 +113,6 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                 },
                 items: [
                     {
-                        xtype: 'infoContainer',
-                        id: 'infoContainerNRS11'
-                    },
-                    {
                         xtype: 'carousel',
                         id: 'NRSCarousel',
                         style: 'background-color:white;',
@@ -192,6 +188,10 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                                 value: 10
                             }
                         ]
+                    },
+                    {
+                        xtype: 'infoContainer',
+                        id: 'infoContainer'
                     }
                 ]
             }

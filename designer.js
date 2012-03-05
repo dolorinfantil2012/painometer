@@ -37,7 +37,7 @@ Ext.application({
         'VASPanel',
         'ConfigPanel',
         'FPSRPanel',
-        'infoContainer'
+        'InfoContainer'
     ],
 
     glossOnIcon: true,

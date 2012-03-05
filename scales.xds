@@ -114,16 +114,16 @@
         },
         "76a4b273-e5b0-42ad-b402-232eb3fc8e82": {
             "paths": [
-                "app/view/infoContainer.js",
-                "app/view/ui/infoContainer.js"
+                "app/view/InfoContainer.js",
+                "app/view/ui/InfoContainer.js"
             ],
-            "className": "infoContainer"
+            "className": "InfoContainer"
         }
     },
     "expandedState": {
         "data": false,
         "model": false,
         "component": true,
-        "controller": true
+        "controller": false
     }
 }

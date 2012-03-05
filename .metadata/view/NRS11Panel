@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "bb13e684-a2b2-4f1d-ac4b-ed6ff0932d05",
     "$viewOrder": 3,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen6248",
@@ -240,22 +240,6 @@
             "customConfigs": [],
             "expanded": true,
             "cn": [
-                {
-                    "id": "ExtBox1-ext-gen18251",
-                    "type": "linkedinstance",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "infoContainerNRS11"
-                    },
-                    "customConfigs": [],
-                    "iconCls": "icon-linkedinstance",
-                    "expanded": true,
-                    "masterInstanceId": "ExtBox1-ext-gen27355"
-                },
                 {
                     "id": "ExtBox1-ext-gen24407",
                     "type": "carousel",
@@ -531,6 +515,22 @@
                             "expanded": true
                         }
                     ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen9686",
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "infoContainer"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-linkedinstance",
+                    "expanded": true,
+                    "masterInstanceId": "ExtBox1-ext-gen27355"
                 }
             ]
         }

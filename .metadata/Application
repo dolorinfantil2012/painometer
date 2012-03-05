@@ -24,7 +24,7 @@
             "VASPanel",
             "ConfigPanel",
             "FPSRPanel",
-            "infoContainer"
+            "InfoContainer"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

@@ -40,7 +40,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "\r\n\r\n        var me = this;\r\n\r\n        var view = me.getValueView();\r\n        view.refresh();",
+                "implHandler": "        var me = this;\r\n\n        var view = me.getValueView();\r\n        view.refresh();",
                 "name": "activate",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "ConfigPanel",
@@ -75,7 +75,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "\r\n\r\n\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -142,7 +142,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "\r\n        var me = this;\r\n\r\n        me.configStore.sync();\r\n        me.getMainContainer().setActiveItem(4);",
+                "implHandler": "        var me = this;\r\n\n        me.configStore.sync();\r\n        me.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -161,7 +161,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "\nvar configDefault = Ext.create('Painometer.model.Config', {\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\nalert(\"onstoreload hello\");\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    alert(\"onstoreload is empty\");\n    store.add(configDefault);\n    store.sync();\n};",
+                "implHandler": "        var configDefault = Ext.create('Painometer.model.Config', {\n            scale    : 0,\n            language : 0,\n            value    : 0\n        });\n        alert(\"onstoreload hello\");\n        if (Ext.isEmpty(records)) {\n            // no hi ha cap registre\n            alert(\"onstoreload is empty\");\n            store.add(configDefault);\n            store.sync();\n        };",
                 "name": "load",
                 "designer|targetType": "Ext.data.Store",
                 "designer|controlQuery": "configStore",
@@ -183,7 +183,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "\r\n        this.configInstance.set('value', newValue);",
+                "implHandler": "        this.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],

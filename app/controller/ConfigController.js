@@ -56,17 +56,12 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onConfigTap: function(button, e, options) {
-
-
-
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);
     },
 
     onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-
-
         var me = this;
 
         var view = me.getValueView();
@@ -74,7 +69,6 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-
         var configDefault = Ext.create('Painometer.model.Config', {
             scale    : 0,
             language : 0,
@@ -90,12 +84,10 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     setValue: function(newValue) {
-
         this.configInstance.set('value', newValue);
     },
 
     onButtonTap: function(button, e, options) {
-
         var me = this;
 
         me.configStore.sync();

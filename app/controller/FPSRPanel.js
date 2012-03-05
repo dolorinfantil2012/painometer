@@ -35,6 +35,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
 
 
+
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 2;
             var oldFace = this.getFpsNav().items.getAt(oldIndex);

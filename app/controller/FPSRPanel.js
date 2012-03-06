@@ -54,7 +54,6 @@ Ext.define('Painometer.controller.FPSRPanel', {
             var configController = this.getApplication().getController("Painometer.controller.ConfigController");
             configController.setValue(container.config.value);
         }
-
     },
 
     onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {

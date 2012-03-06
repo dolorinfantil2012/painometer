@@ -18,6 +18,7 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
 
     config: {
         id: 'ConfigPanel',
+        ui: '',
         layout: {
             type: 'vbox'
         },
@@ -33,6 +34,14 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         id: 'okConfig',
                         ui: 'confirm',
                         text: 'OK'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'creditsbtn',
+                        ui: 'forward',
+                        iconAlign: 'right',
+                        text: 'Crèdits',
+                        align: 'right'
                     }
                 ]
             },

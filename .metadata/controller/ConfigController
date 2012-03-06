@@ -40,7 +40,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "var me = this;\r\n\nalert(\"activat config panel\");\r\n\n//var view = me.getValueView();\r\n//view.refresh();",
+                "implHandler": "        var me = this;\r\n\n        alert(\"activat config panel\");\r\n\n        //var view = me.getValueView();\r\n        //view.refresh();",
                 "name": "activate",
                 "designer|targetType": "Ext.Panel",
                 "designer|controlQuery": "ConfigPanel",
@@ -161,7 +161,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "\nalert(\"onstoreload hello\");\n\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    alert(\"onstoreload is empty\");\n    store.add(this.configInstance);\n    store.sync();\n}\n\nthis.configInstance = this.configStore.first();",
+                "implHandler": "        //alert(\"onstoreload hello\");\n\n        if (Ext.isEmpty(records)) {\n            // no hi ha cap registre\n            //alert(\"onstoreload is empty\");\n            store.add(this.configInstance);\n            store.sync();\n        }\n\n        this.configInstance = this.configStore.first();",
                 "name": "load",
                 "designer|targetType": "Ext.data.Store",
                 "designer|controlQuery": "ConfigStore",
@@ -183,7 +183,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "\ncc = this;\naa = this.configInstance;\n\nthis.configInstance.set('value', newValue);",
+                "implHandler": "        cc = this;\n        aa = this.configInstance;\n\n        this.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],
@@ -217,6 +217,41 @@
                 "ref": "ConfigPanel",
                 "selector": "#ConfigPanel",
                 "designer|userClassName": "ConfigPanel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22711",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "creditsbtnTap",
+                "implHandler": "        var me = this;\n\n        me.getMainContainer().setActiveItem(5);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "creditsbtn",
+                "designer|userClassName": "creditsbtnTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24509",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "creditsbtn",
+                "selector": "#creditsbtn",
+                "designer|userClassName": "creditsbtn"
             },
             "customConfigs": [],
             "expanded": true

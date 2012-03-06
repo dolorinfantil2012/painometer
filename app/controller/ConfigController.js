@@ -31,7 +31,8 @@ Ext.define('Painometer.controller.ConfigController', {
             mainContainer: '#MainContainer',
             scaleSel: '#ScaleSel',
             infoBtn: '#infoBtn',
-            ConfigPanel: '#ConfigPanel'
+            ConfigPanel: '#ConfigPanel',
+            creditsbtn: '#creditsbtn'
         },
 
         control: {
@@ -46,6 +47,9 @@ Ext.define('Painometer.controller.ConfigController', {
             },
             "ConfigStore": {
                 load: 'onStoreLoad'
+            },
+            "creditsbtn": {
+                tap: 'creditsbtnTap'
             }
         }
     },
@@ -81,12 +85,11 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-
-        alert("onstoreload hello");
+        //alert("onstoreload hello");
 
         if (Ext.isEmpty(records)) {
             // no hi ha cap registre
-            alert("onstoreload is empty");
+            //alert("onstoreload is empty");
             store.add(this.configInstance);
             store.sync();
         }
@@ -95,7 +98,6 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     setValue: function(newValue) {
-
         cc = this;
         aa = this.configInstance;
 
@@ -107,6 +109,12 @@ Ext.define('Painometer.controller.ConfigController', {
 
         me.configStore.sync();
         me.getMainContainer().setActiveItem(4);
+    },
+
+    creditsbtnTap: function(button, e, options) {
+        var me = this;
+
+        me.getMainContainer().setActiveItem(5);
     }
 
 });

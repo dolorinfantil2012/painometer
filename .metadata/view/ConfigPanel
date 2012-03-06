@@ -9,6 +9,7 @@
     "userConfig": {
         "html": null,
         "id": "ConfigPanel",
+        "ui": "",
         "layout": "vbox",
         "scrollable": "false",
         "designer|userClassName": "ConfigPanel",
@@ -24,7 +25,7 @@
     ],
     "designerId": "5d1b5cba-1b1c-459d-b90b-4a6a7b52a15f",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen13702",
@@ -55,6 +56,25 @@
                         "ui": "confirm",
                         "text": "OK",
                         "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen10844",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "creditsbtn",
+                        "ui": "forward",
+                        "iconAlign": "right",
+                        "text": "Crèdits",
+                        "designer|userClassName": "MyButton2",
+                        "align": "right"
                     },
                     "customConfigs": [],
                     "expanded": true
@@ -184,7 +204,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "alert(\"ei!!!\");",
+                "implHandler": "        alert(\"ei!!!\");",
                 "name": "activate",
                 "designer|userClassName": "onConfigPanelActivate"
             },

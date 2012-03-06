@@ -1,0 +1,73 @@
+{
+    "id": "ExtBox1-ext-gen29578",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "MainContainer"
+        ],
+        "designer|init": "",
+        "designer|userClassName": "CreditsContainer"
+    },
+    "customConfigs": [],
+    "designerId": "8692a581-c00a-455f-b89d-929a290c0590",
+    "$viewOrder": 3,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen29938",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "configTap",
+                "implHandler": "        var me = this;\n\n        me.getMainContainer().setActiveItem(4);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "config",
+                "designer|userClassName": "configTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen30073",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "config",
+                "selector": "#config",
+                "designer|userClassName": "config"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen31753",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainContainer",
+                "selector": "#MainContainer",
+                "designer|userClassName": "mainContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

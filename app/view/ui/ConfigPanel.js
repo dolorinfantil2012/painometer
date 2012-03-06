@@ -96,7 +96,18 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onConfigPanelActivate',
+                event: 'activate',
+                delegate: '#ConfigPanel'
+            }
         ]
+    },
+
+    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        
     }
 
 });

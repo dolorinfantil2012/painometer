@@ -16,7 +16,7 @@
         "views": [
             "ConfigPanel"
         ],
-        "designer|init": "this.configStore = Ext.getStore(\"configStoreId\");\nthis.configInstance = this.configStore.first();\n",
+        "designer|init": "var configDefault = Ext.create('Painometer.model.Config', {\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\n\nthis.configInstance = configDefault;\n\nthis.configStore = Ext.getStore(\"configStoreId\");\nthis.configStore.on('load', this.onStoreLoad, this);\nthis.configStore.load();\n",
         "designer|userClassName": "ConfigController"
     },
     "customConfigs": [
@@ -28,27 +28,8 @@
     ],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
-        {
-            "id": "ExtBox1-ext-gen8873",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onConfigPanelActivate",
-                "implHandler": "        var me = this;\n\n        var view = me.getValueView();\n        view.refresh();",
-                "name": "activate",
-                "designer|targetType": "Ext.Panel",
-                "designer|controlQuery": "ConfigPanel",
-                "designer|userClassName": "onConfigPanelActivate"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
         {
             "id": "ExtBox1-ext-gen15177",
             "type": "controllerref",
@@ -161,10 +142,10 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "        var configDefault = Ext.create('Painometer.model.Config', {\n            scale    : 0,\n            language : 0,\n            value    : 0\n        });\n        alert(\"onstoreload hello\");\n        if (Ext.isEmpty(records)) {\n            // no hi ha cap registre\n            alert(\"onstoreload is empty\");\n            store.add(configDefault);\n            store.sync();\n        };",
+                "implHandler": "if (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    store.add(this.configInstance);\n    store.sync();\n} \n\naa = store;\n\nthis.configInstance = store.first();",
                 "name": "load",
                 "designer|targetType": "Ext.data.Store",
-                "designer|controlQuery": "configStore",
+                "designer|controlQuery": "ConfigStore",
                 "designer|userClassName": "onStoreLoad"
             },
             "customConfigs": [],
@@ -183,7 +164,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "        this.configInstance.set('value', newValue);",
+                "implHandler": "this.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],

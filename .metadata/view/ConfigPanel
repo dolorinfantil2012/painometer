@@ -173,6 +173,23 @@
                     "expanded": true
                 }
             ]
+        },
+        {
+            "id": "ExtBox1-ext-gen18660",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onConfigPanelActivate",
+                "implHandler": "        alert(\"ei!!!\");",
+                "name": "activate",
+                "designer|userClassName": "onConfigPanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

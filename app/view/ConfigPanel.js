@@ -19,6 +19,10 @@ Ext.define('Painometer.view.ConfigPanel', {
     initialize: function() {
         var me = this;
         me.callParent(arguments);
+    },
+
+    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        alert("ei!!!");
     }
 
 });

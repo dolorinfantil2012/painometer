@@ -34,24 +34,30 @@ Ext.define('Painometer.controller.ConfigController', {
         },
 
         control: {
-            "ConfigPanel": {
-                activate: 'onConfigPanelActivate'
-            },
             "okConfig": {
                 tap: 'onConfigTap'
             },
             "infoBtn": {
                 tap: 'onButtonTap'
             },
-            "configStore": {
+            "ConfigStore": {
                 load: 'onStoreLoad'
             }
         }
     },
 
     init: function() {
+        var configDefault = Ext.create('Painometer.model.Config', {
+            scale    : 0,
+            language : 0,
+            value    : 0
+        });
+
+        this.configInstance = configDefault;
+
         this.configStore = Ext.getStore("configStoreId");
-        this.configInstance = this.configStore.first();
+        this.configStore.on('load', this.onStoreLoad, this);
+        this.configStore.load();
 
     },
 
@@ -61,26 +67,16 @@ Ext.define('Painometer.controller.ConfigController', {
         me.getMainContainer().setActiveItem(scale);
     },
 
-    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var me = this;
-
-        var view = me.getValueView();
-        view.refresh();
-    },
-
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-        var configDefault = Ext.create('Painometer.model.Config', {
-            scale    : 0,
-            language : 0,
-            value    : 0
-        });
-        alert("onstoreload hello");
         if (Ext.isEmpty(records)) {
             // no hi ha cap registre
-            alert("onstoreload is empty");
-            store.add(configDefault);
+            store.add(this.configInstance);
             store.sync();
-        };
+        } 
+
+        aa = store;
+
+        this.configInstance = store.first();
     },
 
     setValue: function(newValue) {

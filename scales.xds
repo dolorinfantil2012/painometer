@@ -118,10 +118,23 @@
                 "app/view/ui/InfoContainer.js"
             ],
             "className": "InfoContainer"
+        },
+        "09dae92c-424f-41eb-aba6-15195d47bc51": {
+            "paths": [
+                "app/view/CreditsContainer.js",
+                "app/view/ui/CreditsContainer.js"
+            ],
+            "className": "CreditsContainer"
+        },
+        "8692a581-c00a-455f-b89d-929a290c0590": {
+            "paths": [
+                "app/controller/CreditsContainer.js"
+            ],
+            "className": "CreditsContainer"
         }
     },
     "expandedState": {
-        "data": false,
+        "data": true,
         "model": false,
         "component": true,
         "controller": true

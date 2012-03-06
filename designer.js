@@ -37,7 +37,8 @@ Ext.application({
         'VASPanel',
         'ConfigPanel',
         'FPSRPanel',
-        'InfoContainer'
+        'InfoContainer',
+        'CreditsContainer'
     ],
 
     glossOnIcon: true,
@@ -47,7 +48,8 @@ Ext.application({
     controllers: [
         'ConfigController',
         'FPSRPanel',
-        'NRS11Panel'
+        'NRS11Panel',
+        'CreditsContainer'
     ],
 
     launch: function() {

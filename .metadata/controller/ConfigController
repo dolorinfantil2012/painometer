@@ -54,7 +54,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "\r\n\r\n\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -121,7 +121,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "        this.configInstance.save();\n        this.getMainContainer().setActiveItem(4);",
+                "implHandler": "\r\n\r\n\r\n        this.configInstance.save();\r\n        this.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -156,7 +156,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "creditsbtnTap",
-                "implHandler": "        var me = this;\n\n        me.getMainContainer().setActiveItem(5);",
+                "implHandler": "\r\n\r\n\r\n        var me = this;\r\n\r\n        me.getMainContainer().setActiveItem(5);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "creditsbtn",
@@ -191,7 +191,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "        var newValue = this.configInstance.get('value');\n\n        this.getValueCont().setData({'value' : newValue});",
+                "implHandler": "\r\n\r\n\r\n        var newValue = this.configInstance.get('value');\r\n\r\n        this.getValueCont().setData({'value' : newValue});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "configpanel",
@@ -213,7 +213,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "        this.configInstance.set('value', newValue);",
+                "implHandler": "\r\n\r\n        this.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],
@@ -229,7 +229,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "getValue",
-                "implHandler": "        return this.configInstance.get('value');",
+                "implHandler": "\r\n\r\n\r\n        return this.configInstance.get('value');",
                 "designer|userClassName": "getValue"
             },
             "customConfigs": [],

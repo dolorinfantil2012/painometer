@@ -32,6 +32,7 @@ Ext.define('Painometer.controller.CreditsContainer', {
     },
 
     configTap: function(button, e, options) {
+
         var me = this;
 
         me.getMainContainer().setActiveItem(4);

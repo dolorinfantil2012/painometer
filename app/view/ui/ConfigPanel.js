@@ -20,6 +20,7 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
         id: 'ConfigPanel',
         ui: '',
         layout: {
+            align: 'center',
             type: 'vbox'
         },
         scrollable: false,
@@ -50,18 +51,17 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                 data: {
                     value: 10
                 },
-                height: 183,
+                height: 200,
                 id: 'ValueCont',
-                style: 'border : 1px; margin: 50px',
+                style: 'font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;',
                 tpl: [
-                    '<H1>value: {value}</H1>'
+                    '{value}'
                 ],
-                layout: {
-                    type: 'fit'
-                }
+                width: 220
             },
             {
                 xtype: 'fieldset',
+                width: '100%',
                 layout: {
                     type: 'default'
                 },

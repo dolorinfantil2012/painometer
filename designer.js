@@ -33,11 +33,11 @@ Ext.application({
         'MainContainer',
         'NRS11Panel',
         'CASPanel',
-        'VASPanel',
         'ConfigPanel',
         'FPSRPanel',
         'InfoContainer',
-        'CreditsContainer'
+        'CreditsContainer',
+        'VASPanel'
     ],
 
     glossOnIcon: true,

@@ -17,6 +17,7 @@ Ext.define('Painometer.view.CreditsContainer', {
     alias: 'widget.creditscontainer',
 
     initialize: function() {
+
         var me = this;
         me.callParent(arguments);
     }

@@ -7,12 +7,70 @@
     },
     "codeClass": null,
     "userConfig": {
-        "html": "CASPanel under construction",
+        "html": null,
+        "style": "background-color:white;",
+        "layout": "fit",
         "designer|userClassName": "CASPanel",
         "designer|userAlias": "caspanel"
     },
     "customConfigs": [],
     "designerId": "bc3742f5-81f1-4e56-97dc-73c4d4d1f3a2",
     "$viewOrder": 4,
-    "expanded": true
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen15921",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": "CASSliderCont",
+                "style": "background-color:white;",
+                "layout": "fit",
+                "designer|userClassName": "MyContainer43"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen8789",
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "cls": "sencha-cas-slider",
+                        "id": "CASSlider",
+                        "label": null,
+                        "designer|userClassName": "MySliderField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen11161",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "infoCAS"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen27355"
+        }
+    ]
 }

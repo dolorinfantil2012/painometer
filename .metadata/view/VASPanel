@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen36661",
+    "id": "ExtBox1-ext-gen13445",
     "type": "container",
     "reference": {
         "name": "items",
@@ -7,12 +7,70 @@
     },
     "codeClass": null,
     "userConfig": {
-        "html": "VASPanel under construction",
+        "html": null,
+        "style": "background-color:white;",
+        "layout": "fit",
         "designer|userClassName": "VASPanel",
         "designer|userAlias": "vaspanel"
     },
     "customConfigs": [],
-    "designerId": "5b31aa95-ddd5-4190-94ac-373de28aad8c",
+    "designerId": "b621cd17-99cb-4c01-8be7-611be68a35c4",
     "$viewOrder": 5,
-    "expanded": true
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen13448",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": "VASSliderCont",
+                "style": "background-color:white;",
+                "layout": "fit",
+                "designer|userClassName": "MyContainer43"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen13451",
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "cls": "sencha-vas-slider",
+                        "id": "VASSlider",
+                        "label": null,
+                        "designer|userClassName": "MySliderField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen13454",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "infoVAS"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen27355"
+        }
+    ]
 }

@@ -46,28 +46,19 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                 ]
             },
             {
-                xtype: 'panel',
+                xtype: 'container',
+                data: {
+                    value: 10
+                },
                 height: 183,
                 id: 'ValueCont',
+                style: 'border : 1px; margin: 50px',
+                tpl: [
+                    '<H1>value: {value}</H1>'
+                ],
                 layout: {
                     type: 'fit'
-                },
-                items: [
-                    {
-                        xtype: 'dataview',
-                        centered: true,
-                        height: 130,
-                        id: 'Value',
-                        style: 'border-width:0.1 px; border-style:solid;',
-                        width: 130,
-                        scrollable: false,
-                        itemTpl: [
-                            '<div style=" padding-top:-15px;',
-                            'font-size:100px;"><center>{value}</center></div>'
-                        ],
-                        store: 'configStoreId'
-                    }
-                ]
+                }
             },
             {
                 xtype: 'fieldset',
@@ -105,18 +96,7 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                     }
                 ]
             }
-        ],
-        listeners: [
-            {
-                fn: 'onConfigPanelActivate',
-                event: 'activate',
-                delegate: '#ConfigPanel'
-            }
         ]
-    },
-
-    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        
     }
 
 });

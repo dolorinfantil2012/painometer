@@ -28,27 +28,8 @@
     ],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
-        {
-            "id": "ExtBox1-ext-gen8873",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onConfigPanelActivate",
-                "implHandler": "        var me = this;\r\n\n        alert(\"activat config panel\");\r\n\n        //var view = me.getValueView();\r\n        //view.refresh();",
-                "name": "activate",
-                "designer|targetType": "Ext.Panel",
-                "designer|controlQuery": "ConfigPanel",
-                "designer|userClassName": "onConfigPanelActivate"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
         {
             "id": "ExtBox1-ext-gen15177",
             "type": "controllerref",
@@ -75,7 +56,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -93,9 +74,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "ValueView",
-                "selector": "Value",
-                "designer|userClassName": "ValueView"
+                "ref": "ValueCont",
+                "selector": "#ValueCont",
+                "designer|userClassName": "ValueCont"
             },
             "customConfigs": [],
             "expanded": true
@@ -142,7 +123,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "        var me = this;\r\n\n        me.configStore.sync();\r\n        me.getMainContainer().setActiveItem(4);",
+                "implHandler": "var me = this;\nme.configStore.sync();\nme.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -161,7 +142,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "        //alert(\"onstoreload hello\");\n\n        if (Ext.isEmpty(records)) {\n            // no hi ha cap registre\n            //alert(\"onstoreload is empty\");\n            store.add(this.configInstance);\n            store.sync();\n        }\n\n        this.configInstance = this.configStore.first();",
+                "implHandler": "\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    //alert(\"onstoreload is empty\");\n    store.add(this.configInstance);\n    store.sync();\n} \n\nthis.configInstance = store.first();",
                 "name": "load",
                 "designer|targetType": "Ext.data.Store",
                 "designer|controlQuery": "ConfigStore",
@@ -183,7 +164,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "        cc = this;\n        aa = this.configInstance;\n\n        this.configInstance.set('value', newValue);",
+                "implHandler": "this.configInstance.set('value', newValue);\n//\n//this.getValueCont().setData({'value' : newValue});\ncc = this;",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],
@@ -201,22 +182,6 @@
                 "ref": "infoBtn",
                 "selector": "#infoBtn",
                 "designer|userClassName": "infoBtn"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen16550",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "ConfigPanel",
-                "selector": "#ConfigPanel",
-                "designer|userClassName": "ConfigPanel"
             },
             "customConfigs": [],
             "expanded": true
@@ -252,6 +217,25 @@
                 "ref": "creditsbtn",
                 "selector": "#creditsbtn",
                 "designer|userClassName": "creditsbtn"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen47718",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onConfigPanelActivate",
+                "implHandler": "var newValue = this.configInstance.get('value');\n\nthis.getValueCont().setData({'value' : newValue});",
+                "name": "activate",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "configpanel",
+                "designer|userClassName": "onConfigPanelActivate"
             },
             "customConfigs": [],
             "expanded": true

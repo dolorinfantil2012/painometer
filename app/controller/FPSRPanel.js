@@ -16,12 +16,14 @@ Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
+        stores: [
+            'ConfigStore'
+        ],
         views: [
             'FPSRPanel'
         ],
         refs: {
             faceContainer: '#FPSCarousel image',
-            FPSRPanel: '#fpsrpanel',
             fpsNav: '#FPSNavContainer',
             mainContainer: '#MainContainer',
             FPSCarousel: '#FPSCarousel'
@@ -30,11 +32,22 @@ Ext.define('Painometer.controller.FPSRPanel', {
         control: {
             "faceContainer": {
                 activate: 'faceActivate'
-            },
-            "FPSRPanel": {
-                activate: 'onContainerActivate'
             }
         }
+    },
+
+    init: function() {
+        alert("init FPRS");
+        var storeConfig = Ext.getStore("configStoreId");
+        var dataStore   = storeConfig.getData();
+        var configModel = dataStore.getAt(0);
+
+        var value = configModel.get("value");
+
+        var pan = this.getFPSCarousel();
+
+        /*value = Math.floor(value / 2);
+        pan.setActiveItem(value);*/
     },
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
@@ -54,19 +67,6 @@ Ext.define('Painometer.controller.FPSRPanel', {
             var configController = this.getApplication().getController("Painometer.controller.ConfigController");
             configController.setValue(container.config.value);
         }
-    },
-
-    onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var storeConfig = Ext.getStore("configStoreId");
-        var dataStore   = storeConfig.getData();
-        var configModel = dataStore.getAt(0);
-
-        var value = configModel.get("value");
-
-        var pan = this.getFPSCarousel();
-
-        value = Math.floor(value / 2);
-        pan.setActiveItem(value);
     }
 
 });

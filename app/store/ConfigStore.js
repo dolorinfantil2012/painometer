@@ -19,6 +19,10 @@ Ext.define('Painometer.store.ConfigStore', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
+    },
+
+    onStoreLoad: function(store, records, successful, operation, eOpts) {
+        alert("load store");
     }
 
 });

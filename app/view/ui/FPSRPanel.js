@@ -132,7 +132,7 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
                         ]
                     },
                     {
-                        xtype: 'infoContainer',
+                        xtype: 'InfoContainer',
                         id: 'infoContainerFP'
                     }
                 ]

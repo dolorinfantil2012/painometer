@@ -27,18 +27,14 @@ Ext.define('Painometer.controller.ConfigController', {
         ],
         refs: {
             okConfig: '#okConfig',
-            ValueView: 'Value',
+            ValueCont: '#ValueCont',
             mainContainer: '#MainContainer',
             scaleSel: '#ScaleSel',
             infoBtn: '#infoBtn',
-            ConfigPanel: '#ConfigPanel',
             creditsbtn: '#creditsbtn'
         },
 
         control: {
-            "ConfigPanel": {
-                activate: 'onConfigPanelActivate'
-            },
             "okConfig": {
                 tap: 'onConfigTap'
             },
@@ -50,6 +46,9 @@ Ext.define('Painometer.controller.ConfigController', {
             },
             "creditsbtn": {
                 tap: 'creditsbtnTap'
+            },
+            "configpanel": {
+                activate: 'onConfigPanelActivate'
             }
         }
     },
@@ -75,38 +74,27 @@ Ext.define('Painometer.controller.ConfigController', {
         me.getMainContainer().setActiveItem(scale);
     },
 
-    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var me = this;
-
-        alert("activat config panel");
-
-        //var view = me.getValueView();
-        //view.refresh();
-    },
-
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-        //alert("onstoreload hello");
 
         if (Ext.isEmpty(records)) {
             // no hi ha cap registre
             //alert("onstoreload is empty");
             store.add(this.configInstance);
             store.sync();
-        }
+        } 
 
-        this.configInstance = this.configStore.first();
+        this.configInstance = store.first();
     },
 
     setValue: function(newValue) {
-        cc = this;
-        aa = this.configInstance;
-
         this.configInstance.set('value', newValue);
+        //
+        //this.getValueCont().setData({'value' : newValue});
+        cc = this;
     },
 
     onButtonTap: function(button, e, options) {
         var me = this;
-
         me.configStore.sync();
         me.getMainContainer().setActiveItem(4);
     },
@@ -115,6 +103,12 @@ Ext.define('Painometer.controller.ConfigController', {
         var me = this;
 
         me.getMainContainer().setActiveItem(5);
+    },
+
+    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var newValue = this.configInstance.get('value');
+
+        this.getValueCont().setData({'value' : newValue});
     }
 
 });

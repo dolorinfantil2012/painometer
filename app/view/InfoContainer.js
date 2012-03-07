@@ -14,7 +14,7 @@
 
 Ext.define('Painometer.view.InfoContainer', {
     extend: 'Painometer.view.ui.InfoContainer',
-    alias: 'widget.infoContainer',
+    alias: 'widget.InfoContainer',
 
     initialize: function() {
         var me = this;

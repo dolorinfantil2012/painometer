@@ -88,7 +88,7 @@
             "masterInstanceId": "ExtBox1-ext-gen36661"
         },
         {
-            "id": "ExtBox1-ext-gen4693",
+            "id": "ExtBox1-ext-gen45668",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -96,7 +96,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "configPanelIt"
+                "id": "ConfigPanelIt"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

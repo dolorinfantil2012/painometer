@@ -11,7 +11,7 @@
         "id": "infoContainerID",
         "layout": "hbox",
         "designer|userClassName": "InfoContainer",
-        "designer|userAlias": "infoContainer",
+        "designer|userAlias": "InfoContainer",
         "container|align": "end",
         "container|pack": "end"
     },

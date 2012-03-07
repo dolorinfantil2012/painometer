@@ -190,7 +190,7 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                         ]
                     },
                     {
-                        xtype: 'infoContainer',
+                        xtype: 'InfoContainer',
                         id: 'infoContainer'
                     }
                 ]

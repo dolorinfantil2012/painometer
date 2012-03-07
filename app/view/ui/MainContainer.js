@@ -57,7 +57,7 @@ Ext.define('Painometer.view.ui.MainContainer', {
             },
             {
                 xtype: 'configpanel',
-                id: 'configPanelIt'
+                id: 'ConfigPanelIt'
             },
             {
                 xtype: 'creditscontainer',

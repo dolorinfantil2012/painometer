@@ -27,11 +27,10 @@ Ext.define('Painometer.controller.ConfigController', {
         ],
         refs: {
             okConfig: '#okConfig',
-            ValueView: 'Value',
+            ValueCont: '#ValueCont',
             mainContainer: '#MainContainer',
             scaleSel: '#ScaleSel',
             infoBtn: '#infoBtn',
-            ConfigPanel: '#ConfigPanel',
             creditsbtn: '#creditsbtn'
         },
 
@@ -47,6 +46,9 @@ Ext.define('Painometer.controller.ConfigController', {
             },
             "creditsbtn": {
                 tap: 'creditsbtnTap'
+            },
+            "configpanel": {
+                activate: 'onConfigPanelActivate'
             }
         }
     },
@@ -73,7 +75,6 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-        //alert("onstoreload hello");
 
         if (Ext.isEmpty(records)) {
             // no hi ha cap registre
@@ -82,21 +83,18 @@ Ext.define('Painometer.controller.ConfigController', {
             store.sync();
         } 
 
-        aa = store;
-
         this.configInstance = store.first();
     },
 
     setValue: function(newValue) {
-        cc = this;
-        aa = this.configInstance;
-
         this.configInstance.set('value', newValue);
+        //
+        //this.getValueCont().setData({'value' : newValue});
+        cc = this;
     },
 
     onButtonTap: function(button, e, options) {
         var me = this;
-
         me.configStore.sync();
         me.getMainContainer().setActiveItem(4);
     },
@@ -105,6 +103,12 @@ Ext.define('Painometer.controller.ConfigController', {
         var me = this;
 
         me.getMainContainer().setActiveItem(5);
+    },
+
+    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var newValue = this.configInstance.get('value');
+
+        this.getValueCont().setData({'value' : newValue});
     }
 
 });

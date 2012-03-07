@@ -7,9 +7,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
+        "autoLoad": null,
         "model": "Config",
         "storeId": "configStoreId",
+        "syncRemovedRecords": null,
         "designer|userClassName": "ConfigStore"
     },
     "customConfigs": [],
@@ -28,6 +29,23 @@
             "userConfig": {
                 "id": "configStoreProxy",
                 "designer|userClassName": "MyLocalStorageProxy"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen50953",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": "alert(\"load store\");",
+                "name": "load",
+                "designer|userClassName": "onStoreLoad"
             },
             "customConfigs": [],
             "expanded": true

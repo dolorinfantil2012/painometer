@@ -20,12 +20,17 @@ Ext.define('Painometer.store.base.ConfigStore', {
     ],
 
     config: {
-        autoLoad: true,
         model: 'Painometer.model.Config',
         storeId: 'configStoreId',
         proxy: {
             type: 'localstorage',
             id: 'configStoreProxy'
-        }
+        },
+        listeners: [
+            {
+                fn: 'onStoreLoad',
+                event: 'load'
+            }
+        ]
     }
 });

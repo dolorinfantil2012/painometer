@@ -39,7 +39,7 @@ Ext.application({
         'FPSRPanel',
         'InfoContainer',
         'CreditsContainer',
-        'Painometer'
+        'ConfigCard'
     ],
 
     glossOnIcon: true,

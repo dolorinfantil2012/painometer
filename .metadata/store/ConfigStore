@@ -43,7 +43,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "alert(\"load store\");",
+                "implHandler": "        alert(\"load store\");",
                 "name": "load",
                 "designer|userClassName": "onStoreLoad"
             },

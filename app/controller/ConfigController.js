@@ -31,7 +31,8 @@ Ext.define('Painometer.controller.ConfigController', {
             mainContainer: '#MainContainer',
             scaleSel: '#ScaleSel',
             infoBtn: '#infoBtn',
-            creditsbtn: '#creditsbtn'
+            creditsbtn: '#creditsbtn',
+            configCard: '#ConfigCard'
         },
 
         control: {
@@ -75,7 +76,6 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-
         if (Ext.isEmpty(records)) {
             // no hi ha cap registre
             //alert("onstoreload is empty");
@@ -101,8 +101,14 @@ Ext.define('Painometer.controller.ConfigController', {
 
     creditsbtnTap: function(button, e, options) {
         var me = this;
+        var card = me.getConfigCard();
+        var layout = card.getLayout();
+        var inn = layout.getAnimation().getInAnimation();
+        var out = layout.getAnimation().getOutAnimation();
 
-        me.getMainContainer().setActiveItem(5);
+        inn.setDirection("left");
+        out.setDirection("left");
+        card.setActiveItem(1);
     },
 
     onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {

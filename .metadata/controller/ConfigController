@@ -56,7 +56,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -123,7 +123,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "var me = this;\nme.configStore.sync();\nme.getMainContainer().setActiveItem(4);",
+                "implHandler": "        var me = this;\r\n        me.configStore.sync();\r\n        me.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -142,7 +142,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "\nif (Ext.isEmpty(records)) {\n    // no hi ha cap registre\n    //alert(\"onstoreload is empty\");\n    store.add(this.configInstance);\n    store.sync();\n} \n\nthis.configInstance = store.first();",
+                "implHandler": "        if (Ext.isEmpty(records)) {\r\n            // no hi ha cap registre\r\n            //alert(\"onstoreload is empty\");\r\n            store.add(this.configInstance);\r\n            store.sync();\r\n        } \r\n\n        this.configInstance = store.first();",
                 "name": "load",
                 "designer|targetType": "Ext.data.Store",
                 "designer|controlQuery": "ConfigStore",
@@ -164,7 +164,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "this.configInstance.set('value', newValue);\n//\n//this.getValueCont().setData({'value' : newValue});\ncc = this;",
+                "implHandler": "        this.configInstance.set('value', newValue);\r\n        //\r\n        //this.getValueCont().setData({'value' : newValue});\r\n        cc = this;",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],
@@ -196,7 +196,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "creditsbtnTap",
-                "implHandler": "        var me = this;\n\n        me.getMainContainer().setActiveItem(5);",
+                "implHandler": "var me = this;\nvar card = me.getConfigCard();\nvar layout = card.getLayout();\nvar inn = layout.getAnimation().getInAnimation();\nvar out = layout.getAnimation().getOutAnimation();\n\ninn.setDirection(\"left\");\nout.setDirection(\"left\");\ncard.setActiveItem(1);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "creditsbtn",
@@ -231,11 +231,27 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "var newValue = this.configInstance.get('value');\n\nthis.getValueCont().setData({'value' : newValue});",
+                "implHandler": "        var newValue = this.configInstance.get('value');\r\n\n        this.getValueCont().setData({'value' : newValue});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "configpanel",
                 "designer|userClassName": "onConfigPanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10854",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "configCard",
+                "selector": "#ConfigCard",
+                "designer|userClassName": "configCard"
             },
             "customConfigs": [],
             "expanded": true

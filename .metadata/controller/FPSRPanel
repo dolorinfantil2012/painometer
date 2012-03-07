@@ -19,7 +19,7 @@
     "customConfigs": [],
     "designerId": "40c4d108-b253-4287-b931-d49f315c15e2",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen29952",
@@ -48,7 +48,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "faceActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value / 2;\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value / 2;\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n            configController.setValue(container.config.value);\n        }",
+                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value / 2;\r\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\r\n\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value / 2;\r\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\r\n\n            newFace.addCls(\"face-selected\");\r\n\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\r\n            configController.setValue(container.config.value);\r\n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "faceContainer",

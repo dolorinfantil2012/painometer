@@ -134,9 +134,9 @@
         }
     },
     "expandedState": {
-        "data": true,
-        "model": false,
-        "component": true,
+        "data": false,
+        "model": true,
+        "component": false,
         "controller": true
     }
 }

@@ -17,7 +17,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
 
     config: {
         stores: [
-            'ConfigStore'
+            
         ],
         views: [
             'NRS11Panel'
@@ -40,38 +40,33 @@ Ext.define('Painometer.controller.NRS11Panel', {
         }
     },
 
-    init: function() {
-        this.storeConfig = Ext.getStore("configStoreId");
-    },
-
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value;
-            var oldFace = this.getNrsNav().items.getAt(oldIndex);
-
-            oldFace.removeCls("face-selected");
-        }
 
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value;
             var newFace    = this.getNrsNav().items.getAt(newIndex);
 
             newFace.addCls("face-selected");
-            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-            configController.setValue(newIndex);
         }
+
+        if (!Ext.isEmpty(oldActiveItem)) {
+            var oldIndex = oldActiveItem.config.value;
+            var oldFace = this.getNrsNav().items.getAt(oldIndex);
+
+            oldFace.removeCls("face-selected");
+            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+            configController.setValue(container.config.value);
+        }
+
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var storeConfig = Ext.getStore("configStoreId");
-        var dataStore   = storeConfig.getData();
-        var configModel = dataStore.getAt(0);
-
-        var value = configModel.get("value");
-
+        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+        var value = configController.getValue();
         var pan = this.getNRSCarousel();
 
         pan.setActiveItem(value);
+
     }
 
 });

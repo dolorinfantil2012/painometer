@@ -7,13 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "stores": [
-            "ConfigStore"
-        ],
+        "stores": [],
         "views": [
             "NRS11Panel"
         ],
-        "designer|init": "this.storeConfig = Ext.getStore(\"configStoreId\");",
+        "designer|init": "",
         "designer|userClassName": "NRS11Panel"
     },
     "customConfigs": [],
@@ -31,7 +29,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "numActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value;\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value;\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n            configController.setValue(newIndex);\n        }",
+                "implHandler": "\nif (!Ext.isEmpty(container)) {\n    var newIndex = container.config.value;\n    var newFace    = this.getNrsNav().items.getAt(newIndex);\n\n    newFace.addCls(\"face-selected\");\n}\n\nif (!Ext.isEmpty(oldActiveItem)) {\n    var oldIndex = oldActiveItem.config.value;\n    var oldFace = this.getNrsNav().items.getAt(oldIndex);\n\n    oldFace.removeCls(\"face-selected\");\n    var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n    configController.setValue(container.config.value);\n}\n",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "numContainer",
@@ -98,7 +96,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNRS11PanelActivate",
-                "implHandler": "        var storeConfig = Ext.getStore(\"configStoreId\");\n        var dataStore   = storeConfig.getData();\n        var configModel = dataStore.getAt(0);\n\n        var value = configModel.get(\"value\");\n\n        var pan = this.getNRSCarousel();\n\n        pan.setActiveItem(value);",
+                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nvar pan = this.getNRSCarousel();\n\npan.setActiveItem(value);\n",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "NRS11Panel",

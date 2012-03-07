@@ -64,6 +64,21 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen56873",
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "painometerProxy",
+                "designer|userClassName": "MyLocalStorageProxy1"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

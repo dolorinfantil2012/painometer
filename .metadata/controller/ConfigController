@@ -54,7 +54,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -121,7 +121,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "\r\n        this.configInstance.save();\r\n        this.getMainContainer().setActiveItem(4);",
+                "implHandler": "        this.configInstance.save();\n        this.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -156,7 +156,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "creditsbtnTap",
-                "implHandler": "\r\n        var me = this;\r\n        var card = me.getConfigCard();\r\n        var layout = card.getLayout();\r\n        var inn = layout.getAnimation().getInAnimation();\r\n        var out = layout.getAnimation().getOutAnimation();\r\n\r\n        inn.setDirection(\"left\");\r\n        out.setDirection(\"left\");\r\n        card.setActiveItem(1);",
+                "implHandler": "        var me = this;\n        var card = me.getConfigCard();\n        var layout = card.getLayout();\n        var inn = layout.getAnimation().getInAnimation();\n        var out = layout.getAnimation().getOutAnimation();\n\n        inn.setDirection(\"left\");\n        out.setDirection(\"left\");\n        card.setActiveItem(1);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "creditsbtn",
@@ -191,7 +191,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onconfigCardActivate",
-                "implHandler": "\nvar newValue = this.configInstance.get('value');\n\nthis.getValueCont().setData({'value' : newValue});",
+                "implHandler": "        var newValue = this.configInstance.get('value');\n\n        this.getValueCont().setData({'value' : newValue});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "configCard",

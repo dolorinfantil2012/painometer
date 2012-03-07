@@ -106,7 +106,6 @@ Ext.define('Painometer.controller.ConfigController', {
 
     setValue: function(newValue) {
         this.configInstance.set('value', newValue);
-
     }
 
 });

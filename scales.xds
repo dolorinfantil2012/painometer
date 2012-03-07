@@ -74,13 +74,6 @@
             ],
             "className": "CASPanel"
         },
-        "5b31aa95-ddd5-4190-94ac-373de28aad8c": {
-            "paths": [
-                "app/view/VASPanel.js",
-                "app/view/ui/VASPanel.js"
-            ],
-            "className": "VASPanel"
-        },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
                 "app/store/languageStore.js",
@@ -111,12 +104,46 @@
                 "app/model/Language.js"
             ],
             "className": "Language"
+        },
+        "76a4b273-e5b0-42ad-b402-232eb3fc8e82": {
+            "paths": [
+                "app/view/InfoContainer.js",
+                "app/view/ui/InfoContainer.js"
+            ],
+            "className": "InfoContainer"
+        },
+        "09dae92c-424f-41eb-aba6-15195d47bc51": {
+            "paths": [
+                "app/view/CreditsContainer.js",
+                "app/view/ui/CreditsContainer.js"
+            ],
+            "className": "CreditsContainer"
+        },
+        "8692a581-c00a-455f-b89d-929a290c0590": {
+            "paths": [
+                "app/controller/CreditsContainer.js"
+            ],
+            "className": "CreditsContainer"
+        },
+        "b621cd17-99cb-4c01-8be7-611be68a35c4": {
+            "paths": [
+                "app/view/VASPanel.js",
+                "app/view/ui/VASPanel.js"
+            ],
+            "className": "VASPanel"
+        },
+        "92fb1979-116c-4c1c-ad68-5063f7fc44c6": {
+            "paths": [
+                "app/view/ConfigCard.js",
+                "app/view/ui/ConfigCard.js"
+            ],
+            "className": "ConfigCard"
         }
     },
     "expandedState": {
         "data": false,
         "model": false,
-        "component": false,
-        "controller": false
+        "component": true,
+        "controller": true
     }
 }

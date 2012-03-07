@@ -17,7 +17,6 @@ Ext.define('Painometer.store.ConfigStore', {
 
     constructor: function(cfg) {
 
-
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({}, cfg)]);
@@ -25,20 +24,7 @@ Ext.define('Painometer.store.ConfigStore', {
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
 
-
-        //alert("Store: records " + Ext.isEmpty(records) + " suc:" + successful);
-
-        var configDefault = Ext.create('Painometer.model.Config', {
-            scale    : 0,
-            language : 0,
-            value    : 0
-        });
-
-        if (Ext.isEmpty(records)) {
-            // no hi ha cap registre
-            store.add(configDefault);
-            store.sync();
-        };
+        alert("load store");
     }
 
 });

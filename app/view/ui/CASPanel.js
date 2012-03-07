@@ -15,9 +15,37 @@
 
 Ext.define('Painometer.view.ui.CASPanel', {
     extend: 'Ext.Container',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
-        html: 'CASPanel under construction'
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'container',
+                id: 'CASSliderCont',
+                style: 'background-color:white;',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'sliderfield',
+                        centered: true,
+                        cls: 'sencha-cas-slider',
+                        id: 'CASSlider'
+                    }
+                ]
+            },
+            {
+                xtype: 'InfoContainer',
+                itemId: 'infoCAS'
+            }
+        ]
     }
 
 });

@@ -9,11 +9,13 @@
     "userConfig": {
         "html": null,
         "id": "ConfigPanel",
+        "ui": "",
         "layout": "vbox",
         "scrollable": "false",
         "designer|userClassName": "ConfigPanel",
         "designer|userAlias": "configpanel",
-        "fullscreen": null
+        "fullscreen": null,
+        "container|align": "center"
     },
     "customConfigs": [
         {
@@ -58,50 +60,48 @@
                     },
                     "customConfigs": [],
                     "expanded": true
-                }
-            ]
-        },
-        {
-            "id": "ExtBox1-ext-gen8349",
-            "type": "panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": 183,
-                "id": "ValueCont",
-                "layout": "fit",
-                "designer|userClassName": "MyPanel"
-            },
-            "customConfigs": [],
-            "expanded": true,
-            "cn": [
+                },
                 {
-                    "id": "ExtBox1-ext-gen19025",
-                    "type": "dataview",
+                    "id": "ExtBox1-ext-gen10844",
+                    "type": "button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "centered": true,
-                        "docked": null,
-                        "height": 130,
-                        "id": "Value",
-                        "style": "border-width:0.1 px; border-style:solid;",
-                        "width": 130,
-                        "scrollable": "false",
-                        "itemTpl": "<div style=\" padding-top:-15px;\nfont-size:100px;\"><center>{value}</center></div>",
-                        "store": "configStoreId",
-                        "designer|userClassName": "MyDataView"
+                        "id": "creditsbtn",
+                        "ui": "forward",
+                        "iconAlign": "right",
+                        "text": "Crèdits",
+                        "designer|userClassName": "MyButton2",
+                        "align": "right"
                     },
                     "customConfigs": [],
                     "expanded": true
                 }
             ]
+        },
+        {
+            "id": "ExtBox1-ext-gen8349",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": "{ value : 10 }",
+                "height": 200,
+                "id": "ValueCont",
+                "style": "font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;",
+                "tpl": "{value}",
+                "width": 220,
+                "layout": null,
+                "designer|userClassName": "MyContainer39"
+            },
+            "customConfigs": [],
+            "expanded": true
         },
         {
             "id": "ExtBox1-ext-gen22132",
@@ -112,6 +112,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "width": "100%",
                 "layout": "default",
                 "instructions": "Opcions generals de l'eina",
                 "title": "Opcions",

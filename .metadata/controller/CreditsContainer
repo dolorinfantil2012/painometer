@@ -1,0 +1,71 @@
+{
+    "id": "ExtBox1-ext-gen29578",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": null,
+        "designer|init": "",
+        "designer|userClassName": "CreditsContainer"
+    },
+    "customConfigs": [],
+    "designerId": "8692a581-c00a-455f-b89d-929a290c0590",
+    "$viewOrder": 3,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen29938",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "configTap",
+                "implHandler": "\r\n\r\n\r\n\r\n        var me = this;\r\n        var card = me.getConfigCard();\r\n        var layout = card.getLayout();\r\n        var inn = layout.getAnimation().getInAnimation();\r\n        var out = layout.getAnimation().getOutAnimation();\r\n\r\n        inn.setDirection(\"right\");\r\n        out.setDirection(\"right\");\r\n        card.setActiveItem(0);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "config",
+                "designer|userClassName": "configTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen30073",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "config",
+                "selector": "#config",
+                "designer|userClassName": "config"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen12047",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "configCard",
+                "selector": "#ConfigCard",
+                "designer|userClassName": "configCard"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

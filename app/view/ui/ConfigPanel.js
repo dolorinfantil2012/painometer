@@ -18,7 +18,9 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
 
     config: {
         id: 'ConfigPanel',
+        ui: '',
         layout: {
+            align: 'center',
             type: 'vbox'
         },
         scrollable: false,
@@ -33,35 +35,33 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         id: 'okConfig',
                         ui: 'confirm',
                         text: 'OK'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'creditsbtn',
+                        ui: 'forward',
+                        iconAlign: 'right',
+                        text: 'Crèdits',
+                        align: 'right'
                     }
                 ]
             },
             {
-                xtype: 'panel',
-                height: 183,
-                id: 'ValueCont',
-                layout: {
-                    type: 'fit'
+                xtype: 'container',
+                data: {
+                    value: 10
                 },
-                items: [
-                    {
-                        xtype: 'dataview',
-                        centered: true,
-                        height: 130,
-                        id: 'Value',
-                        style: 'border-width:0.1 px; border-style:solid;',
-                        width: 130,
-                        scrollable: false,
-                        itemTpl: [
-                            '<div style=" padding-top:-15px;',
-                            'font-size:100px;"><center>{value}</center></div>'
-                        ],
-                        store: 'configStoreId'
-                    }
-                ]
+                height: 200,
+                id: 'ValueCont',
+                style: 'font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;',
+                tpl: [
+                    '{value}'
+                ],
+                width: 220
             },
             {
                 xtype: 'fieldset',
+                width: '100%',
                 layout: {
                     type: 'default'
                 },

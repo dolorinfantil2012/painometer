@@ -15,9 +15,37 @@
 
 Ext.define('Painometer.view.ui.VASPanel', {
     extend: 'Ext.Container',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
-        html: 'VASPanel under construction'
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'container',
+                id: 'VASSliderCont',
+                style: 'background-color:white;',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'sliderfield',
+                        centered: true,
+                        cls: 'sencha-vas-slider',
+                        id: 'VASSlider'
+                    }
+                ]
+            },
+            {
+                xtype: 'InfoContainer',
+                itemId: 'infoVAS'
+            }
+        ]
     }
 
 });

@@ -20,7 +20,7 @@ Ext.define('Painometer.view.ui.MainContainer', {
         'Painometer.view.NRS11Panel',
         'Painometer.view.CASPanel',
         'Painometer.view.VASPanel',
-        'Painometer.view.ConfigPanel'
+        'Painometer.view.ConfigCard'
     ],
 
     config: {
@@ -46,17 +46,15 @@ Ext.define('Painometer.view.ui.MainContainer', {
             },
             {
                 xtype: 'caspanel',
-                id: 'casPanelIt',
-                style: 'background-color:white;'
+                id: 'casPanelIt'
             },
             {
                 xtype: 'vaspanel',
-                id: 'vasPanelIt',
-                style: 'background-color:white;'
+                id: 'VasPanelIt'
             },
             {
-                xtype: 'configpanel',
-                id: 'configPanelIt'
+                xtype: 'configCard',
+                id: 'ConfigCard'
             }
         ]
     }

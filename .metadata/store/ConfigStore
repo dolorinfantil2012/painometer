@@ -7,15 +7,16 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
+        "autoLoad": null,
         "model": "Config",
         "storeId": "configStoreId",
+        "syncRemovedRecords": null,
         "designer|userClassName": "ConfigStore"
     },
     "customConfigs": [],
     "designerId": "fd2548c4-ff23-4550-8829-75f7c0e67fb4",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen9610",
@@ -33,7 +34,7 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen20287",
+            "id": "ExtBox1-ext-gen50953",
             "type": "basiceventbinding",
             "reference": {
                 "name": "listeners",
@@ -42,7 +43,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onStoreLoad",
-                "implHandler": "\r\n\r\n        //alert(\"Store: records \" + Ext.isEmpty(records) + \" suc:\" + successful);\r\n\r\n        var configDefault = Ext.create('Painometer.model.Config', {\r\n            scale    : 0,\r\n            language : 0,\r\n            value    : 0\r\n        });\r\n\r\n        if (Ext.isEmpty(records)) {\r\n            // no hi ha cap registre\r\n            store.add(configDefault);\r\n            store.sync();\r\n        };",
+                "implHandler": "\r\n        alert(\"load store\");",
                 "name": "load",
                 "designer|userClassName": "onStoreLoad"
             },

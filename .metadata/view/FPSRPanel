@@ -170,50 +170,6 @@
             "expanded": false,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen7992",
-                    "type": "container",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": "right",
-                        "id": "infoContainer",
-                        "layout": "hbox",
-                        "designer|userClassName": "MyContainer8",
-                        "container|align": "end",
-                        "container|pack": "end"
-                    },
-                    "customConfigs": [],
-                    "expanded": false,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen8369",
-                            "type": "button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "height": null,
-                                "id": "infoBtn",
-                                "style": "border:0",
-                                "ui": "info_btn-small",
-                                "width": 22,
-                                "icon": null,
-                                "iconCls": "info",
-                                "iconMask": true,
-                                "text": null,
-                                "designer|userClassName": "MyButton"
-                            },
-                            "customConfigs": [],
-                            "expanded": true
-                        }
-                    ]
-                },
-                {
                     "id": "ExtBox1-ext-gen10653",
                     "type": "carousel",
                     "reference": {
@@ -381,6 +337,22 @@
                             "expanded": true
                         }
                     ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen7386",
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "infoContainerFP"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-linkedinstance",
+                    "expanded": true,
+                    "masterInstanceId": "ExtBox1-ext-gen27355"
                 }
             ]
         }

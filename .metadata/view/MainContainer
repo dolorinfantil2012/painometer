@@ -19,7 +19,7 @@
     "customConfigs": [],
     "designerId": "7e707a99-90db-4d80-9225-13d04587e7d7",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen11612",
@@ -88,7 +88,7 @@
             "masterInstanceId": "ExtBox1-ext-gen36661"
         },
         {
-            "id": "ExtBox1-ext-gen4693",
+            "id": "ExtBox1-ext-gen15713",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -96,28 +96,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "configPanelIt"
+                "id": "Painometer"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
             "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen3433"
-        },
-        {
-            "id": "ExtBox1-ext-gen26300",
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "itemId": "CreditsContainer"
-            },
-            "customConfigs": [],
-            "iconCls": "icon-linkedinstance",
-            "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen9391"
+            "masterInstanceId": "ExtBox1-ext-gen8602"
         }
     ]
 }

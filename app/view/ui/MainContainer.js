@@ -20,8 +20,7 @@ Ext.define('Painometer.view.ui.MainContainer', {
         'Painometer.view.NRS11Panel',
         'Painometer.view.CASPanel',
         'Painometer.view.VASPanel',
-        'Painometer.view.ConfigPanel',
-        'Painometer.view.CreditsContainer'
+        'Painometer.view.Painometer'
     ],
 
     config: {
@@ -56,12 +55,8 @@ Ext.define('Painometer.view.ui.MainContainer', {
                 style: 'background-color:white;'
             },
             {
-                xtype: 'configpanel',
-                id: 'configPanelIt'
-            },
-            {
-                xtype: 'creditscontainer',
-                itemId: 'CreditsContainer'
+                xtype: 'painometer',
+                id: 'Painometer'
             }
         ]
     }

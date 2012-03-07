@@ -131,10 +131,17 @@
                 "app/controller/CreditsContainer.js"
             ],
             "className": "CreditsContainer"
+        },
+        "92fb1979-116c-4c1c-ad68-5063f7fc44c6": {
+            "paths": [
+                "app/view/Painometer.js",
+                "app/view/ui/Painometer.js"
+            ],
+            "className": "Painometer"
         }
     },
     "expandedState": {
-        "data": true,
+        "data": false,
         "model": false,
         "component": true,
         "controller": true

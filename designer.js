@@ -38,7 +38,8 @@ Ext.application({
         'ConfigPanel',
         'FPSRPanel',
         'InfoContainer',
-        'CreditsContainer'
+        'CreditsContainer',
+        'Painometer'
     ],
 
     glossOnIcon: true,

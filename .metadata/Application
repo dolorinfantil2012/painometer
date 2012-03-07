@@ -25,7 +25,8 @@
             "ConfigPanel",
             "FPSRPanel",
             "InfoContainer",
-            "CreditsContainer"
+            "CreditsContainer",
+            "Painometer"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

@@ -31,6 +31,7 @@ Ext.define('Painometer.controller.CreditsContainer', {
     configTap: function(button, e, options) {
 
 
+
         var me = this;
         var card = me.getConfigCard();
         var layout = card.getLayout();

@@ -80,6 +80,7 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onConfigTap: function(button, e, options) {
 
+
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);
@@ -87,11 +88,13 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onButtonTap: function(button, e, options) {
 
+
         this.configInstance.save();
         this.getMainContainer().setActiveItem(4);
     },
 
     creditsbtnTap: function(button, e, options) {
+
 
         var me = this;
         var card = me.getConfigCard();
@@ -106,6 +109,7 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
 
+
         var newValue = this.configInstance.get('value');
 
         this.getValueCont().setData({'value' : newValue});
@@ -113,10 +117,12 @@ Ext.define('Painometer.controller.ConfigController', {
 
     getValue: function() {
 
+
         return this.configInstance.get('value');
     },
 
     setValue: function(newValue) {
+
 
         this.configInstance.set('value', newValue);
     }

@@ -19,6 +19,7 @@ Ext.define('Painometer.view.CreditsContainer', {
     initialize: function() {
 
 
+
         var me = this;
         me.callParent(arguments);
     }

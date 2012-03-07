@@ -17,6 +17,7 @@ Ext.define('Painometer.view.ConfigCard', {
     alias: 'widget.configCard',
 
     initialize: function() {
+
         var me = this;
         me.callParent(arguments);
     }

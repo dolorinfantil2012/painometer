@@ -28,7 +28,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "configTap",
-                "implHandler": "        var me = this;\n\n        me.getMainContainer().setActiveItem(4);",
+                "implHandler": "        var me = this;\r\n\n        me.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "config",

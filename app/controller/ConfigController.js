@@ -75,7 +75,6 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-
         if (Ext.isEmpty(records)) {
             // no hi ha cap registre
             //alert("onstoreload is empty");

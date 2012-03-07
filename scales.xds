@@ -5,7 +5,7 @@
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "/Users/roman/Sites/pere",
+        "exportPath": "C:/xampp/htdocs/painometer",
         "extPath": "touch/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -74,13 +74,6 @@
             ],
             "className": "CASPanel"
         },
-        "5b31aa95-ddd5-4190-94ac-373de28aad8c": {
-            "paths": [
-                "app/view/VASPanel.js",
-                "app/view/ui/VASPanel.js"
-            ],
-            "className": "VASPanel"
-        },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
                 "app/store/languageStore.js",
@@ -131,6 +124,13 @@
                 "app/controller/CreditsContainer.js"
             ],
             "className": "CreditsContainer"
+        },
+        "b621cd17-99cb-4c01-8be7-611be68a35c4": {
+            "paths": [
+                "app/view/VASPanel.js",
+                "app/view/ui/VASPanel.js"
+            ],
+            "className": "VASPanel"
         }
     },
     "expandedState": {

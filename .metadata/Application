@@ -21,11 +21,11 @@
             "MainContainer",
             "NRS11Panel",
             "CASPanel",
-            "VASPanel",
             "ConfigPanel",
             "FPSRPanel",
             "InfoContainer",
-            "CreditsContainer"
+            "CreditsContainer",
+            "VASPanel"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

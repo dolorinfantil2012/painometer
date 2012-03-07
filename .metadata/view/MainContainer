@@ -62,8 +62,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "casPanelIt",
-                "style": "background-color:white;"
+                "id": "casPanelIt"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -71,7 +70,7 @@
             "masterInstanceId": "ExtBox1-ext-gen36442"
         },
         {
-            "id": "ExtBox1-ext-gen39408",
+            "id": "ExtBox1-ext-gen14829",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -79,13 +78,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "vasPanelIt",
-                "style": "background-color:white;"
+                "id": "VasPanelIt"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
             "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen36661"
+            "masterInstanceId": "ExtBox1-ext-gen13445"
         },
         {
             "id": "ExtBox1-ext-gen45668",

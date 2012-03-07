@@ -14,7 +14,8 @@
         "scrollable": "false",
         "designer|userClassName": "ConfigPanel",
         "designer|userAlias": "configpanel",
-        "fullscreen": null
+        "fullscreen": null,
+        "container|align": "center"
     },
     "customConfigs": [
         {
@@ -91,11 +92,12 @@
             "codeClass": null,
             "userConfig": {
                 "data": "{ value : 10 }",
-                "height": 183,
+                "height": 200,
                 "id": "ValueCont",
-                "style": "border : 1px; margin: 50px",
-                "tpl": "<H1>value: {value}</H1>",
-                "layout": "fit",
+                "style": "font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;",
+                "tpl": "{value}",
+                "width": 220,
+                "layout": null,
                 "designer|userClassName": "MyContainer39"
             },
             "customConfigs": [],
@@ -110,13 +112,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "width": "100%",
                 "layout": "default",
                 "instructions": "Opcions generals de l'eina",
                 "title": "Opcions",
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen26059",

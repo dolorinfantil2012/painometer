@@ -31,7 +31,8 @@ Ext.define('Painometer.controller.ConfigController', {
             mainContainer: '#MainContainer',
             scaleSel: '#ScaleSel',
             infoBtn: '#infoBtn',
-            creditsbtn: '#creditsbtn'
+            creditsbtn: '#creditsbtn',
+            configCard: '#ConfigCard'
         },
 
         control: {
@@ -44,8 +45,8 @@ Ext.define('Painometer.controller.ConfigController', {
             "creditsbtn": {
                 tap: 'creditsbtnTap'
             },
-            "configpanel": {
-                activate: 'onConfigPanelActivate'
+            "configCard": {
+                activate: 'onconfigCardActivate'
             }
         }
     },
@@ -79,8 +80,6 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onConfigTap: function(button, e, options) {
 
-
-
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);
@@ -88,24 +87,24 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onButtonTap: function(button, e, options) {
 
-
-
         this.configInstance.save();
         this.getMainContainer().setActiveItem(4);
     },
 
     creditsbtnTap: function(button, e, options) {
 
-
-
         var me = this;
+        var card = me.getConfigCard();
+        var layout = card.getLayout();
+        var inn = layout.getAnimation().getInAnimation();
+        var out = layout.getAnimation().getOutAnimation();
 
-        me.getMainContainer().setActiveItem(5);
+        inn.setDirection("left");
+        out.setDirection("left");
+        card.setActiveItem(1);
     },
 
-    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-
-
+    onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
 
         var newValue = this.configInstance.get('value');
 
@@ -114,13 +113,10 @@ Ext.define('Painometer.controller.ConfigController', {
 
     getValue: function() {
 
-
-
         return this.configInstance.get('value');
     },
 
     setValue: function(newValue) {
-
 
         this.configInstance.set('value', newValue);
     }

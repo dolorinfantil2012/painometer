@@ -24,7 +24,8 @@
             "FPSRPanel",
             "InfoContainer",
             "CreditsContainer",
-            "VASPanel"
+            "VASPanel",
+            "ConfigCard"
         ],
         "designer|launch": "",
         "glossOnIcon": true,

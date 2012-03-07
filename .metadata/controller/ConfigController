@@ -26,7 +26,7 @@
     ],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15177",
@@ -54,7 +54,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "\r\n\r\n\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -121,7 +121,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "\r\n\r\n\r\n        this.configInstance.save();\r\n        this.getMainContainer().setActiveItem(4);",
+                "implHandler": "\r\n        this.configInstance.save();\r\n        this.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -156,7 +156,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "creditsbtnTap",
-                "implHandler": "\r\n\r\n\r\n        var me = this;\r\n\r\n        me.getMainContainer().setActiveItem(5);",
+                "implHandler": "\r\n        var me = this;\r\n        var card = me.getConfigCard();\r\n        var layout = card.getLayout();\r\n        var inn = layout.getAnimation().getInAnimation();\r\n        var out = layout.getAnimation().getOutAnimation();\r\n\r\n        inn.setDirection(\"left\");\r\n        out.setDirection(\"left\");\r\n        card.setActiveItem(1);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "creditsbtn",
@@ -190,47 +190,28 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onConfigPanelActivate",
-                "implHandler": "\r\n\r\n\r\n        var newValue = this.configInstance.get('value');\r\n\r\n        this.getValueCont().setData({'value' : newValue});",
+                "fn": "onconfigCardActivate",
+                "implHandler": "\nvar newValue = this.configInstance.get('value');\n\nthis.getValueCont().setData({'value' : newValue});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
-                "designer|controlQuery": "configpanel",
-                "designer|userClassName": "onConfigPanelActivate"
+                "designer|controlQuery": "configCard",
+                "designer|userClassName": "onconfigCardActivate"
             },
             "customConfigs": [],
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen17082",
-            "type": "basicfunction",
+            "id": "ExtBox1-ext-gen10100",
+            "type": "controllerref",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "setValue",
-                "designer|params": [
-                    "newValue"
-                ],
-                "implHandler": "\r\n\r\n        this.configInstance.set('value', newValue);",
-                "designer|userClassName": "setValue"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen53593",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "getValue",
-                "implHandler": "\r\n\r\n\r\n        return this.configInstance.get('value');",
-                "designer|userClassName": "getValue"
+                "ref": "configCard",
+                "selector": "#ConfigCard",
+                "designer|userClassName": "configCard"
             },
             "customConfigs": [],
             "expanded": true

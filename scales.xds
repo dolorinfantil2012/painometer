@@ -131,11 +131,18 @@
                 "app/view/ui/VASPanel.js"
             ],
             "className": "VASPanel"
+        },
+        "92fb1979-116c-4c1c-ad68-5063f7fc44c6": {
+            "paths": [
+                "app/view/ConfigCard.js",
+                "app/view/ui/ConfigCard.js"
+            ],
+            "className": "ConfigCard"
         }
     },
     "expandedState": {
-        "data": true,
-        "model": true,
+        "data": false,
+        "model": false,
         "component": true,
         "controller": true
     }

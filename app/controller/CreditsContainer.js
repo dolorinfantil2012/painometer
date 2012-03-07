@@ -16,12 +16,9 @@ Ext.define('Painometer.controller.CreditsContainer', {
     extend: 'Ext.app.Controller',
 
     config: {
-        views: [
-            'MainContainer'
-        ],
         refs: {
             config: '#config',
-            mainContainer: '#MainContainer'
+            configCard: '#ConfigCard'
         },
 
         control: {
@@ -33,9 +30,16 @@ Ext.define('Painometer.controller.CreditsContainer', {
 
     configTap: function(button, e, options) {
 
-        var me = this;
 
-        me.getMainContainer().setActiveItem(4);
+        var me = this;
+        var card = me.getConfigCard();
+        var layout = card.getLayout();
+        var inn = layout.getAnimation().getInAnimation();
+        var out = layout.getAnimation().getOutAnimation();
+
+        inn.setDirection("right");
+        out.setDirection("right");
+        card.setActiveItem(0);
     }
 
 });

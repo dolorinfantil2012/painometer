@@ -26,8 +26,7 @@ Ext.application({
 
     stores: [
         'scaleTypesStore',
-        'languageStore',
-        'ConfigStore'
+        'languageStore'
     ],
 
     views: [

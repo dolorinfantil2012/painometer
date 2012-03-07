@@ -7,13 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "stores": [
-            "ConfigStore"
-        ],
+        "stores": [],
         "views": [
             "FPSRPanel"
         ],
-        "designer|init": "alert(\"init FPRS\");\nvar storeConfig = Ext.getStore(\"configStoreId\");\nvar dataStore   = storeConfig.getData();\nvar configModel = dataStore.getAt(0);\n\nvar value = configModel.get(\"value\");\n\nvar pan = this.getFPSCarousel();\n\n/*value = Math.floor(value / 2);\npan.setActiveItem(value);*/",
+        "designer|init": "",
         "designer|userClassName": "FPSRPanel"
     },
     "customConfigs": [],
@@ -48,7 +46,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "faceActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value / 2;\r\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\r\n\n            oldFace.removeCls(\"face-selected\");\r\n        }\r\n\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value / 2;\r\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\r\n\n            newFace.addCls(\"face-selected\");\r\n\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\r\n            configController.setValue(container.config.value);\r\n        }",
+                "implHandler": "\r\n        if (!Ext.isEmpty(container)) {\r\n            var newIndex = container.config.value / 2;\r\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\r\n\r\n            newFace.addCls(\"face-selected\");\r\n        }\r\n\r\n        if (!Ext.isEmpty(oldActiveItem)) {\r\n            var oldIndex = oldActiveItem.config.value / 2;\r\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\r\n\r\n            oldFace.removeCls(\"face-selected\");\r\n\r\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\r\n            configController.setValue(container.config.value);\r\n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "faceContainer",
@@ -101,6 +99,25 @@
                 "ref": "FPSCarousel",
                 "selector": "#FPSCarousel",
                 "designer|userClassName": "FPSCarousel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen62624",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFPSRPanelActivate",
+                "implHandler": "\r\n        var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\r\n        var value = configController.getValue();\r\n        var pan = this.getFPSCarousel();\r\n        var index = Math.floor(value / 2);\r\n\r\n        pan.setActiveItem(index);",
+                "name": "activate",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "fpsrpanel",
+                "designer|userClassName": "onFPSRPanelActivate"
             },
             "customConfigs": [],
             "expanded": true

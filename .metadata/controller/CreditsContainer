@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "configTap",
-                "implHandler": "var me = this;\nvar card = me.getConfigCard();\nvar layout = card.getLayout();\nvar inn = layout.getAnimation().getInAnimation();\nvar out = layout.getAnimation().getOutAnimation();\n\ninn.setDirection(\"right\");\nout.setDirection(\"right\");\ncard.setActiveItem(0);",
+                "implHandler": "        var me = this;\n        var card = me.getConfigCard();\n        var layout = card.getLayout();\n        var inn = layout.getAnimation().getInAnimation();\n        var out = layout.getAnimation().getOutAnimation();\n\n        inn.setDirection(\"right\");\n        out.setDirection(\"right\");\n        card.setActiveItem(0);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "config",

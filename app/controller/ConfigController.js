@@ -20,7 +20,7 @@ Ext.define('Painometer.controller.ConfigController', {
             'Config'
         ],
         stores: [
-            'ConfigStore'
+            
         ],
         views: [
             'ConfigPanel'
@@ -42,9 +42,6 @@ Ext.define('Painometer.controller.ConfigController', {
             "infoBtn": {
                 tap: 'onButtonTap'
             },
-            "ConfigStore": {
-                load: 'onStoreLoad'
-            },
             "creditsbtn": {
                 tap: 'creditsbtnTap'
             },
@@ -55,7 +52,11 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     init: function() {
+
+        var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
+
         var configDefault = Ext.create('Painometer.model.Config', {
+            id       : 1,
             scale    : 0,
             language : 0,
             value    : 0
@@ -63,43 +64,35 @@ Ext.define('Painometer.controller.ConfigController', {
 
         this.configInstance = configDefault;
 
-        this.configStore = Ext.getStore("configStoreId");
-        this.configStore.on('load', this.onStoreLoad, this);
-        this.configStore.load();
+        configModel.load(1, {
+            scope: this,
+            failure: function(record) {
+                this.configInstance.save();
+            }, 
+            success: function (record) {
+                this.configInstance.set("value", record.get("value"));
+                this.configInstance.set("language", record.get("language"));
+                this.configInstance.set("scale", record.get("scale"));
+            }
+        });
 
     },
 
     onConfigTap: function(button, e, options) {
+
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);
     },
 
-    onStoreLoad: function(store, records, successful, operation, eOpts) {
-        if (Ext.isEmpty(records)) {
-            // no hi ha cap registre
-            //alert("onstoreload is empty");
-            store.add(this.configInstance);
-            store.sync();
-        } 
-
-        this.configInstance = store.first();
-    },
-
-    setValue: function(newValue) {
-        this.configInstance.set('value', newValue);
-        //
-        //this.getValueCont().setData({'value' : newValue});
-        cc = this;
-    },
-
     onButtonTap: function(button, e, options) {
-        var me = this;
-        me.configStore.sync();
-        me.getMainContainer().setActiveItem(4);
+
+        this.configInstance.save();
+        this.getMainContainer().setActiveItem(4);
     },
 
     creditsbtnTap: function(button, e, options) {
+
         var me = this;
         var card = me.getConfigCard();
         var layout = card.getLayout();
@@ -112,9 +105,20 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+
         var newValue = this.configInstance.get('value');
 
         this.getValueCont().setData({'value' : newValue});
+    },
+
+    getValue: function() {
+
+        return this.configInstance.get('value');
+    },
+
+    setValue: function(newValue) {
+
+        this.configInstance.set('value', newValue);
     }
 
 });

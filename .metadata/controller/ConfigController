@@ -10,13 +10,11 @@
         "models": [
             "Config"
         ],
-        "stores": [
-            "ConfigStore"
-        ],
+        "stores": [],
         "views": [
             "ConfigPanel"
         ],
-        "designer|init": "var configDefault = Ext.create('Painometer.model.Config', {\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\n\nthis.configInstance = configDefault;\n\nthis.configStore = Ext.getStore(\"configStoreId\");\nthis.configStore.on('load', this.onStoreLoad, this);\nthis.configStore.load();\n",
+        "designer|init": "\nvar configModel = Ext.ModelMgr.getModel('Painometer.model.Config');\n\nvar configDefault = Ext.create('Painometer.model.Config', {\n    id       : 1,\n    scale    : 0,\n    language : 0,\n    value    : 0\n});\n\nthis.configInstance = configDefault;\n\nconfigModel.load(1, {\n    scope: this,\n    failure: function(record) {\n        this.configInstance.save();\n    }, \n    success: function (record) {\n        this.configInstance.set(\"value\", record.get(\"value\"));\n        this.configInstance.set(\"language\", record.get(\"language\"));\n        this.configInstance.set(\"scale\", record.get(\"scale\"));\n    }\n});\n",
         "designer|userClassName": "ConfigController"
     },
     "customConfigs": [
@@ -56,7 +54,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "\r\n        var me = this;\r\n        var scale = me.getScaleSel().getValue();\r\n        me.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -123,49 +121,11 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "        var me = this;\r\n        me.configStore.sync();\r\n        me.getMainContainer().setActiveItem(4);",
+                "implHandler": "\r\n        this.configInstance.save();\r\n        this.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
                 "designer|userClassName": "onButtonTap"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen12585",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onStoreLoad",
-                "implHandler": "        if (Ext.isEmpty(records)) {\r\n            // no hi ha cap registre\r\n            //alert(\"onstoreload is empty\");\r\n            store.add(this.configInstance);\r\n            store.sync();\r\n        } \r\n\n        this.configInstance = store.first();",
-                "name": "load",
-                "designer|targetType": "Ext.data.Store",
-                "designer|controlQuery": "ConfigStore",
-                "designer|userClassName": "onStoreLoad"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen17082",
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "setValue",
-                "designer|params": [
-                    "newValue"
-                ],
-                "implHandler": "        this.configInstance.set('value', newValue);\r\n        //\r\n        //this.getValueCont().setData({'value' : newValue});\r\n        cc = this;",
-                "designer|userClassName": "setValue"
             },
             "customConfigs": [],
             "expanded": true
@@ -196,7 +156,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "creditsbtnTap",
-                "implHandler": "var me = this;\nvar card = me.getConfigCard();\nvar layout = card.getLayout();\nvar inn = layout.getAnimation().getInAnimation();\nvar out = layout.getAnimation().getOutAnimation();\n\ninn.setDirection(\"left\");\nout.setDirection(\"left\");\ncard.setActiveItem(1);",
+                "implHandler": "\r\n        var me = this;\r\n        var card = me.getConfigCard();\r\n        var layout = card.getLayout();\r\n        var inn = layout.getAnimation().getInAnimation();\r\n        var out = layout.getAnimation().getOutAnimation();\r\n\r\n        inn.setDirection(\"left\");\r\n        out.setDirection(\"left\");\r\n        card.setActiveItem(1);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "creditsbtn",
@@ -231,7 +191,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "        var newValue = this.configInstance.get('value');\r\n\n        this.getValueCont().setData({'value' : newValue});",
+                "implHandler": "\r\n        var newValue = this.configInstance.get('value');\r\n\r\n        this.getValueCont().setData({'value' : newValue});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "configpanel",
@@ -241,7 +201,7 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen10854",
+            "id": "ExtBox1-ext-gen10100",
             "type": "controllerref",
             "reference": {
                 "name": "items",

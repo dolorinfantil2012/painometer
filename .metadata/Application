@@ -14,8 +14,7 @@
         ],
         "stores": [
             "scaleTypesStore",
-            "languageStore",
-            "ConfigStore"
+            "languageStore"
         ],
         "views": [
             "MainContainer",

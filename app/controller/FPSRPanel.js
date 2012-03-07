@@ -17,7 +17,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
     config: {
         stores: [
-            'ConfigStore'
+            
         ],
         views: [
             'FPSRPanel'
@@ -32,41 +32,41 @@ Ext.define('Painometer.controller.FPSRPanel', {
         control: {
             "faceContainer": {
                 activate: 'faceActivate'
+            },
+            "fpsrpanel": {
+                activate: 'onFPSRPanelActivate'
             }
         }
     },
 
-    init: function() {
-        alert("init FPRS");
-        var storeConfig = Ext.getStore("configStoreId");
-        var dataStore   = storeConfig.getData();
-        var configModel = dataStore.getAt(0);
-
-        var value = configModel.get("value");
-
-        var pan = this.getFPSCarousel();
-
-        /*value = Math.floor(value / 2);
-        pan.setActiveItem(value);*/
-    },
-
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value / 2;
-            var oldFace = this.getFpsNav().items.getAt(oldIndex);
-
-            oldFace.removeCls("face-selected");
-        }
 
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 2;
             var newFace    = this.getFpsNav().items.getAt(newIndex);
 
             newFace.addCls("face-selected");
+        }
+
+        if (!Ext.isEmpty(oldActiveItem)) {
+            var oldIndex = oldActiveItem.config.value / 2;
+            var oldFace = this.getFpsNav().items.getAt(oldIndex);
+
+            oldFace.removeCls("face-selected");
 
             var configController = this.getApplication().getController("Painometer.controller.ConfigController");
             configController.setValue(container.config.value);
         }
+    },
+
+    onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+
+        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+        var value = configController.getValue();
+        var pan = this.getFPSCarousel();
+        var index = Math.floor(value / 2);
+
+        pan.setActiveItem(index);
     }
 
 });

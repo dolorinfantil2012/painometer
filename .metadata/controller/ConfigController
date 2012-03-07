@@ -121,7 +121,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onButtonTap",
-                "implHandler": "this.configInstance.save();\nthis.getMainContainer().setActiveItem(4);",
+                "implHandler": "        this.configInstance.save();\n        this.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
@@ -191,7 +191,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigPanelActivate",
-                "implHandler": "var newValue = this.configInstance.get('value');\n\nthis.getValueCont().setData({'value' : newValue});",
+                "implHandler": "        var newValue = this.configInstance.get('value');\n\n        this.getValueCont().setData({'value' : newValue});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "configpanel",
@@ -213,7 +213,7 @@
                 "designer|params": [
                     "newValue"
                 ],
-                "implHandler": "this.configInstance.set('value', newValue);\n",
+                "implHandler": "        this.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
             },
             "customConfigs": [],
@@ -229,7 +229,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "getValue",
-                "implHandler": "return this.configInstance.get('value');",
+                "implHandler": "        return this.configInstance.get('value');",
                 "designer|userClassName": "getValue"
             },
             "customConfigs": [],

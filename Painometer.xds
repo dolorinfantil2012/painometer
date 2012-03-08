@@ -63,11 +63,11 @@
         },
         "6713f8cf-7ca5-4334-94e4-24f0c7567826": {
             "paths": [
-                "metadata/store/scaleTypesStore",
-                "app/store/override/scaleTypesStore.js",
-                "app/store/scaleTypesStore.js"
+                "metadata/store/ScaleTypes",
+                "app/store/override/ScaleTypes.js",
+                "app/store/ScaleTypes.js"
             ],
-            "className": "scaleTypesStore"
+            "className": "ScaleTypes"
         },
         "bb13e684-a2b2-4f1d-ac4b-ed6ff0932d05": {
             "paths": [
@@ -87,11 +87,11 @@
         },
         "fd2548c4-ff23-4550-8829-75f7c0e67fb4": {
             "paths": [
-                "metadata/store/languageStore",
-                "app/store/override/languageStore.js",
-                "app/store/languageStore.js"
+                "metadata/store/LanguageTypes",
+                "app/store/override/LanguageTypes.js",
+                "app/store/LanguageTypes.js"
             ],
-            "className": "languageStore"
+            "className": "LanguageTypes"
         },
         "9554e44c-a0c7-4564-b92c-02314adf5544": {
             "paths": [
@@ -111,19 +111,19 @@
         },
         "0dda6c73-6cff-4c12-96df-16214d950e50": {
             "paths": [
-                "metadata/model/ScaleTypes",
-                "app/model/override/ScaleTypes.js",
-                "app/model/ScaleTypes.js"
+                "metadata/model/ScaleType",
+                "app/model/override/ScaleType.js",
+                "app/model/ScaleType.js"
             ],
-            "className": "ScaleTypes"
+            "className": "ScaleType"
         },
         "7f37ac91-b1b4-47a6-9101-25deabc7d2c9": {
             "paths": [
-                "metadata/model/Language",
-                "app/model/override/Language.js",
-                "app/model/Language.js"
+                "metadata/model/LanguageType",
+                "app/model/override/LanguageType.js",
+                "app/model/LanguageType.js"
             ],
-            "className": "Language"
+            "className": "LanguageType"
         },
         "76a4b273-e5b0-42ad-b402-232eb3fc8e82": {
             "paths": [
@@ -170,6 +170,6 @@
         "data": false,
         "model": false,
         "component": false,
-        "controller": true
+        "controller": false
     }
 }

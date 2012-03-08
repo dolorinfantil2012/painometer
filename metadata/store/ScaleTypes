@@ -9,9 +9,9 @@
     "userConfig": {
         "autoLoad": true,
         "data": "[\n{ idScale: 0, label: \"FPS-R\"},\n{ idScale: 1, label: \"NRS-11\"},\n{ idScale: 2, label: \"CAS\"},\n{ idScale: 3, label: \"VAS\"}\n]",
-        "model": "ScaleTypes",
+        "model": "ScaleType",
         "storeId": "scaleTypesStoreId",
-        "designer|userClassName": "scaleTypesStore",
+        "designer|userClassName": "ScaleTypes",
         "autoDestroy": null
     },
     "customConfigs": [

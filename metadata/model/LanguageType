@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen28987",
+    "id": "ExtBox1-ext-gen14850",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -7,16 +7,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "clientIdProperty": null,
-        "designer|userClassName": "ScaleTypes"
+        "designer|userClassName": "LanguageType"
     },
     "customConfigs": [],
-    "designerId": "0dda6c73-6cff-4c12-96df-16214d950e50",
-    "$viewOrder": 1,
+    "designerId": "7f37ac91-b1b4-47a6-9101-25deabc7d2c9",
+    "$viewOrder": 2,
     "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen29246",
+            "id": "ExtBox1-ext-gen15309",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -25,15 +24,15 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "name": "idScale",
+                "name": "idLang",
                 "type": "int",
-                "designer|userClassName": "MyField1"
+                "designer|userClassName": "MyField3"
             },
             "customConfigs": [],
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen29259",
+            "id": "ExtBox1-ext-gen15464",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -43,7 +42,7 @@
             "userConfig": {
                 "name": "label",
                 "type": "string",
-                "designer|userClassName": "MyField2"
+                "designer|userClassName": "MyField4"
             },
             "customConfigs": [],
             "expanded": true

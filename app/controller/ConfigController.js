@@ -8,29 +8,113 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.controller.ConfigController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        models: [
+            'Config'
+        ],
+        stores: [
+            
+        ],
+        views: [
+            'ConfigPanel'
+        ],
         refs: {
             okConfig: '#okConfig',
-            mainContainer: '#MainContainer'
+            ValueCont: '#ValueCont',
+            mainContainer: '#MainContainer',
+            scaleSel: '#ScaleSel',
+            infoBtn: '#infoBtn',
+            creditsbtn: '#creditsbtn',
+            configCard: '#ConfigCard'
         },
 
         control: {
             "okConfig": {
                 tap: 'onConfigTap'
+            },
+            "infoBtn": {
+                tap: 'onButtonTap'
+            },
+            "creditsbtn": {
+                tap: 'creditsbtnTap'
+            },
+            "configCard": {
+                activate: 'onconfigCardActivate'
             }
         }
     },
 
+    init: function() {
+
+        var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
+
+        var configDefault = Ext.create('Painometer.model.Config', {
+            id       : 1,
+            scale    : 0,
+            language : 0,
+            value    : 0
+        });
+
+        this.configInstance = configDefault;
+
+        configModel.load(1, {
+            scope: this,
+            failure: function(record) {
+                this.configInstance.save();
+            }, 
+            success: function (record) {
+                this.configInstance.set("value", record.get("value"));
+                this.configInstance.set("language", record.get("language"));
+                this.configInstance.set("scale", record.get("scale"));
+            }
+        });
+
+    },
+
     onConfigTap: function(button, e, options) {
         var me = this;
-        me.getMainContainer().setActiveItem(0);
+        var scale = me.getScaleSel().getValue();
+        me.getMainContainer().setActiveItem(scale);
+    },
+
+    onButtonTap: function(button, e, options) {
+        this.configInstance.save();
+        this.getMainContainer().setActiveItem(4);
+    },
+
+    creditsbtnTap: function(button, e, options) {
+        var me = this;
+        var card = me.getConfigCard();
+        var layout = card.getLayout();
+        var inn = layout.getAnimation().getInAnimation();
+        var out = layout.getAnimation().getOutAnimation();
+
+        inn.setDirection("left");
+        out.setDirection("left");
+        card.setActiveItem(1);
+    },
+
+    onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var newValue = this.configInstance.get('value');
+
+        this.getValueCont().setData({'value' : newValue});
+    },
+
+    getValue: function() {
+        return this.configInstance.get('value');
+
+    },
+
+    setValue: function(newValue) {
+        this.configInstance.set('value', newValue);
     }
 
 });

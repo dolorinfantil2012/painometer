@@ -19,10 +19,23 @@ Ext.define('Painometer.model.Config', {
         fields: [
             {
                 allowNull: false,
-                defaultValue: 0,
                 name: 'scale',
                 type: 'int'
+            },
+            {
+                allowNull: false,
+                name: 'language',
+                type: 'int'
+            },
+            {
+                defaultValue: 0,
+                name: 'value',
+                type: 'int'
             }
-        ]
+        ],
+        proxy: {
+            type: 'localstorage',
+            id: 'painometerProxy'
+        }
     }
 });

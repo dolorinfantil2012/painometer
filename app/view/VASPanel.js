@@ -8,17 +8,45 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.VASPanel', {
-    extend: 'Painometer.view.ui.VASPanel',
+    extend: 'Ext.Container',
     alias: 'widget.vaspanel',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'container',
+                id: 'VASSliderCont',
+                style: 'background-color:white;',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'sliderfield',
+                        centered: true,
+                        cls: 'sencha-vas-slider',
+                        id: 'VASSlider'
+                    }
+                ]
+            },
+            {
+                xtype: 'InfoContainer',
+                itemId: 'infoVAS'
+            }
+        ]
     }
 
 });

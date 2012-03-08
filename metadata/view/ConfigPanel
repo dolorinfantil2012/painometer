@@ -1,0 +1,179 @@
+{
+    "id": "ExtBox1-ext-gen3433",
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "id": "ConfigPanel",
+        "ui": "",
+        "layout": "vbox",
+        "scrollable": "false",
+        "designer|userClassName": "ConfigPanel",
+        "designer|userAlias": "configpanel",
+        "fullscreen": null,
+        "container|align": "center"
+    },
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "fullscreen",
+            "type": "boolean"
+        }
+    ],
+    "designerId": "5d1b5cba-1b1c-459d-b90b-4a6a7b52a15f",
+    "$viewOrder": 1,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen13702",
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Painometer",
+                "designer|userClassName": "MyTitleBar"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen14210",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "okConfig",
+                        "ui": "confirm",
+                        "text": "OK",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen10844",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "creditsbtn",
+                        "ui": "forward",
+                        "iconAlign": "right",
+                        "text": "Crèdits",
+                        "designer|userClassName": "MyButton2",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen8349",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": "{ value : 10 }",
+                "height": 200,
+                "id": "ValueCont",
+                "style": "font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;",
+                "tpl": "{value}",
+                "width": 220,
+                "layout": null,
+                "designer|userClassName": "MyContainer39"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22132",
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": "100%",
+                "layout": "default",
+                "instructions": "Opcions generals de l'eina",
+                "title": "Opcions",
+                "designer|userClassName": "MyFieldSet"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen26059",
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "height": "",
+                        "id": "ScaleSel",
+                        "itemId": "ScaleSel",
+                        "width": "",
+                        "label": "Escala",
+                        "labelAlign": "bottom",
+                        "labelWidth": "40%",
+                        "name": "escalaType",
+                        "required": null,
+                        "displayField": "label",
+                        "store": "scaleTypesStoreId",
+                        "valueField": "idScale",
+                        "designer|userClassName": "MySelectField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen43421",
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "height": "",
+                        "width": "",
+                        "label": "Idioma",
+                        "labelAlign": "bottom",
+                        "labelWidth": "40%",
+                        "name": "Language",
+                        "required": null,
+                        "displayField": "label",
+                        "store": "languageStoreId",
+                        "valueField": "idLang\n",
+                        "designer|userClassName": "MySelectField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

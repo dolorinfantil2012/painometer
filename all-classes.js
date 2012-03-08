@@ -35,7 +35,11 @@ Ext.define('Painometer.model.Config', {
                 name: 'value',
                 type: 'int'
             }
-        ]
+        ],
+        proxy: {
+            type: 'localstorage',
+            id: 'painometerProxy'
+        }
     }
 });
 /*
@@ -91,26 +95,61 @@ Ext.define('Painometer.controller.ConfigController', {
             'Config'
         ],
         stores: [
-            'ConfigStore'
+            
         ],
         views: [
             'ConfigPanel'
         ],
         refs: {
             okConfig: '#okConfig',
-            ValueView: 'Value',
+            ValueCont: '#ValueCont',
             mainContainer: '#MainContainer',
-            scaleSel: '#ScaleSel'
+            scaleSel: '#ScaleSel',
+            infoBtn: '#infoBtn',
+            creditsbtn: '#creditsbtn',
+            configCard: '#ConfigCard'
         },
 
         control: {
-            "ConfigPanel": {
-                activate: 'onConfigPanelActivate'
-            },
             "okConfig": {
                 tap: 'onConfigTap'
+            },
+            "infoBtn": {
+                tap: 'onButtonTap'
+            },
+            "creditsbtn": {
+                tap: 'creditsbtnTap'
+            },
+            "configCard": {
+                activate: 'onconfigCardActivate'
             }
         }
+    },
+
+    init: function() {
+        var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
+
+        var configDefault = Ext.create('Painometer.model.Config', {
+            id       : 1,
+            scale    : 0,
+            language : 0,
+            value    : 0
+        });
+
+        this.configInstance = configDefault;
+
+        configModel.load(1, {
+            scope: this,
+            failure: function(record) {
+                this.configInstance.save();
+            }, 
+            success: function (record) {
+                this.configInstance.set("value", record.get("value"));
+                this.configInstance.set("language", record.get("language"));
+                this.configInstance.set("scale", record.get("scale"));
+            }
+        });
+
     },
 
     onConfigTap: function(button, e, options) {
@@ -119,11 +158,35 @@ Ext.define('Painometer.controller.ConfigController', {
         me.getMainContainer().setActiveItem(scale);
     },
 
-    onConfigPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var me = this;
+    onButtonTap: function(button, e, options) {
+        this.configInstance.save();
+        this.getMainContainer().setActiveItem(4);
+    },
 
-        var view = me.getValueView();
-        view.refresh();
+    creditsbtnTap: function(button, e, options) {
+        var me = this;
+        var card = me.getConfigCard();
+        var layout = card.getLayout();
+        var inn = layout.getAnimation().getInAnimation();
+        var out = layout.getAnimation().getOutAnimation();
+
+        inn.setDirection("left");
+        out.setDirection("left");
+        card.setActiveItem(1);
+    },
+
+    onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var newValue = this.configInstance.get('value');
+
+        this.getValueCont().setData({'value' : newValue});
+    },
+
+    getValue: function() {
+        return this.configInstance.get('value');
+    },
+
+    setValue: function(newValue) {
+        this.configInstance.set('value', newValue);
     }
 
 });
@@ -146,7 +209,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
 
     config: {
         stores: [
-            'ConfigStore'
+            
         ],
         views: [
             'NRS11Panel'
@@ -154,7 +217,6 @@ Ext.define('Painometer.controller.NRS11Panel', {
         refs: {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
-            infoBtn2: '#infoBtn2',
             mainContainer: '#MainContainer',
             NRS11Panel: '#Nrs11Panel',
             NRSCarousel: '#NRSCarousel'
@@ -164,9 +226,6 @@ Ext.define('Painometer.controller.NRS11Panel', {
             "numContainer": {
                 activate: 'numActivate'
             },
-            "infoBtn2": {
-                tap: 'onInfoButtonTap'
-            },
             "NRS11Panel": {
                 activate: 'onNRS11PanelActivate'
             }
@@ -174,13 +233,6 @@ Ext.define('Painometer.controller.NRS11Panel', {
     },
 
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value;
-            var oldFace = this.getNrsNav().items.getAt(oldIndex);
-
-            oldFace.removeCls("face-selected");
-        }
-
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value;
             var newFace    = this.getNrsNav().items.getAt(newIndex);
@@ -188,22 +240,19 @@ Ext.define('Painometer.controller.NRS11Panel', {
             newFace.addCls("face-selected");
         }
 
-        /* guardar valor al model */
-        /* guardar model al disc */;
-    },
+        if (!Ext.isEmpty(oldActiveItem)) {
+            var oldIndex = oldActiveItem.config.value;
+            var oldFace = this.getNrsNav().items.getAt(oldIndex);
 
-    onInfoButtonTap: function(button, e, options) {
-        var me = this;
-        me.getMainContainer().setActiveItem(4);
+            oldFace.removeCls("face-selected");
+            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+            configController.setValue(container.config.value);
+        }
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var storeConfig = Ext.getStore("configStoreId");
-        var dataStore   = storeConfig.getData();
-        var configModel = dataStore.getAt(0);
-
-        var value = configModel.get("value");
-
+        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+        var value = configController.getValue();
         var pan = this.getNRSCarousel();
 
         pan.setActiveItem(value);
@@ -228,34 +277,30 @@ Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
+        stores: [
+            
+        ],
         views: [
             'FPSRPanel'
         ],
         refs: {
             faceContainer: '#FPSCarousel image',
             fpsNav: '#FPSNavContainer',
-            infoBtn: '#infoBtn',
-            mainContainer: '#MainContainer'
+            mainContainer: '#MainContainer',
+            FPSCarousel: '#FPSCarousel'
         },
 
         control: {
             "faceContainer": {
                 activate: 'faceActivate'
             },
-            "infoBtn": {
-                tap: 'onInfoButtonTap'
+            "fpsrpanel": {
+                activate: 'onFPSRPanelActivate'
             }
         }
     },
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value / 2;
-            var oldFace = this.getFpsNav().items.getAt(oldIndex);
-
-            oldFace.removeCls("face-selected");
-        }
-
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 2;
             var newFace    = this.getFpsNav().items.getAt(newIndex);
@@ -263,13 +308,24 @@ Ext.define('Painometer.controller.FPSRPanel', {
             newFace.addCls("face-selected");
         }
 
-        /* guardar valor al model */
-        /* guardar model al disc */;
+        if (!Ext.isEmpty(oldActiveItem)) {
+            var oldIndex = oldActiveItem.config.value / 2;
+            var oldFace = this.getFpsNav().items.getAt(oldIndex);
+
+            oldFace.removeCls("face-selected");
+
+            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+            configController.setValue(container.config.value);
+        }
     },
 
-    onInfoButtonTap: function(button, e, options) {
-        var me = this;
-        me.getMainContainer().setActiveItem(4);
+    onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+        var value = configController.getValue();
+        var pan = this.getFPSCarousel();
+        var index = Math.floor(value / 2);
+
+        pan.setActiveItem(index);
     }
 
 });
@@ -290,9 +346,37 @@ Ext.define('Painometer.controller.FPSRPanel', {
 
 Ext.define('Painometer.view.ui.VASPanel', {
     extend: 'Ext.Container',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
-        html: 'VASPanel under construction'
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'container',
+                id: 'VASSliderCont',
+                style: 'background-color:white;',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'sliderfield',
+                        centered: true,
+                        cls: 'sencha-vas-slider',
+                        id: 'VASSlider'
+                    }
+                ]
+            },
+            {
+                xtype: 'InfoContainer',
+                itemId: 'infoVAS'
+            }
+        ]
     }
 
 });
@@ -316,7 +400,9 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
 
     config: {
         id: 'ConfigPanel',
+        ui: '',
         layout: {
+            align: 'center',
             type: 'vbox'
         },
         scrollable: false,
@@ -331,35 +417,33 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
                         id: 'okConfig',
                         ui: 'confirm',
                         text: 'OK'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'creditsbtn',
+                        ui: 'forward',
+                        iconAlign: 'right',
+                        text: 'Crèdits',
+                        align: 'right'
                     }
                 ]
             },
             {
-                xtype: 'panel',
-                height: 183,
-                id: 'ValueCont',
-                layout: {
-                    type: 'fit'
+                xtype: 'container',
+                data: {
+                    value: 10
                 },
-                items: [
-                    {
-                        xtype: 'dataview',
-                        centered: true,
-                        height: 130,
-                        id: 'Value',
-                        style: 'border-width:0.1 px; border-style:solid;',
-                        width: 130,
-                        scrollable: false,
-                        itemTpl: [
-                            '<div style=" padding-top:-15px;',
-                            'font-size:100px;"><center>{value}</center></div>'
-                        ],
-                        store: 'configStoreId'
-                    }
-                ]
+                height: 200,
+                id: 'ValueCont',
+                style: 'font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;',
+                tpl: [
+                    '{value}'
+                ],
+                width: 220
             },
             {
                 xtype: 'fieldset',
+                width: '100%',
                 layout: {
                     type: 'default'
                 },
@@ -415,6 +499,9 @@ Ext.define('Painometer.view.ui.ConfigPanel', {
 
 Ext.define('Painometer.view.ui.FPSRPanel', {
     extend: 'Ext.form.Panel',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
         id: 'FPSRPanel',
@@ -484,27 +571,6 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
                 },
                 items: [
                     {
-                        xtype: 'container',
-                        docked: 'right',
-                        id: 'infoContainer',
-                        layout: {
-                            align: 'end',
-                            pack: 'end',
-                            type: 'hbox'
-                        },
-                        items: [
-                            {
-                                xtype: 'button',
-                                id: 'infoBtn',
-                                style: 'border:0',
-                                ui: 'info_btn-small',
-                                width: 22,
-                                iconCls: 'info',
-                                iconMask: true
-                            }
-                        ]
-                    },
-                    {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
                         defaults: {
@@ -548,6 +614,10 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
                                 value: 10
                             }
                         ]
+                    },
+                    {
+                        xtype: 'InfoContainer',
+                        id: 'infoContainerFP'
                     }
                 ]
             }
@@ -572,6 +642,9 @@ Ext.define('Painometer.view.ui.FPSRPanel', {
 
 Ext.define('Painometer.view.ui.NRS11Panel', {
     extend: 'Ext.form.Panel',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
         html: '',
@@ -667,27 +740,6 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                 },
                 items: [
                     {
-                        xtype: 'container',
-                        docked: 'right',
-                        id: 'infoContainer2',
-                        layout: {
-                            align: 'end',
-                            pack: 'end',
-                            type: 'hbox'
-                        },
-                        items: [
-                            {
-                                xtype: 'button',
-                                id: 'infoBtn2',
-                                style: 'border:0',
-                                ui: 'info_btn-small',
-                                width: 22,
-                                iconCls: 'info',
-                                iconMask: true
-                            }
-                        ]
-                    },
-                    {
                         xtype: 'carousel',
                         id: 'NRSCarousel',
                         style: 'background-color:white;',
@@ -763,6 +815,10 @@ Ext.define('Painometer.view.ui.NRS11Panel', {
                                 value: 10
                             }
                         ]
+                    },
+                    {
+                        xtype: 'InfoContainer',
+                        id: 'infoContainer'
                     }
                 ]
             }
@@ -829,7 +885,6 @@ Ext.define('Painometer.store.base.ConfigStore', {
     ],
 
     config: {
-        autoLoad: true,
         model: 'Painometer.model.Config',
         storeId: 'configStoreId',
         proxy: {
@@ -892,9 +947,37 @@ Ext.define('Painometer.model.ScaleTypes', {
 
 Ext.define('Painometer.view.ui.CASPanel', {
     extend: 'Ext.Container',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
     config: {
-        html: 'CASPanel under construction'
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'container',
+                id: 'CASSliderCont',
+                style: 'background-color:white;',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'sliderfield',
+                        centered: true,
+                        cls: 'sencha-cas-slider',
+                        id: 'CASSlider'
+                    }
+                ]
+            },
+            {
+                xtype: 'InfoContainer',
+                itemId: 'infoCAS'
+            }
+        ]
     }
 
 });
@@ -1018,19 +1101,7 @@ Ext.define('Painometer.store.ConfigStore', {
     },
 
     onStoreLoad: function(store, records, successful, operation, eOpts) {
-        //alert("Store: records " + Ext.isEmpty(records) + " suc:" + successful);
-
-        var configDefault = Ext.create('Painometer.model.Config', {
-            scale    : 0,
-            language : 0,
-            value    : 0
-        });
-
-        if (Ext.isEmpty(records)) {
-            // no hi ha cap registre
-            store.add(configDefault);
-            store.sync();
-        };
+        alert("load store");
     }
 
 });
@@ -1173,7 +1244,7 @@ Ext.define('Painometer.view.ui.MainContainer', {
         'Painometer.view.NRS11Panel',
         'Painometer.view.CASPanel',
         'Painometer.view.VASPanel',
-        'Painometer.view.ConfigPanel'
+        'Painometer.view.ConfigCard'
     ],
 
     config: {
@@ -1199,17 +1270,15 @@ Ext.define('Painometer.view.ui.MainContainer', {
             },
             {
                 xtype: 'caspanel',
-                id: 'casPanelIt',
-                style: 'background-color:white;'
+                id: 'casPanelIt'
             },
             {
                 xtype: 'vaspanel',
-                id: 'vasPanelIt',
-                style: 'background-color:white;'
+                id: 'VasPanelIt'
             },
             {
-                xtype: 'configpanel',
-                id: 'configPanelIt'
+                xtype: 'configCard',
+                id: 'ConfigCard'
             }
         ]
     }

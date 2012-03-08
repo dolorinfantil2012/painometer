@@ -26,17 +26,19 @@ Ext.application({
 
     stores: [
         'scaleTypesStore',
-        'languageStore',
-        'ConfigStore'
+        'languageStore'
     ],
 
     views: [
         'MainContainer',
         'NRS11Panel',
         'CASPanel',
-        'VASPanel',
         'ConfigPanel',
-        'FPSRPanel'
+        'FPSRPanel',
+        'InfoContainer',
+        'CreditsContainer',
+        'VASPanel',
+        'ConfigCard'
     ],
 
     glossOnIcon: true,
@@ -46,10 +48,12 @@ Ext.application({
     controllers: [
         'ConfigController',
         'FPSRPanel',
-        'NRS11Panel'
+        'NRS11Panel',
+        'CreditsContainer'
     ],
 
     launch: function() {
+        painometerApp = this;
         Ext.create('Painometer.view.MainContainer', {fullscreen: true});
     }
 });

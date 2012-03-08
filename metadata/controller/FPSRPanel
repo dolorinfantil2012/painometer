@@ -7,10 +7,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "stores": [],
         "views": [
             "FPSRPanel"
         ],
         "designer|init": "",
+        "designer|launch": "",
         "designer|userClassName": "FPSRPanel"
     },
     "customConfigs": [],
@@ -45,7 +47,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "faceActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value / 2;\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value / 2;\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n        }\n\n        /* guardar valor al model */\n        /* guardar model al disc */;",
+                "implHandler": "        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value / 2;\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value / 2;\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n            configController.setValue(container.config.value);\n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "faceContainer",
@@ -71,22 +73,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen7984",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "infoBtn",
-                "selector": "#infoBtn",
-                "designer|userClassName": "infoBtn"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen11701",
             "type": "controllerref",
             "reference": {
@@ -103,7 +89,23 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen5686",
+            "id": "ExtBox1-ext-gen13283",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "FPSCarousel",
+                "selector": "#FPSCarousel",
+                "designer|userClassName": "FPSCarousel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen62624",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -111,12 +113,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onInfoButtonTap",
-                "implHandler": "        var me = this;\n        me.getMainContainer().setActiveItem(4);",
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "infoBtn",
-                "designer|userClassName": "onInfoButtonTap"
+                "fn": "onFPSRPanelActivate",
+                "implHandler": "        var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n        var value = configController.getValue();\n        var pan = this.getFPSCarousel();\n        var index = Math.floor(value / 2);\n\n        pan.setActiveItem(index);",
+                "name": "activate",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "fpsrpanel",
+                "designer|userClassName": "onFPSRPanelActivate"
             },
             "customConfigs": [],
             "expanded": true

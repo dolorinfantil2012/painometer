@@ -8,42 +8,39 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
+        stores: [
+            
+        ],
         views: [
             'FPSRPanel'
         ],
         refs: {
             faceContainer: '#FPSCarousel image',
             fpsNav: '#FPSNavContainer',
-            infoBtn: '#infoBtn',
-            mainContainer: '#MainContainer'
+            mainContainer: '#MainContainer',
+            FPSCarousel: '#FPSCarousel'
         },
 
         control: {
             "faceContainer": {
                 activate: 'faceActivate'
             },
-            "infoBtn": {
-                tap: 'onInfoButtonTap'
+            "fpsrpanel": {
+                activate: 'onFPSRPanelActivate'
             }
         }
     },
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value / 2;
-            var oldFace = this.getFpsNav().items.getAt(oldIndex);
-
-            oldFace.removeCls("face-selected");
-        }
-
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 2;
             var newFace    = this.getFpsNav().items.getAt(newIndex);
@@ -51,13 +48,24 @@ Ext.define('Painometer.controller.FPSRPanel', {
             newFace.addCls("face-selected");
         }
 
-        /* guardar valor al model */
-        /* guardar model al disc */;
+        if (!Ext.isEmpty(oldActiveItem)) {
+            var oldIndex = oldActiveItem.config.value / 2;
+            var oldFace = this.getFpsNav().items.getAt(oldIndex);
+
+            oldFace.removeCls("face-selected");
+
+            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+            configController.setValue(container.config.value);
+        }
     },
 
-    onInfoButtonTap: function(button, e, options) {
-        var me = this;
-        me.getMainContainer().setActiveItem(4);
+    onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
+        var value = configController.getValue();
+        var pan = this.getFPSCarousel();
+        var index = Math.floor(value / 2);
+
+        pan.setActiveItem(index);
     }
 
 });

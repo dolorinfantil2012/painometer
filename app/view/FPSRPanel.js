@@ -8,17 +8,137 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.FPSRPanel', {
-    extend: 'Painometer.view.ui.FPSRPanel',
+    extend: 'Ext.form.Panel',
     alias: 'widget.fpsrpanel',
+    requires: [
+        'Painometer.view.InfoContainer'
+    ],
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        id: 'FPSRPanel',
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        scrollable: false,
+        items: [
+            {
+                xtype: 'container',
+                docked: 'top',
+                id: 'FPSNavContainer',
+                padding: 10,
+                defaults: {
+                    width: 50,
+                    height: 68,
+                    style: 'background-position: center center; background-size: 52px;'
+                },
+                layout: {
+                    align: 'center',
+                    pack: 'center',
+                    type: 'hbox'
+                },
+                items: [
+                    {
+                        xtype: 'image',
+                        id: 'smallFace1',
+                        src: 'resources/images/fpsr/cara1.png'
+                    },
+                    {
+                        xtype: 'image',
+                        id: 'smallFace2',
+                        src: 'resources/images/fpsr/cara2.png'
+                    },
+                    {
+                        xtype: 'image',
+                        id: 'smallFace3',
+                        src: 'resources/images/fpsr/cara3.png'
+                    },
+                    {
+                        xtype: 'image',
+                        id: 'smallFace4',
+                        src: 'resources/images/fpsr/cara4.png'
+                    },
+                    {
+                        xtype: 'image',
+                        id: 'smallFace5',
+                        src: 'resources/images/fpsr/cara5.png'
+                    },
+                    {
+                        xtype: 'image',
+                        id: 'smallFace6',
+                        src: 'resources/images/fpsr/cara6.png'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                id: 'InfoCaroCont',
+                defaults: {
+                    style: 'background-color:white',
+                    
+                },
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'carousel',
+                        id: 'FPSCarousel',
+                        defaults: {
+                            style: 'background-position: 75% 0%; background-size: 285px;'
+                        },
+                        items: [
+                            {
+                                xtype: 'image',
+                                id: 'face_1',
+                                src: 'resources/images/fpsr/cara1.png',
+                                value: 0
+                            },
+                            {
+                                xtype: 'image',
+                                id: 'face_2',
+                                src: 'resources/images/fpsr/cara2.png',
+                                value: 2
+                            },
+                            {
+                                xtype: 'image',
+                                id: 'face_3',
+                                src: 'resources/images/fpsr/cara3.png',
+                                value: 4
+                            },
+                            {
+                                xtype: 'image',
+                                id: 'face_4',
+                                src: 'resources/images/fpsr/cara4.png',
+                                value: 6
+                            },
+                            {
+                                xtype: 'image',
+                                id: 'face_5',
+                                src: 'resources/images/fpsr/cara5.png',
+                                value: 8
+                            },
+                            {
+                                xtype: 'image',
+                                id: 'face_6',
+                                src: 'resources/images/fpsr/cara6.png',
+                                value: 10
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'InfoContainer',
+                        id: 'infoContainerFP'
+                    }
+                ]
+            }
+        ]
     }
 
 });

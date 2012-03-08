@@ -20,7 +20,6 @@ Ext.define('Painometer.store.base.ConfigStore', {
     ],
 
     config: {
-        autoLoad: true,
         model: 'Painometer.model.Config',
         storeId: 'configStoreId',
         proxy: {

@@ -8,17 +8,30 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.store.languageStore', {
-    extend: 'Painometer.store.base.languageStore',
+    extend: 'Ext.data.Store',
+    requires: [
+        'Painometer.model.Language'
+    ],
 
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({}, cfg)]);
+    config: {
+        autoLoad: true,
+        data: [
+            {
+                idLang: 0,
+                label: 'Català'
+            },
+            {
+                idLang: 1,
+                label: 'Español'
+            }
+        ],
+        model: 'Painometer.model.Language',
+        storeId: 'languageStoreId'
     }
-
 });

@@ -14,16 +14,18 @@
         ],
         "stores": [
             "scaleTypesStore",
-            "languageStore",
-            "ConfigStore"
+            "languageStore"
         ],
         "views": [
             "MainContainer",
             "NRS11Panel",
             "CASPanel",
-            "VASPanel",
             "ConfigPanel",
-            "FPSRPanel"
+            "FPSRPanel",
+            "InfoContainer",
+            "CreditsContainer",
+            "VASPanel",
+            "ConfigCard"
         ],
         "designer|launch": "painometerApp = this;",
         "glossOnIcon": true,

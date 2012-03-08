@@ -7,13 +7,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "stores": [
-            "ConfigStore"
-        ],
+        "stores": [],
         "views": [
             "NRS11Panel"
         ],
         "designer|init": "",
+        "designer|launch": "",
         "designer|userClassName": "NRS11Panel"
     },
     "customConfigs": [],
@@ -31,30 +30,11 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "numActivate",
-                "implHandler": "        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value;\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value;\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n        }\n\n        /* guardar valor al model */\n        /* guardar model al disc */;",
+                "implHandler": "        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value;\n            var newFace    = this.getNrsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value;\n            var oldFace = this.getNrsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n            configController.setValue(container.config.value);\n        }",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "numContainer",
                 "designer|userClassName": "numActivate"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen13844",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onInfoButtonTap",
-                "implHandler": "        var me = this;\n        me.getMainContainer().setActiveItem(4);",
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "infoBtn2",
-                "designer|userClassName": "onInfoButtonTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -92,22 +72,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen17812",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "infoBtn2",
-                "selector": "#infoBtn2",
-                "designer|userClassName": "infoBtn2"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen18332",
             "type": "controllerref",
             "reference": {
@@ -133,7 +97,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNRS11PanelActivate",
-                "implHandler": "        var storeConfig = Ext.getStore(\"configStoreId\");\n        var dataStore   = storeConfig.getData();\n        var configModel = dataStore.getAt(0);\n\n        var value = configModel.get(\"value\");\n\n        var pan = this.getNRSCarousel();\n\n        pan.setActiveItem(value);",
+                "implHandler": "        var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n        var value = configController.getValue();\n        var pan = this.getNRSCarousel();\n\n        pan.setActiveItem(value);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "NRS11Panel",

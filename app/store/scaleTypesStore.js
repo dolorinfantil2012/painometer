@@ -8,17 +8,38 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.store.scaleTypesStore', {
-    extend: 'Painometer.store.base.scaleTypesStore',
+    extend: 'Ext.data.Store',
+    requires: [
+        'Painometer.model.ScaleTypes'
+    ],
 
-    constructor: function(cfg) {
-        var me = this;
-        cfg = cfg || {};
-        me.callParent([Ext.apply({}, cfg)]);
+    config: {
+        autoLoad: true,
+        data: [
+            {
+                idScale: 0,
+                label: 'FPS-R'
+            },
+            {
+                idScale: 1,
+                label: 'NRS-11'
+            },
+            {
+                idScale: 2,
+                label: 'CAS'
+            },
+            {
+                idScale: 3,
+                label: 'VAS'
+            }
+        ],
+        model: 'Painometer.model.ScaleTypes',
+        storeId: 'scaleTypesStoreId'
     }
-
 });

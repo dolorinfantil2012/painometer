@@ -8,21 +8,75 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.CreditsContainer', {
-    extend: 'Painometer.view.ui.CreditsContainer',
+    extend: 'Ext.Container',
     alias: 'widget.creditscontainer',
 
-    initialize: function() {
-
-
-
-
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        id: 'CreditsContainer',
+        style: 'background-color:white;',
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'Crèdits',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'config',
+                        ui: 'back',
+                        text: 'Painometer'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                html: '',
+                id: 'credits',
+                style: 'background-color:white;',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'container',
+                        docked: 'top',
+                        html: '<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Autors</b></u><br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br><a href="algos">algos</a></center>',
+                        id: 'names',
+                        style: 'padding-top: 5px;'
+                    },
+                    {
+                        xtype: 'container',
+                        docked: 'bottom',
+                        id: 'logo',
+                        style: 'background-color:white; padding-bottom: 15px;',
+                        layout: {
+                            align: 'center',
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'image',
+                                docked: 'bottom',
+                                height: 100,
+                                id: 'algos',
+                                style: 'background-position: 50% 0%; ',
+                                src: 'resources/images/algos/logo_algos.png'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 
 });

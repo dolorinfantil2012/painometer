@@ -1,0 +1,20 @@
+{
+    "id": "ExtBox1-ext-gen12966",
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": "[\n{ idLang: 0, label: \"Català\"},\n{ idLang: 1, label: \"Español\"}\n]",
+        "model": "LanguageType",
+        "storeId": "languageStoreId",
+        "designer|userClassName": "LanguageTypes"
+    },
+    "customConfigs": [],
+    "designerId": "fd2548c4-ff23-4550-8829-75f7c0e67fb4",
+    "$viewOrder": 1,
+    "expanded": true
+}

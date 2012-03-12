@@ -8,17 +8,96 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.ConfigPanel', {
-    extend: 'Painometer.view.ui.ConfigPanel',
+    extend: 'Ext.form.Panel',
     alias: 'widget.configpanel',
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        id: 'ConfigPanel',
+        ui: '',
+        layout: {
+            align: 'center',
+            type: 'vbox'
+        },
+        scrollable: false,
+        items: [
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'Painometer',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'okConfig',
+                        ui: 'confirm',
+                        text: 'OK'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'creditsbtn',
+                        ui: 'forward',
+                        iconAlign: 'right',
+                        text: 'Crèdits',
+                        align: 'right'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                data: {
+                    value: 10
+                },
+                height: 200,
+                id: 'ValueCont',
+                style: 'font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;',
+                tpl: [
+                    '{value}'
+                ],
+                width: 220
+            },
+            {
+                xtype: 'fieldset',
+                width: '100%',
+                layout: {
+                    type: 'default'
+                },
+                instructions: 'Opcions generals de l\'eina',
+                title: 'Opcions',
+                items: [
+                    {
+                        xtype: 'selectfield',
+                        height: '',
+                        id: 'ScaleSel',
+                        itemId: 'ScaleSel',
+                        width: '',
+                        label: 'Escala',
+                        labelAlign: 'bottom',
+                        labelWidth: '40%',
+                        name: 'escalaType',
+                        displayField: 'label',
+                        store: 'scaleTypesStoreId',
+                        valueField: 'idScale'
+                    },
+                    {
+                        xtype: 'selectfield',
+                        height: '',
+                        width: '',
+                        label: 'Idioma',
+                        labelAlign: 'bottom',
+                        labelWidth: '40%',
+                        name: 'Language',
+                        displayField: 'label',
+                        store: 'languageStoreId',
+                        valueField: 'idLang\n'
+                    }
+                ]
+            }
+        ]
     }
 
 });

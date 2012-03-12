@@ -8,20 +8,34 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.InfoContainer', {
-    extend: 'Painometer.view.ui.InfoContainer',
+    extend: 'Ext.Container',
     alias: 'widget.InfoContainer',
 
-    initialize: function() {
-
-
-
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        docked: 'right',
+        id: 'infoContainerID',
+        layout: {
+            align: 'end',
+            pack: 'end',
+            type: 'hbox'
+        },
+        items: [
+            {
+                xtype: 'button',
+                id: 'infoBtn',
+                style: 'border:0',
+                ui: 'info_btn-small',
+                width: 22,
+                iconCls: 'info',
+                iconMask: true
+            }
+        ]
     }
 
 });

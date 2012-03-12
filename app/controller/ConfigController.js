@@ -8,8 +8,9 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.controller.ConfigController', {
@@ -79,23 +80,17 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onConfigTap: function(button, e, options) {
-
-
         var me = this;
         var scale = me.getScaleSel().getValue();
         me.getMainContainer().setActiveItem(scale);
     },
 
     onButtonTap: function(button, e, options) {
-
-
         this.configInstance.save();
         this.getMainContainer().setActiveItem(4);
     },
 
     creditsbtnTap: function(button, e, options) {
-
-
         var me = this;
         var card = me.getConfigCard();
         var layout = card.getLayout();
@@ -108,22 +103,17 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
-
-
         var newValue = this.configInstance.get('value');
 
         this.getValueCont().setData({'value' : newValue});
     },
 
     getValue: function() {
-
-
         return this.configInstance.get('value');
+
     },
 
     setValue: function(newValue) {
-
-
         this.configInstance.set('value', newValue);
     }
 

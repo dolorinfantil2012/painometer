@@ -8,18 +8,34 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.ConfigCard', {
-    extend: 'Painometer.view.ui.ConfigCard',
+    extend: 'Ext.Container',
     alias: 'widget.configCard',
+    requires: [
+        'Painometer.view.ConfigPanel',
+        'Painometer.view.CreditsContainer'
+    ],
 
-    initialize: function() {
-
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        layout: {
+            animation: 'slide',
+            type: 'card'
+        },
+        items: [
+            {
+                xtype: 'configpanel',
+                id: 'configPanel'
+            },
+            {
+                xtype: 'creditscontainer',
+                id: 'Creditscontainer'
+            }
+        ]
     }
 
 });

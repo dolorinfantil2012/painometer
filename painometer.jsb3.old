@@ -1,0 +1,131 @@
+{
+    "projectName": "Painometer",
+    "licenseText": "CC 2011 algos URV",
+    "builds": [
+        {
+            "name": "All Classes",
+            "target": "all-classes.js",
+            "options": {
+                "debug": false
+            },
+            "files": [
+                {
+                    "path": "app/model/",
+                    "name": "Config.js"
+                },
+                {
+                    "path": "app/model/",
+                    "name": "Language.js"
+                },
+                {
+                    "path": "app/controller/",
+                    "name": "ConfigController.js"
+                },
+                {
+                    "path": "app/controller/",
+                    "name": "NRS11Panel.js"
+                },
+                {
+                    "path": "app/controller/",
+                    "name": "FPSRPanel.js"
+                },
+                {
+                    "path": "app/view/ui/",
+                    "name": "VASPanel.js"
+                },
+                {
+                    "path": "app/view/ui/",
+                    "name": "ConfigPanel.js"
+                },
+                {
+                    "path": "app/view/ui/",
+                    "name": "FPSRPanel.js"
+                },
+                {
+                    "path": "app/view/ui/",
+                    "name": "NRS11Panel.js"
+                },
+                {
+                    "path": "app/store/base/",
+                    "name": "languageStore.js"
+                },
+                {
+                    "path": "app/store/base/",
+                    "name": "ConfigStore.js"
+                },
+                {
+                    "path": "app/model/",
+                    "name": "ScaleTypes.js"
+                },
+                {
+                    "path": "app/view/ui/",
+                    "name": "CASPanel.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "VASPanel.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "NRS11Panel.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "FPSRPanel.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "ConfigPanel.js"
+                },
+                {
+                    "path": "app/store/",
+                    "name": "ConfigStore.js"
+                },
+                {
+                    "path": "app/store/",
+                    "name": "languageStore.js"
+                },
+                {
+                    "path": "app/store/base/",
+                    "name": "scaleTypesStore.js"
+                },
+                {
+                    "path": "app/store/",
+                    "name": "scaleTypesStore.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "CASPanel.js"
+                },
+                {
+                    "path": "app/view/ui/",
+                    "name": "MainContainer.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "MainContainer.js"
+                }
+            ]
+        },
+        {
+            "name": "Application - Production",
+            "target": "app-all.js",
+            "compress": true,
+            "files": [
+                {
+                    "path": "lib/",
+                    "name": "sencha-touch-all-debug.js"
+                },
+                {
+                    "path": "",
+                    "name": "all-classes.js"
+                },
+                {
+                    "path": "",
+                    "name": "painometer.js"
+                }
+            ]
+        }
+    ],
+    "resources": []
+}

@@ -8,16 +8,55 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.view.MainContainer', {
-    extend: 'Painometer.view.ui.MainContainer',
+    extend: 'Ext.Container',
+    requires: [
+        'Painometer.view.FPSRPanel',
+        'Painometer.view.NRS11Panel',
+        'Painometer.view.CASPanel',
+        'Painometer.view.VASPanel',
+        'Painometer.view.ConfigCard'
+    ],
 
-    initialize: function() {
-        var me = this;
-        me.callParent(arguments);
+    config: {
+        id: 'MainContainer',
+        style: 'background-color:white;',
+        ui: '',
+        layout: {
+            animation: 'cube',
+            type: 'card'
+        },
+        defaults: {
+            style: 'background-color:white;',
+            
+        },
+        items: [
+            {
+                xtype: 'fpsrpanel',
+                id: 'FpsrPanel'
+            },
+            {
+                xtype: 'nrs11panel',
+                id: 'Nrs11Panel'
+            },
+            {
+                xtype: 'caspanel',
+                id: 'casPanelIt'
+            },
+            {
+                xtype: 'vaspanel',
+                id: 'VasPanelIt'
+            },
+            {
+                xtype: 'configCard',
+                id: 'ConfigCard'
+            }
+        ]
     }
 
 });

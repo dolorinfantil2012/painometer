@@ -8,8 +8,9 @@
  * License of Sencha Designer does not include license for Sencha Touch 2.0.x. For more
  * details see http://www.sencha.com/license or contact license@sencha.com.
  *
- * You should implement event handling and custom methods in this
- * class.
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
  */
 
 Ext.define('Painometer.controller.FPSRPanel', {
@@ -40,9 +41,6 @@ Ext.define('Painometer.controller.FPSRPanel', {
     },
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
-
-
-
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 2;
             var newFace    = this.getFpsNav().items.getAt(newIndex);
@@ -62,9 +60,6 @@ Ext.define('Painometer.controller.FPSRPanel', {
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-
-
-
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
         var pan = this.getFPSCarousel();

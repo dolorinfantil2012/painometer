@@ -20,6 +20,7 @@ Ext.define('Painometer.view.InfoContainer', {
     config: {
         docked: 'right',
         id: 'infoContainerID',
+        style: '',
         layout: {
             align: 'end',
             pack: 'end',
@@ -29,7 +30,7 @@ Ext.define('Painometer.view.InfoContainer', {
             {
                 xtype: 'button',
                 id: 'infoBtn',
-                style: 'border:0',
+                style: 'border:0;',
                 ui: 'info_btn-small',
                 width: 22,
                 iconCls: 'info',

@@ -39,12 +39,23 @@ Ext.define('Painometer.view.CASPanel', {
                         centered: true,
                         cls: 'sencha-cas-slider',
                         id: 'CASSlider'
+                    },
+                    {
+                        xtype: 'InfoContainer',
+                        bottom: '0px',
+                        docked: 'bottom',
+                        height: '25px',
+                        itemId: 'infoCAS',
+                        right: '0px',
+                        tpl: [
+                            '<div class="x-inner x-layout-hbox" id="ext-element-1053" style="-webkit-box-align: end; -webkit-box-pack: end; "><div class="x-button x-iconalign-center x-button-info_btn-small" id="canvas-ExtBox1-ext-gen14191" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; width: 22px !important; "><span style="display: none; " class="x-badge"></span><span class="x-button-icon info x-icon-mask" style="" id="ext-element-1054"></span><span style="display: none; " class="x-button-label"></span></div></div>'
+                        ],
+                        width: '25px',
+                        layout: {
+                            type: 'fit'
+                        }
                     }
                 ]
-            },
-            {
-                xtype: 'InfoContainer',
-                itemId: 'infoCAS'
             }
         ]
     }

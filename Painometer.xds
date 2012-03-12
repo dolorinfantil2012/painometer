@@ -5,8 +5,8 @@
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "/Users/roman/Sites/Painometer",
-        "extPath": "lib/",
+        "exportPath": "C:/xampp/htdocs/painometer",
+        "extPath": "resources/lib/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "LF",
@@ -18,7 +18,7 @@
         "cssPath": "resources/css/painometer.css"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": "309",
+    "xdsBuild": "311",
     "framework": "touch20",
     "topInstanceFileMap": {
         "7e707a99-90db-4d80-9225-13d04587e7d7": {
@@ -168,8 +168,8 @@
     },
     "expandedState": {
         "data": true,
-        "model": false,
-        "component": false,
+        "model": true,
+        "component": true,
         "controller": false
     }
 }

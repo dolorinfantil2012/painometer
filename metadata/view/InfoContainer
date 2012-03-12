@@ -7,8 +7,10 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": null,
         "docked": "right",
         "id": "infoContainerID",
+        "style": "",
         "layout": "hbox",
         "designer|userClassName": "InfoContainer",
         "designer|userAlias": "InfoContainer",
@@ -17,8 +19,8 @@
     },
     "customConfigs": [],
     "designerId": "76a4b273-e5b0-42ad-b402-232eb3fc8e82",
-    "$viewOrder": 6,
-    "expanded": false,
+    "$viewOrder": 8,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen27358",
@@ -31,7 +33,7 @@
             "userConfig": {
                 "height": null,
                 "id": "infoBtn",
-                "style": "border:0",
+                "style": "border:0;",
                 "ui": "info_btn-small",
                 "width": 22,
                 "icon": null,

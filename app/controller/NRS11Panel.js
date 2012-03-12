@@ -52,6 +52,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value;
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
+
             oldFace.removeCls("face-selected");
             var configController = this.getApplication().getController("Painometer.controller.ConfigController");
             configController.setValue(container.config.value);

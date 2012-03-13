@@ -16,7 +16,7 @@
     "customConfigs": [],
     "designerId": "09dae92c-424f-41eb-aba6-15195d47bc51",
     "$viewOrder": 6,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen10644",
@@ -69,7 +69,7 @@
                 "designer|userClassName": "MyContainer35"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen14571",
@@ -81,10 +81,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": "top",
-                        "html": "<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Autors</b></u><br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br><a href=\"algos\">algos</a></center>",
+                        "html": "<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Investigadoras</b></u><br>Rocío de la Vega<br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br></center>",
                         "id": "names",
                         "padding": null,
-                        "style": "padding-top: 5px;",
+                        "style": "padding-top: 5px;text-shadow: 3px 3px 5px #999999;",
                         "designer|userClassName": "MyContainer36"
                     },
                     "customConfigs": [],

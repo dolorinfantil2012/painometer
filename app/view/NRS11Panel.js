@@ -119,7 +119,7 @@ Ext.define('Painometer.view.NRS11Panel', {
                         id: 'NRSCarousel',
                         style: 'background-color:white;',
                         defaults: {
-                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -140px; font-size: 240px; text-align: center; text-shadow: 10px 10px 7px lightgrey;'
+                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -140px; font-size: 240px; text-align: center; text-shadow:3px 3px 6px #707070;'
                         },
                         items: [
                             {

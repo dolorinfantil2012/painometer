@@ -240,7 +240,7 @@
                 "designer|userClassName": "MyContainer23"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen24407",
@@ -254,7 +254,7 @@
                         "height": null,
                         "id": "NRSCarousel",
                         "style": "background-color:white;",
-                        "defaults": "{\nstyle: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -140px; font-size: 240px; text-align: center; text-shadow: 10px 10px 7px lightgrey;'\n}",
+                        "defaults": "{\nstyle: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -140px; font-size: 240px; text-align: center; text-shadow:3px 3px 6px #707070;'\n}",
                         "designer|userClassName": "MyCarousel1"
                     },
                     "customConfigs": [],

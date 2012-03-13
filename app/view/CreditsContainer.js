@@ -49,9 +49,9 @@ Ext.define('Painometer.view.CreditsContainer', {
                     {
                         xtype: 'container',
                         docked: 'top',
-                        html: '<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Autors</b></u><br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br><a href="algos">algos</a></center>',
+                        html: '<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Investigadoras</b></u><br>Rocío de la Vega<br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br></center>',
                         id: 'names',
-                        style: 'padding-top: 5px;'
+                        style: 'padding-top: 5px;text-shadow: 3px 3px 5px #999999;'
                     },
                     {
                         xtype: 'container',

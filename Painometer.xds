@@ -6,7 +6,7 @@
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
         "exportPath": "/Users/roman/Sites/Painometer",
-        "extPath": "lib/",
+        "extPath": "resources/lib/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "LF",
@@ -18,7 +18,7 @@
         "cssPath": "resources/css/painometer.css"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": "309",
+    "xdsBuild": "311",
     "framework": "touch20",
     "topInstanceFileMap": {
         "7e707a99-90db-4d80-9225-13d04587e7d7": {
@@ -164,12 +164,28 @@
                 "app/view/ConfigCard.js"
             ],
             "className": "ConfigCard"
+        },
+        "de6d4bbe-4b2b-41db-9a96-5a4ee10cf8ae": {
+            "paths": [
+                "metadata/controller/CASPanel",
+                "app/controller/override/CASPanel.js",
+                "app/controller/CASPanel.js"
+            ],
+            "className": "CASPanel"
+        },
+        "2a49611e-ab21-4065-aedc-0c73eeb840bc": {
+            "paths": [
+                "metadata/controller/VASPanel",
+                "app/controller/override/VASPanel.js",
+                "app/controller/VASPanel.js"
+            ],
+            "className": "VASPanel"
         }
     },
     "expandedState": {
-        "data": true,
+        "data": false,
         "model": false,
-        "component": false,
+        "component": true,
         "controller": false
     }
 }

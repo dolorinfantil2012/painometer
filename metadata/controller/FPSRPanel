@@ -47,7 +47,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "faceActivate",
-                "implHandler": "        if (!Ext.isEmpty(container)) {\n            var newIndex = container.config.value / 2;\n            var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n            newFace.addCls(\"face-selected\");\n        }\n\n        if (!Ext.isEmpty(oldActiveItem)) {\n            var oldIndex = oldActiveItem.config.value / 2;\n            var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n            oldFace.removeCls(\"face-selected\");\n\n            var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n            configController.setValue(container.config.value);\n        }",
+                "implHandler": "if (!Ext.isEmpty(container)) {\n    var newIndex = container.config.value / 20;\n    var newFace    = this.getFpsNav().items.getAt(newIndex);\n\n    newFace.addCls(\"face-selected\");\n}\n\nif (!Ext.isEmpty(oldActiveItem)) {\n    var oldIndex = oldActiveItem.config.value / 20;\n    var oldFace = this.getFpsNav().items.getAt(oldIndex);\n\n    oldFace.removeCls(\"face-selected\");\n\n    var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n    configController.setValue(container.config.value);\n}",
                 "name": "activate",
                 "designer|targetType": "Ext.Container",
                 "designer|controlQuery": "faceContainer",
@@ -114,7 +114,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFPSRPanelActivate",
-                "implHandler": "        var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\n        var value = configController.getValue();\n        var pan = this.getFPSCarousel();\n        var index = Math.floor(value / 2);\n\n        pan.setActiveItem(index);",
+                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\npan.setActiveItem(index);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "fpsrpanel",

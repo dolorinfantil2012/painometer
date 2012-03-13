@@ -7,17 +7,21 @@
     },
     "codeClass": null,
     "userConfig": {
+        "bottom": "0px",
+        "cls": null,
         "docked": "right",
+        "height": "30px",
         "id": "infoContainerID",
-        "layout": "hbox",
+        "right": "0px",
+        "style": "",
+        "width": "30px",
+        "layout": null,
         "designer|userClassName": "InfoContainer",
-        "designer|userAlias": "InfoContainer",
-        "container|align": "end",
-        "container|pack": "end"
+        "designer|userAlias": "InfoContainer"
     },
     "customConfigs": [],
     "designerId": "76a4b273-e5b0-42ad-b402-232eb3fc8e82",
-    "$viewOrder": 6,
+    "$viewOrder": 8,
     "expanded": false,
     "cn": [
         {
@@ -31,7 +35,7 @@
             "userConfig": {
                 "height": null,
                 "id": "infoBtn",
-                "style": "border:0",
+                "style": "border:0;",
                 "ui": "info_btn-small",
                 "width": 22,
                 "icon": null,

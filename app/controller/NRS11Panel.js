@@ -43,14 +43,14 @@ Ext.define('Painometer.controller.NRS11Panel', {
 
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (!Ext.isEmpty(container)) {
-            var newIndex = container.config.value;
+            var newIndex = container.config.value / 10;
             var newFace    = this.getNrsNav().items.getAt(newIndex);
 
             newFace.addCls("face-selected");
         }
 
         if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value;
+            var oldIndex = oldActiveItem.config.value / 10;
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
 
             oldFace.removeCls("face-selected");
@@ -63,8 +63,9 @@ Ext.define('Painometer.controller.NRS11Panel', {
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
         var pan = this.getNRSCarousel();
+        var index = Math.floor(value / 10);
 
-        pan.setActiveItem(value);
+        pan.setActiveItem(index);
     }
 
 });

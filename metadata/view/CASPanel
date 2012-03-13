@@ -8,10 +8,11 @@
     "codeClass": null,
     "userConfig": {
         "html": null,
+        "id": "CASPanel",
         "style": "background-color:white;",
         "layout": "fit",
         "designer|userClassName": "CASPanel",
-        "designer|userAlias": "caspanel"
+        "designer|userAlias": "CASPanel"
     },
     "customConfigs": [],
     "designerId": "bc3742f5-81f1-4e56-97dc-73c4d4d1f3a2",
@@ -57,7 +58,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen11161",
+            "id": "ExtBox1-ext-gen10191",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -65,7 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "infoCAS"
+                "id": "CASInfoCont"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

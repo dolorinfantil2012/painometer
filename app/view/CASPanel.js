@@ -15,12 +15,13 @@
 
 Ext.define('Painometer.view.CASPanel', {
     extend: 'Ext.Container',
-    alias: 'widget.caspanel',
+    alias: 'widget.CASPanel',
     requires: [
         'Painometer.view.InfoContainer'
     ],
 
     config: {
+        id: 'CASPanel',
         style: 'background-color:white;',
         layout: {
             type: 'fit'

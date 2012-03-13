@@ -131,62 +131,62 @@ Ext.define('Painometer.view.NRS11Panel', {
                                 xtype: 'container',
                                 html: 1,
                                 id: 'NRS1',
-                                value: 1
+                                value: 10
                             },
                             {
                                 xtype: 'container',
                                 html: 2,
                                 id: 'NRS2',
-                                value: 2
+                                value: 20
                             },
                             {
                                 xtype: 'container',
                                 html: 3,
                                 id: 'NRS3',
-                                value: 3
+                                value: 30
                             },
                             {
                                 xtype: 'container',
                                 html: 4,
                                 id: 'NRS4',
-                                value: 4
+                                value: 40
                             },
                             {
                                 xtype: 'container',
                                 html: 5,
                                 id: 'NRS5',
-                                value: 5
+                                value: 50
                             },
                             {
                                 xtype: 'container',
                                 html: 6,
                                 id: 'NRS6',
-                                value: 6
+                                value: 60
                             },
                             {
                                 xtype: 'container',
                                 html: 7,
                                 id: 'NRS7',
-                                value: 7
+                                value: 70
                             },
                             {
                                 xtype: 'container',
                                 html: 8,
                                 id: 'NRS8',
-                                value: 8
+                                value: 80
                             },
                             {
                                 xtype: 'container',
                                 html: 9,
                                 id: 'NRS9',
-                                value: 9
+                                value: 90
                             },
                             {
                                 xtype: 'container',
                                 html: 10,
                                 id: 'NRS10',
                                 style: 'padding-top: 100px; padding-left: 50px; font-size: 180px',
-                                value: 10
+                                value: 100
                             }
                         ]
                     },

@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "bb13e684-a2b2-4f1d-ac4b-ed6ff0932d05",
     "$viewOrder": 3,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen6248",
@@ -238,7 +238,7 @@
                 "designer|userClassName": "MyContainer23"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen24407",
@@ -295,7 +295,7 @@
                                 "html": 1,
                                 "id": "NRS1",
                                 "designer|userClassName": "MyContainer25",
-                                "value": 1
+                                "value": 10
                             },
                             "customConfigs": [
                                 {
@@ -318,7 +318,7 @@
                                 "html": 2,
                                 "id": "NRS2",
                                 "designer|userClassName": "MyContainer26",
-                                "value": 2
+                                "value": 20
                             },
                             "customConfigs": [
                                 {
@@ -341,7 +341,7 @@
                                 "html": 3,
                                 "id": "NRS3",
                                 "designer|userClassName": "MyContainer27",
-                                "value": 3
+                                "value": 30
                             },
                             "customConfigs": [
                                 {
@@ -364,7 +364,7 @@
                                 "html": 4,
                                 "id": "NRS4",
                                 "designer|userClassName": "MyContainer28",
-                                "value": 4
+                                "value": 40
                             },
                             "customConfigs": [
                                 {
@@ -387,7 +387,7 @@
                                 "html": 5,
                                 "id": "NRS5",
                                 "designer|userClassName": "MyContainer29",
-                                "value": 5
+                                "value": 50
                             },
                             "customConfigs": [
                                 {
@@ -410,7 +410,7 @@
                                 "html": 6,
                                 "id": "NRS6",
                                 "designer|userClassName": "MyContainer30",
-                                "value": 6
+                                "value": 60
                             },
                             "customConfigs": [
                                 {
@@ -433,7 +433,7 @@
                                 "html": 7,
                                 "id": "NRS7",
                                 "designer|userClassName": "MyContainer31",
-                                "value": 7
+                                "value": 70
                             },
                             "customConfigs": [
                                 {
@@ -456,7 +456,7 @@
                                 "html": 8,
                                 "id": "NRS8",
                                 "designer|userClassName": "MyContainer32",
-                                "value": 8
+                                "value": 80
                             },
                             "customConfigs": [
                                 {
@@ -479,7 +479,7 @@
                                 "html": 9,
                                 "id": "NRS9",
                                 "designer|userClassName": "MyContainer34",
-                                "value": 9
+                                "value": 90
                             },
                             "customConfigs": [
                                 {
@@ -503,7 +503,7 @@
                                 "id": "NRS10",
                                 "style": "padding-top: 100px; padding-left: 50px; font-size: 180px",
                                 "designer|userClassName": "MyContainer33",
-                                "value": 10
+                                "value": 100
                             },
                             "customConfigs": [
                                 {

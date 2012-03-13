@@ -8,15 +8,16 @@
     "codeClass": null,
     "userConfig": {
         "html": null,
+        "id": "VASPanel",
         "style": "background-color:white;",
         "layout": "fit",
         "designer|userClassName": "VASPanel",
-        "designer|userAlias": "vaspanel"
+        "designer|userAlias": "VASPanel"
     },
     "customConfigs": [],
     "designerId": "b621cd17-99cb-4c01-8be7-611be68a35c4",
     "$viewOrder": 5,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen13448",

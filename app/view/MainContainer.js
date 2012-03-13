@@ -45,11 +45,11 @@ Ext.define('Painometer.view.MainContainer', {
                 id: 'Nrs11Panel'
             },
             {
-                xtype: 'caspanel',
+                xtype: 'CASPanel',
                 id: 'casPanelIt'
             },
             {
-                xtype: 'vaspanel',
+                xtype: 'VASPanel',
                 id: 'VasPanelIt'
             },
             {

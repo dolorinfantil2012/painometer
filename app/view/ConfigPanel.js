@@ -24,7 +24,7 @@ Ext.define('Painometer.view.ConfigPanel', {
             align: 'center',
             type: 'vbox'
         },
-        scrollable: false,
+        scrollable: true,
         items: [
             {
                 xtype: 'titlebar',
@@ -50,15 +50,15 @@ Ext.define('Painometer.view.ConfigPanel', {
             {
                 xtype: 'container',
                 data: {
-                    value: 10
+                    value: 100
                 },
-                height: 200,
+                height: 210,
                 id: 'ValueCont',
-                style: 'font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;',
+                style: 'text-align: center; font-size: 135px; margin: 15px; border: 15px; border-style: groove; padding: 0px; padding-top: 5px;',
                 tpl: [
                     '{value}'
                 ],
-                width: 220
+                width: 260
             },
             {
                 xtype: 'fieldset',

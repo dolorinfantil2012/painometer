@@ -121,12 +121,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onButtonTap",
+                "fn": "oninfoButtonTap",
                 "implHandler": "        this.configInstance.save();\n        this.getMainContainer().setActiveItem(4);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "infoBtn",
-                "designer|userClassName": "onButtonTap"
+                "designer|userClassName": "oninfoButtonTap"
             },
             "customConfigs": [],
             "expanded": true

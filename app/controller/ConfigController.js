@@ -41,7 +41,7 @@ Ext.define('Painometer.controller.ConfigController', {
                 tap: 'onConfigTap'
             },
             "infoBtn": {
-                tap: 'onButtonTap'
+                tap: 'oninfoButtonTap'
             },
             "creditsbtn": {
                 tap: 'creditsbtnTap'
@@ -85,7 +85,7 @@ Ext.define('Painometer.controller.ConfigController', {
         me.getMainContainer().setActiveItem(scale);
     },
 
-    onButtonTap: function(button, e, options) {
+    oninfoButtonTap: function(button, e, options) {
         this.configInstance.save();
         this.getMainContainer().setActiveItem(4);
     },

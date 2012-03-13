@@ -6,7 +6,7 @@
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
         "exportPath": "C:/xampp/htdocs/painometer",
-        "extPath": "lib/",
+        "extPath": "resources/lib/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "LF",
@@ -164,12 +164,20 @@
                 "app/view/ConfigCard.js"
             ],
             "className": "ConfigCard"
+        },
+        "df33411c-0b34-422b-8bf6-b70b6cb4b83f": {
+            "paths": [
+                "metadata/controller/AppMainController",
+                "app/controller/override/AppMainController.js",
+                "app/controller/AppMainController.js"
+            ],
+            "className": "AppMainController"
         }
     },
     "expandedState": {
         "data": false,
         "model": false,
         "component": true,
-        "controller": false
+        "controller": true
     }
 }

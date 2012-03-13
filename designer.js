@@ -49,7 +49,8 @@ Ext.application({
         'ConfigController',
         'FPSRPanel',
         'NRS11Panel',
-        'CreditsContainer'
+        'CreditsContainer',
+        'AppMainController'
     ],
 
     launch: function() {

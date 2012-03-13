@@ -91,7 +91,7 @@ Ext.define('Painometer.view.FPSRPanel', {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
                         defaults: {
-                            style: 'background-position: 75% 0%; background-size: 285px;'
+                            style: 'background-position: 50% 25%; background-size: 285px;'
                         },
                         items: [
                             {

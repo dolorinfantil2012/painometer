@@ -119,7 +119,7 @@ Ext.define('Painometer.view.NRS11Panel', {
                         id: 'NRSCarousel',
                         style: 'background-color:white;',
                         defaults: {
-                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -100px; font-size: 200px; text-align: center; text-shadow: 10px 10px 7px #333;'
+                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -140px; font-size: 240px; text-align: center; text-shadow: 10px 10px 7px lightgrey;'
                         },
                         items: [
                             {
@@ -186,7 +186,7 @@ Ext.define('Painometer.view.NRS11Panel', {
                                 xtype: 'container',
                                 html: 10,
                                 id: 'NRS10',
-                                style: 'text-shadow: 10px 10px 7px #333; padding-top: 100px; padding-left: 50px; font-size: 180px',
+                                style: 'width: 100%; height: 200px; position: absolute; top: 50%; margin-top: -135px; text-shadow: 10px 10px 7px lightgrey; padding-left: 50px; font-size: 220px; padding-top: 10px;',
                                 value: 100
                             }
                         ]

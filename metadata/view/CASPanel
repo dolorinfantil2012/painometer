@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "bc3742f5-81f1-4e56-97dc-73c4d4d1f3a2",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15921",
@@ -54,35 +54,24 @@
                     },
                     "customConfigs": [],
                     "expanded": true
-                },
-                {
-                    "id": "ExtBox1-ext-gen19197",
-                    "type": "linkedinstance",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "bottom": "0px",
-                        "centered": null,
-                        "cls": null,
-                        "docked": "bottom",
-                        "height": "25px",
-                        "itemId": "infoCAS",
-                        "left": null,
-                        "right": "0px",
-                        "tpl": "<div class=\"x-inner x-layout-hbox\" id=\"ext-element-1053\" style=\"-webkit-box-align: end; -webkit-box-pack: end; \"><div class=\"x-button x-iconalign-center x-button-info_btn-small\" id=\"canvas-ExtBox1-ext-gen14191\" style=\"border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; width: 22px !important; \"><span style=\"display: none; \" class=\"x-badge\"></span><span class=\"x-button-icon info x-icon-mask\" style=\"\" id=\"ext-element-1054\"></span><span style=\"display: none; \" class=\"x-button-label\"></span></div></div>",
-                        "width": "25px",
-                        "defaults": null,
-                        "layout": "fit"
-                    },
-                    "customConfigs": [],
-                    "iconCls": "icon-linkedinstance",
-                    "expanded": true,
-                    "masterInstanceId": "ExtBox1-ext-gen27355"
                 }
             ]
+        },
+        {
+            "id": "ExtBox1-ext-gen10191",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "CASInfoCont"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen27355"
         }
     ]
 }

@@ -7,15 +7,17 @@
     },
     "codeClass": null,
     "userConfig": {
+        "bottom": "0px",
         "cls": null,
         "docked": "right",
+        "height": "30px",
         "id": "infoContainerID",
+        "right": "0px",
         "style": "",
-        "layout": "hbox",
+        "width": "30px",
+        "layout": null,
         "designer|userClassName": "InfoContainer",
-        "designer|userAlias": "InfoContainer",
-        "container|align": "end",
-        "container|pack": "end"
+        "designer|userAlias": "InfoContainer"
     },
     "customConfigs": [],
     "designerId": "76a4b273-e5b0-42ad-b402-232eb3fc8e82",

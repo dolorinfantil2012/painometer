@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "b621cd17-99cb-4c01-8be7-611be68a35c4",
     "$viewOrder": 5,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen13448",
@@ -58,7 +58,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen13454",
+            "id": "ExtBox1-ext-gen8986",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -66,18 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "bottom": "0px",
-                "centered": null,
-                "cls": null,
-                "docked": "bottom",
-                "height": "25px",
-                "itemId": "infoVAS",
-                "left": null,
-                "right": "0px",
-                "tpl": "<div class=\"x-inner x-layout-hbox\" id=\"ext-element-1053\" style=\"-webkit-box-align: end; -webkit-box-pack: end; \"><div class=\"x-button x-iconalign-center x-button-info_btn-small\" id=\"canvas-ExtBox1-ext-gen14191\" style=\"border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; width: 22px !important; \"><span style=\"display: none; \" class=\"x-badge\"></span><span class=\"x-button-icon info x-icon-mask\" style=\"\" id=\"ext-element-1054\"></span><span style=\"display: none; \" class=\"x-button-label\"></span></div></div>",
-                "width": "25px",
-                "defaults": null,
-                "layout": "fit"
+                "id": "VASInfoCont"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

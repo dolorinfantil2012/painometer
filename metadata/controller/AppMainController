@@ -7,7 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|init": "\nExt.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        alert(\"ei!!!!\");\n    }\n});",
+        "designer|init": "",
         "designer|launch": "",
         "designer|userClassName": "AppMainController"
     },
@@ -16,41 +16,6 @@
     "$viewOrder": 4,
     "expanded": true,
     "cn": [
-        {
-            "id": "ExtBox1-ext-gen11382",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mainContainer",
-                "selector": "#MainContainer",
-                "designer|userClassName": "mainContainer"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen11728",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "MainContainerMove",
-                "implHandler": "",
-                "name": "move",
-                "designer|targetType": "Ext.Container",
-                "designer|controlQuery": "MainContainer",
-                "designer|userClassName": "MainContainerMove"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
         {
             "id": "ExtBox1-ext-gen14111",
             "type": "basicfunction",
@@ -61,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "isLandscape",
-                "implHandler": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        alert(\"ei!!!!\");\n        if (no == portrait){\n            return \"false\"; \n        }\n        else{\n            return \"true\";\n        }\n    }\n});\n",
+                "implHandler": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        if (no == \"landscape\"){\n            return \"true\"; \n        }\n        else{\n            return \"false\";\n        }\n    }\n});\n",
                 "designer|userClassName": "isLandscape"
             },
             "customConfigs": [],
@@ -77,7 +42,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "isPortrait",
-                "implHandler": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        alert(\"ei!!!!\");\n        if (no == landscape){\n            return \"true\"; \n        }\n        else{\n            return \"false\";\n        }\n    }\n});",
+                "implHandler": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        if (no == \"portrait\"){\n            return \"true\"; \n        }\n        else{\n            return \"false\";\n        }\n    }\n});",
                 "designer|userClassName": "isPortrait"
             },
             "customConfigs": [],

@@ -17,29 +17,6 @@ Ext.define('Painometer.controller.AppMainController', {
     extend: 'Ext.app.Controller',
 
     config: {
-        refs: {
-            mainContainer: '#MainContainer'
-        },
-
-        control: {
-            "MainContainer": {
-                move: 'MainContainerMove'
-            }
-        }
-    },
-
-    init: function() {
-
-        Ext.Viewport.on({
-            scope: this,
-            orientationchange: function(viewport, newOrientation, width, height) {
-                vw = viewport; no = newOrientation; wi = width; he = height;
-                alert("ei!!!!");
-            }
-        });
-    },
-
-    MainContainerMove: function(container, item, toIndex, fromIndex, options) {
 
     },
 
@@ -48,12 +25,11 @@ Ext.define('Painometer.controller.AppMainController', {
             scope: this,
             orientationchange: function(viewport, newOrientation, width, height) {
                 vw = viewport; no = newOrientation; wi = width; he = height;
-                alert("ei!!!!");
-                if (no == portrait){
-                    return "false"; 
+                if (no == "landscape"){
+                    return "true"; 
                 }
                 else{
-                    return "true";
+                    return "false";
                 }
             }
         });
@@ -65,8 +41,7 @@ Ext.define('Painometer.controller.AppMainController', {
             scope: this,
             orientationchange: function(viewport, newOrientation, width, height) {
                 vw = viewport; no = newOrientation; wi = width; he = height;
-                alert("ei!!!!");
-                if (no == landscape){
+                if (no == "portrait"){
                     return "true"; 
                 }
                 else{

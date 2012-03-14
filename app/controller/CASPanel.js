@@ -40,6 +40,7 @@ Ext.define('Painometer.controller.CASPanel', {
     onCASPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
+        configController.setFactor(1);
         var slider = this.getCASSlider();
 
         slider.setValue(value);

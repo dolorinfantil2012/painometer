@@ -28,9 +28,9 @@
 .x-button {
   &.x-button-info_btn, &.x-button-info_btn-round, &.x-button-info_btn-small  {
     .x-button-icon.x-icon-mask {
-      -webkit-mask-size: .76em;
-      width: .76em;
-      height: .76em;
+      -webkit-mask-size: 23px;
+      width: 23px;
+      height: 23px;
     }
   } 
 }

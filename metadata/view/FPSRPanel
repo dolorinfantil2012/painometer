@@ -180,7 +180,7 @@
                     "userConfig": {
                         "id": "FPSCarousel",
                         "itemId": null,
-                        "defaults": "{\n   style:'background-position: 50% 25%; background-size: 285px;'\n}",
+                        "defaults": "{\n   style:'background-position: 50% 1%; background-size: 260px;'\n}",
                         "designer|userClassName": "MyCarousel"
                     },
                     "customConfigs": [],

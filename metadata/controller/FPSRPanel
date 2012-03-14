@@ -7,6 +7,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "Config"
+        ],
         "stores": [],
         "views": [
             "FPSRPanel"
@@ -114,7 +117,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFPSRPanelActivate",
-                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\npan.setActiveItem(index);",
+                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nconfigController.setFactor(0.1);\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\npan.setActiveItem(index);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "fpsrpanel",

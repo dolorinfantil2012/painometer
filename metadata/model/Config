@@ -32,6 +32,23 @@
             "expanded": true
         },
         {
+            "id": "ExtBox1-ext-gen10315",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaultValue": "1",
+                "name": "factor",
+                "type": "float",
+                "designer|userClassName": "MyField7"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
             "id": "ExtBox1-ext-gen23739",
             "type": "datafield",
             "reference": {

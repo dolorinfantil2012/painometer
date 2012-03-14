@@ -180,7 +180,7 @@
                     "userConfig": {
                         "id": "FPSCarousel",
                         "itemId": null,
-                        "defaults": "{\n   style:'background-position: 50% 25%; background-size: 285px;'\n}",
+                        "defaults": "{\n   style:'background-position: 50% 1%; background-size: 260px;'\n}",
                         "designer|userClassName": "MyCarousel"
                     },
                     "customConfigs": [],
@@ -339,7 +339,7 @@
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen7386",
+                    "id": "ExtBox1-ext-gen10290",
                     "type": "linkedinstance",
                     "reference": {
                         "name": "items",
@@ -347,7 +347,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "infoContainerFP"
+                        "id": "FPSInfoCont",
+                        "itemId": "FPSInfoContainer"
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",

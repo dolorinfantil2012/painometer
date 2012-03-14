@@ -24,7 +24,9 @@ Ext.define('Painometer.view.ConfigPanel', {
             align: 'center',
             type: 'vbox'
         },
-        scrollable: true,
+        scrollable: {
+            direction: 'vertical'
+        },
         items: [
             {
                 xtype: 'titlebar',
@@ -50,7 +52,7 @@ Ext.define('Painometer.view.ConfigPanel', {
             {
                 xtype: 'container',
                 data: {
-                    value: 100
+                    value: 10
                 },
                 height: 210,
                 id: 'ValueCont',
@@ -82,6 +84,15 @@ Ext.define('Painometer.view.ConfigPanel', {
                         displayField: 'label',
                         store: 'scaleTypesStoreId',
                         valueField: 'idScale'
+                    },
+                    {
+                        xtype: 'checkboxfield',
+                        id: 'reset',
+                        itemId: 'reset',
+                        label: 'Reset',
+                        labelAlign: 'bottom',
+                        labelWidth: '37.5%',
+                        name: 'reset'
                     },
                     {
                         xtype: 'selectfield',

@@ -97,7 +97,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onNRS11PanelActivate",
-                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nvar pan = this.getNRSCarousel();\nvar index = Math.floor(value / 10);\n\npan.setActiveItem(index);",
+                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nconfigController.setFactor(0.1);\nvar pan = this.getNRSCarousel();\nvar index = Math.floor(value / 10);\n\npan.setActiveItem(index);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "NRS11Panel",

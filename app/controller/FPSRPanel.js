@@ -17,6 +17,9 @@ Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
+        models: [
+            'Config'
+        ],
         stores: [
             
         ],
@@ -62,6 +65,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
+        configController.setFactor(0.1);
         var pan = this.getFPSCarousel();
         var index = Math.floor(value / 20);
 

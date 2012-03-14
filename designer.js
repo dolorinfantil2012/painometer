@@ -50,7 +50,8 @@ Ext.application({
         'FPSRPanel',
         'NRS11Panel',
         'CreditsContainer',
-        'AppMainController'
+        'CASPanel',
+        'VASPanel'
     ],
 
     launch: function() {

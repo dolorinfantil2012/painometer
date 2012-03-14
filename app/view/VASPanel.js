@@ -15,12 +15,13 @@
 
 Ext.define('Painometer.view.VASPanel', {
     extend: 'Ext.Container',
-    alias: 'widget.vaspanel',
+    alias: 'widget.VASPanel',
     requires: [
         'Painometer.view.InfoContainer'
     ],
 
     config: {
+        id: 'VASPanel',
         style: 'background-color:white;',
         layout: {
             type: 'fit'
@@ -44,7 +45,7 @@ Ext.define('Painometer.view.VASPanel', {
             },
             {
                 xtype: 'InfoContainer',
-                itemId: 'infoVAS'
+                id: 'VASInfoCont'
             }
         ]
     }

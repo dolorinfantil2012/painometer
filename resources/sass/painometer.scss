@@ -64,15 +64,9 @@
 
   .x-slider {
       position: relative;
-      height: 3cm;
       min-height: 0;
       min-width: 0;
       //background-image: url(../images/cas_bg.png);
-      width: 12.2cm;
-      background-size: 10cm 3cm;
-      background-repeat: no-repeat;
-      background-position-x: 1cm;
-
     > * {
         position: absolute;
         width: 100%;
@@ -86,9 +80,9 @@
 
     .x-thumb {
       position: relative;
-      height: 4cm;
+      height: 12cm;
       width: 2.5cm;
-      top: -0.5cm;
+      top: -4.5cm;
       
       //visibility: hidden;
       background: -webkit-gradient(
@@ -104,7 +98,7 @@
       // The actual thumb
       &:before {
         width: 2px;
-        height: 4cm;
+        height: 12cm;
         margin-top: -3px;
         margin-left: 1.15cm;
       }
@@ -136,15 +130,24 @@
   
   .x-slider {
       background-image: url(../images/cas_bg.png);
+      background-size: 11cm 3.3cm;
+      background-repeat: no-repeat;
+      background-position-x: 1cm;
+      width: 13.2cm;
+      height: 3.3cm;
   }
   
 }
-
 .sencha-vas-slider {
   @include sencha-cas-sliders;
   
   .x-slider {
       background-image: url(../images/vas_bg.png);
+      background-size: 9.9cm 3cm;
+      background-repeat: no-repeat;
+      background-position-x: 1.23cm;
+      width: 12.34cm;
+      height: 3cm;
   }
 
 }

@@ -5,7 +5,7 @@
         "directAPI": "",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "C:/xampp/htdocs/painometer",
+        "exportPath": "/Users/roman/Sites/Painometer",
         "extPath": "resources/lib/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
@@ -165,19 +165,27 @@
             ],
             "className": "ConfigCard"
         },
-        "df33411c-0b34-422b-8bf6-b70b6cb4b83f": {
+        "de6d4bbe-4b2b-41db-9a96-5a4ee10cf8ae": {
             "paths": [
-                "metadata/controller/AppMainController",
-                "app/controller/override/AppMainController.js",
-                "app/controller/AppMainController.js"
+                "metadata/controller/CASPanel",
+                "app/controller/override/CASPanel.js",
+                "app/controller/CASPanel.js"
             ],
-            "className": "AppMainController"
+            "className": "CASPanel"
+        },
+        "2a49611e-ab21-4065-aedc-0c73eeb840bc": {
+            "paths": [
+                "metadata/controller/VASPanel",
+                "app/controller/override/VASPanel.js",
+                "app/controller/VASPanel.js"
+            ],
+            "className": "VASPanel"
         }
     },
     "expandedState": {
         "data": false,
         "model": false,
         "component": true,
-        "controller": true
+        "controller": false
     }
 }

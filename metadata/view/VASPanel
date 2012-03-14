@@ -8,10 +8,11 @@
     "codeClass": null,
     "userConfig": {
         "html": null,
+        "id": "VASPanel",
         "style": "background-color:white;",
         "layout": "fit",
         "designer|userClassName": "VASPanel",
-        "designer|userAlias": "vaspanel"
+        "designer|userAlias": "VASPanel"
     },
     "customConfigs": [],
     "designerId": "b621cd17-99cb-4c01-8be7-611be68a35c4",
@@ -57,7 +58,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen13454",
+            "id": "ExtBox1-ext-gen8986",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -65,7 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "infoVAS"
+                "id": "VASInfoCont"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",

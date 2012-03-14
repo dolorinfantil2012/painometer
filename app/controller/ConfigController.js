@@ -82,7 +82,7 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onConfigTap: function(button, e, options) {
         var me = this;
-        if (me.getReset().isChecked())
+        if (me.getReset().getValue() == 1)
         {
             me.setValue(0);
         }

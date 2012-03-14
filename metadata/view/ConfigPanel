@@ -114,8 +114,8 @@
             "userConfig": {
                 "width": "100%",
                 "layout": "default",
-                "instructions": "Opcions generals de l'eina",
-                "title": "Opcions",
+                "instructions": null,
+                "title": null,
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
@@ -149,21 +149,21 @@
                     "expanded": true
                 },
                 {
-                    "id": "ExtBox1-ext-gen32505",
-                    "type": "checkboxfield",
+                    "id": "ExtBox1-ext-gen10691",
+                    "type": "togglefield",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "height": null,
                         "id": "reset",
                         "itemId": "reset",
                         "label": "Reset",
-                        "labelAlign": "bottom",
-                        "labelWidth": "37.5%",
-                        "name": "reset",
-                        "designer|userClassName": "MyCheckbox"
+                        "labelWidth": "36.4%",
+                        "name": null,
+                        "designer|userClassName": "MyToggleField"
                     },
                     "customConfigs": [],
                     "expanded": true
@@ -179,6 +179,7 @@
                     "userConfig": {
                         "docked": null,
                         "height": "",
+                        "hidden": true,
                         "width": "",
                         "label": "Idioma",
                         "labelAlign": "bottom",

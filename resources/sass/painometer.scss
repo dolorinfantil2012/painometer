@@ -28,9 +28,9 @@
 .x-button {
   &.x-button-info_btn, &.x-button-info_btn-round, &.x-button-info_btn-small  {
     .x-button-icon.x-icon-mask {
-      -webkit-mask-size: 23px;
-      width: 23px;
-      height: 23px;
+      -webkit-mask-size: .76em;
+      width: .76em;
+      height: .76em;
     }
   } 
 }
@@ -125,6 +125,11 @@
   
 }
 
+#ext-element-128 {
+    height: 60px;
+}
+
+
 .sencha-cas-slider {
   @include sencha-cas-sliders;
   
@@ -149,5 +154,7 @@
       width: 12.34cm;
       height: 3cm;
   }
+
+
 
 }

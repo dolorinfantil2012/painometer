@@ -68,8 +68,6 @@ Ext.define('Painometer.view.ConfigPanel', {
                 layout: {
                     type: 'default'
                 },
-                instructions: 'Opcions generals de l\'eina',
-                title: 'Opcions',
                 items: [
                     {
                         xtype: 'selectfield',
@@ -86,17 +84,16 @@ Ext.define('Painometer.view.ConfigPanel', {
                         valueField: 'idScale'
                     },
                     {
-                        xtype: 'checkboxfield',
+                        xtype: 'togglefield',
                         id: 'reset',
                         itemId: 'reset',
                         label: 'Reset',
-                        labelAlign: 'bottom',
-                        labelWidth: '37.5%',
-                        name: 'reset'
+                        labelWidth: '36.4%'
                     },
                     {
                         xtype: 'selectfield',
                         height: '',
+                        hidden: true,
                         width: '',
                         label: 'Idioma',
                         labelAlign: 'bottom',

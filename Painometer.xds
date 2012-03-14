@@ -186,6 +186,6 @@
         "data": false,
         "model": true,
         "component": true,
-        "controller": false
+        "controller": true
     }
 }

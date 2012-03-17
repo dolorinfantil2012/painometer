@@ -62,6 +62,7 @@ Ext.define('Painometer.controller.NRS11Panel', {
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
+        configController.setFactor(0.1);
         var pan = this.getNRSCarousel();
         var index = Math.floor(value / 10);
 

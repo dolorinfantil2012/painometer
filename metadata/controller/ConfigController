@@ -27,7 +27,7 @@
     ],
     "designerId": "b0b0b5df-5293-42cc-adc8-22fa6d04d3e8",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15177",
@@ -55,7 +55,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onConfigTap",
-                "implHandler": "        var me = this;\n        var scale = me.getScaleSel().getValue();\n        me.getMainContainer().setActiveItem(scale);",
+                "implHandler": "var me = this;\nif (me.getReset().getValue() == 1)\n{\n    me.setValue(0);\n}\nvar scale = me.getScaleSel().getValue();\nme.getMainContainer().setActiveItem(scale);",
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "okConfig",
@@ -192,7 +192,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onconfigCardActivate",
-                "implHandler": "        var newValue = this.configInstance.get('value');\n\n        this.getValueCont().setData({'value' : newValue});",
+                "implHandler": "var newValue = this.configInstance.get('value');\nvar factor = this.configInstance.get('factor');\n\nthis.getValueCont().setData({'value' : newValue * factor});",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "configCard",
@@ -227,7 +227,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "getValue",
-                "implHandler": "return this.configInstance.get('value');\n",
+                "implHandler": "return this.configInstance.get('value');",
                 "designer|userClassName": "getValue"
             },
             "customConfigs": [],
@@ -248,6 +248,57 @@
                 ],
                 "implHandler": "this.configInstance.set('value', newValue);",
                 "designer|userClassName": "setValue"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16518",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setFactor",
+                "designer|params": [
+                    "newFactor"
+                ],
+                "implHandler": "this.configInstance.set('factor', newFactor);",
+                "designer|userClassName": "setFactor"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen17240",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getFactor",
+                "implHandler": "return this.configInstance.get('factor');",
+                "designer|userClassName": "getFactor"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen26284",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "reset",
+                "selector": "#reset",
+                "designer|userClassName": "reset"
             },
             "customConfigs": [],
             "expanded": true

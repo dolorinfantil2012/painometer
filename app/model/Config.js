@@ -23,6 +23,11 @@ Ext.define('Painometer.model.Config', {
                 type: 'int'
             },
             {
+                defaultValue: 1,
+                name: 'factor',
+                type: 'float'
+            },
+            {
                 allowNull: false,
                 name: 'language',
                 type: 'int'

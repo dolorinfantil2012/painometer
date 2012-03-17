@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "5e0c77f3-813b-4b62-b539-aadb9241db86",
     "$viewOrder": 2,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen5820",
@@ -180,7 +180,7 @@
                     "userConfig": {
                         "id": "FPSCarousel",
                         "itemId": null,
-                        "defaults": "{\n   style:'background-position: 50% 25%; background-size: 285px;'\n}",
+                        "defaults": "{\n   style:'background-position: 50% 1%; background-size: 270px;'\n}",
                         "designer|userClassName": "MyCarousel"
                     },
                     "customConfigs": [],
@@ -339,7 +339,7 @@
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen7386",
+                    "id": "ExtBox1-ext-gen10290",
                     "type": "linkedinstance",
                     "reference": {
                         "name": "items",
@@ -347,7 +347,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "infoContainerFP"
+                        "id": "FPSInfoCont",
+                        "itemId": "FPSInfoContainer"
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",

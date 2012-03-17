@@ -91,7 +91,7 @@ Ext.define('Painometer.view.FPSRPanel', {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
                         defaults: {
-                            style: 'background-position: 50% 25%; background-size: 285px;'
+                            style: 'background-position: 50% 1%; background-size: 270px;'
                         },
                         items: [
                             {
@@ -134,7 +134,8 @@ Ext.define('Painometer.view.FPSRPanel', {
                     },
                     {
                         xtype: 'InfoContainer',
-                        id: 'infoContainerFP'
+                        id: 'FPSInfoCont',
+                        itemId: 'FPSInfoContainer'
                     }
                 ]
             }

@@ -24,7 +24,9 @@ Ext.define('Painometer.view.ConfigPanel', {
             align: 'center',
             type: 'vbox'
         },
-        scrollable: true,
+        scrollable: {
+            direction: 'vertical'
+        },
         items: [
             {
                 xtype: 'titlebar',
@@ -50,7 +52,7 @@ Ext.define('Painometer.view.ConfigPanel', {
             {
                 xtype: 'container',
                 data: {
-                    value: 100
+                    value: 10
                 },
                 height: 210,
                 id: 'ValueCont',
@@ -66,8 +68,6 @@ Ext.define('Painometer.view.ConfigPanel', {
                 layout: {
                     type: 'default'
                 },
-                instructions: 'Opcions generals de l\'eina',
-                title: 'Opcions',
                 items: [
                     {
                         xtype: 'selectfield',
@@ -84,8 +84,16 @@ Ext.define('Painometer.view.ConfigPanel', {
                         valueField: 'idScale'
                     },
                     {
+                        xtype: 'togglefield',
+                        id: 'reset',
+                        itemId: 'reset',
+                        label: 'Reset',
+                        labelWidth: '36.4%'
+                    },
+                    {
                         xtype: 'selectfield',
                         height: '',
+                        hidden: true,
                         width: '',
                         label: 'Idioma',
                         labelAlign: 'bottom',

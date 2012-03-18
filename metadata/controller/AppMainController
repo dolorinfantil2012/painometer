@@ -7,14 +7,21 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|init": "",
+        "designer|init": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        if((newOrientation == \"portrait\")&&(this.getScaleSel().getValue() == 2)){\n            this.getOverlayCAS().setHidden(false);\n        }\n        if((newOrientation == \"landscape\")&&(this.getScaleSel().getValue() == 2)){\n            this.getOverlayCAS().setHidden(true);\n        }\n        if((newOrientation == \"portrait\")&&(this.getScaleSel().getValue() == 3)){\n            this.getOverlayVAS().setHidden(false);\n        }\n        if((newOrientation == \"landscape\")&&(this.getScaleSel().getValue() == 3)){\n            this.getOverlayVAS().setHidden(true);\n        }\n        this.setOrientation(newOrientation == \"landscape\");\n    }\n});",
         "designer|launch": "",
-        "designer|userClassName": "AppMainController"
+        "designer|userClassName": "AppMainController",
+        "orientation": true
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "orientation",
+            "type": "boolean"
+        }
+    ],
     "designerId": "df33411c-0b34-422b-8bf6-b70b6cb4b83f",
     "$viewOrder": 4,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen14111",
@@ -26,7 +33,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "isLandscape",
-                "implHandler": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        if (no == \"landscape\"){\n            return \"true\"; \n        }\n        else{\n            return \"false\";\n        }\n    }\n});\n",
+                "implHandler": "return this.getOrientation();\n",
                 "designer|userClassName": "isLandscape"
             },
             "customConfigs": [],
@@ -42,8 +49,56 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "isPortrait",
-                "implHandler": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        vw = viewport; no = newOrientation; wi = width; he = height;\n        if (no == \"portrait\"){\n            return \"true\"; \n        }\n        else{\n            return \"false\";\n        }\n    }\n});",
+                "implHandler": "return !this.getOrientation();",
                 "designer|userClassName": "isPortrait"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24444",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "scaleSel",
+                "selector": "#ScaleSel",
+                "designer|userClassName": "scaleSel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18452",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "OverlayCAS",
+                "selector": "#OverlayCAS",
+                "designer|userClassName": "OverlayCAS"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18789",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "OverlayVAS",
+                "selector": "#OverlayVAS",
+                "designer|userClassName": "OverlayVAS"
             },
             "customConfigs": [],
             "expanded": true

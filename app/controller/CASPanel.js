@@ -24,7 +24,8 @@ Ext.define('Painometer.controller.CASPanel', {
             'CASPanel'
         ],
         refs: {
-            CASSlider: '#CASSlider'
+            CASSlider: '#CASSlider',
+            OverlayCAS: '#OverlayCAS'
         },
 
         control: {
@@ -38,6 +39,19 @@ Ext.define('Painometer.controller.CASPanel', {
     },
 
     onCASPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var appmaincontroller = this.getApplication().getController("Painometer.controller.AppMainController");
+        var landscape = appmaincontroller.isLandscape();
+        var portrait = appmaincontroller.isPortrait();
+        var overlay = this.getOverlayCAS();
+
+        if(portrait){
+            overlay.setHidden(false);
+        }
+
+        if(landscape){
+            overlay.setHidden(true);
+        }
+
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
         configController.setFactor(1);

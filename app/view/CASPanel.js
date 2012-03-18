@@ -40,6 +40,29 @@ Ext.define('Painometer.view.CASPanel', {
                         centered: true,
                         cls: 'sencha-cas-slider',
                         id: 'CASSlider'
+                    },
+                    {
+                        xtype: 'container',
+                        height: 145,
+                        hidden: true,
+                        hideAnimation: 'fadeOut',
+                        html: 'Per utilitzar l\'escala CAS has de ficar la pantalla en posició horitzontal.',
+                        id: 'OverlayCAS',
+                        left: 0,
+                        margin: '75px',
+                        showAnimation: 'popIn',
+                        style: 'background-color: gray; border: 5px solid black; border-radius: 15px;',
+                        top: 0,
+                        width: 170,
+                        modal: true,
+                        items: [
+                            {
+                                xtype: 'toolbar',
+                                docked: 'top',
+                                style: 'border-top-left-radius: 10px; border-top-right-radius: 10px;',
+                                title: 'Atenció'
+                            }
+                        ]
                     }
                 ]
             },

@@ -21,7 +21,7 @@
     "customConfigs": [],
     "designerId": "40c4d108-b253-4287-b931-d49f315c15e2",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen29952",
@@ -117,7 +117,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFPSRPanelActivate",
-                "implHandler": "var configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nconfigController.setFactor(0.1);\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\npan.setActiveItem(index);",
+                "implHandler": "var appmaincontroller = this.getApplication().getController(\"Painometer.controller.AppMainController\");\nvar landscape = appmaincontroller.isLandscape();\nvar portrait = appmaincontroller.isPortrait();\nvar configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nconfigController.setFactor(0.1);\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\nif (landscape){\n    pan.setDefaults({style:'background-position: 75% 0%; background-size: 150px;'});\n}\nif (portrait){\n    pan.getDefaults().style = 'background-position: 75% 0%; background-size: 270px;';\n}\n\npan.setActiveItem(index);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "fpsrpanel",

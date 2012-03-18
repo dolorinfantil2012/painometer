@@ -165,6 +165,14 @@
             ],
             "className": "ConfigCard"
         },
+        "df33411c-0b34-422b-8bf6-b70b6cb4b83f": {
+            "paths": [
+                "metadata/controller/AppMainController",
+                "app/controller/override/AppMainController.js",
+                "app/controller/AppMainController.js"
+            ],
+            "className": "AppMainController"
+        },
         "de6d4bbe-4b2b-41db-9a96-5a4ee10cf8ae": {
             "paths": [
                 "metadata/controller/CASPanel",
@@ -180,19 +188,11 @@
                 "app/controller/VASPanel.js"
             ],
             "className": "VASPanel"
-        },
-        "df33411c-0b34-422b-8bf6-b70b6cb4b83f": {
-            "paths": [
-                "metadata/controller/AppMainController",
-                "app/controller/override/AppMainController.js",
-                "app/controller/AppMainController.js"
-            ],
-            "className": "AppMainController"
         }
     },
     "expandedState": {
         "data": false,
-        "model": true,
+        "model": false,
         "component": true,
         "controller": true
     }

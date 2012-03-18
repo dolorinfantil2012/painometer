@@ -17,38 +17,42 @@ Ext.define('Painometer.controller.AppMainController', {
     extend: 'Ext.app.Controller',
 
     config: {
-
+        orientation: true,
+        refs: {
+            scaleSel: '#ScaleSel',
+            OverlayCAS: '#OverlayCAS',
+            OverlayVAS: '#OverlayVAS'
+        }
     },
 
-    isLandscape: function() {
+    init: function() {
         Ext.Viewport.on({
             scope: this,
             orientationchange: function(viewport, newOrientation, width, height) {
-                vw = viewport; no = newOrientation; wi = width; he = height;
-                if (no == "landscape"){
-                    return "true"; 
+                if((newOrientation == "portrait")&&(this.getScaleSel().getValue() == 2)){
+                    this.getOverlayCAS().setHidden(false);
                 }
-                else{
-                    return "false";
+                if((newOrientation == "landscape")&&(this.getScaleSel().getValue() == 2)){
+                    this.getOverlayCAS().setHidden(true);
                 }
+                if((newOrientation == "portrait")&&(this.getScaleSel().getValue() == 3)){
+                    this.getOverlayVAS().setHidden(false);
+                }
+                if((newOrientation == "landscape")&&(this.getScaleSel().getValue() == 3)){
+                    this.getOverlayVAS().setHidden(true);
+                }
+                this.setOrientation(newOrientation == "landscape");
             }
         });
+    },
+
+    isLandscape: function() {
+        return this.getOrientation();
 
     },
 
     isPortrait: function() {
-        Ext.Viewport.on({
-            scope: this,
-            orientationchange: function(viewport, newOrientation, width, height) {
-                vw = viewport; no = newOrientation; wi = width; he = height;
-                if (no == "portrait"){
-                    return "true"; 
-                }
-                else{
-                    return "false";
-                }
-            }
-        });
+        return !this.getOrientation();
     }
 
 });

@@ -63,11 +63,21 @@ Ext.define('Painometer.controller.FPSRPanel', {
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        var appmaincontroller = this.getApplication().getController("Painometer.controller.AppMainController");
+        var landscape = appmaincontroller.isLandscape();
+        var portrait = appmaincontroller.isPortrait();
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
         configController.setFactor(0.1);
         var pan = this.getFPSCarousel();
         var index = Math.floor(value / 20);
+
+        if (landscape){
+            pan.setDefaults({style:'background-position: 75% 0%; background-size: 150px;'});
+        }
+        if (portrait){
+            pan.getDefaults().style = 'background-position: 75% 0%; background-size: 270px;';
+        }
 
         pan.setActiveItem(index);
     }

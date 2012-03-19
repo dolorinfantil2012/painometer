@@ -10,13 +10,14 @@
         "id": "CreditsContainer",
         "style": "background-color:white;",
         "layout": "fit",
+        "scrollable": "{direction: 'vertical'}",
         "designer|userClassName": "CreditsContainer",
         "designer|userAlias": "creditscontainer"
     },
     "customConfigs": [],
     "designerId": "09dae92c-424f-41eb-aba6-15195d47bc51",
     "$viewOrder": 6,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen10644",
@@ -32,7 +33,7 @@
                 "designer|userClassName": "MyTitleBar1"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11187",

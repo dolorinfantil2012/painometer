@@ -35,7 +35,7 @@
                 "designer|userClassName": "MyContainer43"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen8789",
@@ -58,7 +58,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen10191",
+            "id": "ExtBox1-ext-gen12614",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",

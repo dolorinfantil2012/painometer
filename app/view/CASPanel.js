@@ -48,11 +48,10 @@ Ext.define('Painometer.view.CASPanel', {
                         hideAnimation: 'fadeOut',
                         html: 'Per utilitzar l\'escala CAS has de ficar la pantalla en posició horitzontal.',
                         id: 'OverlayCAS',
-                        left: 0,
-                        margin: '75px',
+                        left: '30%',
                         showAnimation: 'popIn',
                         style: 'background-color: gray; border: 5px solid black; border-radius: 15px;',
-                        top: 0,
+                        top: '30%',
                         width: 170,
                         modal: true,
                         items: [

@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "bc3742f5-81f1-4e56-97dc-73c4d4d1f3a2",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15921",
@@ -35,7 +35,7 @@
                 "designer|userClassName": "MyContainer43"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen8789",
@@ -70,12 +70,12 @@
                         "hideAnimation": "fadeOut",
                         "html": "Per utilitzar l'escala CAS has de ficar la pantalla en posició horitzontal.",
                         "id": "OverlayCAS",
-                        "left": 0,
-                        "margin": "75px",
+                        "left": "30%",
+                        "margin": null,
                         "padding": null,
                         "showAnimation": "popIn",
                         "style": "background-color: gray; border: 5px solid black; border-radius: 15px;",
-                        "top": 0,
+                        "top": "30%",
                         "width": 170,
                         "modal": true,
                         "designer|userClassName": "Overlay",

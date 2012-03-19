@@ -35,7 +35,7 @@
                 "designer|userClassName": "MyContainer43"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen8789",
@@ -64,6 +64,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "docked": null,
                         "height": 145,
                         "hidden": true,
                         "hideAnimation": "fadeOut",

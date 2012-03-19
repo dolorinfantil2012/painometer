@@ -21,7 +21,9 @@ Ext.define('Painometer.controller.AppMainController', {
         refs: {
             scaleSel: '#ScaleSel',
             OverlayCAS: '#OverlayCAS',
-            OverlayVAS: '#OverlayVAS'
+            OverlayVAS: '#OverlayVAS',
+            OverlayFPS: '#OverlayFPS',
+            OverlayFPS2: '#OverlayFPS2'
         }
     },
 
@@ -29,17 +31,31 @@ Ext.define('Painometer.controller.AppMainController', {
         Ext.Viewport.on({
             scope: this,
             orientationchange: function(viewport, newOrientation, width, height) {
-                if((newOrientation == "portrait")&&(this.getScaleSel().getValue() == 2)){
-                    this.getOverlayCAS().setHidden(false);
+                var overlaycas = this.getOverlayCAS();
+                var overlayvas = this.getOverlayVAS();
+                var overlayfps = this.getOverlayFPS();
+                var overlayfps2 = this.getOverlayFPS2();
+                var scalesel = this.getScaleSel().getValue();
+
+                if((newOrientation == "portrait")&&(scalesel == 2)){
+                    overlaycas.setHidden(false);
                 }
-                if((newOrientation == "landscape")&&(this.getScaleSel().getValue() == 2)){
-                    this.getOverlayCAS().setHidden(true);
+                if((newOrientation == "landscape")&&(scalesel == 2)){
+                    overlaycas.setHidden(true);
                 }
-                if((newOrientation == "portrait")&&(this.getScaleSel().getValue() == 3)){
-                    this.getOverlayVAS().setHidden(false);
+                if((newOrientation == "portrait")&&(scalesel == 3)){
+                    overlayvas.setHidden(false);
                 }
-                if((newOrientation == "landscape")&&(this.getScaleSel().getValue() == 3)){
-                    this.getOverlayVAS().setHidden(true);
+                if((newOrientation == "landscape")&&(scalesel == 3)){
+                    overlayvas.setHidden(true);
+                }
+                if((newOrientation == "portrait")&&(scalesel === 0)){
+                    overlayfps.setHidden(true);
+                    overlayfps2.setHidden(true);
+                }
+                if((newOrientation == "landscape")&&(scalesel === 0)){
+                    overlayfps.setHidden(false);
+                    overlayfps2.setHidden(false);
                 }
                 this.setOrientation(newOrientation == "landscape");
             }

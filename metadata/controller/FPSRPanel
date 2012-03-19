@@ -117,11 +117,43 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFPSRPanelActivate",
-                "implHandler": "var appmaincontroller = this.getApplication().getController(\"Painometer.controller.AppMainController\");\nvar landscape = appmaincontroller.isLandscape();\nvar portrait = appmaincontroller.isPortrait();\nvar configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nconfigController.setFactor(0.1);\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\nif (landscape){\n    pan.setDefaults({style:'background-position: 75% 0%; background-size: 150px;'});\n}\nif (portrait){\n    pan.getDefaults().style = 'background-position: 75% 0%; background-size: 270px;';\n}\n\npan.setActiveItem(index);",
+                "implHandler": "var appmaincontroller = this.getApplication().getController(\"Painometer.controller.AppMainController\");\nvar landscape = appmaincontroller.isLandscape();\nvar portrait = appmaincontroller.isPortrait();\nvar overlay = this.getOverlayFPS();\nvar overlay2 = this.getOverlayFPS2();\n\nif(portrait){\n    overlay.setHidden(true);\n    overlay2.setHidden(true);\n}\n\nif(landscape){\n    overlay.setHidden(false);\n    overlay2.setHidden(false);\n}\n\nvar configController = this.getApplication().getController(\"Painometer.controller.ConfigController\");\nvar value = configController.getValue();\nconfigController.setFactor(0.1);\nvar pan = this.getFPSCarousel();\nvar index = Math.floor(value / 20);\n\npan.setActiveItem(index);",
                 "name": "activate",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "fpsrpanel",
                 "designer|userClassName": "onFPSRPanelActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11389",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "OverlayFPS",
+                "selector": "#OverlayFPS",
+                "designer|userClassName": "OverlayFPS"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen19001",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "OverlayFPS2",
+                "selector": "#OverlayFPS2",
+                "designer|userClassName": "OverlayFPS2"
             },
             "customConfigs": [],
             "expanded": true

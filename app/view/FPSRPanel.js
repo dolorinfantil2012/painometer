@@ -30,6 +30,28 @@ Ext.define('Painometer.view.FPSRPanel', {
         items: [
             {
                 xtype: 'container',
+                height: 145,
+                hidden: true,
+                hideAnimation: 'fadeOut',
+                html: 'Per utilitzar l\'escala FPS-R has de ficar la pantalla en posició vertical.',
+                id: 'OverlayFPS',
+                left: 0,
+                showAnimation: 'popIn',
+                style: 'margin-left: 160px; background-color: gray; border: 5px solid black; border-radius: 15px;',
+                top: 0,
+                width: 170,
+                modal: true,
+                items: [
+                    {
+                        xtype: 'toolbar',
+                        docked: 'top',
+                        style: 'border-top-left-radius: 10px; border-top-right-radius: 10px;',
+                        title: 'Atenció'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
                 docked: 'top',
                 id: 'FPSNavContainer',
                 padding: 10,
@@ -73,6 +95,16 @@ Ext.define('Painometer.view.FPSRPanel', {
                         xtype: 'image',
                         id: 'smallFace6',
                         src: 'resources/images/fpsr/cara6.png'
+                    },
+                    {
+                        xtype: 'container',
+                        hidden: true,
+                        hideAnimation: 'fadeOut',
+                        id: 'OverlayFPS2',
+                        left: 0,
+                        showAnimation: 'popIn',
+                        top: 0,
+                        modal: true
                     }
                 ]
             },

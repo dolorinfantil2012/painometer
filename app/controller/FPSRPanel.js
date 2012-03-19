@@ -30,7 +30,9 @@ Ext.define('Painometer.controller.FPSRPanel', {
             faceContainer: '#FPSCarousel image',
             fpsNav: '#FPSNavContainer',
             mainContainer: '#MainContainer',
-            FPSCarousel: '#FPSCarousel'
+            FPSCarousel: '#FPSCarousel',
+            OverlayFPS: '#OverlayFPS',
+            OverlayFPS2: '#OverlayFPS2'
         },
 
         control: {
@@ -66,18 +68,24 @@ Ext.define('Painometer.controller.FPSRPanel', {
         var appmaincontroller = this.getApplication().getController("Painometer.controller.AppMainController");
         var landscape = appmaincontroller.isLandscape();
         var portrait = appmaincontroller.isPortrait();
+        var overlay = this.getOverlayFPS();
+        var overlay2 = this.getOverlayFPS2();
+
+        if(portrait){
+            overlay.setHidden(true);
+            overlay2.setHidden(true);
+        }
+
+        if(landscape){
+            overlay.setHidden(false);
+            overlay2.setHidden(false);
+        }
+
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");
         var value = configController.getValue();
         configController.setFactor(0.1);
         var pan = this.getFPSCarousel();
         var index = Math.floor(value / 20);
-
-        if (landscape){
-            pan.setDefaults({style:'background-position: 75% 0%; background-size: 150px;'});
-        }
-        if (portrait){
-            pan.getDefaults().style = 'background-position: 75% 0%; background-size: 270px;';
-        }
 
         pan.setActiveItem(index);
     }

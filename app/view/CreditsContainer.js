@@ -23,6 +23,9 @@ Ext.define('Painometer.view.CreditsContainer', {
         layout: {
             type: 'fit'
         },
+        scrollable: {
+            direction: 'vertical'
+        },
         items: [
             {
                 xtype: 'titlebar',

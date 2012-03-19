@@ -417,7 +417,7 @@
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen10290",
+                    "id": "ExtBox1-ext-gen14411",
                     "type": "linkedinstance",
                     "reference": {
                         "name": "items",
@@ -425,8 +425,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "FPSInfoCont",
-                        "itemId": "FPSInfoContainer"
+                        "id": "FPSInfoCont"
                     },
                     "customConfigs": [],
                     "iconCls": "icon-linkedinstance",

@@ -166,8 +166,7 @@ Ext.define('Painometer.view.FPSRPanel', {
                     },
                     {
                         xtype: 'InfoContainer',
-                        id: 'FPSInfoCont',
-                        itemId: 'FPSInfoContainer'
+                        id: 'FPSInfoCont'
                     }
                 ]
             }

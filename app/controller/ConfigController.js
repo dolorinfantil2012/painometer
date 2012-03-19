@@ -38,8 +38,12 @@ Ext.define('Painometer.controller.ConfigController', {
         },
 
         control: {
+            "#MainContainer": {
+                activate: 'onContainerActivate',
+                activeitemchange: 'onmcchange'
+            },
             "okConfig": {
-                tap: 'onConfigTap'
+                tap: 'onOKTap'
             },
             "infoBtn": {
                 tap: 'oninfoButtonTap'
@@ -77,10 +81,13 @@ Ext.define('Painometer.controller.ConfigController', {
                 this.configInstance.set("scale", record.get("scale"));
             }
         });
-
     },
 
-    onConfigTap: function(button, e, options) {
+    onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
+        container.setActiveItem(this.getScale());
+    },
+
+    onOKTap: function(button, e, options) {
         var me = this;
         if (me.getReset().getValue() == 1)
         {
@@ -91,7 +98,7 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     oninfoButtonTap: function(button, e, options) {
-        this.configInstance.save();
+        //this.configInstance.save();
         this.getMainContainer().setActiveItem(4);
     },
 
@@ -114,12 +121,18 @@ Ext.define('Painometer.controller.ConfigController', {
         this.getValueCont().setData({'value' : newValue * factor});
     },
 
+    onmcchange: function(container, value, oldValue, options) {
+        this.setScale(container.items.indexOf(container.getActiveItem()));
+        this.configInstance.save();
+    },
+
     getValue: function() {
         return this.configInstance.get('value');
     },
 
     setValue: function(newValue) {
         this.configInstance.set('value', newValue);
+        this.configInstance.save();
     },
 
     setFactor: function(newFactor) {
@@ -128,6 +141,14 @@ Ext.define('Painometer.controller.ConfigController', {
 
     getFactor: function() {
         return this.configInstance.get('factor');
+    },
+
+    getScale: function() {
+        return this.configInstance.get('scale');
+    },
+
+    setScale: function(newScale) {
+        this.configInstance.set('scale', newScale);
     }
 
 });

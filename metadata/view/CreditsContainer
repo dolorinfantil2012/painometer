@@ -10,6 +10,7 @@
         "id": "CreditsContainer",
         "style": "background-color:white;",
         "layout": "fit",
+        "scrollable": "{direction: 'vertical'}",
         "designer|userClassName": "CreditsContainer",
         "designer|userAlias": "creditscontainer"
     },
@@ -32,7 +33,7 @@
                 "designer|userClassName": "MyTitleBar1"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11187",

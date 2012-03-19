@@ -161,7 +161,7 @@
                         "id": "reset",
                         "itemId": "reset",
                         "label": "Reset",
-                        "labelWidth": "36.4%",
+                        "labelWidth": "165px",
                         "name": null,
                         "designer|userClassName": "MyToggleField"
                     },

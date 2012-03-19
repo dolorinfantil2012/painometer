@@ -8,7 +8,10 @@
     "codeClass": null,
     "userConfig": {
         "designer|initialView": true,
+        "data": null,
+        "hidden": null,
         "id": "MainContainer",
+        "itemId": null,
         "style": "background-color:white;",
         "ui": "",
         "defaults": "{\nstyle:'background-color:white;',\n}",

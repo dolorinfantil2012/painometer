@@ -39,7 +39,7 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onContainerActivate",
-                "implHandler": "container.setActiveItem(this.getScale());\nalert(\"MainContainer Activat\");",
+                "implHandler": "container.setActiveItem(this.getScale());",
                 "element": null,
                 "name": "activate",
                 "designer|targetType": "Ext.Container",

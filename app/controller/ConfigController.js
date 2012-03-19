@@ -85,7 +85,6 @@ Ext.define('Painometer.controller.ConfigController', {
 
     onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
         container.setActiveItem(this.getScale());
-        alert("MainContainer Activat");
     },
 
     onOKTap: function(button, e, options) {

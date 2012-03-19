@@ -88,7 +88,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                         id: 'reset',
                         itemId: 'reset',
                         label: 'Reset',
-                        labelWidth: '36.4%'
+                        labelWidth: '165px'
                     },
                     {
                         xtype: 'selectfield',

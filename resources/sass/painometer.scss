@@ -126,10 +126,30 @@
 }
 
 .x-form-label {
-    height: 60px;
+  height: 58px; 
 }
-
-
+#ext-element-143 {
+  padding-left: 15%;
+}
+#ScaleSel {
+  height: 47px;
+}
+#ext-element-141 {
+  height: 15px;
+}
+#ext-element-146 {
+  width: 85%;
+  padding-left: 10%;
+}
+#ext-element-140{
+  width: 85%;
+}
+#reset {
+  height: 61px;
+}
+#ext-element-147 {
+  height: 55px;
+}
 .sencha-cas-slider {
   @include sencha-cas-sliders;
   
@@ -141,7 +161,7 @@
       width: 13.2cm;
       height: 3.3cm;
   }
-  
+
 }
 .sencha-vas-slider {
   @include sencha-cas-sliders;

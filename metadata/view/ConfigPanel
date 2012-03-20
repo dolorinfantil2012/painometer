@@ -26,7 +26,7 @@
     ],
     "designerId": "5d1b5cba-1b1c-459d-b90b-4a6a7b52a15f",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen13702",
@@ -134,10 +134,10 @@
                         "height": "",
                         "id": "ScaleSel",
                         "itemId": "ScaleSel",
-                        "width": "",
+                        "width": null,
                         "label": "Escala",
                         "labelAlign": "bottom",
-                        "labelWidth": "40%",
+                        "labelWidth": "49.5%",
                         "name": "escalaType",
                         "required": null,
                         "displayField": "label",
@@ -161,7 +161,7 @@
                         "id": "reset",
                         "itemId": "reset",
                         "label": "Reset",
-                        "labelWidth": "165px",
+                        "labelWidth": "45%",
                         "name": null,
                         "designer|userClassName": "MyToggleField"
                     },

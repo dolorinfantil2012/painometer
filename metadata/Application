@@ -25,9 +25,10 @@
             "InfoContainer",
             "CreditsContainer",
             "VASPanel",
-            "ConfigCard"
+            "ConfigCard",
+            "OrientationInfo"
         ],
-        "designer|launch": "painometerApp = this;",
+        "designer|launch": "this.OrientationInfo = Ext.Viewport.add({\n    xtype: 'OrientationInfo'\n});\n",
         "glossOnIcon": true,
         "name": "Painometer"
     },

@@ -7,7 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|init": "Ext.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        var overlaycas = this.getOverlayCAS();\n        var overlayvas = this.getOverlayVAS();\n        var overlayfps = this.getOverlayFPS();\n        var overlayfps2 = this.getOverlayFPS2();\n        var scalesel = this.getScaleSel().getValue();\n\n        if((newOrientation == \"portrait\")&&(scalesel == 2)){\n            overlaycas.setHidden(false);\n        }\n        if((newOrientation == \"landscape\")&&(scalesel == 2)){\n            overlaycas.setHidden(true);\n        }\n        if((newOrientation == \"portrait\")&&(scalesel == 3)){\n            overlayvas.setHidden(false);\n        }\n        if((newOrientation == \"landscape\")&&(scalesel == 3)){\n            overlayvas.setHidden(true);\n        }\n        if((newOrientation == \"portrait\")&&(scalesel === 0)){\n            overlayfps.setHidden(true);\n            overlayfps2.setHidden(true);\n        }\n        if((newOrientation == \"landscape\")&&(scalesel === 0)){\n            overlayfps.setHidden(false);\n            overlayfps2.setHidden(false);\n        }\n        this.setOrientation(newOrientation == \"landscape\");\n    }\n});",
+        "designer|init": "this.orientationWarning = Ext.Viewport.add({\n    xtype: 'OrientationInfo'\n});\n\nExt.Viewport.on({\n    scope: this,\n    orientationchange: function(viewport, newOrientation, width, height) {\n        var overlaycas = this.getOverlayCAS();\n        var overlayvas = this.getOverlayVAS();\n        var overlayfps = this.getOverlayFPS();\n        var overlayfps2 = this.getOverlayFPS2();\n        var scalesel = this.getScaleSel().getValue();\n        var mainContainer = this.getMainContainer();\n        var activePage = mainContainer.getActiveItem();\n\n        if((newOrientation == \"portrait\")&&(scalesel == 2)){\n            overlaycas.setHidden(false);\n        }\n        if((newOrientation == \"landscape\")&&(scalesel == 2)){\n            overlaycas.setHidden(true);\n        }\n        if((newOrientation == \"portrait\")&&(scalesel == 3)){\n            overlayvas.setHidden(false);\n        }\n        if((newOrientation == \"landscape\")&&(scalesel == 3)){\n            overlayvas.setHidden(true);\n        }\n        if((newOrientation == \"portrait\")&&(scalesel === 0)){\n            //overlayfps.setHidden(true);\n            //overlayfps2.setHidden(true);\n        }\n        if((newOrientation == \"landscape\")&&(scalesel === 0)) {\n            //overlayfps.setHidden(false);\n            //overlayfps2.setHidden(false);\n            this.orientationWarning.showBy(activePage);\n        }\n        this.setOrientation(newOrientation == \"landscape\");\n    }\n});",
         "designer|launch": "",
         "designer|userClassName": "AppMainController",
         "orientation": true
@@ -21,7 +21,7 @@
     ],
     "designerId": "df33411c-0b34-422b-8bf6-b70b6cb4b83f",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen14111",
@@ -131,6 +131,22 @@
                 "ref": "OverlayFPS2",
                 "selector": "#OverlayFPS2",
                 "designer|userClassName": "OverlayFPS2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10589",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "MainContainer",
+                "selector": "#MainContainer",
+                "designer|userClassName": "MainContainer"
             },
             "customConfigs": [],
             "expanded": true

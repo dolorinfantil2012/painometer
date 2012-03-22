@@ -72,13 +72,13 @@ Ext.define('Painometer.controller.FPSRPanel', {
         var overlay2 = this.getOverlayFPS2();
 
         if(portrait){
-            overlay.setHidden(true);
-            overlay2.setHidden(true);
+            //    overlay.setHidden(true);
+            //    overlay2.setHidden(true);
         }
 
         if(landscape){
-            overlay.setHidden(false);
-            overlay2.setHidden(false);
+            //    overlay.setHidden(false);
+            //    overlay2.setHidden(false);
         }
 
         var configController = this.getApplication().getController("Painometer.controller.ConfigController");

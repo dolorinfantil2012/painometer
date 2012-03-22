@@ -38,7 +38,8 @@ Ext.application({
         'InfoContainer',
         'CreditsContainer',
         'VASPanel',
-        'ConfigCard'
+        'ConfigCard',
+        'OrientationInfo'
     ],
 
     glossOnIcon: true,
@@ -56,7 +57,10 @@ Ext.application({
     ],
 
     launch: function() {
-        painometerApp = this;
+        this.OrientationInfo = Ext.Viewport.add({
+            xtype: 'OrientationInfo'
+        });
+
         Ext.create('Painometer.view.MainContainer', {fullscreen: true});
     }
 });

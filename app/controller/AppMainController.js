@@ -17,46 +17,54 @@ Ext.define('Painometer.controller.AppMainController', {
     extend: 'Ext.app.Controller',
 
     config: {
-        orientation: true,
+    	configController : null,  
+        orientation      : true,
+        
         refs: {
-            scaleSel: '#ScaleSel',
-            OverlayCAS: '#OverlayCAS',
-            OverlayVAS: '#OverlayVAS',
-            OverlayFPS: '#OverlayFPS',
-            OverlayFPS2: '#OverlayFPS2'
+            MainContainer : '#MainContainer'
         }
     },
 
     init: function() {
+    	var app = this.getApplication();
+    	
+    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
+    	
+        this.orientationWarning = Ext.Viewport.add({
+            xtype: 'OrientationInfo'
+        });
+
         Ext.Viewport.on({
             scope: this,
             orientationchange: function(viewport, newOrientation, width, height) {
-                var overlaycas = this.getOverlayCAS();
-                var overlayvas = this.getOverlayVAS();
-                var overlayfps = this.getOverlayFPS();
-                var overlayfps2 = this.getOverlayFPS2();
-                var scalesel = this.getScaleSel().getValue();
+               	var scale = this.getConfigController().getScale();
+                var mainContainer = this.getMainContainer();
+                var activePage = mainContainer.getActiveItem();
 
-                if((newOrientation == "portrait")&&(scalesel == 2)){
-                    overlaycas.setHidden(false);
+                if ((newOrientation == "portrait") && (scale == 2)) {
+                    this.orientationWarning.hide();
                 }
-                if((newOrientation == "landscape")&&(scalesel == 2)){
-                    overlaycas.setHidden(true);
+                
+                if ((newOrientation == "landscape") && (scale == 2)) {
+                    this.orientationWarning.showBy(activePage);
                 }
-                if((newOrientation == "portrait")&&(scalesel == 3)){
-                    overlayvas.setHidden(false);
+                
+                if ((newOrientation == "portrait") && (scale == 3)) {
+                    this.orientationWarning.hide();
                 }
-                if((newOrientation == "landscape")&&(scalesel == 3)){
-                    overlayvas.setHidden(true);
+                
+                if ((newOrientation == "landscape") && (scale == 3)) {
+                    this.orientationWarning.showBy(activePage);
                 }
-                if((newOrientation == "portrait")&&(scalesel === 0)){
-                    overlayfps.setHidden(true);
-                    overlayfps2.setHidden(true);
+                
+                if ((newOrientation == "portrait") && (scale == 0)) {
+                    this.orientationWarning.hide();
                 }
-                if((newOrientation == "landscape")&&(scalesel === 0)){
-                    overlayfps.setHidden(false);
-                    overlayfps2.setHidden(false);
+                 
+                if ((newOrientation == "landscape") && (scale === 0)) {
+                    this.orientationWarning.showBy(activePage);
                 }
+                
                 this.setOrientation(newOrientation == "landscape");
             }
         });

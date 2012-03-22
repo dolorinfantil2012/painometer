@@ -19,10 +19,15 @@ Ext.define('Painometer.controller.AppMainController', {
     config: {
     	configController : null,  
         orientation      : true,
-        
+        views: ['FPSRPanel', 'CASPanel', 'VASPanel'],
         refs: {
             MainContainer : '#MainContainer'
-        }
+        },  
+        control: {
+            "fpsrpanel" : {activate: 'onLandscapShowActivate'},
+            "CASPanel"  : {activate: 'onPortraitShowActivate'},
+            "VASPanel"  : {activate: 'onPortraitShowActivate'},
+        },
     },
 
     init: function() {
@@ -36,38 +41,51 @@ Ext.define('Painometer.controller.AppMainController', {
 
         Ext.Viewport.on({
             scope: this,
-            orientationchange: function(viewport, newOrientation, width, height) {
+            orientationchange: function(viewport, newOrientation) {
                	var scale = this.getConfigController().getScale();
-                var mainContainer = this.getMainContainer();
-                var activePage = mainContainer.getActiveItem();
-
-                if ((newOrientation == "portrait") && (scale == 2)) {
-                    this.orientationWarning.hide();
+               	
+               	if (newOrientation == "portrait") {
+               		if (scale == 0) {
+               			this.hideOrientationInfo();	
+               		} else if (scale == 2 || scale == 3) {
+               			this.showOrientationInfo();
+               		}
+                } else {
+                	this.setOrientation(true);
+                	if (scale == 0) {
+                		this.showOrientationInfo();
+                	} else if (scale == 2 || scale == 3) {
+                		this.hideOrientationInfo();
+                	}
                 }
-                
-                if ((newOrientation == "landscape") && (scale == 2)) {
-                    this.orientationWarning.showBy(activePage);
-                }
-                
-                if ((newOrientation == "portrait") && (scale == 3)) {
-                    this.orientationWarning.hide();
-                }
-                
-                if ((newOrientation == "landscape") && (scale == 3)) {
-                    this.orientationWarning.showBy(activePage);
-                }
-                
-                if ((newOrientation == "portrait") && (scale == 0)) {
-                    this.orientationWarning.hide();
-                }
-                 
-                if ((newOrientation == "landscape") && (scale === 0)) {
-                    this.orientationWarning.showBy(activePage);
-                }
-                
-                this.setOrientation(newOrientation == "landscape");
             }
         });
+    },
+    
+    onLandscapShowActivate: function(container, newActiveItem, oldActiveItem, options) {
+    	if (this.isLandscape()) {
+            this.showOrientationInfo(); 
+        } else {
+        	this.hideOrientationInfo();        	
+        }
+    },
+    
+    onPortraitShowActivate: function(container, newActiveItem, oldActiveItem, options) {
+        if (this.isLandscape()) {
+            this.hideOrientationInfo(); 
+        } else {
+        	this.showOrientationInfo();        	
+        }
+    },
+    
+    showOrientationInfo: function() {
+    	var mainContainer = this.getMainContainer();
+		var activePage = mainContainer.getActiveItem();
+    	this.orientationWarning.showBy(activePage);
+    },
+    
+	hideOrientationInfo: function() {
+    	this.orientationWarning.hide();
     },
 
     isLandscape: function() {

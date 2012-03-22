@@ -17,16 +17,10 @@ Ext.define('Painometer.controller.NRS11Panel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        stores: [
-            
-        ],
-        views: [
-            'NRS11Panel'
-        ],
+        views: ['NRS11Panel'],
         refs: {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
-            mainContainer: '#MainContainer',
             NRS11Panel: '#Nrs11Panel',
             NRSCarousel: '#NRSCarousel'
         },

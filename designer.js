@@ -52,7 +52,7 @@ Ext.application({
         'NRS11Panel',
         'CreditsContainer',
         'AppMainController',
-        'CASPanel',
+        'CASPanelController',
         'VASPanel'
     ],
 

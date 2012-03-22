@@ -17,33 +17,26 @@ Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        models: [
-            'Config'
-        ],
-        stores: [
-            
-        ],
-        views: [
-            'FPSRPanel'
-        ],
+        models: ['Config'],
+        views: ['FPSRPanel'],
         refs: {
-            faceContainer: '#FPSCarousel image',
-            fpsNav: '#FPSNavContainer',
-            mainContainer: '#MainContainer',
-            FPSCarousel: '#FPSCarousel',
-            OverlayFPS: '#OverlayFPS',
-            OverlayFPS2: '#OverlayFPS2'
+            faceContainer : '#FPSCarousel image',
+            fpsNav        : '#FPSNavContainer',
+            FPSCarousel   : '#FPSCarousel'
         },
-
         control: {
-            "faceContainer": {
-                activate: 'faceActivate'
-            },
-            "fpsrpanel": {
-                activate: 'onFPSRPanelActivate'
-            }
-        }
+            "faceContainer": { activate: 'faceActivate'},
+            "fpsrpanel"    : {activate: 'onFPSRPanelActivate'}
+        },
+        // user variables
+        configController  : null,
     },
+    
+	init: function() {
+    	var app = this.getApplication();
+    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
+	}, 
+	
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (!Ext.isEmpty(container)) {
@@ -56,38 +49,18 @@ Ext.define('Painometer.controller.FPSRPanel', {
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 20;
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
-
+            
             oldFace.removeCls("face-selected");
-
-            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-            configController.setValue(container.config.value);
+            this.getConfigController().setValue(container.config.value);
         }
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var appmaincontroller = this.getApplication().getController("Painometer.controller.AppMainController");
-        var landscape = appmaincontroller.isLandscape();
-        var portrait = appmaincontroller.isPortrait();
-        var overlay = this.getOverlayFPS();
-        var overlay2 = this.getOverlayFPS2();
-
-        if(portrait){
-            //    overlay.setHidden(true);
-            //    overlay2.setHidden(true);
-        }
-
-        if(landscape){
-            //    overlay.setHidden(false);
-            //    overlay2.setHidden(false);
-        }
-
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
-        configController.setFactor(0.1);
-        var pan = this.getFPSCarousel();
-        var index = Math.floor(value / 20);
-
-        pan.setActiveItem(index);
+    	var value = this.getConfigController().getValue(),
+    		pan   = this.getFPSCarousel(),
+    		index = Math.floor(value / 20);
+       
+       	pan.setActiveItem(index); 
     }
 
 });

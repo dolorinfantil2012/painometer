@@ -40,28 +40,6 @@ Ext.define('Painometer.view.VASPanel', {
                         centered: true,
                         cls: 'sencha-vas-slider',
                         id: 'VASSlider'
-                    },
-                    {
-                        xtype: 'container',
-                        height: 145,
-                        hidden: true,
-                        hideAnimation: 'fadeOut',
-                        html: 'Per utilitzar l\'escala VAS has de ficar la pantalla en posició horitzontal.',
-                        id: 'OverlayVAS',
-                        left: '30%',
-                        showAnimation: 'popIn',
-                        style: 'background-color: gray; border: 5px solid black; border-radius: 15px;',
-                        top: '30%',
-                        width: 170,
-                        modal: true,
-                        items: [
-                            {
-                                xtype: 'toolbar',
-                                docked: 'top',
-                                style: 'border-top-left-radius: 10px; border-top-right-radius: 10px;',
-                                title: 'Atenció'
-                            }
-                        ]
                     }
                 ]
             },

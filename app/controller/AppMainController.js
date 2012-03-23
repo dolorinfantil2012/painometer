@@ -89,12 +89,12 @@ Ext.define('Painometer.controller.AppMainController', {
     },
 
     isLandscape: function() {
-        return this.getOrientation();
+        return Ext.Viewport.getOrientation() == "landscape"
 
     },
 
     isPortrait: function() {
-        return !this.getOrientation();
+        return Ext.Viewport.getOrientation() == "portrait"
     }
 
 });

@@ -60,7 +60,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
     		pan   = this.getFPSCarousel(),
     		index = Math.floor(value / 20);
        
-       	pan.setActiveItem(index); 
+       	pan.setActiveItem(index);
     }
 
 });

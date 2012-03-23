@@ -72,8 +72,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                     {
                         xtype: 'selectfield',
                         height: '',
-                        id: 'ScaleSel',
-                        itemId: 'ScaleSel',
+                        id: 'scaleField',
                         label: 'Escala',
                         labelAlign: 'bottom',
                         labelWidth: '49.5%',
@@ -84,8 +83,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                     },
                     {
                         xtype: 'togglefield',
-                        id: 'reset',
-                        itemId: 'reset',
+                        id: 'resetField',
                         label: 'Reset',
                         labelWidth: '45%'
                     },

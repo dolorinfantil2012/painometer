@@ -22,6 +22,7 @@ Ext.define('Painometer.view.ConfigCard', {
     ],
 
     config: {
+    	id: "configCard",
         layout: {
             animation: 'slide',
             type: 'card'

@@ -42,7 +42,7 @@ Ext.define('Painometer.controller.VASPanel', {
     },
 
     onVASPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var value = this.getConfigController().getValue();
+        var value  = this.getConfigController().getValue();
         var slider = this.getVASSlider();
         slider.setValue(value);
     }

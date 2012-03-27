@@ -79,9 +79,11 @@ Ext.define('Painometer.controller.AppMainController', {
     },
     
     showOrientationInfo: function() {
-    	var mainContainer = this.getMainContainer();
-		var activePage = mainContainer.getActiveItem();
-    	this.orientationWarning.showBy(activePage);
+    	var screenWidth = Ext.Viewport.getSize().width;
+    	var left        = (screenWidth - this.orientationWarning.getWidth()) / 2;
+    	
+    	this.orientationWarning.setLeft(left);
+    	this.orientationWarning.show();
     },
     
 	hideOrientationInfo: function() {

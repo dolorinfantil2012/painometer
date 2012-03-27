@@ -18,23 +18,28 @@ Ext.define('Painometer.view.OrientationInfo', {
     alias: 'widget.OrientationInfo',
 
     config: {
-        height: 200,
         hidden: true,
-        html: '<h2>Atenció</h2><p>Giri la pantalla per veure l\'escala correctament.</p><p>Gràcies</p>',
-        left: '10%',
+        html: 'Giri la pantalla per veure l\'escala correctament.</p><p style="margin-bottom:0;text-align:right">Gràcies</p>',
+        left: '0',
         style: 'margin: 0 auto;',
         styleHtmlContent: true,
         top: '15%',
-        width: '80%',
-        modal: true
+        width: 300,
+        modal: true,
+        showAnimation: 'popIn',
+        hideAnimation: 'fadeOut',
+        items: [
+        	{
+            xtype: 'toolbar',
+            docked: 'top',
+            title: 'Atenció'
+            }
+		]
     }
-
 });
 
 
-/*height: 145,
-                        hidden: true,
-                        hideAnimation: 'fadeOut',
+/*				height: 145,
                         html: 'Per utilitzar l\'escala CAS has de ficar la pantalla en posició horitzontal.',
                         id: 'OverlayCAS',
                         left: '30%',

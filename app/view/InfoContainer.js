@@ -25,6 +25,7 @@ Ext.define('Painometer.view.InfoContainer', {
         right: '0px',
         style: '',
         width: '35px',
+        zIndex : 4,
         items: [
             {
                 xtype: 'button',

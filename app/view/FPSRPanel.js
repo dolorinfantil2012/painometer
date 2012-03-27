@@ -23,6 +23,7 @@ Ext.define('Painometer.view.FPSRPanel', {
     config: {
         id: 'FPSRPanel',
         style: 'background-color:white;',
+        zIndex : 0,
         layout: {
             type: 'fit'
         },

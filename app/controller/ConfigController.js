@@ -73,10 +73,6 @@ Ext.define('Painometer.controller.ConfigController', {
         });
     },
 
-    onContainerActivate: function(container, newActiveItem, oldActiveItem, options) {
-        //container.setActiveItem(this.getScale());
-    },
-
 	// function that listen the ok tap to go back to show the scale
     onOKTap: function(button, e, options) {
         if (this.isReset()) {

@@ -17,36 +17,26 @@ Ext.define('Painometer.controller.VASPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        models: [
-            'Config'
-        ],
-        views: [
-            'VASPanel'
-        ],
+        models: ['Config'],
+        views: ['VASPanel'],
         refs: {
-            VASSlider: '#VASSlider'
+            VASSlider: '#VASSlider',
+            OverlayVAS: '#OverlayVAS'
         },
 
         control: {
-            "VASSlider": {
-                change: 'onVASSliderChange'
-            },
-            "VASPanel": {
-                activate: 'onVASPanelActivate'
-            }
+        	"VASSlider": {change: 'onVASSliderChange'},
+            "VASPanel" : {activate: 'onVASPanelActivate'}
         }
     },
-
+    
     onVASSliderChange: function(slider, thumb, newValue, oldValue, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        configController.setValue(newValue);
+        this.getApplication().setValue(newValue);
     },
 
     onVASPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
+        var value  = this.getApplication().getValue();
         var slider = this.getVASSlider();
-
         slider.setValue(value);
     }
 

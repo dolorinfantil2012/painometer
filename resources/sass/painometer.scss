@@ -25,6 +25,7 @@
 
 @include sencha-button-ui('info_btn', #ffffff, 'flat');
 
+
 .x-button {
   &.x-button-info_btn, &.x-button-info_btn-round, &.x-button-info_btn-small  {
     .x-button-icon.x-icon-mask {
@@ -36,23 +37,12 @@
 }
 
 .face-selected {
-    //@include single-box-shadow(black, 1px, 1px, 0.1); 
-    //-webkit-box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.2);
-    //box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.2);
     border: 1px solid lightgray;
-    //-webkit-transform: scale(1.2);
 }
 
 /**************************************************************/
 /* CAS SLIDER                                                 */
 /**************************************************************/
-/*@import '../global';*/
-
-/**
- * Includes default form slider styles.
- *
- * @member Ext.field.Slider
- */
 
 @mixin sencha-cas-sliders {
 
@@ -66,7 +56,6 @@
       position: relative;
       min-height: 0;
       min-width: 0;
-      //background-image: url(../images/cas_bg.png);
     > * {
         position: absolute;
         width: 100%;
@@ -125,6 +114,46 @@
   
 }
 
+#configPanel {
+  .x-form-label {
+    height: 58px; 
+    background-color: white;
+  }
+}
+
+//#ext-element-143 {
+//  padding-left: 15%;
+//}
+
+//#ext-element-141 {
+//  height: 15px;
+//}
+
+//#ext-element-146 {
+//  width: 85%;
+//  padding-left: 10%;
+//}
+
+//#ext-element-140{
+//  width: 85%;
+//}
+
+
+//#ScaleSel {
+//  height: 47px;
+//}
+
+
+
+//#reset {
+//  height: 61px;
+//}
+
+//#ext-element-147 {
+//  height: 55px;
+//}
+
+
 .sencha-cas-slider {
   @include sencha-cas-sliders;
   
@@ -136,8 +165,8 @@
       width: 13.2cm;
       height: 3.3cm;
   }
-  
 }
+
 .sencha-vas-slider {
   @include sencha-cas-sliders;
   
@@ -149,5 +178,4 @@
       width: 12.34cm;
       height: 3cm;
   }
-
 }

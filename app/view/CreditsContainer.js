@@ -23,6 +23,9 @@ Ext.define('Painometer.view.CreditsContainer', {
         layout: {
             type: 'fit'
         },
+        scrollable: {
+            direction: 'vertical'
+        },
         items: [
             {
                 xtype: 'titlebar',
@@ -67,7 +70,7 @@ Ext.define('Painometer.view.CreditsContainer', {
                             {
                                 xtype: 'image',
                                 docked: 'bottom',
-                                height: 100,
+                                height: 150,
                                 id: 'algos',
                                 style: 'background-position: 50% 0%; ',
                                 src: 'resources/images/algos/logo_algos.png'

@@ -13,41 +13,28 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('Painometer.controller.CASPanel', {
+Ext.define('Painometer.controller.CASPanelController', {
     extend: 'Ext.app.Controller',
 
     config: {
-        models: [
-            'Config'
-        ],
-        views: [
-            'CASPanel'
-        ],
-        refs: {
-            CASSlider: '#CASSlider'
+        models: ['Config'],
+        views : ['CASPanel'],
+        refs  : {
+            CASSlider: '#CASSlider',
+            OverlayCAS: '#OverlayCAS'
         },
-
         control: {
-            "CASPanel": {
-                activate: 'onCASPanelActivate'
-            },
-            "CASSlider": {
-                change: 'onCASSliderChange'
-            }
-        }
+            "CASPanel" : { activate: 'onCASPanelActivate'},
+            "CASSlider": { change: 'onCASSliderChange'}
+        },
     },
-
+    
     onCASPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
-        var slider = this.getCASSlider();
-
-        slider.setValue(value);
+        this.getCASSlider().setValue(this.getApplication().getValue());
     },
 
     onCASSliderChange: function(slider, thumb, newValue, oldValue, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        configController.setValue(newValue);
+        this.getApplication().setValue(newValue);
     }
 
 });

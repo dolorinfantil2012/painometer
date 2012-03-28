@@ -19,7 +19,7 @@ Ext.define('Painometer.view.VASPanel', {
     requires: [
         'Painometer.view.InfoContainer'
     ],
-
+	zIndex : 0,
     config: {
         id: 'VASPanel',
         style: 'background-color:white;',

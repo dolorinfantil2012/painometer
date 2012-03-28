@@ -18,19 +18,29 @@ Ext.define('Painometer.model.Config', {
     config: {
         fields: [
             {
-                allowNull: false,
                 name: 'scale',
-                type: 'int'
+                type: 'int',
+                defaultValue: 0
             },
             {
-                allowNull: false,
                 name: 'language',
-                type: 'int'
+                type: 'int',
+                defaultValue: 0
             },
             {
-                defaultValue: 0,
                 name: 'value',
-                type: 'int'
+                type: 'int',
+                defaultValue: 0
+            },
+            {
+            	name: 'reset',
+            	type: 'boolean',
+            	defaultValue: false
+            },
+            {
+            	name: 'viewIndex',  // the index of the view in the mainContainer
+            	type: 'int',
+            	defaultValue: 0	
             }
         ],
         proxy: {

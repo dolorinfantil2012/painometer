@@ -38,7 +38,8 @@ Ext.application({
         'InfoContainer',
         'CreditsContainer',
         'VASPanel',
-        'ConfigCard'
+        'ConfigCard',
+        'OrientationInfo'
     ],
 
     glossOnIcon: true,
@@ -50,12 +51,62 @@ Ext.application({
         'FPSRPanel',
         'NRS11Panel',
         'CreditsContainer',
-        'CASPanel',
-        'VASPanel'
+        'CASPanelController',
+        'VASPanel',
+        'OrientationController'
     ],
 
+	// data mars of the application
+	painometerData : null, // instance of the current state
+	
+	getPainometerData: function() {
+		if (this.painometerData === null) {
+			this.painometerData = Ext.create('Painometer.model.Config', {id : 1});
+		}
+		return this.painometerData;
+	},
+	
     launch: function() {
-        painometerApp = this;
-        Ext.create('Painometer.view.MainContainer', {fullscreen: true});
-    }
+    	this.loadData();
+    },
+    
+    
+    /* the data */
+    loadData: function() {
+    	var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
+        configModel.load(1, {
+            scope: this,
+            failure: function(record) {
+                this.getPainometerData().save();
+            }, 
+            success: function (record) {
+            	this.painometerData = record;
+            },
+            callback: function() {
+            	var configController = this.getController("ConfigController");
+            	Ext.create('Painometer.view.MainContainer', {fullscreen: true});
+        		configController.onOKTap();
+            }
+        });
+    },
+    
+    getValue: function() {
+        return this.getPainometerData().get('value');
+    },
+
+    setValue: function(newValue) {
+        this.getPainometerData().set('value', newValue);
+        this.getPainometerData().save();
+    },
+    
+    setScale: function(newScale) {
+        this.getPainometerData().set('scale', newScale);
+        this.getPainometerData().save();
+    },
+    
+    setReset: function(newValue) {
+    	this.getPainometerData().set('reset', newValue);
+    	this.getPainometerData().save();
+    },
+    
 });

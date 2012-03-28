@@ -25,6 +25,10 @@ Ext.define('Painometer.model.ScaleType', {
             {
                 name: 'label',
                 type: 'string'
+            },
+            {
+                name: 'ratio',
+                type: 'float'
             }
         ]
     }

@@ -17,28 +17,26 @@ Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        stores: [
-            
-        ],
-        views: [
-            'FPSRPanel'
-        ],
+        models: ['Config'],
+        views: ['FPSRPanel'],
         refs: {
-            faceContainer: '#FPSCarousel image',
-            fpsNav: '#FPSNavContainer',
-            mainContainer: '#MainContainer',
-            FPSCarousel: '#FPSCarousel'
+            faceContainer : '#FPSCarousel image',
+            fpsNav        : '#FPSNavContainer',
+            FPSCarousel   : '#FPSCarousel'
         },
-
         control: {
-            "faceContainer": {
-                activate: 'faceActivate'
-            },
-            "fpsrpanel": {
-                activate: 'onFPSRPanelActivate'
-            }
-        }
+            "faceContainer": { activate: 'faceActivate'},
+            "fpsrpanel"    : {activate: 'onFPSRPanelActivate'}
+        },
+        // user variables
+        configController  : null,
     },
+    
+	init: function() {
+    	var app = this.getApplication();
+    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
+	}, 
+	
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (!Ext.isEmpty(container)) {
@@ -51,21 +49,18 @@ Ext.define('Painometer.controller.FPSRPanel', {
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 20;
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
-
+            
             oldFace.removeCls("face-selected");
-
-            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-            configController.setValue(container.config.value);
+            this.getApplication().setValue(container.config.value);
         }
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
-        var pan = this.getFPSCarousel();
-        var index = Math.floor(value / 20);
-
-        pan.setActiveItem(index);
+    	var value = this.getConfigController().getValue(),
+    		pan   = this.getFPSCarousel(),
+    		index = Math.floor(value / 20);
+       
+       	pan.setActiveItem(index);
     }
 
 });

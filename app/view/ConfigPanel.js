@@ -56,9 +56,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                 height: 210,
                 id: 'ValueCont',
                 style: 'text-align: center; font-size: 135px; margin: 15px; border: 15px; border-style: groove; padding: 0px; padding-top: 5px;',
-                tpl: [
-                    '{value}'
-                ],
+                tpl: ['{value}'],
                 width: 260
             },
             {
@@ -70,7 +68,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                         id: 'scaleField',
                         label: 'Escala',
                         //labelAlign: 'bottom',
-                        //labelWidth: '49.5%',
+                        labelWidth: '200',
                         name: 'scale',
                         displayField: 'label',
                         store: 'scaleTypesStoreId',

@@ -20,13 +20,14 @@ Ext.define('Painometer.controller.ConfigController', {
         models: [ 'Config'],
         views: ['ConfigPanel'],
         refs: {
-            okConfig: '#okConfig',
-            valueCont: '#ValueCont',
-            mainContainer: '#MainContainer',
-            infoBtn: '#infoBtn',
-            creditsbtn: '#creditsbtn',
-            view: '#configPanel',
-            field: "#configPanel field"
+            okConfig      : '#okConfig',
+            valueCont     : '#ValueCont',
+            mainContainer : '#MainContainer',
+            infoBtn       : '#infoBtn',
+            creditsbtn    : '#creditsbtn',
+            view          : '#configPanel',
+            field         : "#configPanel field",
+            configCard    : "#ConfigCard"
         },
         control: {
             creditsbtn : { tap: 'creditsbtnTap' },
@@ -65,8 +66,7 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     creditsbtnTap: function(button, e, options) {
-        var me = this;
-        var card = me.getConfigCard();
+        var card   = this.getConfigCard();
         var layout = card.getLayout();
         var inn = layout.getAnimation().getInAnimation();
         var out = layout.getAnimation().getOutAnimation();

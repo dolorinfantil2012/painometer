@@ -51,7 +51,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
             
             oldFace.removeCls("face-selected");
-            this.getConfigController().setValue(container.config.value);
+            this.getApplication().setValue(container.config.value);
         }
     },
 

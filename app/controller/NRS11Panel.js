@@ -27,16 +27,9 @@ Ext.define('Painometer.controller.NRS11Panel', {
         control: {
             "numContainer" : { activate: 'numActivate' },
             "NRS11Panel"   : { activate: 'onNRS11PanelActivate'}
-        },
-        // user variables
-        configController  : null,
+        }
     },
     
-	init: function() {
-    	var app = this.getApplication();
-    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
-	}, 
-
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
     	if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 10;
@@ -50,12 +43,12 @@ Ext.define('Painometer.controller.NRS11Panel', {
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
 
             oldFace.removeCls("face-selected");
-            this.getConfigController().setValue(container.config.value);
+            this.getApplication().setValue(container.config.value);
         }
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var value = this.getConfigController().getValue();
+        var value = this.getApplication().getValue();
         var pan = this.getNRSCarousel();
         var index = Math.floor(value / 10);
 

@@ -13,20 +13,19 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('Painometer.controller.AppMainController', {
+Ext.define('Painometer.controller.OrientationController', {
     extend: 'Ext.app.Controller',
 
     config: {
     	configController : null,  
         orientation      : true,
-        views: ['FPSRPanel', 'CASPanel', 'VASPanel'],
         refs: {
             MainContainer : '#MainContainer'
         },  
         control: {
-            "fpsrpanel" : {activate: 'onLandscapShowActivate'},
-            "CASPanel"  : {activate: 'onPortraitShowActivate'},
-            "VASPanel"  : {activate: 'onPortraitShowActivate'},
+            "fpsrpanel"   : {activate: 'onLandscapShowActivate'},
+            "CASPanel"    : {activate: 'onPortraitShowActivate'},
+            "VASPanel"    : {activate: 'onPortraitShowActivate'},
         },
     },
 

@@ -35,7 +35,7 @@ Ext.define('Painometer.model.Config', {
             {
             	name: 'reset',
             	type: 'boolean',
-            	defaultValue: true
+            	defaultValue: false
             },
             {
             	name: 'viewIndex',  // the index of the view in the mainContainer

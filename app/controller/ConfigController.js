@@ -25,63 +25,42 @@ Ext.define('Painometer.controller.ConfigController', {
             mainContainer: '#MainContainer',
             infoBtn: '#infoBtn',
             creditsbtn: '#creditsbtn',
-            configCard: '#ConfigCard',
-            scaleField: '#scaleField',    // scale field of configuration
-            resetField: '#resetField'     // reset field
+            view: '#configPanel',
+            field: "#configPanel field"
         },
         control: {
-            /*"#MainContainer": {
-                activate: 'onContainerActivate',
-                activeitemchange: 'onmcchange'
-            },
-            ,*/
-            
             creditsbtn : { tap: 'creditsbtnTap' },
-            configCard : { activate: 'onconfigCardActivate'},
            	infoBtn    : { tap: 'oninfoButtonTap'},
            	okConfig   : { tap: 'onOKTap'},
             // form
-            scaleField : {change  : 'onChangeScale'},
-            resetField : {change  : 'onChangeReset'}
+            field      : {change  : 'onChange'},
         } ,
         // user variables
-        configInstance : null, // instance of the current state
         scaleTypes     : null  // instance to the scale stores
     }, 
-
+    
     init: function() {
     	var store = Ext.data.StoreManager.lookup('scaleTypesStoreId');
-        var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
-        var configDefault = Ext.create('Painometer.model.Config', {
-            id       : 1 // other values are default
-        });
-
-        this.setConfigInstance(configDefault);
         this.setScaleTypes(store);
-
-        configModel.load(1, {
-            scope: this,
-            failure: function(record) {
-                this.getConfigInstance().save();
-            }, 
-            success: function (record) {
-                this.getConfigInstance().set("value",    record.get("value"));
-                this.getConfigInstance().set("language", record.get("language"));
-                this.getConfigInstance().set("scale",    record.get("scale"));
-                this.getConfigInstance().set("reset",    record.get("reset"));
-            }
-        });
     },
 
 	// function that listen the ok tap to go back to show the scale
-    onOKTap: function(button, e, options) {
+    onOKTap: function() {
         if (this.isReset()) {
-            this.setValue(0);
+            this.getApplication().setValue(0);
         }
-		this.getMainContainer().setActiveItem(this.getScale());
+        this.getMainContainer().setActiveItem(this.getScale());
     },
 
     oninfoButtonTap: function(button, e, options) {
+    	var data     = this.getApplication().getPainometerData();
+    	var newValue = data.get('value');
+        var record   = this.getScaleTypes().findRecord("idScale", this.getScale());
+        var factor   = record.get('ratio');
+    	var view     = this.getView();
+    	
+    	view.setRecord(data);
+        this.getValueCont().setData({'value' : newValue * factor});
         this.getMainContainer().setActiveItem(4);
     },
 
@@ -97,63 +76,33 @@ Ext.define('Painometer.controller.ConfigController', {
         card.setActiveItem(1);
     },
 
-    onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var newValue = this.getConfigInstance().get('value');
-        var record   = this.getScaleTypes().findRecord("idScale", this.getScale());
-        var factor   = record.get('ratio');
-        
-        this.getValueCont().setData({'value' : newValue * factor});
-    },
-    
     
    /***************************************/
    /* change model                        */
    /***************************************/ 
 
     getValue: function() {
-        return this.getConfigInstance().get('value');
-    },
-
-    setValue: function(newValue) {
-        this.getConfigInstance().set('value', newValue);
-        this.getConfigInstance().save();
+        return this.getApplication().getPainometerData().get('value');
     },
 
     getScale: function() {
-        return this.getConfigInstance().get('scale');
-    },
-
-    setScale: function(newScale) {
-        this.getConfigInstance().set('scale', newScale);
-        this.getConfigInstance().save();
-    },
-    
-    setReset: function(newValue) {
-    	this.getConfigInstance().set('reset', newValue);
-    	this.getConfigInstance().save();
+        return this.getApplication().getPainometerData().get('scale');
     },
     
     isReset: function() {
-    	return this.getConfigInstance().get('reset');
+    	return this.getApplication().getPainometerData().get('reset');
     },
     
     /*********************************************************/
     /* listeners of the form                                 */
     /*********************************************************/
-   
-    // listen the change of the reset field
-    onChangeReset: function (slider, thumb, newValue, oldValue ) {
-    	if (newValue != oldValue) {
-    		this.setReset(newValue);
+  
+    onChange: function(field, newValue, oldValue) {
+    	if (field.getName() === "scale") {
+    		this.getApplication().setScale(field.getRecord().get("idScale"));
+    	} else if (field.getName() === "reset") {
+    		this.getApplication().setReset(oldValue);
     	}
-    },
-    
-    // listen the scale field
-    onChangeScale: function (slider ) {
-    	var newValue = slider.getRecord();
-    	if (!Ext.isEmpty(newValue)) {
-    		this.setScale(newValue.get("idScale"));
-    	} 
     }
-
+    
 });

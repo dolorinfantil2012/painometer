@@ -27,21 +27,14 @@ Ext.define('Painometer.controller.CASPanelController', {
             "CASPanel" : { activate: 'onCASPanelActivate'},
             "CASSlider": { change: 'onCASSliderChange'}
         },
- 		// user variables       
-        configController  : null,
     },
     
-	init: function() {
-    	var app = this.getApplication();
-    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
-	}, 
-	
     onCASPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        this.getCASSlider().setValue(this.getConfigController().getValue());
+        this.getCASSlider().setValue(this.getApplication().getValue());
     },
 
     onCASSliderChange: function(slider, thumb, newValue, oldValue, options) {
-        this.getConfigController().setValue(newValue);
+        this.getApplication().setValue(newValue);
     }
 
 });

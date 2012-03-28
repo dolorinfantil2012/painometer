@@ -27,7 +27,6 @@ Ext.define('Painometer.view.MainContainer', {
         id: 'MainContainer',
         style: 'background-color:white;',
         ui: '',
-        activeItem : 4, 
         layout: {
             animation: 'cube',
             type: 'card'

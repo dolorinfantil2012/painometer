@@ -19,7 +19,6 @@ Ext.define('Painometer.view.ConfigPanel', {
 
     config: {
         id: 'configPanel',
-        ui: '',
         layout: {
             align: 'center',
             type: 'vbox'
@@ -72,7 +71,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                         label: 'Escala',
                         //labelAlign: 'bottom',
                         //labelWidth: '49.5%',
-                        name: 'escalaType',
+                        name: 'scale',
                         displayField: 'label',
                         store: 'scaleTypesStoreId',
                         valueField: 'idScale'
@@ -81,6 +80,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                         xtype: 'togglefield',
                         id: 'resetField',
                         label: 'Reset',
+                        name: 'reset'
                         //labelWidth: '45%'
                     },
                     {
@@ -91,7 +91,7 @@ Ext.define('Painometer.view.ConfigPanel', {
                         label: 'Idioma',
                         labelAlign: 'bottom',
                         labelWidth: '40%',
-                        name: 'Language',
+                        name: 'language',
                         displayField: 'label',
                         store: 'languageStoreId',
                         valueField: 'idLang\n'

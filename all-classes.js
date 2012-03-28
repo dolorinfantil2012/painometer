@@ -59,6 +59,10 @@ Ext.define('Painometer.model.ScaleType', {
             {
                 name: 'label',
                 type: 'string'
+            },
+            {
+                name: 'ratio',
+                type: 'float'
             }
         ]
     }
@@ -85,18 +89,20 @@ Ext.define('Painometer.view.InfoContainer', {
     config: {
         bottom: '0px',
         docked: 'right',
-        height: '30px',
+        height: '35px',
         id: 'infoContainerID',
         right: '0px',
         style: '',
-        width: '30px',
+        width: '35px',
+        zIndex : 4,
         items: [
             {
                 xtype: 'button',
+                height: '30px',
                 id: 'infoBtn',
                 style: 'border:0;',
                 ui: 'info_btn-small',
-                width: 22,
+                width: '30px',
                 iconCls: 'info',
                 iconMask: true
             }
@@ -129,6 +135,7 @@ Ext.define('Painometer.view.FPSRPanel', {
     config: {
         id: 'FPSRPanel',
         style: 'background-color:white;',
+        zIndex : 0,
         layout: {
             type: 'fit'
         },
@@ -197,7 +204,7 @@ Ext.define('Painometer.view.FPSRPanel', {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
                         defaults: {
-                            style: 'background-position: 50% 25%; background-size: 285px;'
+                            style: 'background-position: 50% 1%; background-size: 270px;'
                         },
                         items: [
                             {
@@ -240,7 +247,7 @@ Ext.define('Painometer.view.FPSRPanel', {
                     },
                     {
                         xtype: 'InfoContainer',
-                        id: 'infoContainerFP'
+                        id: 'FPSInfoCont'
                     }
                 ]
             }
@@ -272,6 +279,9 @@ Ext.define('Painometer.view.CreditsContainer', {
         style: 'background-color:white;',
         layout: {
             type: 'fit'
+        },
+        scrollable: {
+            direction: 'vertical'
         },
         items: [
             {
@@ -317,7 +327,7 @@ Ext.define('Painometer.view.CreditsContainer', {
                             {
                                 xtype: 'image',
                                 docked: 'bottom',
-                                height: 100,
+                                height: 150,
                                 id: 'algos',
                                 style: 'background-position: 50% 0%; ',
                                 src: 'resources/images/algos/logo_algos.png'
@@ -350,13 +360,14 @@ Ext.define('Painometer.view.ConfigPanel', {
     alias: 'widget.configpanel',
 
     config: {
-        id: 'ConfigPanel',
-        ui: '',
+        id: 'configPanel',
         layout: {
             align: 'center',
             type: 'vbox'
         },
-        scrollable: true,
+        scrollable: {
+            direction: 'vertical'
+        },
         items: [
             {
                 xtype: 'titlebar',
@@ -382,47 +393,45 @@ Ext.define('Painometer.view.ConfigPanel', {
             {
                 xtype: 'container',
                 data: {
-                    value: 100
+                    value: 10
                 },
                 height: 210,
                 id: 'ValueCont',
                 style: 'text-align: center; font-size: 135px; margin: 15px; border: 15px; border-style: groove; padding: 0px; padding-top: 5px;',
-                tpl: [
-                    '{value}'
-                ],
+                tpl: ['{value}'],
                 width: 260
             },
             {
                 xtype: 'fieldset',
                 width: '100%',
-                layout: {
-                    type: 'default'
-                },
-                instructions: 'Opcions generals de l\'eina',
-                title: 'Opcions',
                 items: [
                     {
                         xtype: 'selectfield',
-                        height: '',
-                        id: 'ScaleSel',
-                        itemId: 'ScaleSel',
-                        width: '',
+                        id: 'scaleField',
                         label: 'Escala',
-                        labelAlign: 'bottom',
-                        labelWidth: '40%',
-                        name: 'escalaType',
+                        //labelAlign: 'bottom',
+                        labelWidth: 150,
+                        name: 'scale',
                         displayField: 'label',
                         store: 'scaleTypesStoreId',
                         valueField: 'idScale'
                     },
                     {
+                        xtype: 'togglefield',
+                        id: 'resetField',
+                        label: 'Reset',
+                        name: 'reset',
+                        labelWidth: 150
+                    },
+                    {
                         xtype: 'selectfield',
                         height: '',
+                        hidden: true,
                         width: '',
                         label: 'Idioma',
                         labelAlign: 'bottom',
                         labelWidth: '40%',
-                        name: 'Language',
+                        name: 'language',
                         displayField: 'label',
                         store: 'languageStoreId',
                         valueField: 'idLang\n'
@@ -452,82 +461,56 @@ Ext.define('Painometer.controller.ConfigController', {
     extend: 'Ext.app.Controller',
 
     config: {
-        models: [
-            'Config'
-        ],
-        stores: [
-            
-        ],
-        views: [
-            'ConfigPanel'
-        ],
+        models: [ 'Config'],
+        views: ['ConfigPanel'],
         refs: {
-            okConfig: '#okConfig',
-            ValueCont: '#ValueCont',
-            mainContainer: '#MainContainer',
-            scaleSel: '#ScaleSel',
-            infoBtn: '#infoBtn',
-            creditsbtn: '#creditsbtn',
-            configCard: '#ConfigCard'
+            okConfig      : '#okConfig',
+            valueCont     : '#ValueCont',
+            mainContainer : '#MainContainer',
+            infoBtn       : '#infoBtn',
+            creditsbtn    : '#creditsbtn',
+            view          : '#configPanel',
+            field         : "#configPanel field",
+            configCard    : "#ConfigCard"
         },
-
         control: {
-            "okConfig": {
-                tap: 'onConfigTap'
-            },
-            "infoBtn": {
-                tap: 'oninfoButtonTap'
-            },
-            "creditsbtn": {
-                tap: 'creditsbtnTap'
-            },
-            "configCard": {
-                activate: 'onconfigCardActivate'
-            }
-        }
-    },
-
+            creditsbtn : { tap: 'creditsbtnTap' },
+           	infoBtn    : { tap: 'oninfoButtonTap'},
+           	okConfig   : { tap: 'onOKTap'},
+            // form
+            field      : {change  : 'onChange'},
+        } ,
+        // user variables
+        scaleTypes     : null  // instance to the scale stores
+    }, 
+    
     init: function() {
-
-        var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
-
-        var configDefault = Ext.create('Painometer.model.Config', {
-            id       : 1,
-            scale    : 0,
-            language : 0,
-            value    : 0
-        });
-
-        this.configInstance = configDefault;
-
-        configModel.load(1, {
-            scope: this,
-            failure: function(record) {
-                this.configInstance.save();
-            }, 
-            success: function (record) {
-                this.configInstance.set("value", record.get("value"));
-                this.configInstance.set("language", record.get("language"));
-                this.configInstance.set("scale", record.get("scale"));
-            }
-        });
-
+    	var store = Ext.data.StoreManager.lookup('scaleTypesStoreId');
+        this.setScaleTypes(store);
     },
 
-    onConfigTap: function(button, e, options) {
-        var me = this;
-        var scale = me.getScaleSel().getValue();
-        me.getMainContainer().setActiveItem(scale);
+	// function that listen the ok tap to go back to show the scale
+    onOKTap: function() {
+        if (this.isReset()) {
+            this.getApplication().setValue(0);
+        }
+        this.getMainContainer().setActiveItem(this.getScale());
     },
 
     oninfoButtonTap: function(button, e, options) {
-        this.configInstance.save();
+    	var data     = this.getApplication().getPainometerData();
+    	var newValue = data.get('value');
+        var record   = this.getScaleTypes().findRecord("idScale", this.getScale());
+        var factor   = record.get('ratio');
+    	var view     = this.getView();
+    	
+    	view.setRecord(data);
+        this.getValueCont().setData({'value' : newValue * factor});
         this.getMainContainer().setActiveItem(4);
     },
 
     creditsbtnTap: function(button, e, options) {
-        var me = this;
-        var card = me.getConfigCard();
+        var card   = this.getConfigCard();
         var layout = card.getLayout();
         var inn = layout.getAnimation().getInAnimation();
         var out = layout.getAnimation().getOutAnimation();
@@ -537,21 +520,35 @@ Ext.define('Painometer.controller.ConfigController', {
         card.setActiveItem(1);
     },
 
-    onconfigCardActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var newValue = this.configInstance.get('value');
-
-        this.getValueCont().setData({'value' : newValue});
-    },
+    
+   /***************************************/
+   /* change model                        */
+   /***************************************/ 
 
     getValue: function() {
-        return this.configInstance.get('value');
-
+        return this.getApplication().getPainometerData().get('value');
     },
 
-    setValue: function(newValue) {
-        this.configInstance.set('value', newValue);
+    getScale: function() {
+        return this.getApplication().getPainometerData().get('scale');
+    },
+    
+    isReset: function() {
+    	return this.getApplication().getPainometerData().get('reset');
+    },
+    
+    /*********************************************************/
+    /* listeners of the form                                 */
+    /*********************************************************/
+  
+    onChange: function(field, newValue, oldValue) {
+    	if (field.getName() === "scale") {
+    		this.getApplication().setScale(field.getRecord().get("idScale"));
+    	} else if (field.getName() === "reset") {
+    		this.getApplication().setReset(oldValue);
+    	}
     }
-
+    
 });
 /*
  * File: app/view/ConfigCard.js
@@ -577,6 +574,7 @@ Ext.define('Painometer.view.ConfigCard', {
     ],
 
     config: {
+    	id: "configCard",
         layout: {
             animation: 'slide',
             type: 'card'
@@ -615,7 +613,7 @@ Ext.define('Painometer.view.VASPanel', {
     requires: [
         'Painometer.view.InfoContainer'
     ],
-
+	zIndex : 0,
     config: {
         id: 'VASPanel',
         style: 'background-color:white;',
@@ -666,28 +664,26 @@ Ext.define('Painometer.controller.FPSRPanel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        stores: [
-            
-        ],
-        views: [
-            'FPSRPanel'
-        ],
+        models: ['Config'],
+        views: ['FPSRPanel'],
         refs: {
-            faceContainer: '#FPSCarousel image',
-            fpsNav: '#FPSNavContainer',
-            mainContainer: '#MainContainer',
-            FPSCarousel: '#FPSCarousel'
+            faceContainer : '#FPSCarousel image',
+            fpsNav        : '#FPSNavContainer',
+            FPSCarousel   : '#FPSCarousel'
         },
-
         control: {
-            "faceContainer": {
-                activate: 'faceActivate'
-            },
-            "fpsrpanel": {
-                activate: 'onFPSRPanelActivate'
-            }
-        }
+            "faceContainer": { activate: 'faceActivate'},
+            "fpsrpanel"    : {activate: 'onFPSRPanelActivate'}
+        },
+        // user variables
+        configController  : null,
     },
+    
+	init: function() {
+    	var app = this.getApplication();
+    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
+	}, 
+	
 
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (!Ext.isEmpty(container)) {
@@ -700,21 +696,18 @@ Ext.define('Painometer.controller.FPSRPanel', {
         if (!Ext.isEmpty(oldActiveItem)) {
             var oldIndex = oldActiveItem.config.value / 20;
             var oldFace = this.getFpsNav().items.getAt(oldIndex);
-
+            
             oldFace.removeCls("face-selected");
-
-            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-            configController.setValue(container.config.value);
+            this.getApplication().setValue(container.config.value);
         }
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
-        var pan = this.getFPSCarousel();
-        var index = Math.floor(value / 20);
-
-        pan.setActiveItem(index);
+    	var value = this.getConfigController().getValue(),
+    		pan   = this.getFPSCarousel(),
+    		index = Math.floor(value / 20);
+       
+       	pan.setActiveItem(index);
     }
 
 });
@@ -744,19 +737,23 @@ Ext.define('Painometer.store.ScaleTypes', {
         data: [
             {
                 idScale: 0,
-                label: 'FPS-R'
+                label: 'FPS-R',
+                ratio: 0.1
             },
             {
                 idScale: 1,
-                label: 'NRS-11'
+                label: 'NRS-11',
+                ratio: 0.1
             },
             {
                 idScale: 2,
-                label: 'CAS'
+                label: 'CAS',
+                ratio: 1
             },
             {
                 idScale: 3,
-                label: 'VAS'
+                label: 'VAS',
+                ratio: 1
             }
         ],
         model: 'Painometer.model.ScaleType',
@@ -863,32 +860,21 @@ Ext.define('Painometer.controller.NRS11Panel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        stores: [
-            
-        ],
-        views: [
-            'NRS11Panel'
-        ],
+        views: ['NRS11Panel'],
         refs: {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
-            mainContainer: '#MainContainer',
             NRS11Panel: '#Nrs11Panel',
             NRSCarousel: '#NRSCarousel'
         },
-
         control: {
-            "numContainer": {
-                activate: 'numActivate'
-            },
-            "NRS11Panel": {
-                activate: 'onNRS11PanelActivate'
-            }
+            "numContainer" : { activate: 'numActivate' },
+            "NRS11Panel"   : { activate: 'onNRS11PanelActivate'}
         }
     },
-
+    
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(container)) {
+    	if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 10;
             var newFace    = this.getNrsNav().items.getAt(newIndex);
 
@@ -900,14 +886,12 @@ Ext.define('Painometer.controller.NRS11Panel', {
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
 
             oldFace.removeCls("face-selected");
-            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-            configController.setValue(container.config.value);
+            this.getApplication().setValue(container.config.value);
         }
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
+        var value = this.getApplication().getValue();
         var pan = this.getNRSCarousel();
         var index = Math.floor(value / 10);
 
@@ -935,19 +919,29 @@ Ext.define('Painometer.model.Config', {
     config: {
         fields: [
             {
-                allowNull: false,
                 name: 'scale',
-                type: 'int'
+                type: 'int',
+                defaultValue: 0
             },
             {
-                allowNull: false,
                 name: 'language',
-                type: 'int'
+                type: 'int',
+                defaultValue: 0
             },
             {
-                defaultValue: 0,
                 name: 'value',
-                type: 'int'
+                type: 'int',
+                defaultValue: 0
+            },
+            {
+            	name: 'reset',
+            	type: 'boolean',
+            	defaultValue: false
+            },
+            {
+            	name: 'viewIndex',  // the index of the view in the mainContainer
+            	type: 'int',
+            	defaultValue: 0	
             }
         ],
         proxy: {
@@ -1151,7 +1145,7 @@ Ext.define('Painometer.view.NRS11Panel', {
                     },
                     {
                         xtype: 'InfoContainer',
-                        id: 'infoContainer'
+                        id: 'NRSInfoCont'
                     }
                 ]
             }
@@ -1187,6 +1181,7 @@ Ext.define('Painometer.view.CASPanel', {
         layout: {
             type: 'fit'
         },
+        zIndex : 0,
         items: [
             {
                 xtype: 'container',

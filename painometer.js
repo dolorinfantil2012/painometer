@@ -85,7 +85,7 @@ Ext.application({
             callback: function() {
             	var configController = this.getController("ConfigController");
             	Ext.create('Painometer.view.MainContainer', {fullscreen: true});
-        		configController.onOKTap();
+        		this.showView();
             }
         });
     },
@@ -107,6 +107,20 @@ Ext.application({
     setReset: function(newValue) {
     	this.getPainometerData().set('reset', newValue);
     	this.getPainometerData().save();
+    },
+    
+    setViewIndex: function(newViewIndex) {
+    	this.getPainometerData().set('viewIndex', newViewIndex);
+    	this.getPainometerData().save();
+    },
+    
+    getViewIndex: function() {
+    	return this.getPainometerData().get('viewIndex');
+    },
+    
+    showView: function() {
+    	var main = Ext.Viewport.getItems().get("MainContainer");
+    	main.setActiveItem(this.getPainometerData().get('viewIndex'));
     },
     
 });

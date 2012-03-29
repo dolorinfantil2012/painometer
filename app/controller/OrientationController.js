@@ -41,8 +41,11 @@ Ext.define('Painometer.controller.OrientationController', {
         Ext.Viewport.on({
             scope: this,
             orientationchange: function(viewport, newOrientation) {
+            	var view  = this.getApplication().getViewIndex();
+               	if (view == 4)
+               		return;
+               		
                	var scale = this.getConfigController().getScale();
-               	
                	if (newOrientation == "portrait") {
                		if (scale == 0) {
                			this.hideOrientationInfo();	

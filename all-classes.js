@@ -522,8 +522,8 @@ Ext.define('Painometer.controller.ConfigController', {
 
     config: {
         models: [ 'Config'],
-        views: ['ConfigPanel'],
-        refs: {
+        views : ['ConfigPanel'],
+        refs  : {
             okConfig      : '#okConfig',
             valueCont     : '#ValueCont',
             mainContainer : '#MainContainer',
@@ -553,10 +553,11 @@ Ext.define('Painometer.controller.ConfigController', {
     onOKTap: function() {
         if (this.isReset()) {
             this.getApplication().setValue(0);
-        }
-        this.getMainContainer().setActiveItem(this.getScale());
+        };
+        this.getApplication().setViewIndex(this.getScale());
+      	this.getApplication().showView();
     },
-
+ 
     oninfoButtonTap: function(button, e, options) {
     	var data     = this.getApplication().getPainometerData();
     	var newValue = data.get('value');
@@ -566,6 +567,8 @@ Ext.define('Painometer.controller.ConfigController', {
     	
     	view.setRecord(data);
         this.getValueCont().setData({'value' : newValue * factor});
+        
+        this.getApplication().setViewIndex(4);
         this.getMainContainer().setActiveItem(4);
     },
 
@@ -902,8 +905,11 @@ Ext.define('Painometer.controller.OrientationController', {
         Ext.Viewport.on({
             scope: this,
             orientationchange: function(viewport, newOrientation) {
+            	var view  = this.getApplication().getViewIndex();
+               	if (view == 4)
+               		return;
+               		
                	var scale = this.getConfigController().getScale();
-               	
                	if (newOrientation == "portrait") {
                		if (scale == 0) {
                			this.hideOrientationInfo();	

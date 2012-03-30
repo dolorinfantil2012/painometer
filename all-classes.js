@@ -508,7 +508,7 @@ Ext.define('Painometer.controller.ConfigController', {
            	infoBtn    : { tap: 'oninfoButtonTap'},
            	okConfig   : { tap: 'onOKTap'},
             // form
-            field      : {change  : 'onChange'},
+            field      : { change : 'onChange'},
         } ,
         // user variables
         scaleTypes     : null  // instance to the scale stores
@@ -521,17 +521,17 @@ Ext.define('Painometer.controller.ConfigController', {
 
 	// function that listen the ok tap to go back to show the scale
     onOKTap: function() {
-        if (this.isReset()) {
+        if (this.getApplication().isReset()) {
             this.getApplication().setValue(0);
         };
-        this.getApplication().setViewIndex(this.getScale());
+        this.getApplication().setViewIndex(this.getApplication().getScale());
       	this.getApplication().showView();
     },
  
     oninfoButtonTap: function(button, e, options) {
     	var data     = this.getApplication().getPainometerData();
     	var newValue = data.get('value');
-        var record   = this.getScaleTypes().findRecord("idScale", this.getScale());
+        var record   = this.getScaleTypes().findRecord("idScale", this.getApplication().getScale());
         var factor   = record.get('ratio');
     	var view     = this.getView();
     	
@@ -554,29 +554,19 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     
-   /***************************************/
-   /* change model                        */
-   /***************************************/ 
-
-    getValue: function() {
-        return this.getApplication().getPainometerData().get('value');
-    },
-
-    getScale: function() {
-        return this.getApplication().getPainometerData().get('scale');
-    },
-    
-    isReset: function() {
-    	return this.getApplication().getPainometerData().get('reset');
-    },
-    
     /*********************************************************/
     /* listeners of the form                                 */
     /*********************************************************/
   
     onChange: function(field, newValue, oldValue) {
+    	var oldScale = this.getApplication().getScale();
+    	
     	if (field.getName() === "scale") {
-    		this.getApplication().setScale(field.getRecord().get("idScale"));
+    		var newScale = field.getRecord().get("idScale");
+    		if (newScale != oldScale) {
+ 	   			this.getApplication().setScale(newScale);
+ 	   			this.getApplication().setValue(0);
+ 	   		}
     	} else if (field.getName() === "reset") {
     		this.getApplication().setReset(oldValue);
     	}
@@ -613,16 +603,8 @@ Ext.define('Painometer.controller.FPSRPanel', {
             "faceContainer": { activate: 'faceActivate'},
             "fpsrpanel"    : {activate: 'onFPSRPanelActivate'}
         },
-        // user variables
-        configController  : null,
     },
     
-	init: function() {
-    	var app = this.getApplication();
-    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
-	}, 
-	
-
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 20;
@@ -641,7 +623,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-    	var value = this.getConfigController().getValue(),
+    	var value = this.getApplication().getValue(),
     		pan   = this.getFPSCarousel(),
     		index = Math.floor(value / 20);
        
@@ -851,7 +833,6 @@ Ext.define('Painometer.controller.OrientationController', {
     extend: 'Ext.app.Controller',
 
     config: {
-    	configController : null,  
         orientation      : true,
         refs: {
             MainContainer : '#MainContainer'
@@ -864,10 +845,6 @@ Ext.define('Painometer.controller.OrientationController', {
     },
 
     init: function() {
-    	var app = this.getApplication();
-    	
-    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
-    	
         this.orientationWarning = Ext.Viewport.add({
             xtype: 'OrientationInfo'
         });
@@ -879,7 +856,7 @@ Ext.define('Painometer.controller.OrientationController', {
                	if (view == 4)
                		return;
                		
-               	var scale = this.getConfigController().getScale();
+               	var scale = this.getApplication().getScale();
                	if (newOrientation == "portrait") {
                		if (scale == 0) {
                			this.hideOrientationInfo();	

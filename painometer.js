@@ -99,14 +99,26 @@ Ext.application({
         this.getPainometerData().save();
     },
     
+    getValue: function() {
+        return this.getApplication().getPainometerData().get('value');
+    },
+    
     setScale: function(newScale) {
         this.getPainometerData().set('scale', newScale);
         this.getPainometerData().save();
     },
     
+    getScale: function() {
+        return this.getApplication().getPainometerData().get('scale');
+    },
+    
     setReset: function(newValue) {
     	this.getPainometerData().set('reset', newValue);
     	this.getPainometerData().save();
+    },
+    
+    isReset: function() {
+    	return this.getApplication().getPainometerData().get('reset');
     },
     
     setViewIndex: function(newViewIndex) {

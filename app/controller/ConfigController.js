@@ -34,7 +34,7 @@ Ext.define('Painometer.controller.ConfigController', {
            	infoBtn    : { tap: 'oninfoButtonTap'},
            	okConfig   : { tap: 'onOKTap'},
             // form
-            field      : {change  : 'onChange'},
+            field      : { change : 'onChange'},
         } ,
         // user variables
         scaleTypes     : null  // instance to the scale stores
@@ -47,17 +47,17 @@ Ext.define('Painometer.controller.ConfigController', {
 
 	// function that listen the ok tap to go back to show the scale
     onOKTap: function() {
-        if (this.isReset()) {
+        if (this.getApplication().isReset()) {
             this.getApplication().setValue(0);
         };
-        this.getApplication().setViewIndex(this.getScale());
+        this.getApplication().setViewIndex(this.getApplication().getScale());
       	this.getApplication().showView();
     },
  
     oninfoButtonTap: function(button, e, options) {
     	var data     = this.getApplication().getPainometerData();
     	var newValue = data.get('value');
-        var record   = this.getScaleTypes().findRecord("idScale", this.getScale());
+        var record   = this.getScaleTypes().findRecord("idScale", this.getApplication().getScale());
         var factor   = record.get('ratio');
     	var view     = this.getView();
     	
@@ -80,29 +80,19 @@ Ext.define('Painometer.controller.ConfigController', {
     },
 
     
-   /***************************************/
-   /* change model                        */
-   /***************************************/ 
-
-    getValue: function() {
-        return this.getApplication().getPainometerData().get('value');
-    },
-
-    getScale: function() {
-        return this.getApplication().getPainometerData().get('scale');
-    },
-    
-    isReset: function() {
-    	return this.getApplication().getPainometerData().get('reset');
-    },
-    
     /*********************************************************/
     /* listeners of the form                                 */
     /*********************************************************/
   
     onChange: function(field, newValue, oldValue) {
+    	var oldScale = this.getApplication().getScale();
+    	
     	if (field.getName() === "scale") {
-    		this.getApplication().setScale(field.getRecord().get("idScale"));
+    		var newScale = field.getRecord().get("idScale");
+    		if (newScale != oldScale) {
+ 	   			this.getApplication().setScale(newScale);
+ 	   			this.getApplication().setValue(0);
+ 	   		}
     	} else if (field.getName() === "reset") {
     		this.getApplication().setReset(oldValue);
     	}

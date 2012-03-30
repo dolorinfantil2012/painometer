@@ -17,7 +17,6 @@ Ext.define('Painometer.controller.OrientationController', {
     extend: 'Ext.app.Controller',
 
     config: {
-    	configController : null,  
         orientation      : true,
         refs: {
             MainContainer : '#MainContainer'
@@ -30,10 +29,6 @@ Ext.define('Painometer.controller.OrientationController', {
     },
 
     init: function() {
-    	var app = this.getApplication();
-    	
-    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
-    	
         this.orientationWarning = Ext.Viewport.add({
             xtype: 'OrientationInfo'
         });
@@ -45,7 +40,7 @@ Ext.define('Painometer.controller.OrientationController', {
                	if (view == 4)
                		return;
                		
-               	var scale = this.getConfigController().getScale();
+               	var scale = this.getApplication().getScale();
                	if (newOrientation == "portrait") {
                		if (scale == 0) {
                			this.hideOrientationInfo();	

@@ -28,16 +28,8 @@ Ext.define('Painometer.controller.FPSRPanel', {
             "faceContainer": { activate: 'faceActivate'},
             "fpsrpanel"    : {activate: 'onFPSRPanelActivate'}
         },
-        // user variables
-        configController  : null,
     },
     
-	init: function() {
-    	var app = this.getApplication();
-    	this.setConfigController(app.getController("Painometer.controller.ConfigController"));
-	}, 
-	
-
     faceActivate: function(container, newActiveItem, oldActiveItem, options) {
         if (!Ext.isEmpty(container)) {
             var newIndex = container.config.value / 20;
@@ -56,7 +48,7 @@ Ext.define('Painometer.controller.FPSRPanel', {
     },
 
     onFPSRPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-    	var value = this.getConfigController().getValue(),
+    	var value = this.getApplication().getValue(),
     		pan   = this.getFPSCarousel(),
     		index = Math.floor(value / 20);
        

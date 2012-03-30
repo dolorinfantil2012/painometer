@@ -26,6 +26,7 @@ Ext.define('Painometer.view.VASPanel', {
         layout: {
             type: 'fit'
         },
+        zIndex : 0,
         items: [
             {
                 xtype: 'container',

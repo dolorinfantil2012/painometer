@@ -23,6 +23,7 @@ Ext.define('Painometer.view.FPSRPanel', {
     config: {
         id: 'FPSRPanel',
         style: 'background-color:white;',
+        zIndex : 0,
         layout: {
             type: 'fit'
         },
@@ -91,7 +92,7 @@ Ext.define('Painometer.view.FPSRPanel', {
                         xtype: 'carousel',
                         id: 'FPSCarousel',
                         defaults: {
-                            style: 'background-position: 75% 0%; background-size: 285px;'
+                            style: 'background-position: 50% 1%; background-size: 270px;'
                         },
                         items: [
                             {
@@ -104,37 +105,37 @@ Ext.define('Painometer.view.FPSRPanel', {
                                 xtype: 'image',
                                 id: 'face_2',
                                 src: 'resources/images/fpsr/cara2.png',
-                                value: 2
+                                value: 20
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_3',
                                 src: 'resources/images/fpsr/cara3.png',
-                                value: 4
+                                value: 40
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_4',
                                 src: 'resources/images/fpsr/cara4.png',
-                                value: 6
+                                value: 60
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_5',
                                 src: 'resources/images/fpsr/cara5.png',
-                                value: 8
+                                value: 80
                             },
                             {
                                 xtype: 'image',
                                 id: 'face_6',
                                 src: 'resources/images/fpsr/cara6.png',
-                                value: 10
+                                value: 100
                             }
                         ]
                     },
                     {
                         xtype: 'InfoContainer',
-                        id: 'infoContainerFP'
+                        id: 'FPSInfoCont'
                     }
                 ]
             }

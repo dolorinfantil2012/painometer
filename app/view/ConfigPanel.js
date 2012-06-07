@@ -18,13 +18,14 @@ Ext.define('Painometer.view.ConfigPanel', {
     alias: 'widget.configpanel',
 
     config: {
-        id: 'ConfigPanel',
-        ui: '',
+        id: 'configPanel',
         layout: {
             align: 'center',
             type: 'vbox'
         },
-        scrollable: false,
+        scrollable: {
+            direction: 'vertical'
+        },
         items: [
             {
                 xtype: 'titlebar',
@@ -52,45 +53,43 @@ Ext.define('Painometer.view.ConfigPanel', {
                 data: {
                     value: 10
                 },
-                height: 200,
+                height: 210,
                 id: 'ValueCont',
-                style: 'font-size: 130px; margin: 15px; border: 15px; border-style: groove; text-align:center; padding-left: 0px; padding-right: 0px; padding-top: 5px;',
-                tpl: [
-                    '{value}'
-                ],
-                width: 220
+                style: 'text-align: center; font-size: 135px; margin: 15px; border: 15px; border-style: groove; padding: 0px; padding-top: 5px;',
+                tpl: ['{value}'],
+                width: 260
             },
             {
                 xtype: 'fieldset',
                 width: '100%',
-                layout: {
-                    type: 'default'
-                },
-                instructions: 'Opcions generals de l\'eina',
-                title: 'Opcions',
                 items: [
                     {
                         xtype: 'selectfield',
-                        height: '',
-                        id: 'ScaleSel',
-                        itemId: 'ScaleSel',
-                        width: '',
+                        id: 'scaleField',
                         label: 'Escala',
-                        labelAlign: 'bottom',
-                        labelWidth: '40%',
-                        name: 'escalaType',
+                        //labelAlign: 'bottom',
+                        labelWidth: 150,
+                        name: 'scale',
                         displayField: 'label',
                         store: 'scaleTypesStoreId',
                         valueField: 'idScale'
                     },
                     {
+                        xtype: 'togglefield',
+                        id: 'resetField',
+                        label: 'Reset',
+                        name: 'reset',
+                        labelWidth: 150
+                    },
+                    {
                         xtype: 'selectfield',
                         height: '',
+                        hidden: true,
                         width: '',
                         label: 'Idioma',
                         labelAlign: 'bottom',
                         labelWidth: '40%',
-                        name: 'Language',
+                        name: 'language',
                         displayField: 'label',
                         store: 'languageStoreId',
                         valueField: 'idLang\n'

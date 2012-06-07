@@ -20,13 +20,14 @@ Ext.define('Painometer.view.CreditsContainer', {
     config: {
         id: 'CreditsContainer',
         style: 'background-color:white;',
-        layout: {
-            type: 'fit'
+        layout: 'vbox',
+        scrollable: {
+            direction: 'vertical'
         },
         items: [
             {
                 xtype: 'titlebar',
-                docked: 'top',
+                dock : 'top',
                 title: 'Crèdits',
                 items: [
                     {
@@ -38,43 +39,14 @@ Ext.define('Painometer.view.CreditsContainer', {
                 ]
             },
             {
-                xtype: 'container',
-                html: '',
-                id: 'credits',
-                style: 'background-color:white;',
-                layout: {
-                    type: 'fit'
-                },
-                items: [
-                    {
-                        xtype: 'container',
-                        docked: 'top',
-                        html: '<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Autors</b></u><br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br>Rocío de la Vega<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br><a href="algos">algos</a></center>',
-                        id: 'names',
-                        style: 'padding-top: 5px;'
-                    },
-                    {
-                        xtype: 'container',
-                        docked: 'bottom',
-                        id: 'logo',
-                        style: 'background-color:white; padding-bottom: 15px;',
-                        layout: {
-                            align: 'center',
-                            pack: 'center',
-                            type: 'hbox'
-                        },
-                        items: [
-                            {
-                                xtype: 'image',
-                                docked: 'bottom',
-                                height: 100,
-                                id: 'algos',
-                                style: 'background-position: 50% 0%; ',
-                                src: 'resources/images/algos/logo_algos.png'
-                            }
-                        ]
-                    }
-                ]
+            	html: '<center><u><b>Director</b></u><br>Dr. Jordi Miró<br><br><u><b>Investigadoras</b></u><br>Rocío de la Vega<br>Elena Castarlenas<br>Elisabet Sánchez-Rodríguez<br><br><u><b>Desenvolupadors</b></u><br>Roman Roset<br>Gerard Gutiérrez<br>Pere Llorens<br><br></center>',
+                style: 'padding-top: 5px;text-shadow: 3px 3px 5px #999999;'
+            },
+            {
+            	xtype: 'image',
+                height: 150,
+                style: 'background-position: 50% 0%; ',
+                src: 'resources/images/algos/logo_algos.png'
             }
         ]
     }

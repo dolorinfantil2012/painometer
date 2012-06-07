@@ -38,7 +38,8 @@ Ext.application({
         'InfoContainer',
         'CreditsContainer',
         'VASPanel',
-        'ConfigCard'
+        'ConfigCard',
+        'OrientationInfo'
     ],
 
     glossOnIcon: true,
@@ -49,11 +50,89 @@ Ext.application({
         'ConfigController',
         'FPSRPanel',
         'NRS11Panel',
-        'CreditsContainer'
+        'CreditsContainer',
+        'CASPanelController',
+        'VASPanel',
+        'OrientationController'
     ],
 
+	// data mars of the application
+	painometerData : null, // instance of the current state
+	
+	getPainometerData: function() {
+		if (this.painometerData === null) {
+			this.painometerData = Ext.create('Painometer.model.Config', {id : 1});
+		}
+		return this.painometerData;
+	},
+	
     launch: function() {
-        painometerApp = this;
-        Ext.create('Painometer.view.MainContainer', {fullscreen: true});
-    }
+    	this.loadData();
+    },
+    
+    
+    /* the data */
+    loadData: function() {
+    	var configModel = Ext.ModelMgr.getModel('Painometer.model.Config');
+        configModel.load(1, {
+            scope: this,
+            failure: function(record) {
+                this.getPainometerData().save();
+            }, 
+            success: function (record) {
+            	this.painometerData = record;
+            },
+            callback: function() {
+            	var configController = this.getController("ConfigController");
+            	Ext.create('Painometer.view.MainContainer', {fullscreen: true});
+        		this.showView();
+            }
+        });
+    },
+    
+    getValue: function() {
+        return this.getPainometerData().get('value');
+    },
+
+    setValue: function(newValue) {
+        this.getPainometerData().set('value', newValue);
+        this.getPainometerData().save();
+    },
+    
+    getValue: function() {
+        return this.getApplication().getPainometerData().get('value');
+    },
+    
+    setScale: function(newScale) {
+        this.getPainometerData().set('scale', newScale);
+        this.getPainometerData().save();
+    },
+    
+    getScale: function() {
+        return this.getApplication().getPainometerData().get('scale');
+    },
+    
+    setReset: function(newValue) {
+    	this.getPainometerData().set('reset', newValue);
+    	this.getPainometerData().save();
+    },
+    
+    isReset: function() {
+    	return this.getApplication().getPainometerData().get('reset');
+    },
+    
+    setViewIndex: function(newViewIndex) {
+    	this.getPainometerData().set('viewIndex', newViewIndex);
+    	this.getPainometerData().save();
+    },
+    
+    getViewIndex: function() {
+    	return this.getPainometerData().get('viewIndex');
+    },
+    
+    showView: function() {
+    	var main = Ext.Viewport.getItems().get("MainContainer");
+    	main.setActiveItem(this.getPainometerData().get('viewIndex'));
+    },
+    
 });

@@ -1,6 +1,6 @@
 {
     "projectName": "Painometer",
-    "licenseText": "CC 2011 algos URV",
+    "licenseText": "GPL 2011 algos Unitat per a l'Estudi i Tractament del Dolor - ALGOS. Research on Pain",
     "builds": [
         {
             "name": "All Classes",
@@ -11,11 +11,19 @@
             "files": [
                 {
                     "path": "app/model/",
-                    "name": "LanguageType.js"
+                    "name": "Config.js"
                 },
                 {
                     "path": "app/model/",
                     "name": "ScaleType.js"
+                },
+                {
+                    "path": "app/model/",
+                    "name": "LanguageType.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "ConfigPanel.js"
                 },
                 {
                     "path": "app/view/",
@@ -23,19 +31,11 @@
                 },
                 {
                     "path": "app/view/",
-                    "name": "FPSRPanel.js"
-                },
-                {
-                    "path": "app/view/",
                     "name": "CreditsContainer.js"
                 },
                 {
                     "path": "app/view/",
-                    "name": "ConfigPanel.js"
-                },
-                {
-                    "path": "app/controller/",
-                    "name": "ConfigController.js"
+                    "name": "VASPanel.js"
                 },
                 {
                     "path": "app/view/",
@@ -43,31 +43,43 @@
                 },
                 {
                     "path": "app/view/",
-                    "name": "VASPanel.js"
+                    "name": "OrientationInfo.js"
+                },
+                {
+                    "path": "app/controller/",
+                    "name": "ConfigController.js"
                 },
                 {
                     "path": "app/controller/",
                     "name": "FPSRPanel.js"
                 },
                 {
-                    "path": "app/store/",
-                    "name": "ScaleTypes.js"
+                    "path": "app/controller/",
+                    "name": "NRS11Panel.js"
                 },
                 {
                     "path": "app/controller/",
                     "name": "CreditsContainer.js"
                 },
                 {
-                    "path": "app/store/",
-                    "name": "LanguageTypes.js"
+                    "path": "app/controller/",
+                    "name": "CASPanelController.js"
                 },
                 {
                     "path": "app/controller/",
-                    "name": "NRS11Panel.js"
+                    "name": "VASPanel.js"
                 },
                 {
-                    "path": "app/model/",
-                    "name": "Config.js"
+                    "path": "app/controller/",
+                    "name": "OrientationController.js"
+                },
+                {
+                    "path": "app/store/",
+                    "name": "ScaleTypes.js"
+                },
+                {
+                    "path": "app/store/",
+                    "name": "LanguageTypes.js"
                 },
                 {
                     "path": "app/view/",
@@ -79,7 +91,15 @@
                 },
                 {
                     "path": "app/view/",
+                    "name": "FPSRPanel.js"
+                },
+                {
+                    "path": "app/view/",
                     "name": "MainContainer.js"
+                },
+                {
+                    "path": "app/view/",
+                    "name": "OrientationInfo.js"
                 }
             ]
         },

@@ -17,54 +17,42 @@ Ext.define('Painometer.controller.NRS11Panel', {
     extend: 'Ext.app.Controller',
 
     config: {
-        stores: [
-            
-        ],
-        views: [
-            'NRS11Panel'
-        ],
+        views: ['NRS11Panel'],
         refs: {
             numContainer: '#NRSCarousel container',
             nrsNav: '#NRSNavContainer',
-            mainContainer: '#MainContainer',
             NRS11Panel: '#Nrs11Panel',
             NRSCarousel: '#NRSCarousel'
         },
-
         control: {
-            "numContainer": {
-                activate: 'numActivate'
-            },
-            "NRS11Panel": {
-                activate: 'onNRS11PanelActivate'
-            }
+            "numContainer" : { activate: 'numActivate' },
+            "NRS11Panel"   : { activate: 'onNRS11PanelActivate'}
         }
     },
-
+    
     numActivate: function(container, newActiveItem, oldActiveItem, options) {
-        if (!Ext.isEmpty(container)) {
-            var newIndex = container.config.value;
+    	if (!Ext.isEmpty(container)) {
+            var newIndex = container.config.value / 10;
             var newFace    = this.getNrsNav().items.getAt(newIndex);
 
             newFace.addCls("face-selected");
         }
 
         if (!Ext.isEmpty(oldActiveItem)) {
-            var oldIndex = oldActiveItem.config.value;
+            var oldIndex = oldActiveItem.config.value / 10;
             var oldFace = this.getNrsNav().items.getAt(oldIndex);
 
             oldFace.removeCls("face-selected");
-            var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-            configController.setValue(container.config.value);
+            this.getApplication().setValue(container.config.value);
         }
     },
 
     onNRS11PanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        var configController = this.getApplication().getController("Painometer.controller.ConfigController");
-        var value = configController.getValue();
+        var value = this.getApplication().getValue();
         var pan = this.getNRSCarousel();
+        var index = Math.floor(value / 10);
 
-        pan.setActiveItem(value);
+        pan.setActiveItem(index);
     }
 
 });

@@ -25,6 +25,7 @@
 
 @include sencha-button-ui('info_btn', #ffffff, 'flat');
 
+
 .x-button {
   &.x-button-info_btn, &.x-button-info_btn-round, &.x-button-info_btn-small  {
     .x-button-icon.x-icon-mask {
@@ -36,23 +37,12 @@
 }
 
 .face-selected {
-    //@include single-box-shadow(black, 1px, 1px, 0.1); 
-    //-webkit-box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.2);
-    //box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid lightgray;
-    //-webkit-transform: scale(1.2);
+    border: 1px solid #61AE24;
 }
 
 /**************************************************************/
 /* CAS SLIDER                                                 */
 /**************************************************************/
-/*@import '../global';*/
-
-/**
- * Includes default form slider styles.
- *
- * @member Ext.field.Slider
- */
 
 @mixin sencha-cas-sliders {
 
@@ -64,15 +54,8 @@
 
   .x-slider {
       position: relative;
-      height: 3cm;
       min-height: 0;
       min-width: 0;
-      //background-image: url(../images/cas_bg.png);
-      width: 12.2cm;
-      background-size: 10cm 3cm;
-      background-repeat: no-repeat;
-      background-position-x: 1cm;
-
     > * {
         position: absolute;
         width: 100%;
@@ -86,9 +69,9 @@
 
     .x-thumb {
       position: relative;
-      height: 4cm;
+      height: 12cm;
       width: 2.5cm;
-      top: -0.5cm;
+      top: -4.5cm;
       
       //visibility: hidden;
       background: -webkit-gradient(
@@ -104,7 +87,7 @@
       // The actual thumb
       &:before {
         width: 2px;
-        height: 4cm;
+        height: 12cm;
         margin-top: -3px;
         margin-left: 1.15cm;
       }
@@ -131,13 +114,57 @@
   
 }
 
+#configPanel {
+  .x-form-label {
+    height: 58px; 
+    background-color: white;
+  }
+}
+
+//#ext-element-143 {
+//  padding-left: 15%;
+//}
+
+//#ext-element-141 {
+//  height: 15px;
+//}
+
+//#ext-element-146 {
+//  width: 85%;
+//  padding-left: 10%;
+//}
+
+//#ext-element-140{
+//  width: 85%;
+//}
+
+
+//#ScaleSel {
+//  height: 47px;
+//}
+
+
+
+//#reset {
+//  height: 61px;
+//}
+
+//#ext-element-147 {
+//  height: 55px;
+//}
+
+
 .sencha-cas-slider {
   @include sencha-cas-sliders;
   
   .x-slider {
       background-image: url(../images/cas_bg.png);
+      background-size: 11cm 3.3cm;
+      background-repeat: no-repeat;
+      background-position-x: 1cm;
+      width: 13.2cm;
+      height: 3.3cm;
   }
-  
 }
 
 .sencha-vas-slider {
@@ -145,6 +172,10 @@
   
   .x-slider {
       background-image: url(../images/vas_bg.png);
+      background-size: 9.9cm 3cm;
+      background-repeat: no-repeat;
+      background-position-x: 1.23cm;
+      width: 12.34cm;
+      height: 3cm;
   }
-
 }

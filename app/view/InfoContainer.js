@@ -18,20 +18,22 @@ Ext.define('Painometer.view.InfoContainer', {
     alias: 'widget.InfoContainer',
 
     config: {
+        bottom: '0px',
         docked: 'right',
+        height: '35px',
         id: 'infoContainerID',
-        layout: {
-            align: 'end',
-            pack: 'end',
-            type: 'hbox'
-        },
+        right: '0px',
+        style: '',
+        width: '35px',
+        zIndex : 4,
         items: [
             {
                 xtype: 'button',
+                height: '30px',
                 id: 'infoBtn',
-                style: 'border:0',
+                style: 'border:0;',
                 ui: 'info_btn-small',
-                width: 22,
+                width: '30px',
                 iconCls: 'info',
                 iconMask: true
             }

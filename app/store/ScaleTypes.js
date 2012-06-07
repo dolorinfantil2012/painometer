@@ -24,19 +24,23 @@ Ext.define('Painometer.store.ScaleTypes', {
         data: [
             {
                 idScale: 0,
-                label: 'FPS-R'
+                label: 'FPS-R',
+                ratio: 0.1
             },
             {
                 idScale: 1,
-                label: 'NRS-11'
+                label: 'NRS-11',
+                ratio: 0.1
             },
             {
                 idScale: 2,
-                label: 'CAS'
+                label: 'CAS',
+                ratio: 1
             },
             {
                 idScale: 3,
-                label: 'VAS'
+                label: 'VAS',
+                ratio: 1
             }
         ],
         model: 'Painometer.model.ScaleType',

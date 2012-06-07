@@ -33,10 +33,11 @@ Ext.define('Painometer.view.NRS11Panel', {
                 xtype: 'container',
                 docked: 'top',
                 id: 'NRSNavContainer',
+                style: 'padding-bottom: 5px;',
                 defaults: {
                     width: 29,
-                    height: 20,
-                    style: 'margin-top: 15px; text-align: center; background-position: center center; '
+                    height: 25,
+                    style: 'padding-bottom: 4px; margin-top: 15px; text-align: center; background-position: center center; '
                 },
                 layout: {
                     pack: 'center',
@@ -118,7 +119,7 @@ Ext.define('Painometer.view.NRS11Panel', {
                         id: 'NRSCarousel',
                         style: 'background-color:white;',
                         defaults: {
-                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -100px; font-size: 200px; text-align: center;'
+                            style: 'width: 100%;height: 200px; position: absolute; top: 50%; margin-top: -140px; font-size: 240px; text-align: center; text-shadow:3px 3px 6px #707070;'
                         },
                         items: [
                             {
@@ -131,68 +132,68 @@ Ext.define('Painometer.view.NRS11Panel', {
                                 xtype: 'container',
                                 html: 1,
                                 id: 'NRS1',
-                                value: 1
+                                value: 10
                             },
                             {
                                 xtype: 'container',
                                 html: 2,
                                 id: 'NRS2',
-                                value: 2
+                                value: 20
                             },
                             {
                                 xtype: 'container',
                                 html: 3,
                                 id: 'NRS3',
-                                value: 3
+                                value: 30
                             },
                             {
                                 xtype: 'container',
                                 html: 4,
                                 id: 'NRS4',
-                                value: 4
+                                value: 40
                             },
                             {
                                 xtype: 'container',
                                 html: 5,
                                 id: 'NRS5',
-                                value: 5
+                                value: 50
                             },
                             {
                                 xtype: 'container',
                                 html: 6,
                                 id: 'NRS6',
-                                value: 6
+                                value: 60
                             },
                             {
                                 xtype: 'container',
                                 html: 7,
                                 id: 'NRS7',
-                                value: 7
+                                value: 70
                             },
                             {
                                 xtype: 'container',
                                 html: 8,
                                 id: 'NRS8',
-                                value: 8
+                                value: 80
                             },
                             {
                                 xtype: 'container',
                                 html: 9,
                                 id: 'NRS9',
-                                value: 9
+                                value: 90
                             },
                             {
                                 xtype: 'container',
                                 html: 10,
                                 id: 'NRS10',
-                                style: 'padding-top: 100px; padding-left: 50px; font-size: 180px',
-                                value: 10
+                                style: 'width: 100%; height: 200px; position: absolute; top: 50%; margin-top: -135px; text-shadow: 10px 10px 7px lightgrey; padding-left: 50px; font-size: 220px; padding-top: 10px;',
+                                value: 100
                             }
                         ]
                     },
                     {
                         xtype: 'InfoContainer',
-                        id: 'infoContainer'
+                        id: 'NRSInfoCont'
                     }
                 ]
             }

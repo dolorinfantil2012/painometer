@@ -1,6 +1,6 @@
 {
     "projectName": "Painometer",
-    "licenseText": "GPL 2011 algos URV",
+    "licenseText": "GPL 2011 algos Unitat per a l'Estudi i Tractament del Dolor - ALGOS. Research on Pain",
     "builds": [
         {
             "name": "All Classes",

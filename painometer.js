@@ -1,7 +1,7 @@
 /*
  *
- * <Painometer. L'objectiu d'aquest programa és que l'usuari pugui tenir accés
-   a informació mitjançant presentacions que es podrà descarregar.>
+ * <Painometer. L'objectiu d'aquest programa és que l'usuari pugui fer un
+   seguiment del seu dolor mitjançant diferents tipus d'escales.>
    Copyright (C) <2012> 
    <Unitat per a l'Estudi i Tractament del Dolor - ALGOS. Research on Pain>
 

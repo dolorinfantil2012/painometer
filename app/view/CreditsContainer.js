@@ -61,9 +61,29 @@ Ext.define('Painometer.view.CreditsContainer', {
             },
             {
             	xtype: 'image',
-                height: 150,
+                height: 90,
                 style: 'background-position: 50% 0%; ',
                 src: 'resources/images/algos/logo_algos.png'
+            },
+            {
+            	html:'<center><u><b>Licència:</b></u><br></center>'
+            	+ '<p style="font-size:12px; padding: 10px">Està completament prohibida la comercialització del programa. Per a qualsevol ús '
+            	+ 's´ha de consultar a <a href="mailto:jordi.miro@urv.cat">jordi.miro@urv.cat</a>.'
+            	+ '<br>'
+            	+ 'Aquesta aplicació es distribueix sota <a href="http://www.gnu.org/copyleft/gpl.html">llicència GPL</a>.'
+                + 'Esta aplicación se distribuye bajo <a href="http://www.gnu.org/copyleft/gpl.html">licencia GPL</a>.'
+                + '<br>'
+                + 'This program is free software: you can redistribute it and/or modify'
+                + 'it under the terms of the GNU General Public License as published by'
+                + 'the Free Software Foundation, either version 3 of the License, or' 
+                + '(at your option) any later version.'
+				+ '<br>'
+    			+ 'This program is distributed in the hope that it will be useful,'
+    			+ 'but WITHOUT ANY WARRANTY; without even the implied warranty of'
+    			+ 'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the'
+    			+ 'GNU General Public License for more details.'
+				+ '<br>'
+    			+ '<a href="http://www.gnu.org/copyleft/gpl.html">GPL license</a>.'
             }
         ]
     }

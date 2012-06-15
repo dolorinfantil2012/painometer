@@ -1,0 +1,106 @@
+{
+    "id": "ExtBox1-ext-gen36661",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": "VASPanel under construction",
+        "style": "background-color:white;",
+        "ui": "",
+        "layout": "fit",
+        "designer|userClassName": "VASPanel",
+        "designer|userAlias": "vaspanel"
+    },
+    "customConfigs": [],
+    "designerId": "5b31aa95-ddd5-4190-94ac-373de28aad8c",
+    "$viewOrder": 5,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen15890",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "sencha-vas-slider"
+                ],
+                "id": "VASSliderContainer",
+                "style": "background-color:white;",
+                "designer|userClassName": "MyContainer33"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen17405",
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": null,
+                        "centered": true,
+                        "cls": null,
+                        "label": null,
+                        "designer|userClassName": "MySliderField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen16364",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "right",
+                "id": "infoContainer",
+                "layout": "hbox",
+                "designer|userClassName": "MyContainer8",
+                "container|align": "end",
+                "container|pack": "end"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen16367",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "infoBtn",
+                        "style": "border:0",
+                        "ui": "info_btn-small",
+                        "width": 22,
+                        "icon": null,
+                        "iconCls": "info",
+                        "iconMask": true,
+                        "text": null,
+                        "designer|userClassName": "MyButton"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

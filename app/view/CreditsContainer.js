@@ -66,7 +66,7 @@ Ext.define('Painometer.view.CreditsContainer', {
                 src: 'resources/images/algos/logo_algos.png'
             },
             {
-            	html:'<center><u><b>Licència:</b></u><br></center>'
+            	html:'<center><u><b>Llicència:</b></u><br></center>'
             	+ '<p style="font-size:12px; padding: 10px">Està completament prohibida la comercialització del programa. Per a qualsevol ús '
             	+ 's´ha de consultar a <a href="mailto:jordi.miro@urv.cat">jordi.miro@urv.cat</a>.'
             	+ '<br>'
